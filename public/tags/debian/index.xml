@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>debian on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+    <link>https://example.com/tags/debian/</link>
+    <description>Recent content in debian on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 28 Mar 2017 05:57:43 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Comment mon #serveur #web est organisé</title>
+      <link>https://example.com/configuration-serveur-web/</link>
+      <pubDate>Tue, 28 Mar 2017 05:57:43 +0000</pubDate>
+      
+      <guid>https://example.com/configuration-serveur-web/</guid>
+      <description>Il y a maintenant une ou deux année de cela, j&amp;rsquo;ai pris la décision de ne plus utiliser des serveurs mutualisés. J&amp;rsquo;ai fait ce choix principalement pour avoir le contrôle absolue sur ce que je fais (I&amp;rsquo;m ROOT, I&amp;rsquo;m GOD) et expérimenter des nouvelles technologies, sans attendre le bon vouloir de mon hébergeur pour les intégrer à ses serveurs.
+Le système d&amp;rsquo;exploitation que je choisi pour un serveur web, est Debian et si ce ne serait pas Debian ça aurait été Ubuntu.</description>
+    </item>
+    
+    <item>
+      <title>Sauvegarder ses données dans Dropbox avec mysqldump</title>
+      <link>https://example.com/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</link>
+      <pubDate>Thu, 03 Dec 2015 05:36:17 +0000</pubDate>
+      
+      <guid>https://example.com/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</guid>
+      <description>J&amp;rsquo;écris cet article suite à une mésaventure. Tous les disques durs de mon serveur sont tombés en panne, j&amp;rsquo;ai perdu près de deux ans de travail pour l&amp;rsquo;un de mes sites. Je suis paresseuse et faire des backups hebdomadaire via une interface ne m&amp;rsquo;enchante guère.
+La solution qui permettra à cette mésaventure de ne plus se reproduire, c&amp;rsquo;est d&amp;rsquo;utiliser cron et mysqldump, ça ne me tente pas d&amp;rsquo;écrire un script pour automatiser l&amp;rsquo;envoie de mes données vers un serveur FTP.</description>
+    </item>
+    
+  </channel>
+</rss>

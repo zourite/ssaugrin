@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+    <link>https://example.com/</link>
+    <description>Recent content on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Fri, 06 Apr 2018 16:04:16 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Qui suis-je ?</title>
+      <link>https://example.com/about/</link>
+      <pubDate>Fri, 06 Apr 2018 16:04:16 +0000</pubDate>
+      
+      <guid>https://example.com/about/</guid>
+      <description>Je suis Sonia, je crée des blogs pour les personnes qui désirent s&amp;rsquo;exprimer et des sites sur mesure pour ceux qui veulent lancer leur activité ou avoir une présence sur internet.
+Je suis très attaché à la sécurité d&amp;rsquo;un site internet, je propose un forfait de maintenance qui vous permettra de garder vos sites à jour et sécurisé.
+Mon objectif est de vous aider à lancer votre activité en toute sécurité sur le Web, pour que vous puissiez augmenter ou générer des revenus.</description>
+    </item>
+    
+    <item>
+      <title>La solution pour avoir plus de temps !</title>
+      <link>https://example.com/solution-avoir-plus-temps/</link>
+      <pubDate>Tue, 10 Oct 2017 05:16:35 +0000</pubDate>
+      
+      <guid>https://example.com/solution-avoir-plus-temps/</guid>
+      <description>Ne pas avoir le temps que cela signifie t’il ? Je pense qu’il est temps de faire le point sur cette fameuse phrase que tout le monde répète : Je n’ai pas le temps. Pour étayer cet article, j’ai cherché la définition du mot “temps”.
+Ce mot a plusieurs définition, j’en ai donc choisi une qui correspond au contenu de cet article que j’ai pris le temps d’écrire. 😉</description>
+    </item>
+    
+    <item>
+      <title>Comment mon #serveur #web est organisé</title>
+      <link>https://example.com/configuration-serveur-web/</link>
+      <pubDate>Tue, 28 Mar 2017 05:57:43 +0000</pubDate>
+      
+      <guid>https://example.com/configuration-serveur-web/</guid>
+      <description>Il y a maintenant une ou deux année de cela, j&amp;rsquo;ai pris la décision de ne plus utiliser des serveurs mutualisés. J&amp;rsquo;ai fait ce choix principalement pour avoir le contrôle absolue sur ce que je fais (I&amp;rsquo;m ROOT, I&amp;rsquo;m GOD) et expérimenter des nouvelles technologies, sans attendre le bon vouloir de mon hébergeur pour les intégrer à ses serveurs.
+Le système d&amp;rsquo;exploitation que je choisi pour un serveur web, est Debian et si ce ne serait pas Debian ça aurait été Ubuntu.</description>
+    </item>
+    
+    <item>
+      <title>Ecrire un email à un professionnel et obtenir une réponse rapide</title>
+      <link>https://example.com/comment-envoyer-email-professionnel-obtenir-reponse-rapide/</link>
+      <pubDate>Wed, 20 Jan 2016 11:54:40 +0000</pubDate>
+      
+      <guid>https://example.com/comment-envoyer-email-professionnel-obtenir-reponse-rapide/</guid>
+      <description>Avez-vous déjà contacté un professionnel ? Avez-vous attendu une réponse à votre email pendant un siècle ? Avez-vous répondu oui aux questions précédentes ? Alors, cet article est fait pour vous. Il est vrai que cela est frustrant de ne pas apercevoir de réponse dans sa boite de réception. Cela peut renforcer le manque de confiance en soi et faire surgir des émotions négatives.
+Les « PROS » sont des personnes souvent occupés qui n&amp;rsquo;aiment pas perdre leur temps en futilité et vont directement à l’essentiel.</description>
+    </item>
+    
+    <item>
+      <title>Mentions légales</title>
+      <link>https://example.com/mentions-legales/</link>
+      <pubDate>Sun, 20 Dec 2015 18:18:27 +0000</pubDate>
+      
+      <guid>https://example.com/mentions-legales/</guid>
+      <description>Éditeur : Sonia SAUGRIN
+SIRET : 80181524200012
+Hébergeur : OVH – 2 rue Kellermann – 59100 Roubaix – France
+Ce site participe au Programme Partenaires d&amp;rsquo;Amazon EU, un programme d&amp;rsquo;affiliation conçu pour permettre à des sites de percevoir une rémunération grâce à la création de liens vers Amazon.fr.
+MENTIONS RELATIVES AUX COOKIES Qu’est-ce qu’un cookie et à quoi sert-il ? Un cookie (ou témoin de connexion) est un fichier texte susceptible d’être enregistré, sous réserve de vos choix, dans un espace dédié du disque dur de votre terminal (ordinateur, tablette …) à l’occasion de la consultation d’un service en ligne grâce à votre logiciel de navigation.</description>
+    </item>
+    
+    <item>
+      <title>Comment ajouter des émojis à #Twitter</title>
+      <link>https://example.com/comment-ajouter-emojis-twitter/</link>
+      <pubDate>Sat, 19 Dec 2015 06:53:27 +0000</pubDate>
+      
+      <guid>https://example.com/comment-ajouter-emojis-twitter/</guid>
+      <description>J&amp;rsquo;écris cet article suite au précédent qui fourni une liste de symbole compatible que l&amp;rsquo;on peut insérer dans son Pseudo Twitter, Facebook ou Instagram. Je vous offre ici une liste plus complète que vous pouvez utiliser dans vos statuts Facebook ou vos tweets. Et si vous etes réellement fan de ces petites bouilles d&amp;rsquo;amour vous pouvez en acheter sous forme de coussin chez Amazon.
+Smileys et People ? ? ?</description>
+    </item>
+    
+    <item>
+      <title>Sauvegarder ses données dans Dropbox avec mysqldump</title>
+      <link>https://example.com/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</link>
+      <pubDate>Thu, 03 Dec 2015 05:36:17 +0000</pubDate>
+      
+      <guid>https://example.com/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</guid>
+      <description>J&amp;rsquo;écris cet article suite à une mésaventure. Tous les disques durs de mon serveur sont tombés en panne, j&amp;rsquo;ai perdu près de deux ans de travail pour l&amp;rsquo;un de mes sites. Je suis paresseuse et faire des backups hebdomadaire via une interface ne m&amp;rsquo;enchante guère.
+La solution qui permettra à cette mésaventure de ne plus se reproduire, c&amp;rsquo;est d&amp;rsquo;utiliser cron et mysqldump, ça ne me tente pas d&amp;rsquo;écrire un script pour automatiser l&amp;rsquo;envoie de mes données vers un serveur FTP.</description>
+    </item>
+    
+    <item>
+      <title>#Facebook n’est pas bon pour toi ! Fais ta vie !</title>
+      <link>https://example.com/facebook-nest-pas-bon-pour-toi-fais-ta-vie/</link>
+      <pubDate>Thu, 20 Mar 2014 10:49:02 +0000</pubDate>
+      
+      <guid>https://example.com/facebook-nest-pas-bon-pour-toi-fais-ta-vie/</guid>
+      <description>Ce texte est une traduction d’un l’article intitulé [« Facebook is bad for you
+Get a life! »]1 du site : The Economist parut le 17/08/2013
+ Il paraît que Facebook, est mauvais pour nous ! Ceux qui n’ont pas voulu intégrer le réseau social Facebook vont sûrement se dire qu’ils avaient raison de le faire, quand ils prendront connaissance des dernières recherches menées à propos de ce réseau social.</description>
+    </item>
+    
+    <item>
+      <title>Fonction pour obtenir des articles relatifs par Tag et par Categorie #WordPress</title>
+      <link>https://example.com/fonction-obtenir-articles-relatifs-tag-categorie-wordpress/</link>
+      <pubDate>Thu, 13 Mar 2014 06:52:39 +0000</pubDate>
+      
+      <guid>https://example.com/fonction-obtenir-articles-relatifs-tag-categorie-wordpress/</guid>
+      <description>Les articles relatifs dans WordPress sont comme les suggestions de vidéos dans Youtube, ils sont parfois pertinents. Ce dont je suis sûre et certaine, c’est qu’ils sont devenus incontournable pour un blog. Il y a des années de cela, j’utilisais une fonction toute pourrie et assez compliquée, qui se basait sur les variables global $wpdb ou encore global $posts, pour afficher ces fichus articles relatifs. Une fonction est faite pour être améliorée donc j’ai décidé de refaire cette super fonction qui faisait 1Km.</description>
+    </item>
+    
+    <item>
+      <title>Héberger une page web sur Google Drive</title>
+      <link>https://example.com/heberger-une-page-web-sur-google-drive/</link>
+      <pubDate>Wed, 06 Feb 2013 19:17:58 +0000</pubDate>
+      
+      <guid>https://example.com/heberger-une-page-web-sur-google-drive/</guid>
+      <description>Après Dropbox voici une astuce simple pour héberger une page web avec Google Drive. Je trouve ceci assez pratique pour partager un CV ou tout autre document non dynamique. Vous pouvez faire des pages HTML reliées à du CSS et du js. Google Drive &amp;#8211; Contenu web</description>
+    </item>
+    
+    <item>
+      <title>Intégrer #Highcharts à du #PHP / #CSV</title>
+      <link>https://example.com/integrer-highcharts-a-du-php-csv/</link>
+      <pubDate>Sun, 02 Dec 2012 13:11:52 +0000</pubDate>
+      
+      <guid>https://example.com/integrer-highcharts-a-du-php-csv/</guid>
+      <description>Comme on me l&amp;rsquo;a gentiment demandé, j&amp;rsquo;ai écrit un petit tutoriel sur le moyen d&amp;rsquo;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&amp;rsquo;aide d&amp;rsquo;un csv. Dans un premier temps, vous devez télécharger la librairie PHP &amp;#8211; Highcharts de Ghunti.
+Transformer un CSV en Array() Pour transformer un CSV en array() on va utiliser la fonction fgetcsv()</description>
+    </item>
+    
+    <item>
+      <title>Creer un flux RSS avec DOMDocument</title>
+      <link>https://example.com/creer-un-flux-rss-avec-domdocument/</link>
+      <pubDate>Wed, 12 Sep 2012 08:47:11 +0000</pubDate>
+      
+      <guid>https://example.com/creer-un-flux-rss-avec-domdocument/</guid>
+      <description>Qu&amp;rsquo;est ce que DOMDocument ? DOMDocument est une librairie PHP, qui à fait son entrer avec PHP5. Cette librairie permet de créer ou de modifier un fichier XML ou HTML. DOMDocument est très semblable à Javascript aussi bien par le biais de ses fonctions ou par son fonctionement. Nous retrouvons donc le concept des noeuds ou encore la fameuse fonction getElementById().
+Plus besoin de faire :
+$xml = &#39;&#39;; $xml .</description>
+    </item>
+    
+    <item>
+      <title>Générer des graphiques avec Highcharts et #CodeIgniter</title>
+      <link>https://example.com/generer-des-graphiques-avec-highcharts-et-codeigniter/</link>
+      <pubDate>Mon, 06 Aug 2012 05:10:04 +0000</pubDate>
+      
+      <guid>https://example.com/generer-des-graphiques-avec-highcharts-et-codeigniter/</guid>
+      <description>Highcharts est une librairie Javascript, qui permet de faire de beaux graphiques. Si quelqu&amp;rsquo;un me dit d&amp;rsquo;utiliser Google Chart, car c&amp;rsquo;est plus simple, je le tue. Plus sérieusement je n&amp;rsquo;utilise pas Google Chart pour générer des graphiques puisque rien m&amp;rsquo;assure que le service sera toujours accessible 24H/24H, je n&amp;rsquo;aime pas dépendre d&amp;rsquo;application tierce. Pour certains services on ne peut faire autrement, pour exemple je ne citerais que Google Map. Si une personne me dit qu&amp;rsquo;il peut se passer aisément de Google Maps quand il à besoin de représenter des données sur une map qu&amp;rsquo;il me donne sa solution.</description>
+    </item>
+    
+    <item>
+      <title>Présentation de #CodeIgniter</title>
+      <link>https://example.com/presentation-codeigniter/</link>
+      <pubDate>Tue, 03 Apr 2012 06:00:07 +0000</pubDate>
+      
+      <guid>https://example.com/presentation-codeigniter/</guid>
+      <description>Je ne suis pas une super développeuse qui code d&amp;rsquo;une main en jouant à WOW de l&amp;rsquo;autre, qui connais tous les design pattern ou les principes de plusieurs algorithmes. Je débute en programmation et c&amp;rsquo;est déroutant de commencer à manier un Framework avec des conventions strictes ou avec un système de configuration mis en place par des développeurs que je qualifierais de sadique. Bien évidement des tutoriels sont disponibles sur la toile, mais il suffit de manquer une étape pour être découragé et peut être perdre confiance en soi et en ses compétences.</description>
+    </item>
+    
+    <item>
+      <title>Comment ajouter des images a côté de votre pseudo Twitter ou Facebook</title>
+      <link>https://example.com/comment-ajouter-des-images-pseudo-twitter-ou-facebook/</link>
+      <pubDate>Wed, 27 Oct 2010 14:17:10 +0000</pubDate>
+      
+      <guid>https://example.com/comment-ajouter-des-images-pseudo-twitter-ou-facebook/</guid>
+      <description>Edit : J&amp;rsquo;ai mis un article en ligne avec une liste plus complète d’icônes, d&amp;rsquo;images, d&amp;rsquo;émoji appelez les comme vous le voulez. J&amp;rsquo;ai même découvert qu&amp;rsquo;on en vendait sous forme de coussin chez Amazon 🙂
+Dans un premier temps ce que j&amp;rsquo;appelle ici « image » ne sont pas des images, pour être correcte ce sont des symboles ASCII. Vous pouvez les rajouter à côté de votre pseudo sur les réseaux sociaux tel que Twitter ou Facebook, ceci apportera une petite touche de personnalisation à votre profil.</description>
+    </item>
+    
+    <item>
+      <title>Une fonction complete pour fil d&amp;rsquo;Ariane WordPress</title>
+      <link>https://example.com/une-fonction-complete-pour-fil-dariane-wordpress/</link>
+      <pubDate>Thu, 29 Oct 2009 12:07:09 +0000</pubDate>
+      
+      <guid>https://example.com/une-fonction-complete-pour-fil-dariane-wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://example.com/contact/</link>
+      <pubDate>Fri, 10 Apr 2009 23:58:57 +0000</pubDate>
+      
+      <guid>https://example.com/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

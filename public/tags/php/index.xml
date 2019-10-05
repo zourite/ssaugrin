@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHP on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+    <link>https://example.com/tags/php/</link>
+    <description>Recent content in PHP on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Thu, 13 Mar 2014 06:52:39 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fonction pour obtenir des articles relatifs par Tag et par Categorie #WordPress</title>
+      <link>https://example.com/fonction-obtenir-articles-relatifs-tag-categorie-wordpress/</link>
+      <pubDate>Thu, 13 Mar 2014 06:52:39 +0000</pubDate>
+      
+      <guid>https://example.com/fonction-obtenir-articles-relatifs-tag-categorie-wordpress/</guid>
+      <description>Les articles relatifs dans WordPress sont comme les suggestions de vidéos dans Youtube, ils sont parfois pertinents. Ce dont je suis sûre et certaine, c’est qu’ils sont devenus incontournable pour un blog. Il y a des années de cela, j’utilisais une fonction toute pourrie et assez compliquée, qui se basait sur les variables global $wpdb ou encore global $posts, pour afficher ces fichus articles relatifs. Une fonction est faite pour être améliorée donc j’ai décidé de refaire cette super fonction qui faisait 1Km.</description>
+    </item>
+    
+    <item>
+      <title>Intégrer #Highcharts à du #PHP / #CSV</title>
+      <link>https://example.com/integrer-highcharts-a-du-php-csv/</link>
+      <pubDate>Sun, 02 Dec 2012 13:11:52 +0000</pubDate>
+      
+      <guid>https://example.com/integrer-highcharts-a-du-php-csv/</guid>
+      <description>Comme on me l&amp;rsquo;a gentiment demandé, j&amp;rsquo;ai écrit un petit tutoriel sur le moyen d&amp;rsquo;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&amp;rsquo;aide d&amp;rsquo;un csv. Dans un premier temps, vous devez télécharger la librairie PHP &amp;#8211; Highcharts de Ghunti.
+Transformer un CSV en Array() Pour transformer un CSV en array() on va utiliser la fonction fgetcsv()</description>
+    </item>
+    
+    <item>
+      <title>Creer un flux RSS avec DOMDocument</title>
+      <link>https://example.com/creer-un-flux-rss-avec-domdocument/</link>
+      <pubDate>Wed, 12 Sep 2012 08:47:11 +0000</pubDate>
+      
+      <guid>https://example.com/creer-un-flux-rss-avec-domdocument/</guid>
+      <description>Qu&amp;rsquo;est ce que DOMDocument ? DOMDocument est une librairie PHP, qui à fait son entrer avec PHP5. Cette librairie permet de créer ou de modifier un fichier XML ou HTML. DOMDocument est très semblable à Javascript aussi bien par le biais de ses fonctions ou par son fonctionement. Nous retrouvons donc le concept des noeuds ou encore la fameuse fonction getElementById().
+Plus besoin de faire :
+$xml = &#39;&#39;; $xml .</description>
+    </item>
+    
+    <item>
+      <title>Générer des graphiques avec Highcharts et #CodeIgniter</title>
+      <link>https://example.com/generer-des-graphiques-avec-highcharts-et-codeigniter/</link>
+      <pubDate>Mon, 06 Aug 2012 05:10:04 +0000</pubDate>
+      
+      <guid>https://example.com/generer-des-graphiques-avec-highcharts-et-codeigniter/</guid>
+      <description>Highcharts est une librairie Javascript, qui permet de faire de beaux graphiques. Si quelqu&amp;rsquo;un me dit d&amp;rsquo;utiliser Google Chart, car c&amp;rsquo;est plus simple, je le tue. Plus sérieusement je n&amp;rsquo;utilise pas Google Chart pour générer des graphiques puisque rien m&amp;rsquo;assure que le service sera toujours accessible 24H/24H, je n&amp;rsquo;aime pas dépendre d&amp;rsquo;application tierce. Pour certains services on ne peut faire autrement, pour exemple je ne citerais que Google Map. Si une personne me dit qu&amp;rsquo;il peut se passer aisément de Google Maps quand il à besoin de représenter des données sur une map qu&amp;rsquo;il me donne sa solution.</description>
+    </item>
+    
+    <item>
+      <title>Une fonction complete pour fil d&amp;rsquo;Ariane WordPress</title>
+      <link>https://example.com/une-fonction-complete-pour-fil-dariane-wordpress/</link>
+      <pubDate>Thu, 29 Oct 2009 12:07:09 +0000</pubDate>
+      
+      <guid>https://example.com/une-fonction-complete-pour-fil-dariane-wordpress/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

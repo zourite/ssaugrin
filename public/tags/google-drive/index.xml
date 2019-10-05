@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Drive on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+    <link>https://example.com/tags/google-drive/</link>
+    <description>Recent content in Google Drive on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Wed, 06 Feb 2013 19:17:58 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/google-drive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Héberger une page web sur Google Drive</title>
+      <link>https://example.com/heberger-une-page-web-sur-google-drive/</link>
+      <pubDate>Wed, 06 Feb 2013 19:17:58 +0000</pubDate>
+      
+      <guid>https://example.com/heberger-une-page-web-sur-google-drive/</guid>
+      <description>Après Dropbox voici une astuce simple pour héberger une page web avec Google Drive. Je trouve ceci assez pratique pour partager un CV ou tout autre document non dynamique. Vous pouvez faire des pages HTML reliées à du CSS et du js. Google Drive &amp;#8211; Contenu web</description>
+    </item>
+    
+  </channel>
+</rss>

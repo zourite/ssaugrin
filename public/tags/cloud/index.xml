@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cloud on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+    <link>https://example.com/tags/cloud/</link>
+    <description>Recent content in cloud on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Thu, 03 Dec 2015 05:36:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sauvegarder ses données dans Dropbox avec mysqldump</title>
+      <link>https://example.com/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</link>
+      <pubDate>Thu, 03 Dec 2015 05:36:17 +0000</pubDate>
+      
+      <guid>https://example.com/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</guid>
+      <description>J&amp;rsquo;écris cet article suite à une mésaventure. Tous les disques durs de mon serveur sont tombés en panne, j&amp;rsquo;ai perdu près de deux ans de travail pour l&amp;rsquo;un de mes sites. Je suis paresseuse et faire des backups hebdomadaire via une interface ne m&amp;rsquo;enchante guère.
+La solution qui permettra à cette mésaventure de ne plus se reproduire, c&amp;rsquo;est d&amp;rsquo;utiliser cron et mysqldump, ça ne me tente pas d&amp;rsquo;écrire un script pour automatiser l&amp;rsquo;envoie de mes données vers un serveur FTP.</description>
+    </item>
+    
+    <item>
+      <title>Héberger une page web sur Google Drive</title>
+      <link>https://example.com/heberger-une-page-web-sur-google-drive/</link>
+      <pubDate>Wed, 06 Feb 2013 19:17:58 +0000</pubDate>
+      
+      <guid>https://example.com/heberger-une-page-web-sur-google-drive/</guid>
+      <description>Après Dropbox voici une astuce simple pour héberger une page web avec Google Drive. Je trouve ceci assez pratique pour partager un CV ou tout autre document non dynamique. Vous pouvez faire des pages HTML reliées à du CSS et du js. Google Drive &amp;#8211; Contenu web</description>
+    </item>
+    
+  </channel>
+</rss>

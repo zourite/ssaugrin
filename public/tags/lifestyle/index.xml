@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lifestyle on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+    <link>https://example.com/tags/lifestyle/</link>
+    <description>Recent content in lifestyle on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 10 Oct 2017 05:16:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/lifestyle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>La solution pour avoir plus de temps !</title>
+      <link>https://example.com/solution-avoir-plus-temps/</link>
+      <pubDate>Tue, 10 Oct 2017 05:16:35 +0000</pubDate>
+      
+      <guid>https://example.com/solution-avoir-plus-temps/</guid>
+      <description>Ne pas avoir le temps que cela signifie t’il ? Je pense qu’il est temps de faire le point sur cette fameuse phrase que tout le monde répète : Je n’ai pas le temps. Pour étayer cet article, j’ai cherché la définition du mot “temps”.
+Ce mot a plusieurs définition, j’en ai donc choisi une qui correspond au contenu de cet article que j’ai pris le temps d’écrire. 😉</description>
+    </item>
+    
+  </channel>
+</rss>

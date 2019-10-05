@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>csv on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+    <link>https://example.com/tags/csv/</link>
+    <description>Recent content in csv on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Sun, 02 Dec 2012 13:11:52 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/csv/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intégrer #Highcharts à du #PHP / #CSV</title>
+      <link>https://example.com/integrer-highcharts-a-du-php-csv/</link>
+      <pubDate>Sun, 02 Dec 2012 13:11:52 +0000</pubDate>
+      
+      <guid>https://example.com/integrer-highcharts-a-du-php-csv/</guid>
+      <description>Comme on me l&amp;rsquo;a gentiment demandé, j&amp;rsquo;ai écrit un petit tutoriel sur le moyen d&amp;rsquo;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&amp;rsquo;aide d&amp;rsquo;un csv. Dans un premier temps, vous devez télécharger la librairie PHP &amp;#8211; Highcharts de Ghunti.
+Transformer un CSV en Array() Pour transformer un CSV en array() on va utiliser la fonction fgetcsv()</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+    <link>https://example.com/categories/</link>
+    <description>Recent content in Categories on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 10 Oct 2017 05:16:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mes Opinions</title>
+      <link>https://example.com/categories/mes-opinions/</link>
+      <pubDate>Tue, 10 Oct 2017 05:16:35 +0000</pubDate>
+      
+      <guid>https://example.com/categories/mes-opinions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SysAdmin</title>
+      <link>https://example.com/categories/sysadmin/</link>
+      <pubDate>Tue, 28 Mar 2017 05:57:43 +0000</pubDate>
+      
+      <guid>https://example.com/categories/sysadmin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Divers</title>
+      <link>https://example.com/categories/divers/</link>
+      <pubDate>Sat, 19 Dec 2015 06:53:27 +0000</pubDate>
+      
+      <guid>https://example.com/categories/divers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programmation</title>
+      <link>https://example.com/categories/programmation/</link>
+      <pubDate>Thu, 13 Mar 2014 06:52:39 +0000</pubDate>
+      
+      <guid>https://example.com/categories/programmation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wordpress</title>
+      <link>https://example.com/categories/wordpress/</link>
+      <pubDate>Thu, 13 Mar 2014 06:52:39 +0000</pubDate>
+      
+      <guid>https://example.com/categories/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open-Source</title>
+      <link>https://example.com/categories/open-source/</link>
+      <pubDate>Mon, 06 Aug 2012 05:10:04 +0000</pubDate>
+      
+      <guid>https://example.com/categories/open-source/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

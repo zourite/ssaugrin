@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8">
+<title>Comment mon #serveur #web est organisé - Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+<meta name="description" content="Chaque fois que vous voyez une entreprise qui réussit, dites-vous que c’est parce qu’un jour quelqu’un a pris une décision courageuse - Peter Drucker">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta itemprop="name" content="Comment mon #serveur #web est organisé">
+<meta itemprop="description" content="Il y a maintenant une ou deux année de cela, j&rsquo;ai pris la décision de ne plus utiliser des serveurs mutualisés. J&rsquo;ai fait ce choix principalement pour avoir le contrôle absolue sur ce que je fais (I&rsquo;m ROOT, I&rsquo;m GOD) et expérimenter des nouvelles technologies, sans attendre le bon vouloir de mon hébergeur pour les intégrer à ses serveurs.
+Le système d&rsquo;exploitation que je choisi pour un serveur web, est Debian et si ce ne serait pas Debian ça aurait été Ubuntu.">
+
+
+<meta itemprop="datePublished" content="2017-03-28T05:57:43&#43;00:00" />
+<meta itemprop="dateModified" content="2017-03-28T05:57:43&#43;00:00" />
+<meta itemprop="wordCount" content="633">
+
+
+
+<meta itemprop="keywords" content="debian,nginx," />
+
+  <meta property="og:title" content="Comment mon #serveur #web est organisé" />
+<meta property="og:description" content="Il y a maintenant une ou deux année de cela, j&rsquo;ai pris la décision de ne plus utiliser des serveurs mutualisés. J&rsquo;ai fait ce choix principalement pour avoir le contrôle absolue sur ce que je fais (I&rsquo;m ROOT, I&rsquo;m GOD) et expérimenter des nouvelles technologies, sans attendre le bon vouloir de mon hébergeur pour les intégrer à ses serveurs.
+Le système d&rsquo;exploitation que je choisi pour un serveur web, est Debian et si ce ne serait pas Debian ça aurait été Ubuntu." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/configuration-serveur-web/" />
+<meta property="article:published_time" content="2017-03-28T05:57:43+00:00" />
+<meta property="article:modified_time" content="2017-03-28T05:57:43+00:00" /><meta property="og:site_name" content="Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Comment mon #serveur #web est organisé"/>
+<meta name="twitter:description" content="Il y a maintenant une ou deux année de cela, j&rsquo;ai pris la décision de ne plus utiliser des serveurs mutualisés. J&rsquo;ai fait ce choix principalement pour avoir le contrôle absolue sur ce que je fais (I&rsquo;m ROOT, I&rsquo;m GOD) et expérimenter des nouvelles technologies, sans attendre le bon vouloir de mon hébergeur pour les intégrer à ses serveurs.
+Le système d&rsquo;exploitation que je choisi pour un serveur web, est Debian et si ce ne serait pas Debian ça aurait été Ubuntu."/>
+<meta name="twitter:site" content="@zourite"/>
+
+  
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="/css/foundation.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.794c8b9d6e6d36721dfc6e2a9ca1310d02b1c573f46e89c6913674f54a3b4125.css" integrity="sha256-eUyLnW5tNnId/G4qnKExDQKxxXP0bonGkTZ09Uo7QSU=">
+      
+      <link rel="stylesheet" href="/css/add-on.css">
+      <link rel="stylesheet" href="/css/style.css">
+    
+  
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          ssaugrin aka Zourite
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        <a href="/" class="link"><i class="fas fa-home">&nbsp;</i>Accueil</a>
+      
+        <a href="/about/" class="link"><i class="far fa-id-card">&nbsp;</i>A Propos</a>
+      
+        <a href="/posts/" class="link"><i class="far fa-newspaper">&nbsp;</i>Blog</a>
+      
+        <a href="/categories/" class="link"><i class="fas fa-sitemap">&nbsp;</i>Catégories</a>
+      
+        <a href="/contact/" class="link"><i class="far fa-envelope">&nbsp;</i>Contact</a>
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Comment%20mon%20%23serveur%20%23web%20est%20organis%c3%a9&amp;url=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f&amp;title=Comment%20mon%20%23serveur%20%23web%20est%20organis%c3%a9" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f&amp;title=Comment%20mon%20%23serveur%20%23web%20est%20organis%c3%a9" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f&amp;description=Comment%20mon%20%23serveur%20%23web%20est%20organis%c3%a9" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper_posts">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/configuration-serveur-web/">Comment mon #serveur #web est organisé</a></h2>
+    
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2017-03-28 05:57:43 &#43;0000 &#43;0000">
+      
+      28 mars 2017
+      
+    </time>
+    <span class="author">Zourite</span>
+    
+        <p>3 minutes</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Comment%20mon%20%23serveur%20%23web%20est%20organis%c3%a9&amp;url=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f&amp;title=Comment%20mon%20%23serveur%20%23web%20est%20organis%c3%a9" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f&amp;title=Comment%20mon%20%23serveur%20%23web%20est%20organis%c3%a9" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f&amp;description=Comment%20mon%20%23serveur%20%23web%20est%20organis%c3%a9" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fexample.com%2fconfiguration-serveur-web%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+<a href="/configuration-serveur-web/" class="image featured">
+  <img src="/img/2017/03/serveur-web-nginx-php.jpg" alt="">
+</a>
+
+
+  <div class="content">
+    
+
+<p>Il y a maintenant une ou deux année de cela, j&rsquo;ai pris la décision de ne plus utiliser des serveurs mutualisés. J&rsquo;ai fait ce choix principalement pour avoir le contrôle absolue sur ce que je fais <em>(I&rsquo;m ROOT, I&rsquo;m GOD)</em> et expérimenter des nouvelles technologies, sans attendre le bon vouloir de mon hébergeur pour les intégrer à ses serveurs.</p>
+
+<p>Le système d&rsquo;exploitation que je choisi pour un serveur web, est <a href="https://www.debian.org/index.fr.html">Debian</a> et si ce ne serait pas Debian ça aurait été Ubuntu. Il y à énormément de ressources et de tutaux pour ces systèmes d&rsquo;exploitations. <strong>Grande est la communauté du .deb</strong> 😀</p>
+
+<p><strong>Un serveur web</strong> est par définition un ordinateur qui te <strong>permet de visualiser un site web</strong> grâce à Firefox ou Chrome. Je te propose de regarder cette vidéo de deux minutes qui t&rsquo;explique comment fonctionne un serveur web.</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="//www.youtube.com/embed/msB9AvJ4bTM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>Entrons donc dans le vif du sujet, le schéma ci dessous te montre comment mon serveur est organisé. Je partitionne <em>(séparer en plusieurs partie)</em> mon serveur en deux. Les fichiers qui constituent <strong>le site web sont stockés dans le répertoire /home et les applicatifs sont à la racine /(racine).</strong> Je préfère séparer ces deux types de données si un site est trop gourmand en stockage d&rsquo;images, de pdf ou de vidéos, et sature l&rsquo;espace disponible, mon serveur continuera de fonctionner sans encombre.</p>
+
+<p><img src="2017/03/serveur-nginx-php-mysql.jpg" alt="" width="791" height="361" class="aligncenter size-full wp-image-3074" srcset="2017/03/serveur-nginx-php-mysql.jpg 791w, 2017/03/serveur-nginx-php-mysql-300x137.jpg 300w, 2017/03/serveur-nginx-php-mysql-768x351.jpg 768w" sizes="(max-width: 791px) 100vw, 791px" /></p>
+
+<h2 id="le-serveur-http"><strong>Le serveur HTTP</strong></h2>
+
+<p>Sans un serveur HTTP d&rsquo;installé rien ne fonctionne, il est le pilier principal d&rsquo;un serveur web. Parmi les serveurs HTTP les plus utilisés, il y a Apache, NGINX et IIS. J&rsquo;ai utilisé Apache pendant très longtemps sur mes serveurs web mais depuis j&rsquo;ai rencontré Nginx. Je suis tombé amoureuse et je ne veux rien d&rsquo;autre que du Nginx sur mon serveur.</p>
+
+<p>A la base NGINX est utilisé en tant que reverse proxy en complément d&rsquo;Apache. Cependant je trouve que NGINX rempli très bien son rôle de serveur HTTP sans pour autant avoir besoin d&rsquo;Apache. Mis à part sa légèreté et sa rapidité d’exécution. Je trouve que la syntaxe de NGINX est plus simple et plus intuitive, ce n&rsquo;est que mon avis. Plus bas, tu trouveras un graphique qui représente la part de marché des différents serveurs HTTP. NGINX prend de plus en plus de part au fil des années.</p>
+
+<div id="attachment_3078" style="width: 730px" class="wp-caption aligncenter">
+  <img aria-describedby="caption-attachment-3078" src="2017/03/Sélection_239.png" alt="" width="720" height="586" class="size-full wp-image-3078" srcset="2017/03/Sélection_239.png 720w, 2017/03/Sélection_239-300x244.png 300w" sizes="(max-width: 720px) 100vw, 720px" />
+  
+  <p id="caption-attachment-3078" class="wp-caption-text">
+    <a href="https://trends.builtwith.com/web-server">https://trends.builtwith.com/web-server</a>
+  </p>
+</div>
+
+<h2 id="language-de-scripts"><strong>Language de scripts</strong></h2>
+
+<p>Si tu décides d&rsquo;avoir ton propre serveur, je ne pense pas que c&rsquo;est uniquement pour y déposer des fichiers HTML. Si tu veux au moins un formulaire de contact sur ton site, il te faudra nécessairement installer un language de scripts. J&rsquo;ai débuter avec PHP et pour le moment il me convient. Le serveur Nginx se charge d’interpréter le PHP pour le renvoyer sous forme HTML à ton navigateur.</p>
+
+<h2 id="la-base-de-données"><strong>La base de données</strong></h2>
+
+<p>En ce qui concerne la gestion de base de données, j&rsquo;utilise principalement <strong>MySql</strong> par ce que comme PHP c&rsquo;est l&rsquo;une des technologies les plus utilisées pour le web. La majorité des CMS fonctionnement avec MySQL. Cependant d&rsquo;autres systèmes de gestion de base de données existent. Tu as le choix entre <strong>MariaDB, Sqlite et PostgreSQL.</strong></p>
+
+<p>Tu peux stocker tes informations dans des fichiers .txt que tu enregistrera sur ton serveur et dont tu feras appel quand tu auras besoin. Tu peux le faire ce n&rsquo;est pas interdit, mais pour une question de performance, je te conseille de choisir un applicatif qui est spécialement conçu pour le stockage de données. 😀 Je dis ça, je dis rien tu peux faire ton <em>frappadingue</em> et tout enregistrer dans des fichiers, c&rsquo;est pas un soucis.</p>
+
+<p>Pour conclure, j&rsquo;évoque le fait que cette configuration est basique et me convient pour ce que j&rsquo;ai à faire. Je pense plus tard ajouter un système de cache avec Varnish qui est un serveur de cache qui se place avant Nginx et pourquoi pas installer MemCached pour améliorer les performances du serveur.</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://example.com/categories/sysadmin">SysAdmin</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://example.com/tags/debian">debian</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://example.com/tags/nginx">nginx</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/comment-envoyer-email-professionnel-obtenir-reponse-rapide/" class="button big previous"><i class="fas fa-angle-left"></i> Ecrire un email à un professionnel et obtenir une réponse rapide</a>
+  
+  
+    <a href="/solution-avoir-plus-temps/" class="button big next">La solution pour avoir plus de temps ! <i class="fas fa-angle-right"></i></a>
+  
+</div>
+
+
+      </main>
+      
+      
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+    </div>
+  </body>
+</html>

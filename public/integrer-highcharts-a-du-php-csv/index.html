@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8">
+<title>Intégrer #Highcharts à du #PHP / #CSV - Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+<meta name="description" content="Chaque fois que vous voyez une entreprise qui réussit, dites-vous que c’est parce qu’un jour quelqu’un a pris une décision courageuse - Peter Drucker">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+
+  
+  <meta itemprop="name" content="Intégrer #Highcharts à du #PHP / #CSV">
+<meta itemprop="description" content="Comme on me l&rsquo;a gentiment demandé, j&rsquo;ai écrit un petit tutoriel sur le moyen d&rsquo;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&rsquo;aide d&rsquo;un csv. Dans un premier temps, vous devez télécharger la librairie PHP &#8211; Highcharts de Ghunti.
+Transformer un CSV en Array() Pour transformer un CSV en array() on va utiliser la fonction fgetcsv()">
+
+
+<meta itemprop="datePublished" content="2012-12-02T13:11:52&#43;00:00" />
+<meta itemprop="dateModified" content="2012-12-02T13:11:52&#43;00:00" />
+<meta itemprop="wordCount" content="482">
+
+
+
+<meta itemprop="keywords" content="csv,highcharts,Javascript,Librairie,PHP," />
+
+  <meta property="og:title" content="Intégrer #Highcharts à du #PHP / #CSV" />
+<meta property="og:description" content="Comme on me l&rsquo;a gentiment demandé, j&rsquo;ai écrit un petit tutoriel sur le moyen d&rsquo;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&rsquo;aide d&rsquo;un csv. Dans un premier temps, vous devez télécharger la librairie PHP &#8211; Highcharts de Ghunti.
+Transformer un CSV en Array() Pour transformer un CSV en array() on va utiliser la fonction fgetcsv()" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/integrer-highcharts-a-du-php-csv/" />
+<meta property="article:published_time" content="2012-12-02T13:11:52+00:00" />
+<meta property="article:modified_time" content="2012-12-02T13:11:52+00:00" /><meta property="og:site_name" content="Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Intégrer #Highcharts à du #PHP / #CSV"/>
+<meta name="twitter:description" content="Comme on me l&rsquo;a gentiment demandé, j&rsquo;ai écrit un petit tutoriel sur le moyen d&rsquo;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&rsquo;aide d&rsquo;un csv. Dans un premier temps, vous devez télécharger la librairie PHP &#8211; Highcharts de Ghunti.
+Transformer un CSV en Array() Pour transformer un CSV en array() on va utiliser la fonction fgetcsv()"/>
+<meta name="twitter:site" content="@zourite"/>
+
+  
+
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css">
+  
+    
+      <link rel="stylesheet" href="/css/normalize.css">
+      <link rel="stylesheet" href="/css/foundation.min.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+      
+      
+      <link rel="stylesheet" href="/css/main.min.794c8b9d6e6d36721dfc6e2a9ca1310d02b1c573f46e89c6913674f54a3b4125.css" integrity="sha256-eUyLnW5tNnId/G4qnKExDQKxxXP0bonGkTZ09Uo7QSU=">
+      
+      <link rel="stylesheet" href="/css/add-on.css">
+      <link rel="stylesheet" href="/css/style.css">
+    
+  
+  
+  
+  
+  
+</head>
+
+  <body>
+    
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/">
+        
+          ssaugrin aka Zourite
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu">
+      
+        <a href="/" class="link"><i class="fas fa-home">&nbsp;</i>Accueil</a>
+      
+        <a href="/about/" class="link"><i class="far fa-id-card">&nbsp;</i>A Propos</a>
+      
+        <a href="/posts/" class="link"><i class="far fa-newspaper">&nbsp;</i>Blog</a>
+      
+        <a href="/categories/" class="link"><i class="fas fa-sitemap">&nbsp;</i>Catégories</a>
+      
+        <a href="/contact/" class="link"><i class="far fa-envelope">&nbsp;</i>Contact</a>
+      
+      <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      
+
+    </menu>
+    
+
+    <a href="#share-menu" class="share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    
+    <a href="#site-nav" class="nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  
+  
+    <menu id="share-menu" class="flyout-menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Int%c3%a9grer%20%23Highcharts%20%c3%a0%20du%20%23PHP%20%2f%20%23CSV&amp;url=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f&amp;title=Int%c3%a9grer%20%23Highcharts%20%c3%a0%20du%20%23PHP%20%2f%20%23CSV" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f&amp;title=Int%c3%a9grer%20%23Highcharts%20%c3%a0%20du%20%23PHP%20%2f%20%23CSV" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f&amp;description=Int%c3%a9grer%20%23Highcharts%20%c3%a0%20du%20%23PHP%20%2f%20%23CSV" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper_posts">
+      
+      <main id="site-main">
+        <article class="post">
+  <header>
+  <div class="title">
+    
+        <h2><a href="/integrer-highcharts-a-du-php-csv/">Intégrer #Highcharts à du #PHP / #CSV</a></h2>
+    
+    
+</div>
+  <div class="meta">
+    <time class="published" datetime="2012-12-02 13:11:52 &#43;0000 &#43;0000">
+      
+      2 décembre 2012
+      
+    </time>
+    <span class="author">Zourite</span>
+    
+        <p>3 minutes</p>
+    
+  </div>
+</header>
+
+  <section id="socnet-share">
+    
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Int%c3%a9grer%20%23Highcharts%20%c3%a0%20du%20%23PHP%20%2f%20%23CSV&amp;url=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f" target="_blank" rel="noopener" class="share-btn twitter">
+        <i class="fab fa-twitter"></i><p>&nbsp;Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f" target="_blank" rel="noopener" class="share-btn facebook">
+        <i class="fab fa-facebook"></i><p>&nbsp;Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f&amp;title=Int%c3%a9grer%20%23Highcharts%20%c3%a0%20du%20%23PHP%20%2f%20%23CSV" target="_blank" rel="noopener" class="share-btn reddit">
+          <i class="fab fa-reddit-alien"></i><p>&nbsp;Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f&amp;title=Int%c3%a9grer%20%23Highcharts%20%c3%a0%20du%20%23PHP%20%2f%20%23CSV" target="_blank" rel="noopener" class="share-btn linkedin">
+            <i class="fab fa-linkedin"></i><p>&nbsp;LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f&amp;description=Int%c3%a9grer%20%23Highcharts%20%c3%a0%20du%20%23PHP%20%2f%20%23CSV" target="_blank" rel="noopener" class="share-btn pinterest">
+          <i class="fab fa-pinterest-p"></i><p>&nbsp;Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check out this post by %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fexample.com%2fintegrer-highcharts-a-du-php-csv%2f" target="_blank" class="share-btn email" data-proofer-ignore>
+          <i class="fas fa-envelope"></i><p>&nbsp;Email</p>
+        </a>
+  
+
+
+  </section>
+  
+<a href="/integrer-highcharts-a-du-php-csv/" class="image featured">
+  <img src="/img/2012/11/csv.png" alt="">
+</a>
+
+
+  <div class="content">
+    
+
+<p><a href="2012/11/csv.png"><img src="2012/11/csv.png" alt="csv" title="csv" width="128" height="128" class="alignright size-full wp-image-2423" /></a></p>
+
+<p>Comme on me l&rsquo;a gentiment demandé, j&rsquo;ai écrit un petit tutoriel sur le moyen d&rsquo;intégrer <strong>Highcharts</strong> à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&rsquo;aide d&rsquo;un csv. Dans un premier temps, vous devez télécharger la librairie <a href="https://github.com/ghunti/HighchartsPHP/" target="_blank">PHP &#8211; Highcharts de Ghunti.</a></p>
+
+<h3 id="transformer-un-csv-en-array">Transformer un CSV en Array()</h3>
+
+<p>Pour transformer un CSV en <code>array()</code> on va utiliser la fonction <code>fgetcsv()</code></p>
+
+<pre>function get_array() {
+
+        $file = fopen('highcharts_demo.csv', 'r');
+            
+            while (($line = fgetcsv($file,'',';')) !== FALSE) {
+    
+                $array_data[] = $line;
+            
+            }
+        
+    fclose($file);
+
+    unset($array_data[0]);
+
+    return $array_data;
+
+
+    }
+</pre>
+
+<p>Ce qui vous donnera un <code>array()</code> de cette forme</p>
+
+<pre>Array
+(
+    [0] => Array
+        (
+            [0] => Livre
+            [1] => Nombre de fois lue
+            [2] => Mois de lecture
+            [3] => Lecteur
+        )
+
+    [1] => Array
+        (
+            [0] => WordPress
+            [1] => 2
+            [2] => janvier
+            [3] => Mickaël
+        )
+
+    [2] => Array
+        (
+            [0] => PHP
+            [1] => 3
+            [2] => janvier
+            [3] => Raphaël
+        )
+
+    [3] => Array
+        (
+            [0] => SQL
+            [1] => 1
+            [2] => fevrier
+            [3] => Virginie
+        )
+
+    [4] => Array
+        (
+            [0] => Jquery
+            [1] => 5
+            [2] => mars
+            [3] => Mickaël
+        )
+)</pre>
+
+<p><a href="2012/12/Sélection_012.jpg"><img src="2012/12/Sélection_012-300x200.jpg" alt="Graphique Highcharts PHP" title="Graphique Highcharts PHP" width="300" height="200" class="alignright size-medium wp-image-2436" /></a></p>
+
+<h3 id="transformation-de-l-rsquo-array">Transformation de l&rsquo;array</h3>
+
+<p>Nous allons voir comment obtenir un graphique comme celui de droite. Tout d&rsquo;abord il faudra impérativement modifier le tableau, pour qu&rsquo;il nous renvoie ce que nous voulons, ce sera un tableau multidimensionnel, contenant la valeur et le libellé. On va donc récupérer les livres qui sont les plus lus. Pour qu&rsquo;une portion du camembert soit détaché au moment de la visualisation, il faut insérer deux valeurs au tableau <code>sliced =&gt; true</code> et <code>selected =&gt; true</code>.</p>
+
+<pre>function get_livres() {
+
+        $array = get_array();
+
+
+        foreach ($array as $value) :
+                
+                $totaux[$value[0]] += $value[1];
+
+        endforeach;
+
+        foreach ($totaux as $key => $value) :
+
+            if($value > 30) :
+
+                $livres[] = array(
+
+                                'name' => $key , 
+                                'sliced' => true,
+                                'selected' => true, 
+                                'y' => intval($value)
+
+                                ); 
+            else :
+
+                $livres[] = array(utf8_decode($key),intval($value));
+            
+            endif;  
+
+        endforeach;
+
+        
+        return $livres;
+
+    }</pre>
+
+<h3 id="générer-le-graphique">Générer le graphique</h3>
+
+<p>Maintenant, il manque juste à incorporer la fonction <code>get_livres()</code> au code pour que le graphique prenne forme.</p>
+
+<pre>function pie_chart() {
+
+$chart1 = new Highchart();
+
+$chart1->chart->renderTo = "contain";
+$chart1->chart->plotBackgroundColor = null;
+$chart1->chart->plotBorderWidth = null;
+$chart1->chart->plotShadow = false;
+$chart1->title->text = "Pourcentage de lecture par livre";
+
+$chart1->tooltip->formatter = new HighchartJsExpr("function() {
+    return '<b>'+ this.point.name +'</b>: '+ Math.round(this.percentage*100)/100 +' %';}");
+
+$chart1->plotOptions->pie->allowPointSelect = 1;
+$chart1->plotOptions->pie->cursor = "pointer";
+$chart1->plotOptions->pie->dataLabels->enabled = 1;
+$chart1->plotOptions->pie->dataLabels->color = "#000000";
+$chart1->plotOptions->pie->dataLabels->connectorColor = "#000000";
+
+$chart1->plotOptions->pie->dataLabels->formatter = new HighchartJsExpr("function() {
+    return '<b>'+ this.point.name +'</b>: '+ Math.round(this.percentage*100)/100 +' %'; }");
+
+$chart1->series[] = array('type' => "pie",
+                         'name' => "Lecture de Livre",
+                         'data' =>  get_livres());
+
+return $chart1->render();
+
+
+
+
+}
+</pre>
+
+<h3 id="démonstration-et-téléchargement">Démonstration et téléchargement</h3>
+
+<p>Vous pouvez télécharger les fichiers et avoir un aperçu de ce qu&rsquo;on peut faire dans <a href="http://labo.saugrin-sonia.fr/highcharts-php/">mon labo</a>. Il y à deux fichiers important, <code>chart.php</code> qui regroupe les fonctions pour créer le graphique, <code>functions.php</code> contient toutes les fonctions pour modifier l&rsquo;array obtenu à partir du CSV. Maintenant c&rsquo;est à vous d&rsquo;adapter cet exemple.</p>
+
+  </div>
+  <footer>
+    <ul class="stats">
+  
+    
+    
+      <li class="categories">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://example.com/categories/programmation">Programmation</a></li>
+          
+        </ul>
+      </li>
+    
+  
+  
+    
+    
+      <li class="tags">
+        <ul>
+          
+            
+            <li><a class="article-category-link" href="https://example.com/tags/csv">csv</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://example.com/tags/highcharts">highcharts</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://example.com/tags/javascript">Javascript</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://example.com/tags/librairie">Librairie</a></li>
+          
+            
+            <li><a class="article-category-link" href="https://example.com/tags/php">PHP</a></li>
+          
+        </ul>
+      </li>
+    
+  
+</ul>
+
+  </footer>
+</article>
+
+
+<div class="pagination">
+  
+    <a href="/creer-un-flux-rss-avec-domdocument/" class="button big previous"><i class="fas fa-angle-left"></i> Creer un flux RSS avec DOMDocument</a>
+  
+  
+    <a href="/heberger-une-page-web-sur-google-drive/" class="button big next">Héberger une page web sur Google Drive <i class="fas fa-angle-right"></i></a>
+  
+</div>
+
+
+      </main>
+      
+      
+      
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src=/js/util.js></script>
+  <script src=/js/main.js></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src=/js/add-on.js></script>
+  
+
+
+
+    </div>
+  </body>
+</html>

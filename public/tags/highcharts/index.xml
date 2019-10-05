@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>highcharts on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+    <link>https://example.com/tags/highcharts/</link>
+    <description>Recent content in highcharts on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Sun, 02 Dec 2012 13:11:52 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/highcharts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intégrer #Highcharts à du #PHP / #CSV</title>
+      <link>https://example.com/integrer-highcharts-a-du-php-csv/</link>
+      <pubDate>Sun, 02 Dec 2012 13:11:52 +0000</pubDate>
+      
+      <guid>https://example.com/integrer-highcharts-a-du-php-csv/</guid>
+      <description>Comme on me l&amp;rsquo;a gentiment demandé, j&amp;rsquo;ai écrit un petit tutoriel sur le moyen d&amp;rsquo;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&amp;rsquo;aide d&amp;rsquo;un csv. Dans un premier temps, vous devez télécharger la librairie PHP &amp;#8211; Highcharts de Ghunti.
+Transformer un CSV en Array() Pour transformer un CSV en array() on va utiliser la fonction fgetcsv()</description>
+    </item>
+    
+    <item>
+      <title>Générer des graphiques avec Highcharts et #CodeIgniter</title>
+      <link>https://example.com/generer-des-graphiques-avec-highcharts-et-codeigniter/</link>
+      <pubDate>Mon, 06 Aug 2012 05:10:04 +0000</pubDate>
+      
+      <guid>https://example.com/generer-des-graphiques-avec-highcharts-et-codeigniter/</guid>
+      <description>Highcharts est une librairie Javascript, qui permet de faire de beaux graphiques. Si quelqu&amp;rsquo;un me dit d&amp;rsquo;utiliser Google Chart, car c&amp;rsquo;est plus simple, je le tue. Plus sérieusement je n&amp;rsquo;utilise pas Google Chart pour générer des graphiques puisque rien m&amp;rsquo;assure que le service sera toujours accessible 24H/24H, je n&amp;rsquo;aime pas dépendre d&amp;rsquo;application tierce. Pour certains services on ne peut faire autrement, pour exemple je ne citerais que Google Map. Si une personne me dit qu&amp;rsquo;il peut se passer aisément de Google Maps quand il à besoin de représenter des données sur une map qu&amp;rsquo;il me donne sa solution.</description>
+    </item>
+    
+  </channel>
+</rss>

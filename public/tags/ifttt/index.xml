@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ifttt on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</title>
+    <link>https://example.com/tags/ifttt/</link>
+    <description>Recent content in ifttt on Je suis là pour t&#39;aider à t&#39;améliorer | ssaugrin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Thu, 03 Dec 2015 05:36:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/ifttt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sauvegarder ses données dans Dropbox avec mysqldump</title>
+      <link>https://example.com/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</link>
+      <pubDate>Thu, 03 Dec 2015 05:36:17 +0000</pubDate>
+      
+      <guid>https://example.com/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</guid>
+      <description>J&amp;rsquo;écris cet article suite à une mésaventure. Tous les disques durs de mon serveur sont tombés en panne, j&amp;rsquo;ai perdu près de deux ans de travail pour l&amp;rsquo;un de mes sites. Je suis paresseuse et faire des backups hebdomadaire via une interface ne m&amp;rsquo;enchante guère.
+La solution qui permettra à cette mésaventure de ne plus se reproduire, c&amp;rsquo;est d&amp;rsquo;utiliser cron et mysqldump, ça ne me tente pas d&amp;rsquo;écrire un script pour automatiser l&amp;rsquo;envoie de mes données vers un serveur FTP.</description>
+    </item>
+    
+  </channel>
+</rss>
