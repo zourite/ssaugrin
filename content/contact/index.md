@@ -12,3 +12,5 @@ kdc_metadata:
   - 'a:1:{s:4:"lang";s:2:"fr";}'
 
 ---
+
+Pourquoi veux-tu me contacter ? Pour me poser des questions ? En quoi mon expertise te serait utile ?

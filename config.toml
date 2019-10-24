@@ -51,7 +51,7 @@ disableLanguages        = [""]
     # Sets navbarTitle to match the section of the website
     dynamicTitles       = false
     searchMenu          = true
-    shareMenu           = true
+    shareMenu           = false
     languageMenu        = false
 
   # These are optional params related to the sidebar. They are recommended, but not
@@ -131,11 +131,11 @@ disableLanguages        = [""]
     identifier        = "fas fa-sitemap"
     weight            = 5
 
-  [[menu.main]]
-    name              = "Contact"
-    url               = "/contact/"
-    identifier        = "far fa-envelope"
-    weight            = 6
+  # [[menu.main]]
+  #   name              = "Contact"
+  #   url               = "/contact/"
+  #   identifier        = "far fa-envelope"
+  #   weight            = 6
 
 [Languages]
   # Each language has its own menu.
@@ -175,11 +175,11 @@ disableLanguages        = [""]
       identifier        = "fas fa-sitemap"
       weight            = 5
 
-    [[Languages.fr.menu.main]]
-      name              = "Contact"
-      url               = "/contact/"
-      identifier        = "far fa-envelope"
-      weight            = 6
+    # [[Languages.fr.menu.main]]
+    #   name              = "Contact"
+    #   url               = "/contact/"
+    #   identifier        = "far fa-envelope"
+    #   weight            = 6
 
   # [Languages.pl]
   #   languageCode        = "pl"
