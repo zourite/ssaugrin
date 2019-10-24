@@ -11,7 +11,6 @@ views:
 kdc_metadata:
   - 'a:1:{s:4:"lang";s:2:"fr";}'
 categories:
-  - Open-Source
   - Programmation
 tags:
   - CodeIgniter
@@ -37,7 +36,8 @@ Si vous êtes ici, c&rsquo;est que vous savez utiliser les models, je ne vais pa
 
 Je part du fait que le model gènere un `array()` multidimensionnel qui ressemble à :
 
-<pre>Array
+~~~~php
+Array
 (
     [wordpress] => Array
         (
@@ -62,35 +62,35 @@ Je part du fait que le model gènere un `array()` multidimensionnel qui ressembl
         )
 ...
 )
-</pre>
+~~~~
 
 #### View
 
 Ce qui fait que pour générer les graphiques il faut faire le traitement suivant :
 
-<pre><?php 
-            
+~~~~php
+<?php
+
     foreach($tags as $key => $tag):
-                
-        
+
        $labels = array_keys($tag); // récupère les avis ( + , - , Neutre)
-        
+
        $serie['data'] = $tag; // Les résultats à analyser
-        
-        
+
+
         $totaux = 0;
 
         $nbArray = count($tag);
-        
+
         // Fonction qui totalise le total de personne qui ont données leur avis
         for ($i = 0; $i &lt; $nbArray; $i++) {
-            
+
               $totaux += $tag[$i][1];
-        
+
         }
-        
+
         $title = ucfirst($key).' - '.$totaux.' occurences'; // Titre du Graphique
-                            
+
         $callback = "function() { return '
 
 <b>'+ this.point.name +'</b>: '+ Math.round(this.percentage*100)/100 +' %'}";
@@ -104,15 +104,12 @@ Ce qui fait que pour générer les graphiques il faut faire le traitement suivan
             ->set_dimensions('', 300)
             ->set_title($title, '')
             ->set_plotOptions($plot);
-    
-        
-        echo $this->highcharts->render();       
-        
-    
-        
+
+        echo $this->highcharts->render();
+
     endforeach;
-                        
-?></pre>
+?>
+~~~~
 
 ### Rendu
 
