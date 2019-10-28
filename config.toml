@@ -1,4 +1,4 @@
-baseurl                 = "https://example.com/"
+baseurl                 = "https://saugrin-sonia.fr/"
 DefaultContentLanguage  = "fr"
 title                   = "Je suis là pour vous aider"
 theme                   = "hugo-future-imperfect-slim"
