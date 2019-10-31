@@ -27,7 +27,7 @@
         <header>
           <h1><a href="{{ "categories" | relLangURL }}">{{ i18n "categories" }}</a></h1>
         </header>
-        <ul class="fa-ul">
+        <ul id="categorie-side">
           {{ if .Site.Params.sidebar.categoriesByCount }}
             {{ $.Scratch.Set "categories" .Site.Taxonomies.categories.ByCount }}
           {{ else }}
@@ -36,7 +36,6 @@
           {{ range $key, $value := $.Scratch.Get "categories" }}
           <li>
             {{ if ne $value.Name "" }}
-              <span class="fa-li"><i class="fas fa-tag fa-sm"></i></span>
               <a href="{{ printf "%s/%s" "categories" $value.Name | urlize | relLangURL }}/">
                 {{ $value.Name | humanize | title }}<span class="count">{{ $value.Count }}</span>
               </a>

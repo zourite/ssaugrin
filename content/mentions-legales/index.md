@@ -45,49 +45,36 @@ Nous vous informons que vous pouvez toutefois vous opposer à l’enregistrement
 
 Sur Internet Explorer
   
-1. Allez dans Outils > Options Internet.
-  
-2. Cliquez sur l’onglet confidentialité.
-  
-3. Cliquez sur le bouton avancé, cochez la case » Ignorer la gestion automatique des cookies ».
+* Allez dans Outils > Options Internet.
+* Cliquez sur l’onglet confidentialité.
+* Cliquez sur le bouton avancé, cochez la case » Ignorer la gestion automatique des cookies ».
 
 Sur Firefox
-  
-1. En haut de la fenêtre de Firefox, cliquez sur le bouton Firefox (menu Outils sous Windows XP), puis sélectionnez Options.
-  
-2. Sélectionnez le panneau Vie privée.
-  
-3. Paramétrez Règles de conservation : à utiliser les paramètres personnalisés pour l’historique.
-  
-4. Décochez Accepter les cookies.
+
+* En haut de la fenêtre de Firefox, cliquez sur le bouton Firefox (menu Outils sous Windows XP), puis sélectionnez Options.  
+* Sélectionnez le panneau Vie privée.
+* Paramétrez Règles de conservation : à utiliser les paramètres personnalisés pour l’historique.
+* Décochez Accepter les cookies.
 
 Sur Chrome
   
-1. Cliquez sur l’icône représentant une clé à molette qui est située dans la barre d’outils du navigateur.
-  
-2. Sélectionnez Paramètres.
-  
-3. Cliquez sur Afficher les paramètres avancés.
-  
-4. Dans la section « Confidentialité », cliquez sur le bouton Paramètres de contenu.
-  
-5. Dans la section « Cookies », vous pouvez bloquer les cookies et données de sites tiers
+* Cliquez sur l’icône représentant une clé à molette qui est située dans la barre d’outils du navigateur.
+* Sélectionnez Paramètres.
+* Cliquez sur Afficher les paramètres avancés.
+* Dans la section « Confidentialité », cliquez sur le bouton Paramètres de contenu.
+* Dans la section « Cookies », vous pouvez bloquer les cookies et données de sites tiers
 
 Sur Safari
   
-1. Allez dans Réglages > Préférences
-  
-2. Cliquez sur l’onglet Confidentialité
-  
-3. Dans la zone » Bloquer les cookies « , cochez la case « toujours »
+* Allez dans Réglages > Préférences
+* Cliquez sur l’onglet Confidentialité
+* Dans la zone » Bloquer les cookies « , cochez la case « toujours »
 
 Sur Opéra
   
-1. Allez dans Réglages > Préférences
-  
-2. Cliquez sur l’onglet avancées
-  
-3. Dans la zone » Cookies « , cochez la case » Ne jamais accepter les cookies »
+* Allez dans Réglages > Préférences
+* Cliquez sur l’onglet avancées
+* Dans la zone » Cookies « , cochez la case » Ne jamais accepter les cookies »
 
 #### Les cookies de partage des réseaux sociaux
 
@@ -97,12 +84,9 @@ Lorsque vous vous rendez sur une page internet sur laquelle se trouve un de ces 
 
 Des cookies des réseaux sociaux, dont nous n’avons pas la maîtrise, peuvent être alors être déposés dans votre navigateur par ces réseaux. Nous vous invitons à consulter les politiques de confidentialité propres à chacun de ces sites de réseaux sociaux, afin de prendre connaissance des finalités d’utilisation des informations de navigation que peuvent recueillir les réseaux sociaux grâce à ces boutons et modules.
 
-– Facebook
-  
-– Twitter
-  
-– Google+
-  
-– LinkedIn
+* Facebook
+* Twitter
+* Google+  
+* LinkedIn
 
 Je valide l’inscription de ce blog au service Paperblog sous le pseudo ssaugrin

@@ -1,6 +1,6 @@
 baseurl                 = "https://saugrin-sonia.fr/"
 DefaultContentLanguage  = "fr"
-title                   = "Je suis là pour vous aider"
+title                   = "Vivre sans peur pour mourrir en paix"
 theme                   = "hugo-future-imperfect-slim"
 preserveTaxonomyNames   = true
 paginate                =  5
@@ -8,6 +8,7 @@ disqusShortname         = ""
 googleAnalytics         = ""
 pluralizeListTitles     = false
 disableLanguages        = [""]
+disableHugoGeneratorInject = true
 
 [params]
   mainSections = ["blog", "post"]

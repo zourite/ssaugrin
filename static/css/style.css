@@ -1,3 +1,17 @@
+@font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+      font-display: auto;
+    font-style: normal;
+    src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2") format("woff2");
+}
+
+a {
+
+   border : none;
+
+}
+
 .featured {
 
     height : 200px;
@@ -144,7 +158,7 @@
     color : #ff8c00;
 
 }
-article.post a[target=_blank]:after{
+#content a[target=_blank]:after{
     
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
     margin: 0 3px 0 5px;
@@ -154,6 +168,51 @@ article.post a[target=_blank]:after{
 h1 {
 
     font-size : 1.8em;
+
+}
+
+#site-main {
+
+    margin-top : 10px;
+
+}
+
+#categorie-side, .post li {
+
+    padding-left: 1.3em;
+    list-style : none;
+
+}
+
+#categorie-side li:before, .post li:before {
+
+    content: "\f101"; /* FontAwesome Unicode */
+    font-family: 'FontAwesome';
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+
+}
+
+.post > header div {
+    padding: 0em 1em;
+}
+
+.post > footer {
+
+    padding: 1em 0em;
+
+}
+
+.post > header {
+
+    border-bottom :none;
+
+}
+
+#is-single .post header {
+
+    border-bottom: solid 1px rgba(160,160,160,0.3);
 
 }
 
