@@ -15,6 +15,7 @@ a {
 .featured {
 
     height : 200px;
+    margin-top : 0;
   
 }
   
@@ -190,7 +191,7 @@ h1 {
     font-family: 'FontAwesome';
     display: inline-block;
     margin-left: -1.3em; /* same as padding-left set on li */
-    width: 1.3em; /* same as padding-left set on li */
+    width: 1.1em; /* same as padding-left set on li */
 
 }
 
