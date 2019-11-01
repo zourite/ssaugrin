@@ -1,5 +1,30 @@
 <article class="post">
-  {{ .Render "header" }}
+  
+    <header>
+        <div class="title">
+          {{ if $.Scratch.Get "h1" }}
+              <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+              {{ $.Scratch.Set "h1" false }}
+          {{ else }}
+              <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ end }}
+          {{ with .Description }}
+              <p>{{ . }}</p>
+          {{ end }}
+      </div>
+        <div class="meta">
+          <time class="published" datetime="{{ .Date }}">
+            <!-- {{ default (i18n "date_format") | .Date.Format  }} -->
+            {{ .Date.Day }} {{ index $.Site.Data.months $.Site.Language.Lang (printf "%d" .Date.Month) }} {{ .Date.Year }}
+            
+          </time>
+          <span class="author">{{ .Params.author }}</span>
+          {{ if .Site.Params.ReadingTime }}
+              <p>{{ .ReadingTime }} {{ i18n "postreadingtime" }}</p>
+          {{ end }}
+        </div>
+      </header>
+  {{/*  {{ .Render "header" }}  */}}
   {{ .Render "featured" }}
   {{ index .Params "excerpt" }}
   <!-- {{ $.Scratch.Set "summary" ((delimit (findRE "<p.*?>(.|\n)*?</p>" .Content 1) "") | truncate (default 500 .Site.Params.summary_length) (default "&hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
