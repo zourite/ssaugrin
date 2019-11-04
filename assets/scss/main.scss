@@ -1106,7 +1106,7 @@ textarea {
      text-transform: uppercase;
    }
    .flyout-menu {
-     background-color: #fff;
+    //  background-color: #fff;
      border-left: 1px solid rgba(160, 160, 160, 0.3);
      height: calc(100vh - 3.5em);
      margin-top: 3.5em;
@@ -1238,7 +1238,7 @@ textarea {
        padding: 0;
      }
    }
-   > .share-toggle, > .search-toggle {
+   > .share-toggle, > .search-toggle, #cta {
      display: none;
      @include for-tablet-up {
        display: block;
@@ -1248,6 +1248,9 @@ textarea {
          vertical-align: middle;
        }
      }
+   }
+   #cta {
+     width: auto;
    }
    .lang-toggle {
      width: 61px;
