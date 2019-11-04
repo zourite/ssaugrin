@@ -4,13 +4,13 @@ author: Zourite
 type: page
 date: 2018-04-06T16:04:16+00:00
 ---
-Si vous êtes sur cette page, c'est que vous voulez me connaitre un peu mieux. Je suis flattée que vous voulez en savoir plus sur moi. Je pourrais vous dire que je suis développeur web et vous énumérer mes compétences, cependant un titre, des compétences ou un diplôme ne définit pas qui je suis. Je vais donc essayer d’être claire et concise. Je vous partage donc dans les prochaines lignes ma vision de ce que je suis. Vous pouvez avoir une estimation de <a href="https://www.linkedin.com/in/ssaugrin" target="_blank">mes compétences et de mon parcours professionnel sur Linkedin.</a>
+Si vous êtes sur cette page, c'est que vous voulez me connaitre un peu mieux. Je suis flattée que vous voulez en savoir plus sur moi. Je pourrais vous dire que je suis développeur web et vous énumérer mes compétences, cependant un titre, des compétences ou un diplôme ne définit pas qui je suis. Vous pouvez avoir une estimation de <a href="https://www.linkedin.com/in/ssaugrin" target="_blank">mes compétences et de mon parcours professionnel sur Linkedin.</a>
 
-J'ai conscience qu'en publiant sur ce site, je suis responsable de ce que j'écris. Néanmoins, mon cher ami avoir des responsabilités ne m’empêchera de teintés mes mots avec la couleur de mes émotions.
+Depuis ma plus tendre enfance, le domaine de la psychologie et de la philosophie m'attirent. En 2017, j'ai commencé à lire des livres écrient essentiellement par des psychanalistes ou des psychologues. Parmis les livres que j'ai lu, je peux citer **<a href="https://amzn.to/2JMAnAD" target="_blank">"Faites vous même votre malheur"</a>, <a href="https://amzn.to/33dshZi" target="_blank">"L'amour et la haine"</a> et <a href="https://amzn.to/2PKAIYd" target="_blank">"Se séparer pour grandir"</a>**.
 
-En 2015 - 2017, je me suis intéressée à tout ce qui dit développement personnel. Le sujet est vaste et intéressant. Je suis curieuse et ma curiosité me pousse à connaître mieux les êtres humains. De ce fait, je lis des livres qui sont principalement écrits par des psychanalystes ou des psychologues. Je suis aussi attirée par la philosophie.
+Je ne suis pas apte à juger ce qui est bien ou mal, je ne suis pas apte à dire ce qui est bien pour les autres, mais je sais ce qui est bien pour moi. Ayant longtemps eu des relations interpersonnelles très compliqués. Je voulais à tout prix me faire accepter par autrui, mélanges à ceci une pincée de sensibilité et un zeste d'émotivité, tu obtiendras un super cocktail d'émotions instables.
 
-Je ne suis pas apte à juger ce qui est bien ou mal, je ne suis pas apte à dire ce qui est bien pour les autres, mais je sais ce qui est bien pour moi. Ayant longtemps eu des relations interpersonnelles très compliqué étant très sensible, car je voulais absolument et à tout prix me faire accepter par autrui. Je tiens aujourd'hui à partager ma vision de la vie aujourd'hui avec vous par le biais de ce site. La peur de l’abandon et du rejet sont ancrés en moi et elles ont noirci mes journées pendant très longtemps.
+Je tiens aujourd'hui à partager ma vision de la vie avec vous par le biais de ce site. La peur de l’abandon et du rejet sont ancrés en moi et elles ont noirci mes journées pendant très longtemps.
 
 J’ai appris à m’aimer, pour ce que je suis et comme je suis. J’ai arrêté de vouloir me changer pour correspondre a des standards dictée par la société. Je ne me vois plus dans le regard des autres. Je suis moi, simplement moi avec mes névroses et mes psychoses et cela me suffit amplement.
 
