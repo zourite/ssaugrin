@@ -8,11 +8,13 @@ Si vous êtes sur cette page, c'est que vous voulez me connaitre un peu mieux. J
 
 Depuis ma plus tendre enfance, le domaine de la psychologie et de la philosophie m'attirent. En 2017, j'ai commencé à lire des livres écrient essentiellement par des psychanalistes ou des psychologues. Parmis les livres que j'ai lu, je peux citer **<a href="https://amzn.to/2JMAnAD" target="_blank">"Faites vous même votre malheur"</a>, <a href="https://amzn.to/33dshZi" target="_blank">"L'amour et la haine"</a> et <a href="https://amzn.to/2PKAIYd" target="_blank">"Se séparer pour grandir"</a>**.
 
-Je ne suis pas apte à juger ce qui est bien ou mal, je ne suis pas apte à dire ce qui est bien pour les autres, mais je sais ce qui est bien pour moi. Ayant longtemps eu des relations interpersonnelles très compliqués. Je voulais à tout prix me faire accepter par autrui, mélanges à ceci une pincée de sensibilité et un zeste d'émotivité, tu obtiendras un super cocktail d'émotions instables.
+Ayant longtemps eu des relations interpersonnelles très compliqués. Je sais que je ne suis pas apte à juger ce qui est bien ou mal, je ne suis pas apte à dire ce qui est bien pour les autres, mais je sais ce qui est bien pour moi. 
 
-Je tiens aujourd'hui à partager ma vision de la vie avec vous par le biais de ce site. La peur de l’abandon et du rejet sont ancrés en moi et elles ont noirci mes journées pendant très longtemps.
+Il y à quelque chose qui m'a vraiment porté préjudice dans ma vie : *Je voulais à tout prix me faire accepter par autrui*, mélanges à ceci une pincée de sensibilité et un zeste d'émotivité, tu obtiendras un super cocktail d'émotions instables.
 
-J’ai appris à m’aimer, pour ce que je suis et comme je suis. J’ai arrêté de vouloir me changer pour correspondre a des standards dictée par la société. Je ne me vois plus dans le regard des autres. Je suis moi, simplement moi avec mes névroses et mes psychoses et cela me suffit amplement.
+La peur de l’abandon et du rejet sont ancrées en moi et elles ont noircis mes journées pendant très longtemps. Je tiens aujourd'hui à partager ma vision de la vie avec toi qui me lit par le biais de ce site.
+
+J’ai arrêté de vouloir me changer pour correspondre a des standards dictée par la société. J’ai appris à m’aimer, pour ce que je suis et comme je suis. Je ne me vois plus dans le regard des autres. Je suis moi, simplement moi avec mes névroses et mes psychoses et cela me suffit amplement.
 
 **A chaque jour qui passe j'essaie de me remémorer et d'appliquer le fait que :**
 
