@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ .Page.Language | default "en" }}">
+  {{ partial "head" . }}
+  <body id="is-single">
+    {{ partial "site-header" . }}
+    <div id="wrapper">
+      {{ partial "site-intro" . }}
+      <main id="site-main">
+        <article class="post">
+            {{ $.Scratch.Set "h1" true }}
+            {{ .Render "header" }}
+            <div id="content">
+                {{ .Content }}
+                {{ partial "newsletters.html" . }}
+            </div>
+        </article>
+      </main>
+      
+      {{ partial "site-sidebar" . }}
+      {{ partial "site-footer" . }}
+      {{ partial "scripts" . }}
+    </div>
+  </body>
+</html>
