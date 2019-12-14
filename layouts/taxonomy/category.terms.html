@@ -12,22 +12,16 @@
           {{ $.Scratch.Set "categories" .Data.Terms.Alphabetical }}
         {{ end }}
         
-        <div class="row columns">
-          
-          <h2>{{ i18n .Data.Plural }}</h2>
-        
-        </div>
-
-        <div id="list-cat" class="row small-up-1 medium-up-2">
+        <div id="list-cat" class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-2" data-equalizer data-equalize-on="medium">
           
           {{ $data := .Data }}
           {{ range $key, $value := $.Scratch.Get "categories" }}
           
-          <div class="column column-block">
+          <div class="cell">
                 
             {{ if ne $value.Name "" }}
 
-            <div class="card">
+            <div class="card" data-equalizer-watch>
 
               <div class="card-divider">
                 
@@ -49,7 +43,7 @@
                 
                   {{ range .Pages }}
                   <li>
-                   <small>{{.Date.Format "02 Jan 06"}}</small> 
+                    <i class="fas fa-calendar-alt"></i>  <small>{{.Date.Format "02 Jan 06"}}</small> 
                    <div><a href="{{.Permalink}}">{{.Title}}</a></div>
                   </li>
                 
@@ -76,8 +70,8 @@
       </main>
       {{ $.Scratch.Set "showCategories" false }}
       {{ partial "site-sidebar" . }}
-      {{ partial "site-footer" . }}
-      {{ partial "scripts" . }}
     </div>
+    {{ partial "site-footer" . }}
+    {{ partial "scripts" . }}
   </body>
 </html>

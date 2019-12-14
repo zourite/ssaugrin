@@ -4,8 +4,4 @@
   is an official part of the theme (ex. Pull Requests) should be included in main.js
   and follow the formatting and style given.
 */
-$('#maz-grid').masonry({
-  // options
-  itemSelector: '#grid-maz .column',
-  //columnWidth: 200
-});
+$(document).foundation()

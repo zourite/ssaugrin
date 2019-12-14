@@ -59,7 +59,7 @@ disableHugoGeneratorInject = true
   # required for proper functionality. HTML is supported within the params.
   [params.intro]
     header                = "Memento mori 🕊️"
-    paragraph             = "Pensez de manière positive et la vie devient plus riche. - Edward Vernon"
+    paragraph             = "La peur n’empêche pas de mourir, elle empêche de vivre ! - Naguib Mahfou"
     rssIntro              = true
     socialIntro           = true
 

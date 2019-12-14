@@ -10,7 +10,7 @@ Je suis extrèmement ravie, que tu soit ici. Celà signifie beaucoup, cela signi
 
 Ce que je te propose c'est de commencer à penser différement. Penser comme les autres te permettra surement de t'intégrer à la société. Cependant pose toi une question simple. Veux-tu être accepté par la société ou veux-tu vivre ta vie comme tu le sens ?
 
-{{< youtube mt0pngr6DDQ >}}
+{{< youtube iPhM587_iOU >}}
 
 Je pense que le principal dans la vie ce n'est pas d'être riche, ni d'être sur les premieres marches du podium. Connais-tu ce célèbre clochard de la mythologie grec qui vivait parfaitement heureux sans rien ? Il se nomme Diogène.
 A Corinthe, Alexandre-le-Grand à qui l'on présentait le célèbre clochard-philosophe, lui dit : "Demande-moi ce que tu veux, je te le donnerai". Diogène lui répondit du tac au tac: «Ôte-toi de mon soleil».(<http://www.apophtegme.com/PHILOSOPHIE/diogene.htm)>
