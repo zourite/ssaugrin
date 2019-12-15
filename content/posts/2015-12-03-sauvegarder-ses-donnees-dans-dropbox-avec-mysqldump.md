@@ -3,7 +3,7 @@ title: Sauvegarder ses données dans Dropbox avec mysqldump
 author: Zourite
 type: post
 date: 2015-12-03T05:36:17+00:00
-excerpt: "Tous les disques durs de mon serveur sont tombés en panne, j'ai perdu près de deux ans de travail pour l'un de mes sites. Je suis paresseuse et faire des backups hebdomadaire via une interface ne m'enchante guère. Ça ne me tente pas d'écrire un script pour automatiser l'envoie de mes données vers un serveur FTP."
+description: "Tous les disques durs de mon serveur sont tombés en panne, j'ai perdu près de deux ans de travail pour l'un de mes sites. Je suis paresseuse et faire des backups hebdomadaire via une interface ne m'enchante guère. Ça ne me tente pas d'écrire un script pour automatiser l'envoie de mes données vers un serveur FTP."
 url: /sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/
 featured: 2017/02/dropbox-backup.jpg
 pdrp_attributionLocation:

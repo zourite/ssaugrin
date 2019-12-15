@@ -3,7 +3,7 @@ title: 'Générer des graphiques avec Highcharts et #CodeIgniter'
 author: Zourite
 type: post
 date: 2012-08-06T05:10:04+00:00
-excerpt: " Pour générer des graphiques assez sympa, il y a Google Chart et Highcharts. Cet article vous présente un moyen de générer des graphiques  avec Codeigniter et d'Highcharts grâce à une librairie."
+description: " Pour générer des graphiques assez sympa, il y a Google Chart et Highcharts. Cet article vous présente un moyen de générer des graphiques  avec Codeigniter et d'Highcharts grâce à une librairie."
 url: /generer-des-graphiques-avec-highcharts-et-codeigniter/
 featured: 2012/08/Sélection_023.png
 views:

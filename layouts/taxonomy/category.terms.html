@@ -43,7 +43,9 @@
                 
                   {{ range .Pages }}
                   <li>
-                    <i class="fas fa-calendar-alt"></i>  <small>{{.Date.Format "02 Jan 06"}}</small> 
+                    <small>
+                    <i class="fas fa-calendar-alt"></i> &bull; {{ .Date.Day }} {{ index $.Site.Data.months $.Site.Language.Lang (printf "%d" .Date.Month) }} {{ .Date.Year }}
+                    </small> 
                    <div><a href="{{.Permalink}}">{{.Title}}</a></div>
                   </li>
                 

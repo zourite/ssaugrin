@@ -3,7 +3,7 @@ title: '#Facebook n’est pas bon pour toi ! Fais ta vie !'
 author: Zourite
 type: post
 date: 2014-03-20T10:49:02+00:00
-excerpt: 'Ceux qui n’ont pas voulu intégrer le réseau social Facebook vont sûrement se dire qu’ils avaient raison de le faire, quand ils prendront connaissance des dernières recherches menées à propos de ce réseau social. '
+description: 'Ceux qui n’ont pas voulu intégrer le réseau social Facebook vont sûrement se dire qu’ils avaient raison de le faire, quand ils prendront connaissance des dernières recherches menées à propos de ce réseau social. '
 url: /facebook-nest-pas-bon-pour-toi-fais-ta-vie/
 featured: 2017/02/facebook-pas-bon-pour-toi.jpg
 pdrp_attributionLocation:

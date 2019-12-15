@@ -3,7 +3,7 @@ title: Creer un flux RSS avec DOMDocument
 author: Zourite
 type: post
 date: 2012-09-12T08:47:11+00:00
-excerpt: "Depuis un certains temps, j'utilise DOMDocument pour générer mais fichier XML. Je vais donc vous montrer la voie sur le moyen de générer un Flux RSS à l'aide de cette librairie."
+description: "Depuis un certains temps, j'utilise DOMDocument pour générer mais fichier XML. Je vais donc vous montrer la voie sur le moyen de générer un Flux RSS à l'aide de cette librairie."
 url: /creer-un-flux-rss-avec-domdocument/
 featured: 2012/09/elephant-php.gif
 views:

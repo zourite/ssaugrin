@@ -8,9 +8,9 @@
           {{ else }}
               <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
           {{ end }}
-          {{ with .Description }}
+          {{/*  {{ with .Description }}
               <p>{{ . }}</p>
-          {{ end }}
+          {{ end }}  */}}
       </div>
         <div class="meta">
           <time class="published" datetime="{{ .Date }}">
@@ -26,7 +26,7 @@
       </header>
   {{/*  {{ .Render "header" }}  */}}
   {{ .Render "featured" }}
-  {{ index .Params "excerpt" }}
+  {{ index .Params "description" }}
   <!-- {{ $.Scratch.Set "summary" ((delimit (findRE "<p.*?>(.|\n)*?</p>" .Content 1) "") | truncate (default 500 .Site.Params.summary_length) (default "&hellip;" .Site.Params.text.truncated ) | replaceRE "&amp;" "&" | safeHTML) }}
   {{ $.Scratch.Get "summary" }} -->
   <footer>

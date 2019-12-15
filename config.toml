@@ -32,6 +32,7 @@ disableHugoGeneratorInject = true
   #                        "pinterest", "email"]
 
   [params.meta]
+    title               = "ssaugrin"
     # Sets the meta tag description
     description         = "Chaque fois que vous voyez une entreprise qui réussit, dites-vous que c’est parce qu’un jour quelqu’un a pris une décision courageuse - Peter Drucker"
     # Sets the meta tag author
@@ -148,7 +149,7 @@ disableHugoGeneratorInject = true
   [Languages.fr]
     languageCode        = "fr"
     LanguageName        = "Français"
-    title               = "Je suis là pour t'aider à t'améliorer | ssaugrin"
+    title               = "ssaugrin"
     description         = "L'amélioration et l'apprentissage continue vous aidera, à atteindre vos objectifs. Je suis là pour vous aider à le faire "
     weight              = 2
 

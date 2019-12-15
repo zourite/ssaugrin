@@ -3,7 +3,7 @@ title: Ecrire un email à un professionnel et obtenir une réponse rapide
 author: Zourite
 type: post
 date: 2016-01-20T11:54:40+00:00
-excerpt: Avez-vous déjà contacté un professionnel ? Avez-vous attendu une réponse pendant un siècle ? Avez-vous répondu oui aux questions précédentes ? Alors, cet article est fait pour vous. Je vais vous donner quelques conseil pour que vous ayez plus de chance de recevoir une réponse à vos e-mails.
+description: Avez-vous déjà contacté un professionnel ? Avez-vous attendu une réponse pendant un siècle ? Avez-vous répondu oui aux questions précédentes ? Alors, cet article est fait pour vous. Je vais vous donner quelques conseil pour que vous ayez plus de chance de recevoir une réponse à vos e-mails.
 url: /comment-envoyer-email-professionnel-obtenir-reponse-rapide/
 featured: 2016/01/ecrire-mail-reponse.jpg
 pdrp_attributionLocation:

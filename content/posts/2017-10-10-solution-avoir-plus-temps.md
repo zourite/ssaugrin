@@ -3,7 +3,7 @@ title: La solution pour avoir plus de temps !
 author: Zourite
 type: post
 date: 2017-10-10T05:16:35+00:00
-excerpt: "Je vais t'expliquer comment tu peux optimiser ton temps  facilement et récupérer des heures dans ta journée pour avoir plus de temps."
+description: "Je vais t'expliquer comment tu peux optimiser ton temps  facilement et récupérer des heures dans ta journée pour avoir plus de temps."
 url: /solution-avoir-plus-temps/
 featured: 2017/10/113757-accuracy_800x533.jpeg
 kdc_metadata:

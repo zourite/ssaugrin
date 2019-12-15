@@ -3,7 +3,7 @@ title: 'Comment mon #serveur #web est organisé'
 author: Zourite
 type: post
 date: 2017-03-28T05:57:43+00:00
-excerpt: 'Un serveur web est par définition un ordinateur qui te permet de visualiser un site web grâce à Firefox ou Chrome. '
+description: 'Un serveur web est par définition un ordinateur qui te permet de visualiser un site web grâce à Firefox ou Chrome. '
 url: /configuration-serveur-web/
 featured: 2017/03/serveur-web-nginx-php.jpg
 kdc_metadata:

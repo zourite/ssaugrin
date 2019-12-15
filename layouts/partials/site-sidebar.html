@@ -20,7 +20,9 @@
       {{ end }}
     </section>
   {{ end }}
-
+    <section id="promotion-bloc">
+      {{ partial "newsletters" . }}
+    </section>
   {{ if .Site.Params.sidebar.categories }}
     {{ if ne ($.Scratch.Get "showCategories") false }}
       <section id="categories">

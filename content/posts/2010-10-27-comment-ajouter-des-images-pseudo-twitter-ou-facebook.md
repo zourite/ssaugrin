@@ -3,7 +3,7 @@ title: Comment ajouter des images a côté de votre pseudo Twitter ou Facebook
 author: Zourite
 type: post
 date: 2010-10-27T14:17:10+00:00
-excerpt: Vous pouvez rajouter des symboles à côté de votre pseudo sur les réseaux sociaux tel que Twitter ou Facebook, ceci apportera une petite touche de personnalisation à votre profil. (ツ) ☆ ⑨⑦④ ☢ ♐ ♕
+description: Vous pouvez rajouter des symboles à côté de votre pseudo sur les réseaux sociaux tel que Twitter ou Facebook, ceci apportera une petite touche de personnalisation à votre profil. (ツ) ☆ ⑨⑦④ ☢ ♐ ♕
 url: /comment-ajouter-des-images-pseudo-twitter-ou-facebook/
 ratings_users:
   - 0

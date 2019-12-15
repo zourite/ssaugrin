@@ -3,7 +3,7 @@ title: 'Comment ajouter des émojis à #Twitter'
 author: Zourite
 type: post
 date: 2015-12-19T06:53:27+00:00
-excerpt: "J'écris cet article suite au précédent qui fourni une liste de symbole compatible que l'on peut insérer dans son Pseudo Twitter, Facebook ou Instagram. Je vous offre ici une liste plus complète que vous pouvez utiliser dans vos statuts Facebook ou vos tweets."
+description: "J'écris cet article suite au précédent qui fourni une liste de symbole compatible que l'on peut insérer dans son Pseudo Twitter, Facebook ou Instagram. Je vous offre ici une liste plus complète que vous pouvez utiliser dans vos statuts Facebook ou vos tweets."
 url: /comment-ajouter-emojis-twitter/
 featured: 2017/02/emoji-twitter-facebook.jpg
 pdrp_attributionLocation:
