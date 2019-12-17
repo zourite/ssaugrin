@@ -31,17 +31,28 @@ body {
 }
 
 
-h1, h2, h3, h4, h5, h6 {
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
    
     font-family: "Inter var", Helvetica, sans-serif;
     font-feature-settings: "lnum";
     font-variant-numeric: lining-nums;
-    letter-spacing: 0.05em;
+    letter-spacing: 0em;
+    
 }
 
+/* .post h2, .post h3, .post h4 {
+
+    text-decoration: underline;
+} */
 a {
 
    border : none;
+
+}
+
+a:hover {
+
+    font-weight: bold;
 
 }
 
@@ -202,7 +213,7 @@ a {
     color : #ff8c00;
 
 }
-#content a[target=_blank]:after{
+.post a[target=_blank]:after{
     
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
     margin: 0 3px 0 5px;
@@ -376,5 +387,29 @@ nav #cta {
     background-color: #f4f4f4;
     box-shadow: inset 0 4px 8px 0 rgb(0, 0, 0,0.2);
     
+}
+
+#site-sidebar > * {
+
+    padding-top : 0;
+
+}
+
+#site-intro header div {
+    font-size: 1.25em;
+    margin-bottom: 0;
+    color:#3c3b3b;
+    line-height: 1.65;
+    text-transform: uppercase;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    margin-top: 0.67em;
+}
+
+#newsletters #mc_embed_signup input.email {
+
+    width: 100%;
+
 }
 

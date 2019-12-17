@@ -2,7 +2,7 @@
   {{ if gt .Site.Params.sidebar.postAmount 0 }}
     <section id="recent-posts">
       <header>
-        <h1>{{ i18n "recent_posts" }}</h1>
+        <h3>{{ i18n "recent_posts" }}</h3>
       </header>
       {{ range first (.Site.Params.sidebar.postAmount | default 5) (where .Site.Pages  "Type" "post") }}
       <article class="mini-post">
@@ -10,7 +10,7 @@
           {{ .Render "featured" }}
         </section>
         <header>
-          <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+          <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
           <time class="published" datetime="">{{ default (i18n "date_format") | .Date.Format }}</time>
         </header>
       </article>
@@ -20,14 +20,33 @@
       {{ end }}
     </section>
   {{ end }}
-    <section id="promotion-bloc">
+    <section id="newsletters">
+      {{ if ne .RelPermalink "/oublie-regards-autres/" }}
+      <header>
+        <h3>Le mail qui fait réflechir 🤔</h3>
+         ok 
+      </header>
+      <p> 
+        Reçois des ressources par mail qui te feront penser autrement dès maintenant, <strong><em> voit le monde sous un autre angle.</em></strong>
+      </p>
       {{ partial "newsletters" . }}
+      {{ else }}
+      <header>
+        <h3>livre qui te fait reflechir</h3> 
+      </header>
+      
+      <a href="https://amzn.to/35qXjxT" target="_blank">
+        
+        <img src="/img/main/reussir-echouer-paul-watzlawick.jpg" alt="Réussir à échouer de Paul Watzlawick">
+      
+      </a>
+      {{ end }}
     </section>
   {{ if .Site.Params.sidebar.categories }}
     {{ if ne ($.Scratch.Get "showCategories") false }}
       <section id="categories">
         <header>
-          <h1><a href="{{ "categories" | relLangURL }}">{{ i18n "categories" }}</a></h1>
+          <h3><a href="{{ "categories" | relLangURL }}">{{ i18n "categories" }}</a></h3>
         </header>
         <ul id="categorie-side">
           {{ if .Site.Params.sidebar.categoriesByCount }}
