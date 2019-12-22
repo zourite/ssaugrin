@@ -33,7 +33,7 @@ tags:
 
 Dans un premier temps ce que j&rsquo;appelle ici « image » ne sont pas des images, pour être correcte ce sont des symboles ASCII. Vous pouvez les rajouter à côté de votre pseudo sur les réseaux sociaux tel que Twitter ou Facebook, ceci apportera une petite touche de personnalisation à votre profil. L&rsquo;affichage du symbole peut varier en fonction de la police par exemple ♐ deviendra <span style="font-family: Arial;">♐</span> et ce symbole ♕ ce transformera comme ceci <span style="font-family: Arial;">♕</span>
 
-[<img class="alignright size-thumbnail wp-image-736" title="cjr" src="http://www.saugrin-sonia.fr/wp-content/uploads/2010/10/cjr-e1288184467734-150x48.png" alt="compte vérifié" width="150" height="48" />][1]{.thickbox} Ce symbole ✓ peut donner une connotation officielle à votre profil, pour exemple vous pouvez regarder le profil de [CJR974][2] sur Twitter. Parmi les symboles que j&rsquo;aime bien il y a (ツ) ☆ ⑨⑦④ ☢ ♐ ♕. A la fin de cet article, il y a une liste de symboles que vous pouvez utiliser ou vous le voulez.
+[<img class="alignright size-thumbnail wp-image-736" title="cjr" src="https://www.saugrin-sonia.fr/wp-content/uploads/2010/10/cjr-e1288184467734-150x48.png" alt="compte vérifié" width="150" height="48" />][1]{.thickbox} Ce symbole ✓ peut donner une connotation officielle à votre profil, pour exemple vous pouvez regarder le profil de [CJR974][2] sur Twitter. Parmi les symboles que j&rsquo;aime bien il y a (ツ) ☆ ⑨⑦④ ☢ ♐ ♕. A la fin de cet article, il y a une liste de symboles que vous pouvez utiliser ou vous le voulez.
 
 Maintenant venons en donc au fait. Pour les insérer c&rsquo;est simple il suffit de les copier et les coller à côté de votre pseudo, comme si vous copier-coller un texte normal.
   
