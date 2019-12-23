@@ -161,7 +161,7 @@ disableHugoGeneratorInject = true
 
     [[Languages.fr.menu.main]]
       name              = "A Propos"
-      url               = "/about/"
+      url               = "/a-propos/"
       identifier        = "far fa-id-card"
       weight            = 2
 
@@ -182,6 +182,12 @@ disableHugoGeneratorInject = true
     #   url               = "/contact/"
     #   identifier        = "far fa-envelope"
     #   weight            = 6
+
+    [[Languages.fr.menu.main]]
+      name              = "Des livres pour..."
+      url               = "/des-livres-pour/"
+      identifier        = "fas fa-book"
+      weight            = 7
 
   # [Languages.pl]
   #   languageCode        = "pl"

@@ -40,19 +40,21 @@ body {
     
 }
 
-/* .post h2, .post h3, .post h4 {
-
-    text-decoration: underline;
-} */
 a {
 
-   border : none;
-
+   text-decoration: none;
 }
 
 a:hover {
 
-    font-weight: bold;
+color:#000;
+border-bottom: 1px solid #3f3844;
+
+}
+
+#site-header a:hover {
+  
+    color : #ff8c00;
 
 }
 
@@ -68,6 +70,12 @@ a:hover {
     text-align: center;
     margin-top : 1em;
     margin-bottom : 1em;
+
+}
+
+#site-nav-menu #cta{
+
+    
 
 }
   
@@ -370,6 +378,7 @@ nav #cta {
 .center {
 
     text-align: center;
+    margin: 0 auto;
 
 }
 
@@ -379,7 +388,7 @@ nav #cta {
 
 }
 
-.citation {
+.citation, blockquote {
 
     border : 5px solid #f4f4f4;
     padding: 5px;
