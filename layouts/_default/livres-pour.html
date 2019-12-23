@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{ .Page.Language | default "en" }}">
+{{ partial "head" . }}
+
+<body>
+  {{ partial "site-header" . }}
+  <div id="wrapper">
+    {{ partial "site-intro" . }}
+    <main id="site-main">
+      <article class="post">
+        {{ $.Scratch.Set "h1" true }}
+        {{ .Render "header" }}
+        <div id="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro veritatis voluptate labore quidem corporis
+            velit tempora laudantium! Placeat quod accusamus repellendus eligendi minima dolorem eum, obcaecati,
+            voluptatum praesentium voluptates facere.</p>
+          <h2>Se comprendre</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus suscipit corporis, nisi quae dignissimos,
+            itaque veritatis sit animi porro soluta recusandae error temporibus corrupti ex dolorum mollitia velit nobis
+            rem?</p>
+          <div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3" data-equalizer data-equalize-on="medium">
+            {{ range $.Site.Data.books.communiquer.products | first 6}}
+
+            {{ partial "livre" . }}
+
+            {{ end }}
+
+          </div>
+
+          <h2>Communiquer</h2>
+          
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis voluptates ab dolores deserunt quo velit
+            debitis harum eaque, quidem ducimus necessitatibus tempore sit eligendi, libero illum. Delectus vero placeat
+            ipsum?</p>
+          
+          <div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3" data-equalizer data-equalize-on="medium">
+            {{ range $.Site.Data.books.comprendre.products | first 6}}
+
+            {{ partial "livre" . }}
+
+            {{ end }}
+          </div>
+        </div>
+
+      </article>
+    </main>
+
+    {{ partial "site-sidebar" . }}
+
+  </div>
+  {{ partial "site-footer" . }}
+  {{ partial "scripts" . }}
+</body>
+
+</html>

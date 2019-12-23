@@ -73,11 +73,6 @@ border-bottom: 1px solid #3f3844;
 
 }
 
-#site-nav-menu #cta{
-
-    
-
-}
   
 #site-nav-menu {
   
@@ -221,10 +216,27 @@ border-bottom: 1px solid #3f3844;
     color : #ff8c00;
 
 }
+
 .post a[target=_blank]:after{
     
-    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
-    margin: 0 3px 0 5px;
+    content: "\f08e";
+    font-family: "FontAwesome";
+    margin: 0px 3px 5px 5px;
+    font-variant-position: super;
+    font-weight: normal;
+    font-size: 0.8em;
+
+}
+
+.contains-image, .contains-image:hover { 
+    
+    border: none; 
+
+}
+
+.post .contains-image[target=_blank]:after { 
+    
+    content: ""; 
 
 }
 
@@ -422,3 +434,20 @@ nav #cta {
 
 }
 
+.trello-btn {
+
+    background-color: #0079BF;
+    color: #E2E4E6;
+    font-size: 0.50em;
+    margin-top : -40em;
+    width: 100%;
+    padding : 0.6em ;
+    display: inline-block;
+    font-size: 1em;
+    text-transform : uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    border-radius: 10px;
+    font-family: "Raleway", Helvetica, sans-serif;
+
+}
