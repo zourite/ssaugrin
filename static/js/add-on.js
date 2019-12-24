@@ -13,7 +13,7 @@ $(document).ready(function(){
 $(document).scroll(function() {
 
   var y = $(this).scrollTop();
-  if (y > 350) {
+  if (y > 500) {
     $('#cta').fadeIn();
   // } else {
   //   $('#cta').fadeOut();
