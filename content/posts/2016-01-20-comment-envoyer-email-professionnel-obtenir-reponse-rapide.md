@@ -47,7 +47,7 @@ Pour conclure, je vous renvoie vers différents liens utiles qui vous permettron
   * <a href="www.commentcamarche.net/contents/176-regles-de-bon-usage-de-la-messagerie" target="_blank">Règles de bon usage de la messagerie &#8211; CCM</a> 
   * <a href="www.faire-connaitre-mon-entreprise.fr/communication/comment-ecrire-un-email-professionnel/" target="_blank">Comment écrire un email professionnel en 4 points de réussite &#8211; FCME</a> 
   * <a href="http://www.terrafemina.com/emploi-a-carrieres/carriere/articles/27496-quelles-formules-de-politesse-utiliser-dans-un-e-mail-.html" target="_blank">Quelles formules de politesse utiliser dans un e-mail ? &#8211; Terrafemina</a> 
-  * <a rel="nofollow" href="http://www.amazon.fr/gp/product/2212556985/ref=as_li_tl?ie=UTF8&#038;camp=1642&#038;creative=19458&#038;creativeASIN=2212556985&#038;linkCode=as2&#038;tag=ssaugrin-21">Etre un pro de l&rsquo;e-mail : 7 étapes pour rédiger des e-mails efficaces</a><img src="https://ir-fr.amazon-adsystem.com/e/ir?t=ssaugrin-21&#038;l=as2&#038;o=8&#038;a=2212556985" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+  * <a rel="nofollow" href="https://www.amazon.fr/gp/product/2212556985/ref=as_li_tl?ie=UTF8&#038;camp=1642&#038;creative=19458&#038;creativeASIN=2212556985&#038;linkCode=as2&#038;tag=ssaugrin-21">Etre un pro de l&rsquo;e-mail : 7 étapes pour rédiger des e-mails efficaces</a><img src="https://ir-fr.amazon-adsystem.com/e/ir?t=ssaugrin-21&#038;l=as2&#038;o=8&#038;a=2212556985" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
 <div class="clearfix">
   <p>

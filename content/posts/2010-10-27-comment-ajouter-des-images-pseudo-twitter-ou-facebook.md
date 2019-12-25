@@ -18,7 +18,7 @@ views:
   - 1472
   - 1472
 img:
-  - http://www.saugrin-sonia.fr/wp-content/uploads/2010/10/moi.png
+  - https://www.saugrin-sonia.fr/wp-content/uploads/2010/10/moi.png
 pdrp_attributionLocation:
   - end
 categories:
