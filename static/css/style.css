@@ -295,8 +295,15 @@ nav #cta {
 
     background-color : #ff8c00;
     font-weight : bold;
-    color : #000;
+    color : #34515e;
     width : auto;
+}
+
+nav #cta:hover {
+
+    color : #000;
+    
+
 }
 
 .mrg-top {
@@ -315,6 +322,7 @@ nav #cta {
 
     background-color : #ff8c00;
     padding: 1em;
+    margin-top : 1em;
     font-weight: bold;
     text-transform: uppercase;
     transition: all 0.5s;
