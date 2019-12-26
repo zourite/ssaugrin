@@ -6,6 +6,13 @@
     <div id="wrapper">
       {{ partial "site-intro" . }}
       <main id="site-main">
+
+      <div class="grid-x mrg-top">
+        {{range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
+          <a href="{{.Permalink}}" class="button">{{.Title}}</a>
+        {{end}}
+      </div>
+
          {{ if .Site.Params.categoriesByCount }}
           {{ $.Scratch.Set "categories" .Data.Terms.ByCount }}
         {{ else }}
