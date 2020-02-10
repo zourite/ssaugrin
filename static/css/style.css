@@ -125,7 +125,6 @@ border-bottom: 1px solid #3f3844;
 #site-footer {
 
     background: url('../img/main/footer.jpg') #000;
-    color : #8e8e8e;
     padding: 1em;
     margin: 0;
     margin-top: 1em;
@@ -133,6 +132,12 @@ border-bottom: 1px solid #3f3844;
     -moz-box-shadow: 0px -7px 5px 0px rgba(0,0,0,0.19); 
     box-shadow: 0px -7px 5px 0px rgba(0,0,0,0.19);
     
+}
+
+#site-footer .copyright {
+
+    color : hsl(0, 0%, 56%);
+
 }
 
 #site-header {
