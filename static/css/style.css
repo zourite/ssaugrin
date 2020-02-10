@@ -47,12 +47,12 @@ a {
 
 a:hover {
 
-color:#000;
+/* color:#000; */
 border-bottom: 1px solid #3f3844;
 
 }
 
-#site-header a:hover {
+#site-header a:hover, #footer a:hover {
   
     color : #ff8c00;
 
@@ -459,3 +459,4 @@ nav #cta:hover {
     font-family: "Raleway", Helvetica, sans-serif;
 
 }
+
