@@ -13,8 +13,10 @@ $(document).ready(function(){
 $(document).scroll(function() {
 
   var y = $(this).scrollTop();
-  if (y > 500) {
+  if (y > 500 && window.matchMedia("(min-width: 600px)").matches) {
+
     $('#cta').fadeIn();
+
   // } else {
   //   $('#cta').fadeOut();
   }

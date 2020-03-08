@@ -3,267 +3,237 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://saugrin-sonia.fr/categories/</loc>
+    <lastmod>2019-12-26T18:14:06-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://saugrin-sonia.fr/categories/les-relations/</loc>
+    <lastmod>2019-12-26T18:14:06-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://saugrin-sonia.fr/posts/les-relations-toxiques/</loc>
+    <lastmod>2019-12-26T18:14:06-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://saugrin-sonia.fr/posts/</loc>
+    <lastmod>2019-12-26T18:14:06-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://saugrin-sonia.fr/</loc>
+    <lastmod>2019-12-26T18:14:06-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://saugrin-sonia.fr/rester-soi-meme/</loc>
+    <lastmod>2019-11-11T21:46:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://saugrin-sonia.fr/a-propos/</loc>
     <lastmod>2018-04-06T16:04:16+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/about/</loc>
+    <loc>https://saugrin-sonia.fr/des-livres-pour/</loc>
     <lastmod>2018-04-06T16:04:16+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/</loc>
+    <loc>https://saugrin-sonia.fr/solution-avoir-plus-temps/</loc>
     <lastmod>2017-10-10T05:16:35+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/solution-avoir-plus-temps/</loc>
+    <loc>https://saugrin-sonia.fr/tags/lifestyle/</loc>
     <lastmod>2017-10-10T05:16:35+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/lifestyle/</loc>
+    <loc>https://saugrin-sonia.fr/categories/mes-opinions/</loc>
     <lastmod>2017-10-10T05:16:35+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/mes-opinions/</loc>
+    <loc>https://saugrin-sonia.fr/tags/</loc>
     <lastmod>2017-10-10T05:16:35+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/posts/</loc>
-    <lastmod>2017-10-10T05:16:35+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/</loc>
-    <lastmod>2017-10-10T05:16:35+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/configuration-serveur-web/</loc>
+    <loc>https://saugrin-sonia.fr/configuration-serveur-web/</loc>
     <lastmod>2017-03-28T05:57:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/debian/</loc>
+    <loc>https://saugrin-sonia.fr/tags/debian/</loc>
     <lastmod>2017-03-28T05:57:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/nginx/</loc>
+    <loc>https://saugrin-sonia.fr/tags/nginx/</loc>
     <lastmod>2017-03-28T05:57:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/sysadmin/</loc>
+    <loc>https://saugrin-sonia.fr/categories/sysadmin/</loc>
     <lastmod>2017-03-28T05:57:43+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/comment-envoyer-email-professionnel-obtenir-reponse-rapide/</loc>
+    <loc>https://saugrin-sonia.fr/comment-envoyer-email-professionnel-obtenir-reponse-rapide/</loc>
     <lastmod>2016-01-20T11:54:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/email/</loc>
+    <loc>https://saugrin-sonia.fr/tags/email/</loc>
     <lastmod>2016-01-20T11:54:40+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/mentions-legales/</loc>
+    <loc>https://saugrin-sonia.fr/mentions-legales/</loc>
     <lastmod>2015-12-20T18:18:27+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/comment-ajouter-emojis-twitter/</loc>
-    <lastmod>2015-12-19T06:53:27+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/categories/divers/</loc>
-    <lastmod>2015-12-19T06:53:27+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/emoji/</loc>
-    <lastmod>2015-12-19T06:53:27+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/facebook/</loc>
-    <lastmod>2015-12-19T06:53:27+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/twitter/</loc>
-    <lastmod>2015-12-19T06:53:27+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/cloud/</loc>
+    <loc>https://saugrin-sonia.fr/tags/cloud/</loc>
     <lastmod>2015-12-03T05:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/cron/</loc>
+    <loc>https://saugrin-sonia.fr/tags/cron/</loc>
     <lastmod>2015-12-03T05:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/dropbox/</loc>
+    <loc>https://saugrin-sonia.fr/tags/dropbox/</loc>
     <lastmod>2015-12-03T05:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/ifttt/</loc>
+    <loc>https://saugrin-sonia.fr/tags/ifttt/</loc>
     <lastmod>2015-12-03T05:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/mysql/</loc>
+    <loc>https://saugrin-sonia.fr/tags/mysql/</loc>
     <lastmod>2015-12-03T05:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</loc>
+    <loc>https://saugrin-sonia.fr/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</loc>
     <lastmod>2015-12-03T05:36:17+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/facebook-nest-pas-bon-pour-toi-fais-ta-vie/</loc>
+    <loc>https://saugrin-sonia.fr/facebook-nest-pas-bon-pour-toi-fais-ta-vie/</loc>
     <lastmod>2014-03-20T10:49:02+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/fonction-obtenir-articles-relatifs-tag-categorie-wordpress/</loc>
-    <lastmod>2014-03-13T06:52:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/php/</loc>
-    <lastmod>2014-03-13T06:52:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/categories/programmation/</loc>
-    <lastmod>2014-03-13T06:52:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/categories/wordpress/</loc>
-    <lastmod>2014-03-13T06:52:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/google-drive/</loc>
+    <loc>https://saugrin-sonia.fr/categories/divers/</loc>
     <lastmod>2013-02-06T19:17:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/h%C3%A9bergement/</loc>
+    <loc>https://saugrin-sonia.fr/tags/google-drive/</loc>
     <lastmod>2013-02-06T19:17:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/heberger-une-page-web-sur-google-drive/</loc>
+    <loc>https://saugrin-sonia.fr/tags/h%C3%A9bergement/</loc>
     <lastmod>2013-02-06T19:17:58+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/csv/</loc>
+    <loc>https://saugrin-sonia.fr/heberger-une-page-web-sur-google-drive/</loc>
+    <lastmod>2013-02-06T19:17:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://saugrin-sonia.fr/tags/csv/</loc>
     <lastmod>2012-12-02T13:11:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/highcharts/</loc>
+    <loc>https://saugrin-sonia.fr/tags/highcharts/</loc>
     <lastmod>2012-12-02T13:11:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/integrer-highcharts-a-du-php-csv/</loc>
+    <loc>https://saugrin-sonia.fr/integrer-highcharts-a-du-php-csv/</loc>
     <lastmod>2012-12-02T13:11:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/javascript/</loc>
+    <loc>https://saugrin-sonia.fr/tags/javascript/</loc>
     <lastmod>2012-12-02T13:11:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/librairie/</loc>
+    <loc>https://saugrin-sonia.fr/tags/librairie/</loc>
     <lastmod>2012-12-02T13:11:52+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/creer-un-flux-rss-avec-domdocument/</loc>
+    <loc>https://saugrin-sonia.fr/tags/php/</loc>
+    <lastmod>2012-12-02T13:11:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://saugrin-sonia.fr/categories/programmation/</loc>
+    <lastmod>2012-12-02T13:11:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://saugrin-sonia.fr/creer-un-flux-rss-avec-domdocument/</loc>
     <lastmod>2012-09-12T08:47:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/poo/</loc>
+    <loc>https://saugrin-sonia.fr/tags/poo/</loc>
     <lastmod>2012-09-12T08:47:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/rss/</loc>
+    <loc>https://saugrin-sonia.fr/tags/rss/</loc>
     <lastmod>2012-09-12T08:47:11+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/codeigniter/</loc>
+    <loc>https://saugrin-sonia.fr/tags/codeigniter/</loc>
     <lastmod>2012-08-06T05:10:04+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/generer-des-graphiques-avec-highcharts-et-codeigniter/</loc>
+    <loc>https://saugrin-sonia.fr/generer-des-graphiques-avec-highcharts-et-codeigniter/</loc>
     <lastmod>2012-08-06T05:10:04+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/categories/open-source/</loc>
-    <lastmod>2012-08-06T05:10:04+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/framework/</loc>
-    <lastmod>2012-04-03T06:00:07+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/presentation-codeigniter/</loc>
-    <lastmod>2012-04-03T06:00:07+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/comment-ajouter-des-images-pseudo-twitter-ou-facebook/</loc>
+    <loc>https://saugrin-sonia.fr/comment-ajouter-des-images-pseudo-twitter-ou-facebook/</loc>
     <lastmod>2010-10-27T14:17:10+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/r%C3%A9seaux-sociaux/</loc>
+    <loc>https://saugrin-sonia.fr/tags/facebook/</loc>
     <lastmod>2010-10-27T14:17:10+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/cms/</loc>
-    <lastmod>2009-10-29T12:07:09+00:00</lastmod>
+    <loc>https://saugrin-sonia.fr/tags/r%C3%A9seaux-sociaux/</loc>
+    <lastmod>2010-10-27T14:17:10+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/tags/fonction/</loc>
-    <lastmod>2009-10-29T12:07:09+00:00</lastmod>
+    <loc>https://saugrin-sonia.fr/tags/twitter/</loc>
+    <lastmod>2010-10-27T14:17:10+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/une-fonction-complete-pour-fil-dariane-wordpress/</loc>
-    <lastmod>2009-10-29T12:07:09+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/contact/</loc>
+    <loc>https://saugrin-sonia.fr/contact/</loc>
     <lastmod>2009-04-10T23:58:57+00:00</lastmod>
   </url>
   

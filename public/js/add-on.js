@@ -4,8 +4,19 @@
   is an official part of the theme (ex. Pull Requests) should be included in main.js
   and follow the formatting and style given.
 */
-$('#maz-grid').masonry({
-  // options
-  itemSelector: '#grid-maz .column',
-  //columnWidth: 200
+$(document).foundation()
+
+$(document).ready(function(){
+  $('img').parent('a').addClass('contains-image');
+});
+
+$(document).scroll(function() {
+
+  var y = $(this).scrollTop();
+  if (y > 500) {
+    $('#cta').fadeIn();
+  // } else {
+  //   $('#cta').fadeOut();
+  }
+
 });
