@@ -113,12 +113,7 @@ Ce qui fait que pour générer les graphiques il faut faire le traitement suivan
 
 ### Rendu
 
-<div id="attachment_1176" style="width: 310px" class="wp-caption alignleft">
-  <a href="2012/08/Sélection_023.png"><img aria-describedby="caption-attachment-1176" src="2012/08/Sélection_023-300x88.png" alt="Codeigniter - Highcharts" title="Codeigniter - Highcharts" width="300" height="88" class="size-medium wp-image-1176" /></a>
-  
-  <p id="caption-attachment-1176" class="wp-caption-text">
-    Résultats pour la génération de graphique
-  </p>
-</div> Si tout c&rsquo;est bien passé vous devez avoir un rendu comme l&rsquo;image ci-contre. Je vous conseil de faire un tour sur le 
+<img aria-describedby="caption-attachment-1176" src="/img/2012/08/Sélection_023.png" alt="Codeigniter - Highcharts" title="Codeigniter - Highcharts" />
+Si tout c&rsquo;est bien passé vous devez avoir un rendu comme l&rsquo;image ci-contre. Je vous conseil de faire un tour sur le 
 
 <a href="http://www.highcharts.com/" title="site officiel de HighCharts" target="_blank">site officiel de Highcharts</a> pour connaitre l&rsquo;étendue des possibilités offertes.

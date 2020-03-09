@@ -23,7 +23,8 @@ DOMDocument est une librairie PHP, qui à fait son entrer avec PHP5. Cette libra
 
 **Plus besoin de faire :**
 
-<pre>$xml = '<?xml version="1.0" encoding="UTF-8"?>';
+```php
+ $xml = '<?xml version="1.0" encoding="UTF-8"?>';
  $xml .= '&lt;rss version="2.0">'; 
  $xml .= '&lt;channel>'; 
  $xml .= '
@@ -31,19 +32,20 @@ DOMDocument est une librairie PHP, qui à fait son entrer avec PHP5. Cette libra
 <title>
   Titre du flux
 </title>';
-</pre>
+```
 
  **Il suffit d&rsquo;écrire :**
 
-<pre>$file = new DOMDocument("1.0");
+```php
+$file = new DOMDocument("1.0");
 $root = $file->createElement("rss");
 $root->setAttribute("version", "2.0"); 
 $root = $file->appendChild($root); 
 $element_channel = $file->createElement("channel"); 
 $element_channel = $root->appendChild($element_channel);
-</pre></p> 
+```
 
-[<img src="2012/09/elephant-php-300x224.gif" alt="Elephant PHP" title="elephant-php" width="300" height="224" class="alignright size-medium wp-image-1334" />][1]Ok ! J&rsquo;admets que c&rsquo;est plus long de procéder ainsi, mais c&rsquo;est plus sexy, le code est plus agréable à lire et la procédure de maintenance en est simplifier. Il faudra au préalable respecter certains concepts de la POO, pour réellement trouver un intérêt à utiliser cette librairie. Je pense que l&rsquo;avantage principal de DOMDocument, ce situe dans le fait qu&rsquo;on à plus besoin d&rsquo;utiliser des fonctions tel que `fwrite()` ou `fopen()`, DOMDocument se charge de tout.
+Ok ! J&rsquo;admets que c&rsquo;est plus long de procéder ainsi, mais c&rsquo;est plus sexy, le code est plus agréable à lire et la procédure de maintenance en est simplifier. Il faudra au préalable respecter certains concepts de la POO, pour réellement trouver un intérêt à utiliser cette librairie. Je pense que l&rsquo;avantage principal de DOMDocument, ce situe dans le fait qu&rsquo;on à plus besoin d&rsquo;utiliser des fonctions tel que `fwrite()` ou `fopen()`, DOMDocument se charge de tout.
 
 ### Comment faire un Flux RSS ? 
 
@@ -53,15 +55,17 @@ Modifiez la fonction `createXML()`
 
 **Remplacer :**
 
-<pre>// Création du noeud channel 
+```php
+// Création du noeud channel 
 $element_channel = $file->createElement("channel");//On crée un élément channel
 $element_channel->setAttribute("id", "news"); //On donne un attribut id à notre channel
 $element_channel = $root->appendChild($element_channel);//On ajoute cet élément à la racine
-</pre></p> 
+```
 
 **Par :**
 
-<pre>// Création du noeud channel 
+```php
+// Création du noeud channel 
 	 $element_channel = $file->createElement("channel");//On crée un élément channel 
 	 $element_channel = $root->appendChild($element_channel);//On ajoute cet élément à la racine 
 	 $element_id = $file->createAttribute("xml:id");
@@ -69,10 +73,9 @@ $element_channel = $root->appendChild($element_channel);//On ajoute cet élémen
 	 $element_idt = $file->createTextNode("news"); //On donne un attribut id à notre channel 
 	 $element_idt = $element_id->appendChild($element_idt); 
 	 $element_idt = $element_channel->setIdAttribute("xml:id", true);
-</pre></p> 
+``` 
 
 Voila ! Vous pouvez maintenant suivre le reste de son tuto.
 
- [1]: 2012/09/elephant-php.gif
  [2]: http://baptiste-wicht.developpez.com/tutoriels/php/rss/ "Flux RSS PHP4 et PHP5"
  [3]: ftp://ftp-developpez.com/baptiste-wicht/tutoriel/php/rss/fichiers/RSSPHP5.php "Fichier de fonction PHP5 Flux RSS"
