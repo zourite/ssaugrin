@@ -33,7 +33,7 @@ tags:
 
 Dans un premier temps ce que j&rsquo;appelle ici « image » ne sont pas des images, pour être correcte ce sont des symboles ASCII. Vous pouvez les rajouter à côté de votre pseudo sur les réseaux sociaux tel que Twitter ou Facebook, ceci apportera une petite touche de personnalisation à votre profil.
 
-<img class="alignright size-thumbnail wp-image-736" title="cjr" src="https://www.saugrin-sonia.fr/img/2010/10/cjr1.png" alt="compte vérifié"/> Ce symbole ✓ peut donner une connotation officielle à votre profil, pour exemple vous pouvez regarder le profil de [CJR974][1] sur Twitter. Parmi les symboles que j&rsquo;aime bien il y a (ツ) ☆ ⑨⑦④ ☢ ♐ ♕. A la fin de cet article, il y a une liste de symboles que vous pouvez utiliser ou vous le voulez.
+<img class="float-left size-thumbnail wp-image-736" title="cjr" src="https://www.saugrin-sonia.fr/img/2010/10/cjr1.png" alt="compte vérifié"/> Ce symbole ✓ peut donner une connotation officielle à votre profil, pour exemple vous pouvez regarder le profil de [CJR974][1] sur Twitter. Parmi les symboles que j&rsquo;aime bien il y a (ツ) ☆ ⑨⑦④ ☢ ♐ ♕. A la fin de cet article, il y a une liste de symboles que vous pouvez utiliser ou vous le voulez.
 
 <div class="grid-x grid-align-middle">
 

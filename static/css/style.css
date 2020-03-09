@@ -359,6 +359,18 @@ nav #cta:hover {
     opacity: 1;
 }
 
+.float-right {
+
+    float : right;
+
+}
+
+.float-left {
+
+    float : left;
+
+}
+
 /* Pulse */
 @-webkit-keyframes hvr-pulse {
     25% {
