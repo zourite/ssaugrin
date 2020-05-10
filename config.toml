@@ -6,3 +6,6 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [markup.goldmark.renderer]
 unsafe= true
+
+[build]
+writeStats = true
