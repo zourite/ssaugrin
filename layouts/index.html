@@ -1,86 +1,147 @@
-<!doctype html>
-<html lang="{{ .Page.Language | default "en" }}">
-  {{ partial "head" . }}
-  <body>
-    {{ partial "site-header" . }}
-    <div id="wrapper_index" class="grid-container">
-      
-          <div class="grid-x card">
+{{ define "main" }}
+<section class="flex flex-wrap flex-col-reverse lg:flex-row pt-16">
 
-              <div class="cell medium-4 columns show-for-medium">
-              
-                {{ partial "site-intro" . }}
-    
-              </div>
+    <div class="w-full flex flex-wrap w-full content-center lg:w-5/12">
 
-              <div class="cell small-12 medium-8 columns">
+        <div class="m-2">
 
-                  <h1>Ne pas être comme les autres est un avantage</h1>
-                         
-                  <p>
-                    A force de s'efforcer d'être comme les autres, dans un système où tout est mis en place pour que nous soyons de simples rouages, nous ne réalisons jamais nos rêves et nous oublions de vivre notre vie. 
-                  </p>
-                 
-                  <p>
-                    On nous implante la croyance que le rythme auquel on apprend est lié à notre capacité mémorielle et par conséquent à notre réussite alors qu'il n'en est rien.
-                    Nous avons tous un rythme qui nous est propre et des différences qui sont nos forces.
-                    Nous sommes uniques avec des aptitudes et des dons, qui sont propres à nous.
-                  </p>    
-                  
-                  <p>
-                    Cesses de te comparer et de vouloir être comme les autres, révéles avec authenticité au monde qui tu es vraiment.
-                  </p> 
-                     
-                  <p class="center citation">Ce n'est pas ce que nous sommes qui nous empêche de réaliser nos rêves ; c'est ce que nous croyons que nous ne sommes pas. <br /> <i>- Paul-Emile Victor</i></p>
-    
-                  <p class="center mrg-bottom">
+            <h2 class="uppercase clearfix lg:hidden">Coté Technique</h2>
+
+            <div class="flex flex-wrap content-center justify-center">
+
+                {{ range $.Site.Data.logos.logo.skill }}
+
+                <div class="flex flex-wrap w-2/4 md:w-1/4 content-center justify-center">
+
+                    <div class="p-2">
+
+                        <div class="card">
+                        
+                            <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2" />
+                        
+                        </div>
                     
-                      <a href="rester-soi-meme" class="cta hvr-pulse">Rester soi même</a>
+                    </div>
 
-                  </p>
-              
                 </div>
-          
-            </div>
-  
 
-            <div  class="card row mrg-top">
+                {{ end }}
 
-                <h2>Les derniers articles</h2>
-
-                <div class="grid-x grid-padding-x grid-padding-y small-up-1 medium-up-2" >
-              
-                  {{ range first (.Site.Params.sidebar.postAmount | default 6) (where .Site.Pages  "Type" "post") }}
-                    
-                  <div class="cell">
-                    
-                    <article class="mini-post">
-                      <section>
-                        {{ .Render "featured" }}
-                      </section>
-                    
-                      <header>
-
-                      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-                      
-                      </header>
-
-                      <main>
-                        {{ index .Params "description" }}
-                      </main>
-                    </article>
-                  
-                  </div>
-                  
-                  {{ end }}
-                  
-            </div>
             </div>
 
-        </main>
-      
+        </div>
+
     </div>
-    {{ partial "site-footer" . }}
-    {{ partial "scripts" . }}
-  </body>
-</html>
+
+
+    <div class="flex flex-wrap w-full content-center lg:w-7/12">
+
+        <div class="flex flex-wrap flex-grow  m-2">
+
+            <div id="avatar" class="hidden md:flex md:flex-wrap md:w-3/12 md:content-center md:justify-center bubbles">
+                
+                <img src="/img/main/logo-wb.png" alt="logo" class="shadow-img">
+
+            </div>
+
+
+            <div class="w-full md:flex md:flex-wrap md:w-3/12 md:w-9/12">
+
+                <div id="flipbox" class="flip-card">
+
+                    <div id="id-card" class="flex flex-wrap flip-card-inner card card-brd-top">
+
+                        <div class="p-2">
+
+                            <h1>Developpeur Full Stack PHP/JS</h1>
+
+                            <div class="w-full">
+                                <i class="fab fa-twitter"></i> -
+                                <i class="fab fa-github"></i> -
+                                <i class="fab fa-stack-overflow"></i> -
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+
+                            <blockquote class="mt-10 mb-10">
+                                Si debugger, c’est supprimer des bugs, alors programmer ne peut être que les ajouter.
+                                <cite>- Edsger Dijkstra</cite>
+                            </blockquote>
+
+                            <div class="mt-5 mb-2">
+
+                                <button class="cta-btn shadow hover:bg-blue-700 text-white font-bold py-2 px-4">
+                                    J'ai besoin d'un Developpeur
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col flip-card-back p-2">
+
+                            <div class="pr-10 text-4xl">
+                                <div class="text-right">
+                                    <i id="close-flip" class="text-dragon fas fa-window-close" onclick="closeContactBox()"
+                                        ></i>
+                                </div>
+                            </div>
+
+                            <div class="p-2">
+                            <div class="md:content-center md:justify-center text-center ">
+                            
+                                    <p>Je te répondrais le plus vite possible !</p>
+                                    <p><a
+                                            href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;">&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;</a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+         
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2 class="uppercase clearfix m-2">Mes dernieres notes</h2>
+
+    <div id="postlist" class="flex flex-wrap m-2">
+
+        {{ range where .Site.RegularPages "Section" "posts" | first 4}}
+
+        <div class="flex w-full lg:w-3/12 md:w-6/12">
+
+            <div class="m-1 card">
+
+                <div class="h-50">
+                    {{ if isset .Params "featured" }}
+
+                    <img src="/img/{{ .Params.featured }}" alt="{{ .Title }}" />
+
+                    {{ end }}
+                </div>
+
+                <div class="p-2 text-center flex flex-wrap items-center content-center">
+
+                    <h3>
+                        <a href="{{ .RelPermalink }}">
+                            {{.Title}}
+                        </a>
+                    </h3>
+
+                </div>
+            </div>
+
+        </div>
+
+        {{ end }}
+
+    </div>
+
+</section>
+{{ end }}

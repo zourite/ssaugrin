@@ -1,43 +1,21 @@
-<!doctype html>
-<html lang="en">
-{{/*  <head>
-    <meta charset="utf-8">
-    <title>Page non trouvée</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/404.css">
-</head>  */}}
-{{ partial "head" . }}
-<body id="page_404">
-
-    {{ partial "site-header" . }}
-    <div id="container-flex">
-    <div id="box_404" class="card">
-
-        <img src="img/main/unicorn.png" class="center" alt="">
-       
-        <h1 class="center">Tu t'es perdu... petit padawan</h1>
-
-        <hr class="rainbow-hr">
-
-        <p class="center">Le contenu qui est censé être là n'existe plus, je te propose de visiter un des liens ci dessous, ils sont tout aussi intéréssant.</p>
-    
+{{ define "main"}}
+    <main id="p404">
+      <div class="container">
+        <header class="card"> <p class="center">Le contenu qui est censé être là n'existe plus, je te propose de visiter un des liens ci dessous, ils sont tout aussi intéréssant.</p> </header>  
+        <article class="card row valign-wrapper">
+         <div class="col m7 s12">
         <ul id="categorie-side">
-        {{ range first (.Site.Params.sidebar.postAmount | default 3) (where .Site.Pages  "Type" "post") }}
+        {{ range first (.Site.Params.sidebar.postAmount | default 10) (where .Site.Pages  "Type" "post") }}
             <li>
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </li>
         {{ end }}
         </ul>
-
-        <div class="center">
-            <a href="rester-soi-meme" class="cta hvr-pulse">Faisons connaissance</a>
-        </div>
-    </div>
-</div>
-<div style="align-self: flex-end;">
-    {{ partial "site-footer" . }}
-</div>
-</div>
-</body>
-</html>
-<!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->
+    </div>  
+    <div class="col m5 center-align hide-on-small-only">
+        <img src="/img/logo.png" alt="Logo 974 Attitude">
+    </div> 
+        </article>
+      </div>
+    </main>
+{{ end }}

@@ -1,0 +1,16 @@
+{
+  "name": "ssaugrin",
+  "version": "1.0.0",
+  "description": "Tailwind integration",
+  "main": "index.js",
+  "scripts": {
+    "start": "hugo --gc"
+  },
+  "devDependencies": {
+    "tailwindcss": "^1.3.5",
+    "autoprefixer": "^9.7.6",
+    "postcss-cli": "^7.1.0",
+    "postcss-import": "^12.0.1",
+    "tailwind": "^4.0.0"
+  }
+}
