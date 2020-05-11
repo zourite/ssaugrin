@@ -2,12 +2,15 @@
 var header = document.getElementById('header');
 var flipbox = document.getElementById('flipbox');
 var p = document.getElementById("flip");
+var homeLink = document.getElementById("home-link");
+var closeflip = document.getElementById('close-flip');
 
 if( window.location.hash == "#flip") { 
     flipbox.classList.add("rotate");
 }
 
 (function () {
+
     var current = location.pathname.split('/')[1];
     if (current === "") return;
     var menuItems = document.querySelectorAll('.nav-link');
@@ -20,36 +23,36 @@ if( window.location.hash == "#flip") {
 
 function initElement()
 {
-    if ( window.location.pathname == '/' ){
-        // Index (home) page
+    if ( window.location.pathname == '/'){
+       
+        p.onclick = showAlert;
+        closeflip.onclcick = closeContactBox;
         
-  var closeflip = document.getElementById('close-flip');
+        if(window.location.hash != "#flip") {
+            homeLink.classList.add("active");       
+        } else {
+            flip.classList.add("active");
+        }
 
- 
-  // NOTE: showAlert(); ou showAlert(param); NE fonctionne PAS ici.
-  // Il faut fournir une valeur de type function (nom de fonction déclaré ailleurs ou declaration en ligne de fonction).
-  p.onclick = showAlert;
-  closeflip.onclcick = closeContactBox;
-
-  
+    }
     
-    } else {
-        // Other page
-        console.log(window.location.pathname);
-    }  
-  
+    
 };
 
 function showAlert(e)
 {
-    e.preventDefault();
+    e.preventDefault(); 
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0;
     flipbox.classList.add("rotate");
+    flip.classList.add("active");
+    homeLink.classList.remove("active");
 }
 
 function closeContactBox()
 {
+  homeLink.classList.add("active");
+  flip.classList.remove("active");
   flipbox.classList.remove("rotate");
 }
 
