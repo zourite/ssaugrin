@@ -11,7 +11,7 @@
 
                 {{ range $.Site.Data.logos.logo.skill }}
 
-                <div class="flex flex-wrap w-2/4 md:w-1/4 justify-center">
+                <div class="flex flex-wrap w-3/12 md:w-1/4 justify-center">
 
                     <div class="p-2">
 
@@ -55,14 +55,17 @@
                             <h1>Developpeur Full Stack PHP/JS</h1>
 
                             <div class="w-full mb-4">
-                                <a href="https://twitter.com/Zourite" target="_blank"> <i class="fab fa-twitter"></i>
+                                <a href="https://twitter.com/Zourite" target="_blank"> 
+                                    {{ partial "fontawesome.html" "twitter-brands" }}
                                 </a> -
-                                <a href="https://github.com/Zourite" target="_blank"> <i class="fab fa-github"></i> </a>
+                                <a href="https://github.com/Zourite" target="_blank"> {{ partial "fontawesome.html" "github-brands" }}  </a>
                                 -
-                                <a href="https://stackoverflow.com/users/665113/" target="_blank"> <i
-                                        class="fab fa-stack-overflow"></i> </a> -
-                                <a href="https://www.linkedin.com/in/ssaugrin/" target="_blank"> <i
-                                        class="fab fa-linkedin-in"></i> </a>
+                                <a href="https://stackoverflow.com/users/665113/" target="_blank">
+                                    {{ partial "fontawesome.html" "stack-overflow-brands" }}
+                                </a> -
+                                <a href="https://www.linkedin.com/in/ssaugrin/" target="_blank"> 
+                                    {{ partial "fontawesome.html" "linkedin-in-brands" }}
+                                </a>
                             </div>
 
                             <blockquote class="mt-5 mb-5">
@@ -106,15 +109,17 @@
 
 </section>
 
-<section>
+<section class="m-2">
 
-    <h2 class="uppercase clearfix m-2">Mes dernieres notes</h2>
+    <h2 class="uppercase clearfix">Mes dernieres notes</h2>
 
-    <div id="postlist" class="flex flex-wrap m-2">
+    <div  class="w-full">
+
+        <div id="postlist" class="flex flex-wrap">
 
         {{ range where .Site.RegularPages "Section" "posts" | first 4}}
 
-        <div class="flex w-full lg:w-3/12 md:w-6/12">
+        <div class="flex w-full lg:w-3/12 md:w-6/12 px-2">
 
             <div class="my-2 card">
 
@@ -140,6 +145,8 @@
         </div>
 
         {{ end }}
+
+    </div>
 
     </div>
 

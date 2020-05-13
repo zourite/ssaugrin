@@ -17,6 +17,7 @@ body {
     font-feature-settings: 'tnum'1;
     font-feature-settings: 'ss02'1;
     color: #333333;
+    background-color: #b7b7b7;
 }
 
 h1,
@@ -158,8 +159,10 @@ blockquote {
 
 @media (min-width: 768px) {
     
-    #postlist > .card:first-child { margin-left: -0.25rem;  }
-    #postlist > .card:last-child {  margin-right: -0.25rem; }
+    #postlist > :first-child { margin-left: -0.50rem;  }
+    #postlist > :last-child {  
+        margin-right: -0.50rem;
+     }
 
 }
 
@@ -231,4 +234,11 @@ blockquote {
    box-shadow : 6px 0px 2px -2px #bdbbbc;
 }
 
+.inline-svg {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    top: 0.15rem;
+    position: relative;
+  }
 
