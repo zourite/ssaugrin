@@ -5,7 +5,9 @@ var p = document.getElementById("flip");
 var homeLink = document.getElementById("home-link");
 var closeflip = document.getElementById('close-flip');
 
-
+window.addEventListener('resize', function(e) {
+    resizeFlipbox("h-front");
+});
 if( window.location.hash == "#flip") { 
     flipbox.classList.add("rotate");
 }
@@ -23,16 +25,21 @@ if( window.location.hash == "#flip") {
 })();
 
 window.addEventListener('DOMContentLoaded', function() {
-    
+    if (window.matchMedia("(max-width: 768px)").matches) {
     resizeFlipbox("h-front");
-
+    }
  }, false);
 
 
 function resizeFlipbox(face) {
 
+   
+    console.log('toto')
+
     var offsetHeight = document.getElementById(face).offsetHeight;
     document.getElementById("flipbox").setAttribute("style","height:"+offsetHeight+"px");
+
+  
 
 }
 
