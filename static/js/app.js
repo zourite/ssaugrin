@@ -34,13 +34,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 function resizeFlipbox(face) {
 
-   
-    console.log('toto')
-
     var offsetHeight = document.getElementById(face).offsetHeight;
     document.getElementById("flipbox").setAttribute("style","height:"+offsetHeight+"px");
-
-  
 
 }
 
