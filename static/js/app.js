@@ -4,11 +4,15 @@ var p = document.getElementById("flip");
 var homeLink = document.getElementById("home-link");
 var closeflip = document.getElementById('close-flip');
 
-hljs.initHighlightingOnLoad();
+// window.addEventListener('resize', function(e) {
+//     resizeFlipbox("avatar");
+// });
 
-window.addEventListener('resize', function(e) {
-    resizeFlipbox("h-front");
-});
+if (window.matchMedia("(max-width: 640px)").matches) {
+    /* La largeur minimum de l'affichage est 600 px inclus */
+    resizeFlipbox("avatar");
+  }
+
 if( window.location.hash == "#flip") { 
     flipbox.classList.add("rotate");
 }
@@ -25,16 +29,17 @@ if( window.location.hash == "#flip") {
     }
 })();
 
-window.addEventListener('DOMContentLoaded', function() {
+// window.addEventListener('load', function() {
     
-    resizeFlipbox("h-front");
+//     resizeFlipbox("avatar");
    
- }, false);
+//  }, false);
 
 
 function resizeFlipbox(face) {
 
     var offsetHeight = document.getElementById(face).offsetHeight;
+    console.log(offsetHeight);
     document.getElementById("flipbox").setAttribute("style","height:"+offsetHeight+"px");
 
 }
@@ -63,7 +68,7 @@ function initElement()
 function showAlert(e)
 {
     e.preventDefault(); 
-    resizeFlipbox("h-back");
+    // resizeFlipbox("h-back");
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0;
     flipbox.classList.add("rotate");

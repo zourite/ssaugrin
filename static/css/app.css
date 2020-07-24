@@ -189,6 +189,7 @@ blockquote {
 /* entire container, keeps perspective */
 .flip-container {
     perspective: 1000px;
+    
 }
 	/* flip the pane when hovered */
 	.rotate, .flip-container.hover .flipper {
@@ -199,7 +200,8 @@ blockquote {
 .flipper {
 	transition: 0.6s;
     transform-style: preserve-3d;
-
+    height:  100%;
+    display: flex;
 }
 
 /* hide back of pane during swap */
@@ -208,7 +210,7 @@ blockquote {
    width: 100%;
 	backface-visibility: hidden;
 -webkit-backface-visibility: hidden;
-	position: absolute;
+    position: absolute;
 	top: 0;
     left: 0;
 }
