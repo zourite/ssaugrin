@@ -1,4 +1,3 @@
-
 var header = document.getElementById('header');
 var flipbox = document.getElementById('flipbox');
 var p = document.getElementById("flip");
@@ -35,13 +34,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 function resizeFlipbox(face) {
 
-   
-    console.log('toto')
-
     var offsetHeight = document.getElementById(face).offsetHeight;
     document.getElementById("flipbox").setAttribute("style","height:"+offsetHeight+"px");
-
-  
 
 }
 

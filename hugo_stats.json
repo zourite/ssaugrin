@@ -41,6 +41,7 @@
       "ul"
     ],
     "classes": [
+      "-mx-2",
       "active",
       "align-middle",
       "aligncenter",
@@ -88,6 +89,7 @@
       "grid-padding-x",
       "grid-x",
       "h-50",
+      "h-back",
       "hidden",
       "hide-on-small-only",
       "highlight",
@@ -118,6 +120,7 @@
       "md:float-left",
       "md:float-right",
       "md:inline",
+      "md:m-2",
       "md:mt-0",
       "md:mx-0",
       "md:mx-auto",
@@ -130,7 +133,7 @@
       "medium-6",
       "medium-up-2",
       "mr-2",
-      "mt-10",
+      "mt-1",
       "mt-2",
       "mt-3",
       "mt-5",
@@ -148,16 +151,25 @@
       "pt-16",
       "published",
       "px-2",
+<<<<<<< HEAD
+      "relative",
+=======
+>>>>>>> dev
       "row",
       "s12",
       "shadow-img",
       "size-full",
       "size-thumbnail",
+      "sm:w-full",
       "small-12",
       "small-up-1",
       "st",
       "svg-inline--fa",
       "text-2xl",
+<<<<<<< HEAD
+      "text-3xl",
+=======
+>>>>>>> dev
       "text-center",
       "text-dragon",
       "text-light",
@@ -166,7 +178,13 @@
       "trello-btn",
       "uppercase",
       "valign-wrapper",
+<<<<<<< HEAD
+      "w-2/4",
       "w-3/12",
+      "w-3/4",
+=======
+      "w-3/12",
+>>>>>>> dev
       "w-full",
       "waves-effect",
       "wp-caption",
@@ -200,6 +218,10 @@
       "générer-le-graphique",
       "gérer-ses-priorités-voila--comment-avoir-du-temps",
       "h-back",
+<<<<<<< HEAD
+      "h-back ",
+=======
+>>>>>>> dev
       "h-front",
       "header",
       "home-link",
@@ -212,6 +234,7 @@
       "language-de-scripts",
       "le-serveur-http",
       "les-cookies-de-partage-des-réseaux-sociaux",
+      "m-2",
       "meta",
       "nav",
       "p404",
