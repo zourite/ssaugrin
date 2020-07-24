@@ -4,14 +4,20 @@ var p = document.getElementById("flip");
 var homeLink = document.getElementById("home-link");
 var closeflip = document.getElementById('close-flip');
 
-// window.addEventListener('resize', function(e) {
-//     resizeFlipbox("avatar");
-// });
+resizeOnScreen()
 
-if (window.matchMedia("(max-width: 640px)").matches) {
-    /* La largeur minimum de l'affichage est 600 px inclus */
-    resizeFlipbox("avatar");
-  }
+function resizeOnScreen(){
+
+    if (window.matchMedia("(max-width: 640px)").matches) {
+        resizeFlipbox("h-front");
+        }
+
+}
+
+window.addEventListener('resize', function(e) {
+
+    resizeOnScreen()
+});
 
 if( window.location.hash == "#flip") { 
     flipbox.classList.add("rotate");
@@ -29,17 +35,9 @@ if( window.location.hash == "#flip") {
     }
 })();
 
-// window.addEventListener('load', function() {
-    
-//     resizeFlipbox("avatar");
-   
-//  }, false);
-
-
 function resizeFlipbox(face) {
 
     var offsetHeight = document.getElementById(face).offsetHeight;
-    console.log(offsetHeight);
     document.getElementById("flipbox").setAttribute("style","height:"+offsetHeight+"px");
 
 }
@@ -49,9 +47,7 @@ function initElement()
 
     if ( window.location.pathname == '/'){
        
-        
-
-        p.onclick = showAlert;
+        p.onclick = showFlip;
         closeflip.onclcick = closeContactBox;
         
         if(window.location.hash != "#flip") {
@@ -65,10 +61,12 @@ function initElement()
     
 };
 
-function showAlert(e)
+function showFlip(e)
 {
     e.preventDefault(); 
-    // resizeFlipbox("h-back");
+    if (window.matchMedia("(max-width: 640px)").matches) {
+    resizeFlipbox("h-back");
+    }
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0;
     flipbox.classList.add("rotate");
