@@ -1,9 +1,10 @@
-
 var header = document.getElementById('header');
 var flipbox = document.getElementById('flipbox');
 var p = document.getElementById("flip");
 var homeLink = document.getElementById("home-link");
 var closeflip = document.getElementById('close-flip');
+
+hljs.initHighlightingOnLoad();
 
 window.addEventListener('resize', function(e) {
     resizeFlipbox("h-front");

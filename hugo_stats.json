@@ -72,8 +72,6 @@
       "fa-w-16",
       "fa-w-18",
       "fa-window-close",
-      "fab",
-      "far",
       "fas",
       "fixed",
       "flex",
@@ -139,7 +137,6 @@
       "mt-2",
       "mt-3",
       "mt-5",
-      "mx-1",
       "mx-2",
       "mx-auto",
       "my-2",
@@ -154,7 +151,10 @@
       "pt-16",
       "published",
       "px-2",
+<<<<<<< HEAD
       "relative",
+=======
+>>>>>>> dev
       "row",
       "s12",
       "shadow-img",
@@ -166,7 +166,10 @@
       "st",
       "svg-inline--fa",
       "text-2xl",
+<<<<<<< HEAD
       "text-3xl",
+=======
+>>>>>>> dev
       "text-center",
       "text-dragon",
       "text-light",
@@ -175,9 +178,13 @@
       "trello-btn",
       "uppercase",
       "valign-wrapper",
+<<<<<<< HEAD
       "w-2/4",
       "w-3/12",
       "w-3/4",
+=======
+      "w-3/12",
+>>>>>>> dev
       "w-full",
       "waves-effect",
       "wp-caption",
@@ -211,7 +218,10 @@
       "générer-le-graphique",
       "gérer-ses-priorités-voila--comment-avoir-du-temps",
       "h-back",
+<<<<<<< HEAD
       "h-back ",
+=======
+>>>>>>> dev
       "h-front",
       "header",
       "home-link",
