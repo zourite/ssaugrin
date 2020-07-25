@@ -4,7 +4,6 @@
 
   
 <title>
-  {{ if .IsHome }} Developpeur FullStack PHP/JS  | {{ end }}
   {{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
 
 {{ template "_internal/opengraph.html" . }}
@@ -40,7 +39,8 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
   
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet"> 
+<link href='https://fonts.gstatic.com' rel='preconnect' crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"> 
 <link type="text/css" rel="stylesheet" href="{{ "css/app.css" | relURL  }}">
 
 

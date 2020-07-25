@@ -4,22 +4,9 @@ var p = document.getElementById("flip");
 var homeLink = document.getElementById("home-link");
 var closeflip = document.getElementById('close-flip');
 
-resizeOnScreen()
+hljs.initHighlightingOnLoad();
 
-function resizeOnScreen(){
-
-    if (window.matchMedia("(max-width: 640px)").matches) {
-        resizeFlipbox("h-front");
-        }
-
-}
-
-window.addEventListener('resize', function(e) {
-
-    resizeOnScreen()
-});
-
-if( window.location.hash == "#flip") { 
+if( window.location.hash == "#contact") { 
     flipbox.classList.add("rotate");
 }
 
@@ -35,13 +22,6 @@ if( window.location.hash == "#flip") {
     }
 })();
 
-function resizeFlipbox(face) {
-
-    var offsetHeight = document.getElementById(face).offsetHeight;
-    document.getElementById("flipbox").setAttribute("style","height:"+offsetHeight+"px");
-
-}
-
 function initElement()
 {
 
@@ -50,7 +30,7 @@ function initElement()
         p.onclick = showFlip;
         closeflip.onclcick = closeContactBox;
         
-        if(window.location.hash != "#flip") {
+        if(window.location.hash != "#contact") {
             homeLink.classList.add("active");       
         } else {
             flip.classList.add("active");
@@ -64,9 +44,6 @@ function initElement()
 function showFlip(e)
 {
     e.preventDefault(); 
-    if (window.matchMedia("(max-width: 640px)").matches) {
-    resizeFlipbox("h-back");
-    }
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0;
     flipbox.classList.add("rotate");

@@ -1,30 +1,33 @@
 {{ define "main" }}
+<section id="posts" class="pt-16 w-full md:w-11/12 md:mx-auto lg:w-8/12">
 
-<section id="posts" class="pt-16 w-full md:w-10/12 md:mx-auto">
+	<h1>Les notes d'une pieuvre  passioné</h1>
+
     <!-- Ranges through content/posts/*.md -->
     {{ range (.Paginator 6).Pages }}
     <div class="flex flex-wrap w-full my-4">
 
-        <div class="flex flex-wrap card mx-2 md:mx-0">
-          <div class="flex w-full">
-          <h2>
-            <a href="{{ .RelPermalink }}" class="text-light">
-                {{.Title}}
-            </a>
-            </h2>
-          </div>
+        <article class="flex flex-wrap card mx-2 md:mx-0">
+        
             <div class="flex w-full md:w-1/4 items-center">
                 {{ if isset .Params "featured" }}
                   <img src="/img/{{ .Params.featured }}" alt="{{ .Title }}" />
                 {{ end }}
             </div>
             
-            <div class="w-full md:w-3/4">                   
+            <div class="w-full md:w-3/4">
+              <div class="flex w-full">
+                <h2>
+                  <a href="{{ .RelPermalink }}" class="text-light">
+                      {{.Title}}
+                  </a>
+                  </h2>
+                </div>                  
                   <div class="p-3">
                  {{ .Summary }}
                 </div>
             </div>
-        </div>
+        </article>
     </div>
     {{ end }}
 

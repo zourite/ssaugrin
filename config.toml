@@ -1,6 +1,10 @@
 baseURL = "https://saugrin-sonia.fr/"
 languageCode = "fr-fr"
-title = "ssaugrin"
+title = "Developpeur FullStack PHP/JS  | ssaugrin"
+
+[params]
+  author = "Sonia Saugrin"
+  description = "Geek et développeur  fullstack PHP/JS expérimenté vivant à l'île de La Réunion"
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
