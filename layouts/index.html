@@ -78,8 +78,10 @@
                     <div  class="back md:flex md:items-center  id-card  card-brd-top">
                         <div id="h-back" class="w-full p-2">
                             <div class="text-2xl text-right">
-                                <i id="close-flip" class="text-dragon fas fa-window-close"
-                                    onclick="closeContactBox(this)"></i>
+                                <div id="close-flip" class="text-dragon fas fa-window-close"
+                                    onclick="closeContactBox(this)">
+                                    {{ partial "fontawesome.html" "window-close-solid" }}
+                                </div>
                             </div>
                             <p>
                                 Le meilleur moyen de me contacter est de m'envoyer un mail.<br> Je te répondrais dés que
@@ -131,9 +133,9 @@
                     {{ end }}
                 </div>
 
-                <div class="p-2 text-center flex flex-wrap items-center content-center">
+                <div class="p-2">
 
-                    <h3>
+                    <h3 class="text-center">
                         <a href="{{ .RelPermalink }}">
                             {{.Title}}
                         </a>
