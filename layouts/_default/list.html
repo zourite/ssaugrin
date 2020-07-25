@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section id="posts" class="pt-16 w-full md:w-11/12 md:mx-auto lg:w-8/12">
+<section id="posts" class="pt-16 w-full mx-2 md:w-11/12 md:mx-auto lg:w-8/12  ">
 
 	<h1>Les notes d'une pieuvre  passioné</h1>
 
@@ -7,7 +7,7 @@
     {{ range (.Paginator 6).Pages }}
     <div class="flex flex-wrap w-full my-4">
 
-        <article class="flex flex-wrap card mx-2 md:mx-0">
+        <article class="flex flex-wrap card ">
         
             <div class="flex w-full md:w-1/4 items-center">
                 {{ if isset .Params "featured" }}
@@ -17,17 +17,25 @@
             
             <div class="w-full md:w-3/4">
               <div class="flex w-full">
-                <h2>
+                <h2 class="lg:ml-2">
                   <a href="{{ .RelPermalink }}" class="text-light">
                       {{.Title}}
                   </a>
                   </h2>
                 </div>                  
                   <div class="p-3">
-                 {{ .Summary }}
+				 
+					<p>{{ .Summary }}</p>
+				 
+					<div class="clearfix">
+				 		<button class="rm-btn float-right">Lire la suite</button>
+					</div>
+
                 </div>
-            </div>
-        </article>
+			</div>
+		
+		</article>
+		
     </div>
     {{ end }}
 
@@ -35,7 +43,7 @@
 
 <!-- If there's more than one page. -->
 {{ if gt $paginator.TotalPages 1 }}
-<section class="flex p-2 card mx-2 md:mx-0">
+<section class="flex p-2 card ">
   <ul id="pagination" class="flex mx-auto">
     <!-- Previous page. -->
     {{ if $paginator.HasPrev }}

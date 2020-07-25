@@ -11,7 +11,7 @@
 
 body {
 
-    background-image: url('/img/main/brushed-metal-1.jpg');
+    background-image: url('/img/main/brushed-metal-test.jpg');
     font-family: "Inter var", Helvetica, sans-serif;
     font-feature-settings: 'liga'1;
     font-feature-settings: 'tnum'1;
@@ -91,12 +91,6 @@ p {
 
 }
 
-.cta-btn {
-
-    background-color: #c33c54;
-    color: #fafafa;
-
-}
 
 .card {
 
@@ -170,22 +164,9 @@ blockquote {
     text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
 }
 
-@media (min-width: 768px) {
-    
-    #postlist > :first-child { margin-left: -0.50rem;  }
-    #postlist > :last-child {  
-        margin-right: -0.50rem;
-     }
 
-}
 
 .nav-links > :last-child {  margin-right: 0; }
-
-@media (min-width: 768px) and (max-width: 1024px) { 
-#postlist > div:nth-child(2n+2) { margin-right: -0.25rem; }
-#postlist > div:nth-child(3n+3) { margin-left: -0.25rem; }
-}
-
 
 .id-card {
 
@@ -257,9 +238,41 @@ blockquote {
     position: relative;
 }
 
+.top-round-rainbow {
+  
+    border-radius: 4px;
+    
+    background-image: repeating-linear-gradient(to right,
+    #c4e17f 0px, #c4e17f 50px,
+    #f7fdca 50px, #f7fdca 100px,
+    #fad071 100px, #fad071 150px,
+    #f0766b 150px, #f0766b 200px,
+    #db9dbe 200px, #db9dbe 250px,
+    #c49cdf 250px, #c49cdf 300px,
+    #6599e2 300px, #6599e2 350px,
+    #61c2e4 350px, #61c2e4 400px);
+    background-size: 100% 10px;
+    background-repeat:no-repeat;
+  }
+
+  #p404 {
+
+    background: url("/img/main/404.jpg") no-repeat;
+    min-height:  calc(100vh - 70px);
+
+  }
+
+  #posts-404 {
+
+    border: 10px solid transparent;
+    border-image: url('/img/main/watercolor-paint-background.jpg') 60;
+
+  }
+
 @media screen and (max-width: 640px) {
     .flipper {
-        height:  12em;
+        height:  200px;
     }
   }
+    
 

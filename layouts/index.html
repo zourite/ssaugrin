@@ -5,7 +5,7 @@
 
         <div class="m-2">
 
-            <h2 class="uppercase clearfix lg:hidden">Coté Technique</h2>
+            <h2 class="uppercase clearfix lg:hidden mb-2">Coté Technique</h2>
 
             <div class="flex flex-wrap">
 
@@ -17,7 +17,7 @@
 
                         <div class="card">
 
-                            <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2" />
+                            <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2" width="140" height="120"/>
 
                         </div>
 
@@ -111,11 +111,11 @@
 
 <section class="m-2">
 
-    <h2 class="uppercase clearfix">Mes dernieres notes</h2>
+    <h2 class="uppercase clearfix mb-2">Mes dernieres notes</h2>
 
-    <div  class="w-full m-1">
+    <div  class="w-full">
 
-        <div id="postlist" class="flex flex-wrap">
+        <div id="postlist" class="flex flex-wrap -mx-2">
 
         {{ range where .Site.RegularPages "Section" "posts" | first 4}}
 
