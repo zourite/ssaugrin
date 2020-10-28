@@ -24,7 +24,7 @@ if( window.location.hash == "#contact") {
 
 function initElement()
 {
-
+ 
     if ( window.location.pathname == '/'){
        
         p.onclick = showFlip;

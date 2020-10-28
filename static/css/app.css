@@ -263,6 +263,7 @@ blockquote {
 
     background: url("/img/main/404.jpg") no-repeat;
     min-height:  calc(100vh - 70px);
+    background-size: cover;
 
   }
 
