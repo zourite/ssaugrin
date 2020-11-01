@@ -17,7 +17,6 @@ module.exports = {
     },
     variants: {},
     plugins: [
-      // Other plugins
       require('tailwindcss-animatecss')({
             classes: ['animate__animated', 'animate__fadeIn', 'animate__bounceIn', 'animate__lightSpeedOut', 'animate__slideInDown'],
             settings: {
