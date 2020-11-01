@@ -71,7 +71,7 @@ function animatElements(){
 
             sandwich.classList.add('animate__animated', 'animate__fadeIn');
             sandwich.classList.remove("hidden");
-        }, 500 * index);
+        }, 200 * index);
        
     });
     
@@ -86,7 +86,7 @@ function animatElements(){
             sandwich.classList.add('md:flex','animate__animated', 'animate__slideInDown');
             sandwich.classList.remove("hidden");
             
-        }, 4000);
+        }, 1600);
        
     });
 }
