@@ -1,0 +1,33 @@
+h1,
+h2,
+h3,
+h4 {
+
+    font-family: 'Inconsolata', monospace;
+    line-height: 2;
+    letter-spacing: 0.04em;
+}
+
+h1 {
+    @apply text-2xl;
+}
+
+h2 {
+    @apply text-xl;
+}
+
+h3 {
+    @apply text-lg;
+    
+}
+
+h2 {
+
+    border-left: 5px solid #114b5f;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-image: linear-gradient(to right top, #114b5f, #0f586c, #0a6579, #057285, #028090);
+    color: white;
+    display: inline-block;
+
+}

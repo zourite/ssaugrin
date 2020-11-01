@@ -3,19 +3,10 @@
 @import "tailwindcss/components";
 /* Site Specific */
 @import "tailwindcss/utilities";
+@import "tailwindcss/utilities";
+@import "base/base.scss";
 
-h1 {
-    @apply text-2xl;
-  }
-  h2 {
-    @apply text-xl;
-  }
-  h3 {
-    @apply text-lg;
-  }
-  a {
-    @apply text-drk-green-octo;
-  }
+
 
 .nav-link {
 
