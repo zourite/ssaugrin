@@ -16857,11 +16857,16 @@ p {
 .btn-center {
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #026aa7;
+  background-color: #055a8c;
   color: #bdbbbc;
   text-align: center; }
   .btn-center a {
     color: #bdbbbc; }
+  .btn-center:hover {
+    background-color: #094c72; }
+
+.btn-center:hover {
+  background-color: #094c72; }
 
 @media (min-width: 640px) {
   .sm\:container {

@@ -58,13 +58,25 @@
 
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #026aa7;
+  background-color: #055a8c;
   color: #bdbbbc;
   text-align: center;
 
   a {
 
     color: #bdbbbc;
+    
+  }
+
+  &:hover {
+
+    background-color: #094c72 ;
 
   }
+}
+
+.btn-center:hover {
+
+  background-color: #094c72 ;
+
 }
