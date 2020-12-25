@@ -1,30 +1,37 @@
+{{ define "main" }}
+<section id="posts" class="pt-16 w-full m-2 p-2 m-2">
+<p class="card p-2">Ce que j'ai à te proposer ce sont éssentiellement des livres qui pourront t'aider à être encore plus parfait que tu
+  l'es déjà. J'ai un tableau trello qui recense des livres que j'ai lu et que j'aimerais lire, les livres sont classés
+  par categorie. Le tableau se nomme <a href="https://trello.com/b/QcRsNCYA/des-livres-pour" target="_blank"> Des livres
+    pour ... </a>, n'hésite pas à jetter un oeil.</p>
 
-  
-          
-          <p>Ce que j'ai à te proposer ce sont éssentiellement des livres qui pourront t'aider à être encore plus parfait que tu l'es déjà. J'ai un tableau trello qui recense des livres que j'ai lu et que j'aimerais lire, les livres sont classés par categorie. Le tableau se nomme <a href="https://trello.com/b/QcRsNCYA/des-livres-pour" target="_blank"> Des livres pour ... </a>, n'hésite pas à jetter un oeil.</p>
+<h2>Se comprendre</h2>
 
-          <h2>Se comprendre</h2>
-          
-          <p>A mon avis, pour trouver le chemin du bien être il est éssentiel de comprendre ce que l'on est et de l'accepter. Je peux t'assurer que j'ai eu aussi des soucis avec l'acceptation de soi, mais il y a des livres qui m'ont aider à voir plus clair.</p>
+<p class="card p-2">A mon avis, pour trouver le chemin du bien être il est éssentiel de comprendre ce que l'on est et de l'accepter. Je
+  peux t'assurer que j'ai eu aussi des soucis avec l'acceptation de soi, mais il y a des livres qui m'ont aider à voir
+  plus clair.</p>
 
-          <div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3" data-equalizer data-equalize-on="medium">
-            {{ range $.Site.Data.books.communiquer.products | first 6}}
+<div class="row">
+  {{ range $.Site.Data.books.communiquer.products | first 6}}
 
-            {{ partial "livre" . }}
+  {{ partial "livre" . }}
 
-            {{ end }}
+  {{ end }}
 
-          </div>
+</div>
 
-          <h2>Communiquer</h2>
-          
-          <p>Les relations humaines sont parfois très complexe. Au coeur d'une relation ce qui fait souvent défaut c'est la communication. Je ne suis pas une grande communicante dans l'âme, mais des livres m'ont appris à mieux communiquer avec les autres.</p>
-          
-          <div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3" data-equalizer data-equalize-on="medium">
-            {{ range $.Site.Data.books.comprendre.products | first 6}}
+<h2>Communiquer</h2>
 
-            {{ partial "livre" . }}
+<p class="card p-2">Les relations humaines sont parfois très complexe. Au coeur d'une relation ce qui fait souvent défaut c'est la
+  communication. Je ne suis pas une grande communicante dans l'âme, mais des livres m'ont appris à mieux communiquer
+  avec les autres.</p>
 
-            {{ end }}
-          </div>
-        </div>
+<div class="row">
+  {{ range $.Site.Data.books.comprendre.products | first 6}}
+
+  {{ partial "livre" . }}
+
+  {{ end }}
+</div>
+</section>
+{{ end }}

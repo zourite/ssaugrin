@@ -1,6 +1,7 @@
 {{ define "main" }}
-<section class="flex flex-col-reverse w-full lg:flex-row pt-16 lg:items-center">
 
+<section class="flex flex-col-reverse w-full lg:flex-row pt-16 lg:items-center">
+   
     <div class="w-full lg:w-5/12 p-2">
 
         <h2 class="uppercase clearfix lg:hidden mb-2">Coté Technique</h2>
@@ -104,8 +105,50 @@
     </div>
 
 </section>
+<section class="row mt-3">
 
-<section class="m-2">
+    <div class="w-full lg:w-4/12 p-2 flex justify-center">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zourite&layout=compact)" alt="Langages" srcset="">
+    </div>
+
+    <div class="w-full lg:w-8/12">
+        
+        {{ with getJSON "https://api.github.com/users/zourite/repos" }}
+      
+        
+        {{ $projects := sort (where . "fork" false) "created_at" "desc" | first 3 }}
+        
+        <div class="row">
+        {{ range $projects }}
+            <div class="flex w-full lg:w-4/12 p-2">
+                
+                    
+                    <div class="w-full card">
+                
+                        <div class="projects-img">
+                        <img src="https://raw.githubusercontent.com/{{ .full_name }}/master/screenshot.png" alt="" srcset="">
+                        </div>
+                    
+                        <div class="p-1">
+                    
+                        <a href="{{ .html_url }}">{{ replace .name "-" " " | title }}</a>
+                        <span class="float-right">{{ .language }}</span>
+                        <p>{{ .description }}</p>
+                
+                        </div>
+                    </div>
+                
+                
+
+            </div>
+        {{ end }}
+        </div>
+    
+    </div>
+    {{ end }}
+
+</section>
+<section class="p-2">
 
     <h2 class="uppercase clearfix mb-2">Mes dernieres notes</h2>
 

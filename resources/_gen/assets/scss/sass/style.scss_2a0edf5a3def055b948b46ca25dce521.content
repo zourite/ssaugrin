@@ -16773,12 +16773,9 @@ h3 {
   font-size: 1.125rem; }
 
 h2 {
-  border-left: 5px solid #114b5f;
-  padding-left: 8px;
-  padding-right: 8px;
-  background-image: linear-gradient(to right top, #114b5f, #0f586c, #0a6579, #057285, #028090);
-  color: white;
   display: inline-block; }
+  h2 a {
+    color: #114b5f; }
 
 .row {
   display: flex;
@@ -16817,6 +16814,10 @@ p {
   top: 0.15rem;
   position: relative; }
 
+.projects-img {
+  height: 135px;
+  overflow: hidden; }
+
 .nav-link {
   background-color: #c4c2c3;
   border: 1px solid #bdbbbc;
@@ -16852,6 +16853,15 @@ p {
 
 .rm-btn:hover {
   background-color: #028090; }
+
+.btn-center {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #026aa7;
+  color: #bdbbbc;
+  text-align: center; }
+  .btn-center a {
+    color: #bdbbbc; }
 
 @media (min-width: 640px) {
   .sm\:container {

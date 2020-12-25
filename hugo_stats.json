@@ -166,10 +166,7 @@
       "st",
       "svg-inline--fa",
       "text-2xl",
-<<<<<<< HEAD
       "text-3xl",
-=======
->>>>>>> dev
       "text-center",
       "text-dragon",
       "text-light",
@@ -178,13 +175,9 @@
       "trello-btn",
       "uppercase",
       "valign-wrapper",
-<<<<<<< HEAD
       "w-2/4",
       "w-3/12",
       "w-3/4",
-=======
-      "w-3/12",
->>>>>>> dev
       "w-full",
       "waves-effect",
       "wp-caption",
