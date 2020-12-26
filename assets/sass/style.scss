@@ -3,19 +3,10 @@
 @import "tailwindcss/components";
 /* Site Specific */
 @import "tailwindcss/utilities";
+@import "tailwindcss/utilities";
+@import "base/base.scss";
 
-h1 {
-    @apply text-2xl;
-  }
-  h2 {
-    @apply text-xl;
-  }
-  h3 {
-    @apply text-lg;
-  }
-  a {
-    @apply text-drk-green-octo;
-  }
+
 
 .nav-link {
 
@@ -61,4 +52,50 @@ h1 {
 
   background-color:  #028090;
 
+}
+
+.btn-center {
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #055a8c;
+  color: #bdbbbc;
+  text-align: center;
+
+  a {
+
+    color: #bdbbbc;
+    
+  }
+
+  &:hover {
+
+    background-color: #094c72 ;
+
+  }
+}
+
+.btn-center:hover {
+
+  background-color: #094c72 ;
+
+}
+
+.github-btn {
+
+  @apply bg-black p-2 text-white absolute;
+  bottom :0;
+  right : 0;
+
+  a {
+
+    color : #fff;
+
+  }
+
+  .inline-svg {
+
+    margin-right: 5px;
+
+  }
 }

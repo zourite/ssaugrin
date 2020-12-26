@@ -20885,6 +20885,93 @@ video {
   animation: bounce 1s infinite;
 }
 
+.animate__animated {
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+.animate__bounceIn {
+  animation-name: bounceIn;
+  animation-duration: 750ms;
+}
+
+.hover\:animate__animated:hover {
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+}
+
+.hover\:animate__fadeIn:hover {
+  animation-name: fadeIn;
+}
+
+.hover\:animate__bounceIn:hover {
+  animation-name: bounceIn;
+  animation-duration: 750ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reduced-motion\:animate__animated {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .reduced-motion\:animate__fadeIn {
+    animation-name: fadeIn;
+  }
+
+  .reduced-motion\:animate__bounceIn {
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: ease-in-out;
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    transform: scale3d(1.03, 1.03, 1.03);
+    opacity: 1;
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 h1 {
   font-size: 1.5rem;
 }
@@ -41214,6 +41301,50 @@ a {
   .sm\:animate-bounce {
     animation: bounce 1s infinite;
   }
+
+  .sm\:animate__animated {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .sm\:animate__fadeIn {
+    animation-name: fadeIn;
+  }
+
+  .sm\:animate__bounceIn {
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  .sm\:hover\:animate__animated:hover {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .sm\:hover\:animate__fadeIn:hover {
+    animation-name: fadeIn;
+  }
+
+  .sm\:hover\:animate__bounceIn:hover {
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sm\:reduced-motion\:animate__animated {
+      animation-duration: 1000ms;
+      animation-fill-mode: both;
+    }
+
+    .sm\:reduced-motion\:animate__fadeIn {
+      animation-name: fadeIn;
+    }
+
+    .sm\:reduced-motion\:animate__bounceIn {
+      animation-name: bounceIn;
+      animation-duration: 750ms;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -61483,6 +61614,50 @@ a {
 
   .md\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .md\:animate__animated {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .md\:animate__fadeIn {
+    animation-name: fadeIn;
+  }
+
+  .md\:animate__bounceIn {
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  .md\:hover\:animate__animated:hover {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .md\:hover\:animate__fadeIn:hover {
+    animation-name: fadeIn;
+  }
+
+  .md\:hover\:animate__bounceIn:hover {
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .md\:reduced-motion\:animate__animated {
+      animation-duration: 1000ms;
+      animation-fill-mode: both;
+    }
+
+    .md\:reduced-motion\:animate__fadeIn {
+      animation-name: fadeIn;
+    }
+
+    .md\:reduced-motion\:animate__bounceIn {
+      animation-name: bounceIn;
+      animation-duration: 750ms;
+    }
   }
 }
 
@@ -81754,6 +81929,50 @@ a {
   .lg\:animate-bounce {
     animation: bounce 1s infinite;
   }
+
+  .lg\:animate__animated {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .lg\:animate__fadeIn {
+    animation-name: fadeIn;
+  }
+
+  .lg\:animate__bounceIn {
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  .lg\:hover\:animate__animated:hover {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .lg\:hover\:animate__fadeIn:hover {
+    animation-name: fadeIn;
+  }
+
+  .lg\:hover\:animate__bounceIn:hover {
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lg\:reduced-motion\:animate__animated {
+      animation-duration: 1000ms;
+      animation-fill-mode: both;
+    }
+
+    .lg\:reduced-motion\:animate__fadeIn {
+      animation-name: fadeIn;
+    }
+
+    .lg\:reduced-motion\:animate__bounceIn {
+      animation-name: bounceIn;
+      animation-duration: 750ms;
+    }
+  }
 }
 
 @media (min-width: 1280px) {
@@ -102023,5 +102242,49 @@ a {
 
   .xl\:animate-bounce {
     animation: bounce 1s infinite;
+  }
+
+  .xl\:animate__animated {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .xl\:animate__fadeIn {
+    animation-name: fadeIn;
+  }
+
+  .xl\:animate__bounceIn {
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  .xl\:hover\:animate__animated:hover {
+    animation-duration: 1000ms;
+    animation-fill-mode: both;
+  }
+
+  .xl\:hover\:animate__fadeIn:hover {
+    animation-name: fadeIn;
+  }
+
+  .xl\:hover\:animate__bounceIn:hover {
+    animation-name: bounceIn;
+    animation-duration: 750ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .xl\:reduced-motion\:animate__animated {
+      animation-duration: 1000ms;
+      animation-fill-mode: both;
+    }
+
+    .xl\:reduced-motion\:animate__fadeIn {
+      animation-name: fadeIn;
+    }
+
+    .xl\:reduced-motion\:animate__bounceIn {
+      animation-name: bounceIn;
+      animation-duration: 750ms;
+    }
   }
 }

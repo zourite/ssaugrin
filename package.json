@@ -7,14 +7,20 @@
     "start": "hugo --gc"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.5",
-    "postcss-cli": "^7.1.1",
+    "autoprefixer": "^9.8.6",
+    "imagemin": "git+https://github.com/imagemin/imagemin.git#bfd7c547045f68ed92243c6a772f6265a08a687f",
+    "postcss-cli": "^7.1.2",
     "postcss-import": "^12.0.1",
     "tailwind": "^4.0.0",
-    "tailwindcss": "^1.5.2"
+    "tailwindcss": "^1.9.6"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "github:fullhuman/postcss-purgecss"
+    "@fullhuman/postcss-purgecss": "github:fullhuman/postcss-purgecss",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "imagemin-webp": "^6.0.0",
+    "tailwindcss-animatecss": "^1.0.7"
   },
   "optionalDependencies": {
     "fsevents": "^2.1.3"

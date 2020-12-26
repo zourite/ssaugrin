@@ -24,7 +24,7 @@ if( window.location.hash == "#contact") {
 
 function initElement()
 {
-
+ 
     if ( window.location.pathname == '/'){
        
         p.onclick = showFlip;
@@ -37,6 +37,8 @@ function initElement()
         }
 
     }
+
+    animatElements()
     
     
 };
@@ -57,5 +59,35 @@ function closeContactBox()
   homeLink.classList.add("active");
   flip.classList.remove("active");
   flipbox.classList.remove("rotate");
+}
+
+function animatElements(){
+
+    var sandwiches = document.querySelectorAll('.anihome');
+   
+    sandwiches.forEach(function (sandwich, index) {
+
+        setTimeout(function() {
+
+            sandwich.classList.add('animate__animated', 'animate__fadeIn');
+            sandwich.classList.remove("hidden");
+        }, 200 * index);
+       
+    });
+    
+
+    var sandwiches = document.querySelectorAll('.anihome2');
+   
+    sandwiches.forEach(function (sandwich, index) {
+
+        setTimeout(function() {
+
+            
+            sandwich.classList.add('md:flex','animate__animated', 'animate__slideInDown');
+            sandwich.classList.remove("hidden");
+            
+        }, 1600);
+       
+    });
 }
 

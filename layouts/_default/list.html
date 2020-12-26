@@ -1,50 +1,52 @@
 {{ define "main" }}
-<section id="posts" class="pt-16 w-full px-2 md:w-11/12 md:mx-auto md:px-0 lg:w-8/12  ">
+<section id="posts" class="pt-16 w-full px-2">
 
-	<h1>Les notes d'une pieuvre  passioné</h1>
+  <h1>Les notes d'une pieuvre passioné</h1>
 
+  <div class="row -m-2">
     <!-- Ranges through content/posts/*.md -->
-    {{ range (.Paginator 6).Pages }}
-    <div class="flex flex-wrap w-full my-4">
+    {{ range (.Paginator 8).Pages }}
+    <div class="flex w-12/12 md:w-6/12 lg:w-4/12 xl:w-3/12 p-2">
 
-        <article class="flex flex-wrap card ">
-        
-            <div class="md:flex w-full md:w-1/4 items-center">
-                {{ if isset .Params "featured" }}
-                  <img src="/img/{{ .Params.featured }}" alt="{{ .Title }}" />
-                {{ end }}
-            </div>
-            
-            <div class="w-full md:w-3/4">
-              <div class="flex w-full">
-                <h2 class="lg:ml-2">
-                  <a href="{{ .RelPermalink }}" class="text-light">
-                      {{.Title}}
-                  </a>
-                  </h2>
-                </div>                  
-                  <div class="p-3">
-				 
-					<p>{{ .Summary }}</p>
-				 
-					<div class="clearfix">
-				 		<a href="{{ .RelPermalink }}" class="rm-btn float-right">Lire la suite</a>
-					</div>
+      <article class="relative card animate__animated animate__fadeIn my-2">
+     
+        <div class="overflow-hidden h-56">
 
-                </div>
-			</div>
-		
-		</article>
-		
+          {{ if isset .Params "featured" }}
+          <img src="/img/{{ .Params.featured }}" alt="{{ .Title }}" />
+          {{ end }}
+
+        </div>
+
+        <div class="w-full md:w-4/4" style="padding-bottom: 55px;">
+          
+          <div class="w-full p-2">
+            <h2 class="text-center">
+              <a href="{{ .RelPermalink }}">
+                {{.Title}}
+              </a>
+            </h2>
+          </div>
+
+          <div class="absolute" style="right : 0; bottom : 5px;">
+            <a href="{{ .RelPermalink }}" class="rm-btn">Lire la suite</a>
+          </div>
+
+        </div>
+
+      </article>
+
     </div>
-    {{ end }}
 
+    {{ end }}
+  </div>
+</section>
 {{ $paginator := .Paginator }}
 
 <!-- If there's more than one page. -->
 {{ if gt $paginator.TotalPages 1 }}
-<section class="flex  card ">
-  <ul id="pagination" class="flex mx-auto p-2">
+<section class="row w-full mt-5 mb-5 m-2">
+  <ul id="pagination" class="flex mx-auto card p-2">
     <!-- Previous page. -->
     {{ if $paginator.HasPrev }}
     <li class="waves-effect text-white">
@@ -56,11 +58,11 @@
 
     <!-- First page. -->
     <li class="{{ if eq $paginator.PageNumber 1 }} active {{ end }} waves-effect grey darken-4 text-white">
-      <a  href="{{ $paginator.First.URL }}">
+      <a href="{{ $paginator.First.URL }}">
         1
       </a>
     </li>
-   
+
     <!-- Page numbers. -->
     {{ range after 1 $paginator.Pagers}}
     <li class="{{ if eq . $paginator }} active {{ end }} waves-effect grey darken-4 text-white">
@@ -80,7 +82,8 @@
     {{ end }}
 
   </ul><!-- .pagination -->
-</section> 
-{{ end }}
 </section>
+{{ end }}
+
+
 {{ end }}

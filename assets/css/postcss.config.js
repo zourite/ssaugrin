@@ -5,6 +5,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
       'layouts/**/*.html',
       'content/**/*.html',
   ],
+  whitelist: ['animate__animated','animate__fadeIn', 'animate__slideInDown'],
 
   // This is the function used to extract class names from your templates
   defaultExtractor: content => {
@@ -21,7 +22,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 module.exports = {    
   plugins: [        
     require('postcss-import')({
-      path: ["assets/css"],
+      path: ["assets/sass"],
     }), 
     require('tailwindcss')('./assets/css/tailwind.config.js'),    
     require('autoprefixer')({
