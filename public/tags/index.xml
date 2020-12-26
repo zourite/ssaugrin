@@ -1,0 +1,21 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>
+    Tags on Developpeur FullStack PHP/JS  | ssaugrin
+    
+    </title>
+    <link>https://saugrin-sonia.fr/tags/</link>
+    <description>Recent content 
+    
+    in Tags on Developpeur FullStack PHP/JS  | ssaugrin
+    </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    
+    
+    
+        <atom:link href="https://saugrin-sonia.fr/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
