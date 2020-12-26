@@ -80,3 +80,16 @@
   background-color: #094c72 ;
 
 }
+
+.github-btn {
+
+  @apply bg-black p-2 text-white absolute;
+  bottom :0;
+  right : 0;
+
+  a {
+
+    color : #fff;
+
+  }
+}

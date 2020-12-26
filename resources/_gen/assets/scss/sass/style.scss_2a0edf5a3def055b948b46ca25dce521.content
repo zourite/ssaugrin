@@ -16868,6 +16868,20 @@ p {
 .btn-center:hover {
   background-color: #094c72; }
 
+.github-btn {
+  --bg-opacity: 1;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, var(--bg-opacity));
+  padding: 0.5rem;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+  .github-btn a {
+    color: #fff; }
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%; } }

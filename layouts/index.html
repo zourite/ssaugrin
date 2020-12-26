@@ -105,37 +105,46 @@
     </div>
 
 </section>
-<section class="row mt-3">
+<section class="row mt-3 p-2">
 
-    <div class="w-full lg:w-4/12 p-2 flex justify-center">
+    <div class="w-full lg:w-4/12 flex justify-center" style="align-items: center;">
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zourite&layout=compact)" alt="Langages" srcset="">
     </div>
 
+    
+
     <div class="w-full lg:w-8/12">
-        
+
+        <h2 class="uppercase">Mes dernieres réalisations</h2>
+
+        <div class="row -m-2">
+
         {{ with getJSON "https://api.github.com/users/zourite/repos" }}
       
-        
         {{ $projects := sort (where . "fork" false) "created_at" "desc" | first 3 }}
-        
-        <div class="row">
+    
         {{ range $projects }}
-            <div class="flex w-full lg:w-4/12 p-2">
+            <div class="flex w-4/12 p-2">
                 
                     
-                    <div class="w-full card ">
+                    <div class="w-full card relative pb-4">
                 
                         <div class="projects-img">
                         <img src="https://raw.githubusercontent.com/{{ .full_name }}/master/screenshot.png" alt="" srcset="">
                         </div>
                     
-                        <div class="p-1">
-                    
-                        <a href="{{ .html_url }}">{{ replace .name "-" " " | title }}</a>
-                        <span class="float-right">{{ .language }}</span>
+                        <div class="clearfix p-2">
+                        
+                        <small class="text-xs float-right"><i>{{ .language }}</i></small>
                         <p>{{ .description }}</p>
                 
                         </div>
+
+                        <div class="github-btn">
+                            {{ partial "fontawesome.html" "github-brands" }}
+                            <a href="{{ .html_url }}" target="blank">{{ replace .name "-" " " | title }}</a>
+                        </div>
+
                     </div>
                 
                 

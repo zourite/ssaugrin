@@ -3,33 +3,33 @@
 
   <h1>Les notes d'une pieuvre passioné</h1>
 
-  <div class="row">
+  <div class="row -m-2">
     <!-- Ranges through content/posts/*.md -->
-    {{ range (.Paginator 6).Pages }}
-    <div class="row w-12/12 md:w-4/12 xl:w-3/12">
+    {{ range (.Paginator 8).Pages }}
+    <div class="flex w-12/12 md:w-6/12 lg:w-4/12 xl:w-4/12 p-2">
 
-      <article class="row relative flex-col card w-12/12 animate__animated animate__fadeIn m-2 mr-4 ml-0">
+      <article class="relative card animate__animated animate__fadeIn my-2">
+     
+        <div class="overflow-hidden h-56">
 
-        <div class="md:flex w-full md:w-4/4 items-center relative">
-          
           {{ if isset .Params "featured" }}
           <img src="/img/{{ .Params.featured }}" alt="{{ .Title }}" />
           {{ end }}
 
         </div>
 
-        <div class="w-full md:w-4/4" style="padding-bottom: 50px;">
+        <div class="w-full md:w-4/4" style="padding-bottom: 55px;">
           
-          <div class="flex w-full">
-            <h2 class="lg:ml-2">
+          <div class="w-full p-2">
+            <h2 class="text-center">
               <a href="{{ .RelPermalink }}">
                 {{.Title}}
               </a>
             </h2>
           </div>
 
-          <div class="absolute" style="right : 0; bottom : 0;">
-            <a href="{{ .RelPermalink }}" class="rm-btn float-right">Lire la suite</a>
+          <div class="absolute" style="right : 0; bottom : 5px;">
+            <a href="{{ .RelPermalink }}" class="rm-btn">Lire la suite</a>
           </div>
 
         </div>
@@ -45,8 +45,8 @@
 
 <!-- If there's more than one page. -->
 {{ if gt $paginator.TotalPages 1 }}
-<section class="flex w-full  mt-5 mb-5 p-2">
-  <ul id="pagination" class="flex mx-auto card">
+<section class="row w-full mt-5 mb-5 m-2">
+  <ul id="pagination" class="flex mx-auto card p-2">
     <!-- Previous page. -->
     {{ if $paginator.HasPrev }}
     <li class="waves-effect text-white">

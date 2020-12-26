@@ -1,39 +1,41 @@
 {{ define "main" }}
-
 <section id="single" class="md:w-11/12 md:mx-auto lg:w-8/12 pt-16 pb-8">
+  
   <h1>{{ .Title }}</h1>
-<p class="card p-2">Ce que j'ai à te proposer ce sont éssentiellement des livres qui pourront t'aider à être encore plus parfait que tu
+  
+  <p class="card p-2">Ce que j'ai à te proposer ce sont éssentiellement des livres qui pourront t'aider à être encore plus parfait que tu
   l'es déjà. J'ai un tableau trello qui recense des livres que j'ai lu et que j'aimerais lire, les livres sont classés
   par categorie. Le tableau se nomme <a href="https://trello.com/b/QcRsNCYA/des-livres-pour" target="_blank"> Des livres
     pour ... </a>, n'hésite pas à jetter un oeil.</p>
 
-<h2>Se comprendre</h2>
+  <h2>Se comprendre</h2>
 
-<p class="card p-2">A mon avis, pour trouver le chemin du bien être il est éssentiel de comprendre ce que l'on est et de l'accepter. Je
+  <p class="card p-2">A mon avis, pour trouver le chemin du bien être il est éssentiel de comprendre ce que l'on est et de l'accepter. Je
   peux t'assurer que j'ai eu aussi des soucis avec l'acceptation de soi, mais il y a des livres qui m'ont aider à voir
   plus clair.</p>
 
-<div class="row justify-center">
+  <div class="row justify-center">
   {{ range $.Site.Data.books.communiquer.products | first 6}}
 
   {{ partial "livre" . }}
 
   {{ end }}
 
-</div>
+  </div>
 
 <h2>Communiquer</h2>
 
-<p class="card p-2">Les relations humaines sont parfois très complexe. Au coeur d'une relation ce qui fait souvent défaut c'est la
+  <p class="card p-2">Les relations humaines sont parfois très complexe. Au coeur d'une relation ce qui fait souvent défaut c'est la
   communication. Je ne suis pas une grande communicante dans l'âme, mais des livres m'ont appris à mieux communiquer
   avec les autres.</p>
 
-<div class="row justify-center">
+  <div class="row justify-center">
   {{ range $.Site.Data.books.comprendre.products | first 6}}
 
   {{ partial "livre" . }}
 
   {{ end }}
-</div>
+  </div>
+  
 </section>
 {{ end }}
