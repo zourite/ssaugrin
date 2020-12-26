@@ -16881,6 +16881,8 @@ p {
   right: 0; }
   .github-btn a {
     color: #fff; }
+  .github-btn .inline-svg {
+    margin-right: 5px; }
 
 @media (min-width: 640px) {
   .sm\:container {
