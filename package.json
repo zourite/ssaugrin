@@ -8,7 +8,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
-    "imagemin": "git+https://github.com/imagemin/imagemin.git#bfd7c547045f68ed92243c6a772f6265a08a687f",
     "postcss-cli": "^7.1.2",
     "postcss-import": "^12.0.1",
     "tailwind": "^4.0.0",
