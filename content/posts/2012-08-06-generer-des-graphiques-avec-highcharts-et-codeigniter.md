@@ -28,7 +28,11 @@ Passons à l&rsquo;éssentiel dans un premier temps téléchargez l&rsquo;archiv
 
 ### Configuration
 
-Le fichier `config/highcharts.php` permet de personnaliser le rendu des graphiques. Il est possible de configurer des élèments qui seront appliqués à tous les graphiques ou de creer une template personnaliser. Pour choisir une template, il suffit de l&rsquo;initialiser ```php $this->highcharts->initialize('nom_template')```
+Le fichier `config/highcharts.php` permet de personnaliser le rendu des graphiques. Il est possible de configurer des élèments qui seront appliqués à tous les graphiques ou de creer une template personnaliser. Pour choisir une template, il suffit de l&rsquo;initialiser :
+
+~~~~php 
+$this->highcharts->initialize('nom_template')
+~~~~
 
 ### Intégration
 
