@@ -124,7 +124,7 @@
         {{ $projects := sort (where . "fork" false) "created_at" "desc" | first 3 }}
     
         {{ range $projects }}
-            <div class="flex w-4/12 p-2">
+            <div class="flex w-full md:w-4/12 p-2">
                 
                     
                     <div class="w-full card relative pb-4">
