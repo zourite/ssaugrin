@@ -523,9 +523,9 @@ video {
   .container {
     max-width: 1280px; } }
 
-@media (min-width: 1600px) {
+@media (min-width: 1400px) {
   .container {
-    max-width: 1600px; } }
+    max-width: 1400px; } }
 
 /* Site Specific */
 .space-y-0 > :not(template) ~ :not(template) {
@@ -9756,7 +9756,7 @@ video {
   max-width: 1280px; }
 
 .max-w-screen-xl {
-  max-width: 1600px; }
+  max-width: 1400px; }
 
 .min-h-0 {
   min-height: 0; }
@@ -15897,9 +15897,9 @@ p {
   .sm\:container {
     max-width: 1280px; } }
 
-@media (min-width: 640px) and (min-width: 1600px) {
+@media (min-width: 640px) and (min-width: 1400px) {
   .sm\:container {
-    max-width: 1600px; } }
+    max-width: 1400px; } }
 
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
@@ -22803,7 +22803,7 @@ p {
   .sm\:max-w-screen-lg {
     max-width: 1280px; }
   .sm\:max-w-screen-xl {
-    max-width: 1600px; }
+    max-width: 1400px; }
   .sm\:min-h-0 {
     min-height: 0; }
   .sm\:min-h-full {
@@ -27179,9 +27179,9 @@ p {
   .md\:container {
     max-width: 1280px; } }
 
-@media (min-width: 768px) and (min-width: 1600px) {
+@media (min-width: 768px) and (min-width: 1400px) {
   .md\:container {
-    max-width: 1600px; } }
+    max-width: 1400px; } }
 
 @media (min-width: 768px) {
   .md\:space-y-0 > :not(template) ~ :not(template) {
@@ -34085,7 +34085,7 @@ p {
   .md\:max-w-screen-lg {
     max-width: 1280px; }
   .md\:max-w-screen-xl {
-    max-width: 1600px; }
+    max-width: 1400px; }
   .md\:min-h-0 {
     min-height: 0; }
   .md\:min-h-full {
@@ -38461,9 +38461,9 @@ p {
   .lg\:container {
     max-width: 1280px; } }
 
-@media (min-width: 1280px) and (min-width: 1600px) {
+@media (min-width: 1280px) and (min-width: 1400px) {
   .lg\:container {
-    max-width: 1600px; } }
+    max-width: 1400px; } }
 
 @media (min-width: 1280px) {
   .lg\:space-y-0 > :not(template) ~ :not(template) {
@@ -45367,7 +45367,7 @@ p {
   .lg\:max-w-screen-lg {
     max-width: 1280px; }
   .lg\:max-w-screen-xl {
-    max-width: 1600px; }
+    max-width: 1400px; }
   .lg\:min-h-0 {
     min-height: 0; }
   .lg\:min-h-full {
@@ -49727,27 +49727,27 @@ p {
   .lg\:reduced-motion\:animate__slideInDown {
     animation-name: slideInDown; } }
 
-@media (min-width: 1600px) {
+@media (min-width: 1400px) {
   .xl\:container {
     width: 100%; } }
 
-@media (min-width: 1600px) and (min-width: 640px) {
+@media (min-width: 1400px) and (min-width: 640px) {
   .xl\:container {
     max-width: 640px; } }
 
-@media (min-width: 1600px) and (min-width: 768px) {
+@media (min-width: 1400px) and (min-width: 768px) {
   .xl\:container {
     max-width: 768px; } }
 
-@media (min-width: 1600px) and (min-width: 1280px) {
+@media (min-width: 1400px) and (min-width: 1280px) {
   .xl\:container {
     max-width: 1280px; } }
 
-@media (min-width: 1600px) and (min-width: 1600px) {
+@media (min-width: 1400px) and (min-width: 1400px) {
   .xl\:container {
-    max-width: 1600px; } }
+    max-width: 1400px; } }
 
-@media (min-width: 1600px) {
+@media (min-width: 1400px) {
   .xl\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
@@ -56649,7 +56649,7 @@ p {
   .xl\:max-w-screen-lg {
     max-width: 1280px; }
   .xl\:max-w-screen-xl {
-    max-width: 1600px; }
+    max-width: 1400px; }
   .xl\:min-h-0 {
     min-height: 0; }
   .xl\:min-h-full {
@@ -60997,7 +60997,7 @@ p {
   .xl\:hover\:animate__slideInDown:hover {
     animation-name: slideInDown; } }
 
-@media (min-width: 1600px) and (prefers-reduced-motion: reduce) {
+@media (min-width: 1400px) and (prefers-reduced-motion: reduce) {
   .xl\:reduced-motion\:animate__animated {
     animation-duration: 1000ms;
     animation-fill-mode: both; }
