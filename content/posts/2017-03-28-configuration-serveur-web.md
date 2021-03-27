@@ -25,7 +25,7 @@ Le système d&rsquo;exploitation que je choisi pour un serveur web, est [Debian]
 
 Entrons donc dans le vif du sujet, le schéma ci dessous te montre comment mon serveur est organisé. Je partitionne _(séparer en plusieurs partie)_ mon serveur en deux. Les fichiers qui constituent **le site web sont stockés dans le répertoire /home et les applicatifs sont à la racine /(racine).** Je préfère séparer ces deux types de données si un site est trop gourmand en stockage d&rsquo;images, de pdf ou de vidéos, et sature l&rsquo;espace disponible, mon serveur continuera de fonctionner sans encombre.
 
-<img src="/img/2017/03/serveur-nginx-php-mysql.jpg" alt="" width="791" height="361" class="aligncenter size-full wp-image-3074" srcset="/img/2017/03/serveur-nginx-php-mysql.jpg 791w, 2017/03/serveur-nginx-php-mysql-300x137.jpg 300w, 2017/03/serveur-nginx-php-mysql-768x351.jpg 768w" sizes="(max-width: 791px) 100vw, 791px" />
+<img src="/img/2017/03/serveur-nginx-php-mysql.jpg" alt="" class="aligncenter size-full wp-image-3074" srcset="/img/2017/03/serveur-nginx-php-mysql.jpg 791w, 2017/03/serveur-nginx-php-mysql-300x137.jpg 300w, 2017/03/serveur-nginx-php-mysql-768x351.jpg 768w" />
 
 ## **Le serveur HTTP** 
 
@@ -33,12 +33,12 @@ Sans un serveur HTTP d&rsquo;installé rien ne fonctionne, il est le pilier prin
 
 A la base NGINX est utilisé en tant que reverse proxy en complément d&rsquo;Apache. Cependant je trouve que NGINX rempli très bien son rôle de serveur HTTP sans pour autant avoir besoin d&rsquo;Apache. Mis à part sa légèreté et sa rapidité d’exécution. Je trouve que la syntaxe de NGINX est plus simple et plus intuitive, ce n&rsquo;est que mon avis. Plus bas, tu trouveras un graphique qui représente la part de marché des différents serveurs HTTP. NGINX prend de plus en plus de part au fil des années.
 
-<div id="attachment_3078" style="width: 730px" class="wp-caption aligncenter">
-  <img aria-describedby="caption-attachment-3078" src="/img/2017/03/Sélection_239.png" alt="" width="720" height="586" class="size-full wp-image-3078" srcset="/img/2017/03/Sélection_239.png 720w, 2017/03/Sélection_239-300x244.png 300w" sizes="(max-width: 720px) 100vw, 720px" />
+<div class="caption align-center">
+  <img aria-describedby="caption-attachment-3078" src="/img/web-usage-server.png" alt="" class="size-full"/>
   
-  <p id="caption-attachment-3078" class="wp-caption-text">
-    <a href="https://trends.builtwith.com/web-server">https://trends.builtwith.com/web-server</a>
-  </p>
+  <div class="caption-text">
+    <a href="https://trends.builtwith.com/web-server" target="_blank">https://trends.builtwith.com/web-server</a>
+  </div>
 </div>
 
 ## **Language de scripts** 
