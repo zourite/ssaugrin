@@ -115,22 +115,25 @@
 
   position: relative;
 
-  img {
+}
 
-      position: relative;
-  }
+.caption img {
 
-  .caption-text {
+  position: relative;
+}
 
-      padding : 5px;
-      background: rgba($color: #000, $alpha: 0.7);
-      position : absolute;
-      bottom: 0px;
-      @apply shadow-md;
+.caption-text {
 
-      a {
-          color: #fafafa;
-      }
-  }
+  padding : 5px;
+  background: rgba($color: #000, $alpha: 0.7);
+  position : absolute;
+  bottom: 0px;
+  @apply shadow-md;
+
+}
+
+.caption-text a {
+
+    color: #fafafa;
 
 }
