@@ -48,7 +48,7 @@ Si tu as répondu OUI, à la plupart de ces questions, je vais t&rsquo;expliquer
 
 **Tout est une question de priorités**.
 
-<img class="aligncenter size-full wp-image-3098" src="/img/2017/10/ma-journee-gagner-du-temps.jpg" alt="Mieux gérer son temps" width="900" height="500" srcset="/img/2017/10/ma-journee-gagner-du-temps.jpg 900w, 2017/10/ma-journee-gagner-du-temps-300x167.jpg 300w, 2017/10/ma-journee-gagner-du-temps-768x427.jpg 768w" sizes="(max-width: 900px) 100vw, 900px" />
+<img class="aligncenter size-full wp-image-3098" src="/img/2017/10/ma-journee-gagner-du-temps.jpg" alt="Mieux gérer son temps" width="900" height="500" />
 
 Le planning de l&rsquo;une de mes anciennes journées est représentée dans l’image ci-dessus. J’ai pu trouver du temps dans mes journées, je peux encore en trouver si je décide de supprimer l’utilisation des réseaux sociaux. Maintenant, j’ai du temps pour me consacrer au blogging ou pour lire un livre.
 
