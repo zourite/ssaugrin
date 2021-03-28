@@ -6,7 +6,13 @@
 @import "tailwindcss/utilities";
 @import "base/base.scss";
 
+.caption {
 
+  position: relative;
+
+ 
+
+}
 
 .nav-link {
 
@@ -111,10 +117,3 @@
 
 }
 
-.caption {
-
-    position: relative;
-
-   
-
-}

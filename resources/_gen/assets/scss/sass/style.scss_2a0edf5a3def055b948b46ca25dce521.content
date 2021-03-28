@@ -15815,6 +15815,9 @@ p {
   height: 135px;
   overflow: hidden; }
 
+.caption {
+  position: relative; }
+
 .nav-link {
   background-color: #c4c2c3;
   border: 1px solid #bdbbbc;
@@ -15884,9 +15887,6 @@ p {
 @media screen and (max-width: 320px) {
   #footer a {
     font-size: 12px; } }
-
-.caption {
-  position: relative; }
 
 @media (min-width: 640px) {
   .sm\:container {
