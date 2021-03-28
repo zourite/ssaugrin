@@ -15887,16 +15887,6 @@ p {
 
 .caption {
   position: relative; }
-  .caption img {
-    position: relative; }
-  .caption .caption-text {
-    padding: 5px;
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    bottom: 0px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
-    .caption .caption-text a {
-      color: #fafafa; }
 
 @media (min-width: 640px) {
   .sm\:container {
