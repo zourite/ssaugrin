@@ -120,6 +120,8 @@
 .caption img {
 
   position: relative;
+  display: block;
+  margin : auto;
 }
 
 .caption-text {
@@ -128,7 +130,8 @@
   background: rgba($color: #000, $alpha: 0.7);
   position : absolute;
   bottom: 0px;
-  @apply shadow-md;
+  left: 0;
+  right: 0;
 
 }
 
