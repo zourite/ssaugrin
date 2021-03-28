@@ -221,6 +221,31 @@ blockquote {
     .flipper {
         height:  250px;
     }
-  }
+}
+
+.caption {
+
+    position: relative;
+
+}
+
+.caption img {
+
+    position: relative;
+}
+
+.caption-text {
+
+    padding : 5px;
+    background: rgba(0,0,0,0.7);
+    position : absolute;
+    bottom: 0px;
+    @apply shadow-md;
+
+}
+
+a {
+    color: #fafafa;
+}
     
 

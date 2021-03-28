@@ -15815,9 +15815,6 @@ p {
   height: 135px;
   overflow: hidden; }
 
-.caption {
-  position: relative; }
-
 .nav-link {
   background-color: #c4c2c3;
   border: 1px solid #bdbbbc;
