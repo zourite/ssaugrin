@@ -48,26 +48,4 @@ p {
     overflow: hidden;
 }
 
-.caption {
 
-    position: relative;
-
-    img {
-
-        position: relative;
-    }
-
-    .caption-text {
-
-        padding : 5px;
-        background: rgba($color: #000000, $alpha: 0.7);
-        position : absolute;
-        bottom: 0px;
-        @apply shadow-md;
-
-        a {
-            color: #fafafa;
-        }
-    }
-
-}
