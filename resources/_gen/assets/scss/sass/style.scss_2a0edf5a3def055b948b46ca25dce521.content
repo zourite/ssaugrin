@@ -15885,25 +15885,6 @@ p {
   #footer a {
     font-size: 12px; } }
 
-.caption {
-  position: relative; }
-
-.caption img {
-  position: relative;
-  display: block;
-  margin: auto; }
-
-.caption-text {
-  padding: 5px;
-  background: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  right: 0; }
-
-.caption-text a {
-  color: #fafafa; }
-
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%; } }
