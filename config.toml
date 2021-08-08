@@ -1,6 +1,7 @@
 baseURL = "https://saugrin-sonia.fr/"
 languageCode = "fr-fr"
 title = "Developpeur FullStack PHP/JS  | ssaugrin"
+uglyURLs = true
 
 [params]
   author = "Sonia Saugrin"
