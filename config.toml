@@ -6,7 +6,7 @@ uglyURLs = true
 [params]
   author = "Sonia Saugrin"
   description = "Geek et développeur fullstack PHP/JS expérimenté vivant à l'île de La Réunion"
-  images = ['screenshot.png']
+  image = 'screenshot.png'
   token = "123456"
   consumer_key = "13616-c877ca91826123ba561154b7"
 
