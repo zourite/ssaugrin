@@ -3,13 +3,7 @@
 <meta charset="utf-8">
 
   
-<title>
-  {{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
-
-{{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
-{{ template "_internal/schema.html" . }}
-{{ template "_internal/google_news.html" . }}
+<title>{{ .Title }}{{ if ne .Title .Site.Title }} | {{ .Site.Title }}{{ end }}</title>
 
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -27,6 +21,11 @@
 <meta name="application-name" content="ssaugrin">
 <meta name="msapplication-TileColor" content="#b91d47">
 <meta name="theme-color" content="#ffffff">
+
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/schema.html" . }}
+{{ template "_internal/google_news.html" . }}
     
 <base href="{{ .Site.BaseURL }}">
 {{ $sass := resources.Get "sass/style.scss" }}  
@@ -39,8 +38,9 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
   
-<link href='https://fonts.gstatic.com' rel='preconnect' crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="{{ "css/app.css" | relURL  }}">
 
 
