@@ -29,8 +29,8 @@
 <meta name="theme-color" content="#ffffff">
     
 <base href="{{ .Site.BaseURL }}">
-{{ $sass := resources.Get "sass/style.scss" }}  
-{{ $style := $sass | postCSS (dict "config" "./assets/css/postcss.config.js") | resources.ToCSS}}
+
+{{ $style := resources.Get "/css/style.css" | postCSS }}
   
 {{ if .Site.IsServer }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">

@@ -202,7 +202,7 @@ blockquote {
     background-repeat:no-repeat;
   }
 
-  #p404 {
+  .p404 {
 
     background: url("/img/main/404.jpg") no-repeat;
     min-height:  calc(100vh - 70px);

@@ -1,202 +1,77 @@
 {{ define "main" }}
+<section id="home">
 
-<section class="flex flex-col-reverse w-full lg:flex-row pt-16 lg:items-center">
-   
-    <div class="w-full lg:w-5/12 p-2" style="min-height: 247px;">
+  <div class="ocean">
 
-        <h2 class="uppercase clearfix lg:hidden mb-2">Coté Technique</h2>
+    <div id="fish-group" class="flex" aria-hidden="true">
+      <div>
+        <div class="fish" id="fish6" aria-hidden="true"></div>
+        <div class="fish" id="fish5" aria-hidden="true"></div>
+        <div class="fish" id="fish4" aria-hidden="true"></div>
+      </div>
+      <div style="margin-left:-25px">
+        <div class="fish" id="fish3" aria-hidden="true"></div>
+        <div class="fish" id="fish2" aria-hidden="true"></div>
+        <div class="fish" id="fish1" aria-hidden="true"></div>
+      </div>
+    </div>
 
-        <div class="row justify-center">
-
-                {{ range $.Site.Data.logos.logo.skill }}
-
-                <div class="w-3/12 lg:w-1/4 p-2">
-
-                        <div class="card">
-
-                            <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2 center anihome hidden" width="140" height="120" style="margin: auto;"/>
-
-                        </div>
-
-                </div>
-
-                {{ end }}
-
-        </div>
-
+    <div class="bubbles" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
 
-    <div class="col w-full lg:w-7/12 p-2">
+    <article class="container mx-auto h-full ">
 
-        <div class=" md:flex-wrap hidden anihome2">
+      <div class="h-full flex flex-col items-center justify-center">
 
-            <div id="avatar" class="hidden md:block md:w-3/12">
+        <div id="rs-icon" class="text-center">
 
-                <img src="/img/main/logo-wb.png" alt="logo" class="shadow-img">
+          <img src="/img/main/logo-wb-2.png" alt="logo" class="shadow-img mx-auto">
+          
+          <div class="w-full mt-4">
+            <a href="https://twitter.com/Zourite" target="_blank"> 
+                {{ partial "fontawesome.html" "twitter-brands" }}
+            </a> 
+            <a href="https://github.com/Zourite" target="_blank"> {{ partial "fontawesome.html" "github-brands" }}  </a>
+            <a href="https://www.linkedin.com/in/ssaugrin/" target="_blank"> 
+                {{ partial "fontawesome.html" "linkedin-in-brands" }}
+            </a>
+        </div>
 
-            </div>
-
-            <div  class="flip-container w-full md:w-9/12 text-center ">
-
-                <div id="flipbox" class="flipper">
-
-                    <div  class="front md:flex md:items-center  id-card  card-brd-top">
-
-                      <div id="h-front" class="w-full p-2">
-                            <h1>Developpeur Full Stack PHP/JS</h1>
-
-                            <div class="w-full mb-4">
-                                <a href="https://twitter.com/Zourite" target="_blank"> 
-                                    {{ partial "fontawesome.html" "twitter-brands" }}
-                                </a> -
-                                <a href="https://github.com/Zourite" target="_blank"> {{ partial "fontawesome.html" "github-brands" }}  </a>
-                                -
-                                <a href="https://stackoverflow.com/users/665113/" target="_blank">
-                                    {{ partial "fontawesome.html" "stack-overflow-brands" }}
-                                </a> -
-                                <a href="https://www.linkedin.com/in/ssaugrin/" target="_blank"> 
-                                    {{ partial "fontawesome.html" "linkedin-in-brands" }}
-                                </a>
-                            </div>
-
-                            <blockquote class="mt-5 mb-5">
-                                Si debugger, c’est supprimer des bugs, alors programmer ne peut être que les ajouter.
-                                <br>
-                                <cite class="mt-10">- Edsger Dijkstra</cite>
-                            </blockquote>
-                        </div>
-                    </div>
-
-                    <div  class="back md:flex md:items-center  id-card  card-brd-top">
-                        <div id="h-back" class="w-full p-2">
-                            <div class="text-2xl text-right">
-                                <div id="close-flip" class="text-dragon fas fa-window-close"
-                                    onclick="closeContactBox(this)">
-                                    {{ partial "fontawesome.html" "window-close-solid" }}
-                                </div>
-                            </div>
-                            <p>
-                                Le meilleur moyen de me contacter est de m'envoyer un mail.<br> Je te répondrais dés que
-                                possible.
-                            </p>
-                            <p>
-                                <a
-                                    href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;">&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- <div class="mt-5 mb-2">
-               
-                <button class="cta-btn shadow hover:bg-blue-700 text-white font-bold py-2 px-4">J'ai besoin
-                d'un
-                Developpeur</button>
-
-                </div> -->
-
-                </div>
-
-
-            </div>
+          <blockquote class="mt-5 mb-5">
+            <h1> Si debugger, c’est supprimer des bugs, alors programmer ne peut être que les ajouter.</h1>
+            <cite class="mt-3">- Edsger Dijkstra</cite>
+          </blockquote>
 
         </div>
-    
-    </div>
+
+        <div class="grid grid-cols-7 gap-4">
+
+          {{ range $.Site.Data.logos.logo.skill }}
+          <div class="p-5">
+            <div class="card">
+              <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2 center anihome " width="140"
+                height="120" style="margin: auto;" />
+            </div>
+          </div>
+          {{ end }}
+  
+        </div>
+
+      </div>
+           
+  </article>
+
+  </div>
 
 </section>
-<section class="row mt-3 p-2">
 
-    <div class="w-full lg:w-4/12 flex justify-center" style="align-items: center;">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=zourite&layout=compact)" alt="Langages" srcset="">
-    </div>
-
-    
-
-    <div class="w-full lg:w-8/12">
-
-        <h2 class="uppercase">Mes dernieres réalisations</h2>
-
-        <div class="row -m-2">
-
-        {{ with getJSON "https://api.github.com/users/zourite/repos" }}
-      
-        {{ $projects := sort (where . "fork" false) "created_at" "desc" | first 3 }}
-    
-        {{ range $projects }}
-            <div class="flex w-4/12 p-2">
-                
-                    
-                    <div class="w-full card relative pb-4">
-                
-                        <div class="projects-img">
-                        <img src="https://raw.githubusercontent.com/{{ .full_name }}/master/screenshot.png" alt="" srcset="">
-                        </div>
-                    
-                        <div class="clearfix p-2">
-                        
-                        <small class="text-xs float-right"><i>{{ .language }}</i></small>
-                        <p>{{ .description }}</p>
-                
-                        </div>
-
-                        <div class="github-btn">
-                            {{ partial "fontawesome.html" "github-brands" }}
-                            <a href="{{ .html_url }}" target="blank">{{ replace .name "-" " " | title }}</a>
-                        </div>
-
-                    </div>
-                
-                
-
-            </div>
-        {{ end }}
-        </div>
-    
-    </div>
-    {{ end }}
-
-</section>
-<section class="p-2">
-
-    <h2 class="uppercase clearfix mb-2">Mes dernieres notes</h2>
-
-    <div  class="w-full">
-
-        <div id="postlist" class="flex flex-wrap -mx-2">
-
-        {{ range where .Site.RegularPages "Section" "posts" | first 4}}
-
-        <div class="flex w-full lg:w-3/12 md:w-6/12 px-2">
-
-            <div class="my-2 card">
-
-                <div class="h-56  overflow-hidden">
-                    {{ if isset .Params "featured" }}
-
-                    <img src="/img/{{ .Params.featured }}" alt="{{ .Title }}" />
-
-                    {{ end }}
-                </div>
-
-                <div class="p-2">
-
-                    <h3 class="text-center">
-                        <a href="{{ .RelPermalink }}">
-                            {{.Title}}
-                        </a>
-                    </h3>
-
-                </div>
-            </div>
-
-        </div>
-
-        {{ end }}
-
-    </div>
-
-    </div>
-
-</section>
 {{ end }}

@@ -1,0 +1,14 @@
+.p404 {
+
+  background: url("/img/main/404.jpg") no-repeat;
+  min-height:  calc(100vh - 70px);
+  background-size: cover;
+
+}
+
+#posts-404 {
+
+  border: 10px solid transparent;
+  border-image: url('/img/main/watercolor-paint-background.jpg') 60;
+
+}

@@ -1,28 +1,28 @@
 {
   "name": "ssaugrin",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Tailwind integration",
   "main": "index.js",
   "scripts": {
-    "start": "hugo --gc"
+    "start": "concurrently npm:watch:*",
+    "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --postcss --watch",
+    "watch:hugo": "hugo server",
+    "build": "hugo --minify"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
-    "imagemin": "git+https://github.com/imagemin/imagemin.git#bfd7c547045f68ed92243c6a772f6265a08a687f",
-    "postcss-cli": "^7.1.2",
-    "postcss-import": "^12.0.1",
-    "tailwind": "^4.0.0",
-    "tailwindcss": "^1.9.6"
+    "autoprefixer": "^10.4.2",
+    "concurrently": "^7.0.0",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.0.2",
+    "tailwindcss": "^3.0.15"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "github:fullhuman/postcss-purgecss",
-    "imagemin-jpegtran": "^7.0.0",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.1",
-    "imagemin-webp": "^6.0.0",
+    "concat": "^1.0.3",
+    "postcss-comment": "^2.0.0",
+    "postcss-nested": "^5.0.6",
+    "postcss-nested-ancestors": "^2.0.0",
+    "postcss-nesting": "^10.1.2",
     "tailwindcss-animatecss": "^1.0.7"
-  },
-  "optionalDependencies": {
-    "fsevents": "^2.1.3"
   }
 }

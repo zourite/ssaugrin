@@ -8,26 +8,6 @@
 
 
 
-.nav-link {
-
-  background-color : #c4c2c3;
-  border : 1px solid #bdbbbc;
-  letter-spacing : 2px;
-  @apply p-2 shadow;
- 
-}
-
-.nav-links li {
-
-  @apply mr-4;
-
-}
-
-.nav-link:hover, .active {
-
-  box-shadow : inset 0 0 20px #929091;
-
-}
 
 #pagination li {
 

@@ -28,6 +28,6 @@ image = "/img/logos/php.png"
 titre = "JS"
 image = "/img/logos/js.png"
 
-[[skill]]
-titre = "GIT"
-image = "/img/logos/git.png"
+# [[skill]]
+# titre = "GIT"
+# image = "/img/logos/git.png"

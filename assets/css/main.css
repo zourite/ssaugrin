@@ -1,0 +1,12 @@
+@import "/typo/font.css";
+@import "/typo/heading.css";
+@import "/main/header.css";
+@import "/main/footer.css";
+@import "/main/p-error.css";
+@import "/home/home.css";
+@import "helpers.css";
+
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
