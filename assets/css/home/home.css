@@ -3,7 +3,7 @@
   background-color: #3498db;
   background-image: linear-gradient(315deg, #2c3e50 0%, #3498db 74%);
   position: relative;
-  height: calc(100vh - 37px);
+  height: calc(100vh - 35px);
   
   blockquote {
 

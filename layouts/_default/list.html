@@ -1,14 +1,13 @@
 {{ define "main" }}
-<section id="posts" class="pt-16 w-full px-2">
+<section id="posts" class="pt-16 container mx-auto">
 
   <h1>Les notes d'une pieuvre passioné</h1>
 
-  <div class="row -m-2">
+  <div class="grid grid-cols-4 gap-4">
     <!-- Ranges through content/posts/*.md -->
     {{ range (.Paginator 8).Pages }}
-    <div class="flex w-12/12 md:w-6/12 lg:w-4/12 xl:w-3/12 p-2">
-
-      <article class="relative card animate__animated animate__fadeIn my-2">
+  
+      <article class="card">
      
         <div class="overflow-hidden h-56">
 
@@ -18,7 +17,7 @@
 
         </div>
 
-        <div class="w-full md:w-4/4" style="padding-bottom: 55px;">
+        <div>
           
           <div class="w-full p-2">
             <h2 class="text-center">
@@ -28,15 +27,13 @@
             </h2>
           </div>
 
-          <div class="absolute" style="right : 0; bottom : 5px;">
+          <div>
             <a href="{{ .RelPermalink }}" class="rm-btn">Lire la suite</a>
           </div>
 
         </div>
 
       </article>
-
-    </div>
 
     {{ end }}
   </div>
@@ -45,7 +42,7 @@
 
 <!-- If there's more than one page. -->
 {{ if gt $paginator.TotalPages 1 }}
-<section class="row w-full mt-5 mb-5 m-2">
+<section class="">
   <ul id="pagination" class="flex mx-auto card p-2">
     <!-- Previous page. -->
     {{ if $paginator.HasPrev }}

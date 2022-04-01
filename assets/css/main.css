@@ -5,6 +5,7 @@
 @import "/main/p-error.css";
 @import "/home/home.css";
 @import "helpers.css";
+@import "animation.css";
 
 
 @import "tailwindcss/base";

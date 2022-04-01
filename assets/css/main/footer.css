@@ -4,16 +4,24 @@
   box-shadow: 0 -3px 6px  rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
   height : 35px; 
 
-  .nav-links {
+  #nav-foot {
 
-    li {
+    align-items : center;
+    justify-content : center;
+    height : 100%;
 
-      margin-left: 10px;
+    .nav-links {
 
-      a {
+      li {
 
-        color : #fff;
-        font-size : 12px;
+        margin-left: 10px;
+
+        a {
+
+          color : #fff;
+          font-size : 12px;
+
+        }
 
       }
 
@@ -21,4 +29,9 @@
 
   }
 
+  .inset-text {
+
+    border-right : 0;
+    
+  }
 }
