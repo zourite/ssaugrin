@@ -34,3 +34,24 @@
   -webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
 }
+
+.github-btn {
+
+  @apply bg-black p-1 text-white text-sm;
+  width: fit-content;
+  
+  a {
+
+    color : #fff;
+    
+    .inline-svg {
+
+      margin-right: 10px;
+      width: 1em;
+  
+    }
+
+  }
+
+  
+}

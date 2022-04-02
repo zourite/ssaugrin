@@ -1,60 +1,110 @@
 {{ define "main" }}
-<section id="posts" class="pt-16 container mx-auto">
+{{ $pagin := (.Paginator 8).Pages }}
+{{ $paginator := .Paginator }}
+{{ with getJSON "https://api.github.com/users/zourite/repos" }}
+{{ $projects := sort (where . "fork" false) "created_at" "desc" | first 5 }}
+{{ if eq $paginator.PageNumber 1 }}
 
-  <h1>Les notes d'une pieuvre passioné</h1>
+<div class="container mx-auto">
 
-  <div class="grid grid-cols-4 gap-4">
+  <h1>Mes derniers projets... </h1>
+
+  <div class="grid sm:grid-cols-3 xl:grid-cols-5 gap-6">
+
+    {{ range $projects }}
+
+    <div class="project card">
+
+      <div class="project-img">
+
+        <img src="https://raw.githubusercontent.com/{{ .full_name }}/master/screenshot.png"
+          alt="{{ replace .name "-" " " | title }} github">
+        <div class="info-project">
+
+          <p class="text-xs text-right p-2"><i>{{ .language }}</i></p>
+
+          <div class="github-btn">
+
+            <a href="{{ .html_url }}" target="_blank">
+              {{ partial "fontawesome.html" "github-brands" }}
+              {{ replace .name "-" " " | title }}
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+<section id="posts" class="container mx-auto">
+
+  <h2>... et mes derniers articles</h2>
+
+  <div class="grid sm:grid-cols-2 xl:grid-cols-2 gap-6">
     <!-- Ranges through content/posts/*.md -->
-    {{ range (.Paginator 8).Pages }}
-  
-      <article class="card">
-     
-        <div class="overflow-hidden h-56">
+    {{ range $pagin }}
 
+    <article class="post">
+
+      <div class="thumb card w-5/12">
+        <a href="{{ .RelPermalink }}">
           {{ if isset .Params "featured" }}
           <img src="/img/{{ .Params.featured }}" alt="{{ .Title }}" />
           {{ end }}
+        </a>
+      </div>
 
-        </div>
+      <div class="post-content w-7/12 ">
+        <a href="{{ .RelPermalink }}">
+          <h3> {{.Title}} </h3>
+          <ul class="post-meta">
 
-        <div>
-          
-          <div class="w-full p-2">
-            <h2 class="text-center">
-              <a href="{{ .RelPermalink }}">
-                {{.Title}}
-              </a>
-            </h2>
-          </div>
+            <li class="mr-2">
 
-          <div>
-            <a href="{{ .RelPermalink }}" class="rm-btn">Lire la suite</a>
-          </div>
+              {{ partial "fontawesome.html" "calendar-alt-regular" }}
+              <time class="published" datetime="{{ .Date }}">
+                <!-- {{ default (i18n "date_format") | .Date.Format  }} -->
+                {{ .Date.Day }} {{ index $.Site.Data.months "fr" (printf "%d" .Date.Month) }} {{ .Date.Year }}
+              </time>
+            </li>
 
-        </div>
+            <li>
+              {{ partial "fontawesome.html" "stopwatch-solid" }} {{ .ReadingTime }} minutes de lecture
+            </li>
 
-      </article>
+          </ul>
+          <p> {{ .Summary }} </p>
+        </a>
+      </div>
+
+    </article>
 
     {{ end }}
   </div>
 </section>
-{{ $paginator := .Paginator }}
+
 
 <!-- If there's more than one page. -->
 {{ if gt $paginator.TotalPages 1 }}
-<section class="">
-  <ul id="pagination" class="flex mx-auto card p-2">
+<section class="container mx-auto">
+  <ul id="pagination" class="flex mx-auto">
     <!-- Previous page. -->
     {{ if $paginator.HasPrev }}
-    <li class="waves-effect text-white">
+    <li class="waves-effect">
       <a href="{{ $paginator.Prev.URL }}">
-        «
+        ←
       </a>
     </li>
     {{ end }}
 
     <!-- First page. -->
-    <li class="{{ if eq $paginator.PageNumber 1 }} active {{ end }} waves-effect grey darken-4 text-white">
+    <li class="{{ if eq $paginator.PageNumber 1 }} active {{ end }} waves-effect grey darken-4">
       <a href="{{ $paginator.First.URL }}">
         1
       </a>
@@ -62,7 +112,7 @@
 
     <!-- Page numbers. -->
     {{ range after 1 $paginator.Pagers}}
-    <li class="{{ if eq . $paginator }} active {{ end }} waves-effect grey darken-4 text-white">
+    <li class="{{ if eq . $paginator }} active {{ end }} waves-effect grey darken-4">
       <a href="{{ .URL }}" class="pagination__link">
         {{ .PageNumber }}
       </a>
@@ -71,9 +121,9 @@
 
     <!-- Next page. -->
     {{ if $paginator.HasNext }}
-    <li class="waves-effect text-white">
+    <li class="waves-effect">
       <a href="{{ $paginator.Next.URL }}">
-        »
+        →
       </a>
     </li>
     {{ end }}

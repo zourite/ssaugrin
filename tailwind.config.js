@@ -9,6 +9,7 @@ module.exports = {
           'lgt-green-octo': '#028090',
           'light': '#fafafa',
           'dragon': '#c33c54',
+          'blue-deep': '#2c3e50',
         },
         fontFamily: {
           'sans': ['Inter var', 'Helvetica', 'Arial', 'sans-serif']

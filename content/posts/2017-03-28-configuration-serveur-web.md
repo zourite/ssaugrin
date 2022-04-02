@@ -15,7 +15,9 @@ tags:
   - nginx
 
 ---
-Il y a maintenant une ou deux année de cela, j&rsquo;ai pris la décision de ne plus utiliser des serveurs mutualisés. J&rsquo;ai fait ce choix principalement pour avoir le contrôle absolue sur ce que je fais _(I&rsquo;m ROOT, I&rsquo;m GOD)_ et expérimenter des nouvelles technologies, sans attendre le bon vouloir de mon hébergeur pour les intégrer à ses serveurs.
+Il y a maintenant une ou deux année de cela, j&rsquo;ai pris la décision de ne plus utiliser des serveurs mutualisés. 
+
+J&rsquo;ai fait ce choix principalement pour avoir le contrôle absolue sur ce que je fais _(I&rsquo;m ROOT, I&rsquo;m GOD)_ et expérimenter des nouvelles technologies, sans attendre le bon vouloir de mon hébergeur pour les intégrer à ses serveurs.
 
 Le système d&rsquo;exploitation que je choisi pour un serveur web, est [Debian][1] et si ce ne serait pas Debian ça aurait été Ubuntu. Il y à énormément de ressources et de tutaux pour ces systèmes d&rsquo;exploitations. **Grande est la communauté du .deb** 😀
 

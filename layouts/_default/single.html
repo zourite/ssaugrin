@@ -1,11 +1,9 @@
 {{ define "main" }}
-<article id="single" class="w-full md:w-11/12 md:mx-auto lg:w-8/12 pt-16 pb-8">
+<article id="single" class="container mx-auto">
+  <div class="w-1/2 mx-auto">
+  <header class="flex flex-col mb-3 mt-2 p-2">
 
-  <div class="mx-2 md:mx-0">
-
-  <header class="flex flex-col card mb-3 mt-2 p-2">
-
-    <div class="clearfix">
+    
     <ul id="meta" class="flex float-right">
 
       <li class="mr-2">
@@ -22,20 +20,18 @@
       </li>
 
     </ul>
-  </div>
-
+  
     <h1> {{ .Title }} </h1>
 
 
   </header>
 
-  <article class="card p-3">
+  <main class="p-3">
 
     {{ .Content | emojify }}
 
-  </article>
+  </main>
 
 </div>
-
 </article>
 {{ end }}

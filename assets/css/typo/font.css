@@ -18,11 +18,3 @@ body {
   color: #333333;
 
 }
-
-#posts {
-
-  animation-name: fadeInUp;
-  animation-duration: 0.45s;
-  animation-fill-mode: both;
-
-}

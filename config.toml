@@ -1,14 +1,14 @@
 baseURL = "https://saugrin-sonia.fr/"
 languageCode = "fr-fr"
 title = "Lead Developpeur FullStack | ssaugrin"
+disableKinds = ["taxonomy", "taxonomyTerm"]
+summaryLength = 20
 
 [params]
   author = "Sonia Saugrin"
   description = "Geek et développeur web expérimenté vivant à l'île de La Réunion"
   token = "123456"
   consumer_key = "13616-c877ca91826123ba561154b7"
-
-disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [markup.goldmark.renderer]
 unsafe= true
