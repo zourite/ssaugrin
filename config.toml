@@ -1,6 +1,6 @@
 baseURL = "https://saugrin-sonia.fr/"
 languageCode = "fr-fr"
-title = "Lead Developpeur FullStack | ssaugrin"
+title = "Lead Développeur | ssaugrin"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 summaryLength = 20
 

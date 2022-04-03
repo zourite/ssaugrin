@@ -2,14 +2,14 @@
 {{ $pagin := (.Paginator 8).Pages }}
 {{ $paginator := .Paginator }}
 {{ with getJSON "https://api.github.com/users/zourite/repos" }}
-{{ $projects := sort (where . "fork" false) "created_at" "desc" | first 5 }}
-{{ if eq $paginator.PageNumber 1 }}
+{{ $projects := sort (where . "fork" false) "created_at" "desc" | first 4 }}
 
-<div class="container mx-auto">
+{{ if eq $paginator.PageNumber 1 }}
+<div class="container mx-auto px-4 xl:px-0">
 
   <h1>Mes derniers projets... </h1>
 
-  <div class="grid sm:grid-cols-3 xl:grid-cols-5 gap-6">
+  <div class="grid sm:grid-cols-4 gap-6">
 
     {{ range $projects }}
 
@@ -42,17 +42,18 @@
   </div>
 </div>
 {{ end }}
-<section id="posts" class="container mx-auto">
+
+<section id="posts" class="container mx-auto px-4 xl:px-0">
 
   <h2>... et mes derniers articles</h2>
 
-  <div class="grid sm:grid-cols-2 xl:grid-cols-2 gap-6">
+  <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
     <!-- Ranges through content/posts/*.md -->
     {{ range $pagin }}
 
     <article class="post">
 
-      <div class="thumb card w-5/12">
+      <div class="thumb w-full sm:w-5/12">
         <a href="{{ .RelPermalink }}">
           {{ if isset .Params "featured" }}
           <img src="/img/{{ .Params.featured }}" alt="{{ .Title }}" />
@@ -60,7 +61,7 @@
         </a>
       </div>
 
-      <div class="post-content w-7/12 ">
+      <div class="post-content w-full sm:w-7/12 card-brd-top">
         <a href="{{ .RelPermalink }}">
           <h3> {{.Title}} </h3>
           <ul class="post-meta">

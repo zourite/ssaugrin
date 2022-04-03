@@ -24,8 +24,7 @@
  
     &.card {
 
-      display: flex;
-      flex-direction: column;
+     
       background-color: #fff;
       border-radius: 0.5rem;
       box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
@@ -69,19 +68,21 @@
 
     }
 
-    &:not(:last-of-type):after {
+    @screen md {
+    
+      &:not(:last-of-type):after {
 
-      content: '';
-      display: inline-block;
-      width: 1.5rem;
-      height: 2px;
-      background-color: #028090;
-      position: absolute;
-      top : 99px;
-      right : -1.5rem;
+        content: '';
+        display: inline-block;
+        width: 1.5rem;
+        height: 1px;
+        background-color: #028090;
+        position: absolute;
+        top : 99px;
+        right : -1.5rem;
 
+      }
     }
-  
   }
 
 }
@@ -91,11 +92,18 @@
   .post {
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    transition: all 0.5s ease-out;
+
+    @screen md {
+      
+      flex-direction: row;
+    
+    }
 
     .thumb {
 
-      @apply overflow-hidden h-56;
+      @apply overflow-hidden h-52 xl:h-auto;
 
       img {
 
@@ -135,8 +143,14 @@
 
     .post-content {
 
-      @apply p-3 pb-0 bg-white;
+      @apply p-3 bg-white;
       border-bottom: 1px dashed #c33c54;
+
+    }
+
+    &:hover {
+
+      box-shadow: 0px 1px 0px #ccc, 0px 2px 0px #c9c9c9, 0px 3px 0px #bbb, 0px 4px 0px #b9b9b9, 0px 6px 0px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 3px 0px rgba(0, 0, 0, 0.2), 0px 5px 0px rgba(0, 0, 0, 0.25), 0 7px 7px rgba(0, 0, 0, 0.1), 0 8px 7px rgba(0, 0, 0, 0.1), 0 9px 9px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.15), 0 15px 15px rgba(0, 0, 0, 0.16);
 
     }
   

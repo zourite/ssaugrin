@@ -3,6 +3,62 @@ animation-name: flipInY;
 animation-duration: 2s;
 animation-fill-mode: both; */
 
+.ham {
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  user-select: none;
+
+  @screen md {
+
+    display : none;
+
+  }
+
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:#eee;
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+
+  &.ham1  {
+
+    .top {
+      stroke-dasharray: 40 139;
+    }
+
+    .bottom {
+      stroke-dasharray: 40 180;
+    }
+
+    &.active .top {
+      stroke-dashoffset: -98px;
+    }
+
+    &.active .bottom {
+      stroke-dashoffset: -138px;
+    }
+  }
+  
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.slide-in {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+
 @keyframes flipInY {
   from {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
@@ -46,4 +102,23 @@ animation-fill-mode: both; */
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+@keyframes mover {
+  0% {
+      transform: translateY(0);
+  }
+
+  100% {
+      transform: translateY(-20px);
+  }
+}
+
+@keyframes slide-in {
+  100% { transform: translateX(0%); }
+}
+
+@keyframes slide-out {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }
