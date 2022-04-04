@@ -30,7 +30,11 @@
 <base href="{{ .Site.BaseURL }}">
 
 {{ $style := resources.Get "/css/style.css" | postCSS }}
-  
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;600;700&display=swap" rel="stylesheet"> 
+
 {{ if .Site.IsServer }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ else }}
@@ -38,12 +42,6 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
   
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;600;700&display=swap" rel="stylesheet"> 
-<link type="text/css" rel="stylesheet" href="{{ "css/app.css" | relURL  }}">
-
-
 <link rel="canonical" href="{{ .Permalink }}">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/solarized-dark.min.css">

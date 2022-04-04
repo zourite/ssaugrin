@@ -1,37 +1,34 @@
 {{ define "main" }}
-<article id="single" class="container mx-auto">
-  <div class="w-1/2 mx-auto">
-  <header class="flex flex-col mb-3 mt-2 p-2">
-
-    
-    <ul id="meta" class="flex float-right">
-
-      <li class="mr-2">
-       
-        {{ partial "fontawesome.html" "calendar-alt-regular" }} 
-        <time class="published" datetime="{{ .Date }}">
-          <!-- {{ default (i18n "date_format") | .Date.Format  }} -->
-          {{ .Date.Day }} {{ index $.Site.Data.months "fr" (printf "%d" .Date.Month) }} {{ .Date.Year }}
-        </time>
-      </li>
-
-      <li>
-        {{ partial "fontawesome.html" "stopwatch-solid" }} {{ .ReadingTime }} minutes de lecture
-      </li>
-
-    </ul>
+<article id="single">
   
+  <header>
+
     <h1> {{ .Title }} </h1>
-
-
+    
   </header>
 
-  <main class="p-3">
+  <ul id="meta" class="flex">
+
+    <li class="mr-2">
+     
+      {{ partial "fontawesome.html" "calendar-alt-regular" }} 
+      <time class="published" datetime="{{ .Date }}">
+        <!-- {{ default (i18n "date_format") | .Date.Format  }} -->
+        {{ .Date.Day }} {{ index $.Site.Data.months "fr" (printf "%d" .Date.Month) }} {{ .Date.Year }}
+      </time>
+    </li>
+
+    <li>
+      {{ partial "fontawesome.html" "stopwatch-solid" }} {{ .ReadingTime }} minutes de lecture
+    </li>
+
+  </ul>
+
+  <main id="post-content">
 
     {{ .Content | emojify }}
 
   </main>
 
-</div>
 </article>
 {{ end }}

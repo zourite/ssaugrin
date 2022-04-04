@@ -67,12 +67,13 @@
       height: calc(100vh - 40px);
       background-image: linear-gradient(0deg, #3498db 0%, #2c3e50 74%);
       transform: translateX(-100%);
-      
+
       @screen md {
 
         height : auto;
         width : auto;
         background-image : none;
+        transform : unset;
       }
 
       li {
@@ -90,6 +91,12 @@
           width: 100%;
 
         }
+
+        i {
+
+          margin-right : 0.3rem;
+
+        }
   
         &:hover, .active {
   
@@ -98,6 +105,10 @@
     
         }
       
+      }
+
+      > :last-child {  
+        margin-right: 0; 
       }
     }
 
