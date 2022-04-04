@@ -62,7 +62,7 @@
   
     .nav-links  {
 
-      @apply flex-col justify-center md:justify-start md:flex-row;
+      @apply flex-col md:mr-2 justify-center md:justify-start md:flex-row;
       width : 100%;
       height: calc(100vh - 40px);
       background-image: linear-gradient(0deg, #3498db 0%, #2c3e50 74%);

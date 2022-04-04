@@ -59,3 +59,20 @@
   overflow-y: hidden;
 
 }
+
+.btn-trello {
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #055a8c;
+  color: #bdbbbc;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+
+    background-color: #114b5f;
+
+  }
+
+}

@@ -144,8 +144,7 @@
     .post-content {
 
       @apply p-3 bg-white;
-      border-bottom: 1px dashed #c33c54;
-
+    
     }
 
     &:hover {

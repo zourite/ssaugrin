@@ -1,12 +1,13 @@
 {{ define "main" }}
-<article id="single">
+
+<header id="hero" style="background-image:url({{ .Params.hero }})">
+
+  <h1> {{ .Title }} </h1>
   
-  <header>
+</header>
 
-    <h1> {{ .Title }} </h1>
-    
-  </header>
-
+<section id="single" class="single-post">
+  
   <ul id="meta" class="flex">
 
     <li class="mr-2">
@@ -24,11 +25,11 @@
 
   </ul>
 
-  <main id="post-content">
+  <article id="post-content">
 
     {{ .Content | emojify }}
 
-  </main>
+  </article>
 
-</article>
+</section>
 {{ end }}

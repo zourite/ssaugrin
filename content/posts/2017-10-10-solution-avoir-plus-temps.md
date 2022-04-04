@@ -6,6 +6,7 @@ date: 2017-10-10T05:16:35+00:00
 description: "Je vais t'expliquer comment tu peux optimiser ton temps  facilement et récupérer des heures dans ta journée pour avoir plus de temps."
 url: /solution-avoir-plus-temps/
 featured: 2017/10/113757-accuracy_800x533.jpeg
+hero : img/hero/livre-develloppement-personnel.jpg
 kdc_metadata:
   - 'a:1:{s:4:"lang";s:2:"fr";}'
 categories:
