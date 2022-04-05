@@ -10,7 +10,7 @@ animation-fill-mode: both; */
   transition: transform 400ms;
   user-select: none;
 
-  @screen md {
+  @screen lg {
 
     display : none;
 

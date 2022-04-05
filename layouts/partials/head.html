@@ -27,7 +27,7 @@
 <meta name="msapplication-TileColor" content="#b91d47">
 <meta name="theme-color" content="#ffffff">
     
-<base href="{{ .Site.BaseURL }}">
+{{/*  <base href="{{ .Site.BaseURL }}">  */}}
 
 {{ $style := resources.Get "/css/style.css" | postCSS }}
 
@@ -38,8 +38,8 @@
 {{ if .Site.IsServer }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ else }}
-{{ $style := $style | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ $style := $style | minify | fingerprint  }}
+<link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
   
 <link rel="canonical" href="{{ .Permalink }}">

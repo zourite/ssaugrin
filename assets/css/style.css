@@ -829,6 +829,7 @@ h2 a {
   height: 1rem;
   width: 1rem;
   vertical-align : middle;
+  margin-right: 5px;
 }
 
 .section #header, .page #header {
@@ -847,7 +848,7 @@ h2 a {
     height: 100%;
   }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
 #header #menu-principal {
       display: flex;
@@ -868,7 +869,7 @@ h2 a {
         border-right: none;
       }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
 #header #menu-principal .branding .inset-text {
           border-right : 1px solid rgba(160, 160, 160, 0.3)
@@ -887,19 +888,19 @@ h2 a {
       justify-content: center;
     }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
       #header #menu-principal .nav-links {
         margin-right: 0.5rem;
       }
     }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
       #header #menu-principal .nav-links {
         flex-direction: row;
       }
     }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
       #header #menu-principal .nav-links {
         justify-content: flex-start;
       }
@@ -912,7 +913,7 @@ h2 a {
       transform: translateX(-100%);
     }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
 #header #menu-principal .nav-links  {
         height : auto;
@@ -930,20 +931,20 @@ h2 a {
         color: rgb(255 255 255 / var(--tw-text-opacity));
       }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
         #header #menu-principal .nav-links li {
           margin-right: 1rem;
         }
       }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
         #header #menu-principal .nav-links li {
           --tw-bg-opacity: 1;
           background-color: rgb(17 75 95 / var(--tw-bg-opacity));
         }
       }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
         #header #menu-principal .nav-links li {
           text-align: center;
         }
@@ -1362,6 +1363,75 @@ h2 a {
       }
     }
 
+#contact {
+  display: flex;
+  height: calc(100vh - 75px );
+  background-image: linear-gradient(0deg, #3498db 0%, #2c3e50 74%);
+}
+
+#contact #page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+#contact #page-content .mailto {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+    }
+
+#contact #page-content .mailto {
+      color: #fff;
+    }
+
+#contact #page-content #intro {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+
+#contact #page-content #intro {
+      margin-bottom: 30px;
+    }
+
+#contact #page-content #intro p {
+        color : #fff;
+      }
+
+#contact #page-content #rs-icon a {
+        width : 2.5em;
+        height : 2.5em;
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius : 50%;
+        margin-right : 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+#contact #page-content #rs-icon a::last-child {
+          margin-right : 0;
+        }
+
+#contact #page-content #rs-icon a .inline-svg {
+          --tw-text-opacity: 1;
+          color: rgb(44 62 80 / var(--tw-text-opacity));
+        }
+
+#contact #page-content #rs-icon a .inline-svg {
+          width : 1.5em;
+          height : 1.5em;
+          margin: 0;
+          vertical-align: middle;
+        }
+
+#contact #page-content #rs-icon a:hover .inline-svg {
+          --tw-text-opacity: 1;
+          color: rgb(195 60 84 / var(--tw-text-opacity));
+        }
+
 .home:not(.no-scroll) #header {
     background-color: transparent;
     transition: all 0.5s ease-in;
@@ -1724,7 +1794,7 @@ animation-fill-mode: both; */
           user-select: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
 
 .ham {
     display : none
@@ -1902,14 +1972,6 @@ animation-fill-mode: both; */
 }
 
 @media (min-width: 640px) {
-  .sm\:w-5\/12 {
-    width: 41.666667%;
-  }
-
-  .sm\:w-7\/12 {
-    width: 58.333333%;
-  }
-
   .sm\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1945,16 +2007,19 @@ animation-fill-mode: both; */
 }
 
 @media (min-width: 1280px) {
+  .xl\:w-5\/12 {
+    width: 41.666667%;
+  }
+
+  .xl\:w-7\/12 {
+    width: 58.333333%;
+  }
+
   .xl\:w-3\/12 {
     width: 25%;
   }
 
   .xl\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .xl\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 }

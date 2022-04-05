@@ -5,7 +5,7 @@
 {{ $projects := sort (where . "fork" false) "created_at" "desc" | first 4 }}
 
 {{ if eq $paginator.PageNumber 1 }}
-<div class="container mx-auto px-4 xl:px-0">
+<div class="container mx-auto px-4">
 
   <h1>Mes derniers projets... </h1>
 
@@ -43,7 +43,7 @@
 </div>
 {{ end }}
 
-<section id="posts" class="container mx-auto px-4 xl:px-0">
+<section id="posts" class="container mx-auto px-4">
 
   <h2>... et mes derniers articles</h2>
 
@@ -53,7 +53,7 @@
 
     <article class="post">
 
-      <div class="thumb w-full sm:w-5/12">
+      <div class="thumb w-full xl:w-5/12">
         <a href="{{ .RelPermalink }}">
           {{ if isset .Params "featured" }}
           <img src="/img/{{ .Params.featured }}" alt="{{ .Title }}" />
@@ -61,7 +61,7 @@
         </a>
       </div>
 
-      <div class="post-content w-full sm:w-7/12">
+      <div class="post-content w-full xl:w-7/12">
         <a href="{{ .RelPermalink }}">
           <h3> {{.Title}} </h3>
           <ul class="post-meta">
