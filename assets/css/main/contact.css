@@ -14,8 +14,11 @@
 
     .mailto {
 
-      @apply text-3xl;
-      color: #fff;
+      @apply text-3xl text-white;
+
+      &:hover {
+        @apply text-dragon;
+      }
     
     }
 

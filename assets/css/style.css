@@ -1054,60 +1054,6 @@ h2 a {
     padding-top: initial;
   }
 
-.section .project {
-    position : relative;
-  }
-
-.section .project.card {
-      background-color: #fff;
-      border-radius: 0.5rem;
-      box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
-    }
-
-.section .project .project-img {
-      position: relative;
-      height: 200px;
-    }
-
-.section .project .project-img img {
-        height: 100%;
-        width: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        border-radius: 0.5rem;
-      }
-
-.section .project .project-img .info-project {
-        position: absolute;
-        bottom: 0;
-        background-color: rgba(255, 255, 255, 0.85);
-        width: 100%;
-        border-bottom-right-radius: 0.5rem;
-      }
-
-.section .project .github-btn {
-      margin-top: auto;
-      border-bottom-left-radius: 0.5rem;
-    }
-
-.section .project .github-btn a {
-        display: flex;
-        align-items: center;
-      }
-
-@media (min-width: 768px) {
-      .section .project:not(:last-of-type):after {
-        content: '';
-        display: inline-block;
-        width: 1.5rem;
-        height: 1px;
-        background-color: #028090;
-        position: absolute;
-        top : 99px;
-        right : -1.5rem;
-      }
-    }
-
 #posts .post {
     display: flex;
     flex-direction: column;
@@ -1383,8 +1329,14 @@ h2 a {
     }
 
 #contact #page-content .mailto {
-      color: #fff;
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity));
     }
+
+#contact #page-content .mailto:hover {
+        --tw-text-opacity: 1;
+        color: rgb(195 60 84 / var(--tw-text-opacity));
+      }
 
 #contact #page-content #intro {
       font-size: 2.25rem;
@@ -1431,6 +1383,60 @@ h2 a {
           --tw-text-opacity: 1;
           color: rgb(195 60 84 / var(--tw-text-opacity));
         }
+
+.project {
+  position : relative;
+}
+
+.project.card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+  }
+
+.project .project-img {
+    position: relative;
+    height: 200px;
+  }
+
+.project .project-img img {
+      height: 100%;
+      width: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+.project .project-img .info-project {
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.85);
+      width: 100%;
+      border-bottom-right-radius: 0.5rem;
+    }
+
+.project .github-btn {
+    margin-top: auto;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+.project .github-btn a {
+      display: flex;
+      align-items: center;
+    }
+
+@media (min-width: 768px) {
+    .project:not(:last-of-type):after {
+      content: '';
+      display: inline-block;
+      width: 1.5rem;
+      height: 1px;
+      background-color: #028090;
+      position: absolute;
+      top : 99px;
+      right : -1.5rem;
+    }
+  }
 
 .home:not(.no-scroll) #header {
     background-color: transparent;

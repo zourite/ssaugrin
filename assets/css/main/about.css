@@ -1,0 +1,66 @@
+.project {
+   
+  position : relative;
+
+  &.card {
+
+   
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+  
+  }
+
+  .project-img {
+
+    position: relative;
+    height: 200px;
+    
+    img {
+
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    .info-project {
+
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.85);
+      width: 100%;
+      border-bottom-right-radius: 0.5rem;
+    }
+
+  }
+
+  .github-btn {
+
+    margin-top: auto;
+    border-bottom-left-radius: 0.5rem;
+    a {
+      
+      display: flex;
+      align-items: center;
+    
+    }
+
+  }
+
+  @screen md {
+  
+    &:not(:last-of-type):after {
+
+      content: '';
+      display: inline-block;
+      width: 1.5rem;
+      height: 1px;
+      background-color: #028090;
+      position: absolute;
+      top : 99px;
+      right : -1.5rem;
+
+    }
+  }
+}

@@ -1,51 +1,10 @@
 {{ define "main" }}
 {{ $pagin := (.Paginator 8).Pages }}
 {{ $paginator := .Paginator }}
-{{ with getJSON "https://api.github.com/users/zourite/repos" }}
-{{ $projects := sort (where . "fork" false) "created_at" "desc" | first 4 }}
-
-{{ if eq $paginator.PageNumber 1 }}
-<div class="container mx-auto px-4">
-
-  <h1>Mes derniers projets... </h1>
-
-  <div class="grid sm:grid-cols-4 gap-6">
-
-    {{ range $projects }}
-
-    <div class="project card">
-
-      <div class="project-img">
-
-        <img src="https://raw.githubusercontent.com/{{ .full_name }}/master/screenshot.png"
-          alt="{{ replace .name "-" " " | title }} github">
-        <div class="info-project">
-
-          <p class="text-xs text-right p-2"><i>{{ .language }}</i></p>
-
-          <div class="github-btn">
-
-            <a href="{{ .html_url }}" target="_blank">
-              {{ partial "fontawesome.html" "github-brands" }}
-              {{ replace .name "-" " " | title }}
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-    {{ end }}
-    {{ end }}
-  </div>
-</div>
-{{ end }}
 
 <section id="posts" class="container mx-auto px-4">
 
-  <h2>... et mes derniers articles</h2>
+  <h1>Mes derniers articles</h1>
 
   <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
     <!-- Ranges through content/posts/*.md -->
