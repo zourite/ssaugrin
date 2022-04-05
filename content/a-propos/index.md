@@ -1,8 +1,8 @@
 ---
-title: Contacter Zourite
+title: A propos de Zourite
 author: Zourite
 type: page
 layout : about
 hero : img/hero/livre-develloppement-personnel.jpg
-date: 2018-04-06T16:04:16+00:00
+id: about
 ---

@@ -1,45 +1,98 @@
 {{ define "main" }}
 
-<section id="about">
-{{ with getJSON "https://api.github.com/users/zourite/repos" }}
-{{ $projects := sort (where . "fork" false) "created_at" "desc" | first 4 }}
-<div class="container mx-auto px-4">
+<section id="post-content">
+  <section id="me-area" class="">
+  <div class="container mx-auto px-4">
 
-  <h2>Mes derniers projets </h2>
+    <div class="flex gap-4">
 
-  <div class="grid sm:grid-cols-4 gap-6">
+      <div class="w-1/2">
+        <img src="/img/lomaveli.jpg" />
+      </div>
 
-    {{ range $projects }}
+      <div class="w-1/2">
+        <h1>Qui suis-je ?</h1>
+        <p>Je vis à La Réunion, département français [974] situé en plein coeur de l'ocean indien. La spécialité locale
+          que j'adore manger c'est le <a href="https://www.youtube.com/watch?v=0cJAvnyV_HI" target="_blank">civet
+            zourite</a>.</p>
 
-    <article class="project card">
+        <p>J'ai visité la Guyane Française dans le cadre d'une mission en Freelance en tant que formateur Developpeur
+          Web labelisé GEN. Je suis aussi jury professionnelle pour les titres pros <strong>Develloppeur web</strong> et
+          <strong>Concepteur d'application</strong></p>
 
-      <div class="project-img">
+      </div>
 
-        <img src="https://raw.githubusercontent.com/{{ .full_name }}/master/screenshot.png"
-          alt="{{ replace .name "-" " " | title }} github">
-        <div class="info-project">
+    </div>
+  </div>
+</section>
+  <section id="competences-area" class="">
+  <div class="container mx-auto px-4">
+    <div class="flex gap-4">
+      <div class="w-1/2">
+        <h2> Mon domaine de compétences</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam aspernatur autem atque ducimus non aliquam
+          suscipit. Laborum ipsam ducimus, distinctio necessitatibus aut dolorum. Illo cum culpa ad. Alias, ullam
+          aliquid?
+        </p>
+      </div>
+      <div class="w-1/2">
+        <div class="flex flex-wrap gap-4 justify-center">
 
-          <p class="text-xs text-right p-2"><i>{{ .language }}</i></p>
+          {{ range $.Site.Data.logos.logo.skill }}
 
-          <div class="github-btn">
+          <div class="card basis-3/4 lg:basis-1/5">
+            <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2 center" width="140" height="120"
+              style="margin: auto;" />
+          </div>
 
-            <a href="{{ .html_url }}" target="_blank">
-              {{ partial "fontawesome.html" "github-brands" }}
-              {{ replace .name "-" " " | title }}
-            </a>
+
+          {{ end }}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  {{ with getJSON "https://api.github.com/users/zourite/repos" }}
+  {{ $projects := sort (where . "fork" false) "created_at" "desc" | first 4 }}
+  <div class="container mx-auto px-4">
+
+    <h2>Mes derniers projets </h2>
+
+    <div class="grid sm:grid-cols-4 gap-6">
+
+      {{ range $projects }}
+
+      <article class="project card">
+
+        <div class="project-img">
+
+          <img src="https://raw.githubusercontent.com/{{ .full_name }}/master/screenshot.png"
+            alt="{{ replace .name "-" " " | title }} github">
+          <div class="info-project">
+
+            <p class="text-xs text-right p-2"><i>{{ .language }}</i></p>
+
+            <div class="github-btn">
+
+              <a href="{{ .html_url }}" target="_blank">
+                {{ partial "fontawesome.html" "github-brands" }}
+                {{ replace .name "-" " " | title }}
+              </a>
+
+            </div>
 
           </div>
 
         </div>
 
-      </div>
+      </article>
+      {{ end }}
 
-    </article>
-    {{ end }}
-   
+    </div>
   </div>
-</div>
-{{ end }}
+  {{ end }}
 
 </section>
 

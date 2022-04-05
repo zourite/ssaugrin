@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     {{- partial "head.html" . -}}
-    <body class="{{ .Kind }}">
+    <body {{ if isset  .Page.Params "id" }} id="{{ .Page.Params.id }}" {{ end }} class="{{ .Kind }}">
         {{- partial "header.html" . -}}
        
         <main id="content">

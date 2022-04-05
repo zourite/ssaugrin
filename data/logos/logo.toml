@@ -28,6 +28,10 @@ image = "/img/logos/php.png"
 titre = "JS"
 image = "/img/logos/js.png"
 
-# [[skill]]
-# titre = "GIT"
-# image = "/img/logos/git.png"
+[[certif]]
+titre = "Opquast"
+image = "/img/logos/badge_avance.svg"
+
+[[certif]]
+titre = "Scrum"
+image = "/img/logos/icts.svg"

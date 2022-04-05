@@ -87,6 +87,87 @@
 
 }
 
+#post-content {
+
+  h2, h3 {
+
+    @apply text-drk-green-octo;
+
+  }
+
+  a {
+
+    @apply text-dragon;
+    font-weight: bold;
+
+    text-decoration: underline;
+    text-decoration-color: #c33c54;
+    text-decoration-thickness: .05em;
+    text-underline-offset: 1.5px;
+
+    &:hover {
+
+      text-decoration-color: #2c3e50;
+
+    }
+
+    &:visited {
+
+      @apply text-blue-deep;
+      text-decoration-color: #2c3e50;
+
+    }
+
+  }
+
+  .btn-trello a {
+
+    text-decoration: none;
+    color: #fff;
+    
+  }
+
+  p {
+
+    margin: 1rem 0;
+
+  }
+
+  ul {
+
+
+    li {
+
+      margin-bottom: 5px;
+
+      &:before {
+
+        @apply text-drk-green-octo;
+        content: "⦾";
+        display: inline-block;
+        margin-right: 10px;
+
+      }
+
+    }
+
+  }
+
+  @screen lg {
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      background-color: #028090;
+      display: inline-block;
+      height: calc(100% - 1rem);
+      width: 1px;
+    }
+  }
+}
+
 #pagination {
 
   margin: 20px 0;
