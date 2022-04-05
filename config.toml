@@ -3,7 +3,9 @@ languageCode = "fr-fr"
 title = "Lead Développeur | ssaugrin"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 summaryLength = 20
-
+[permalinks]
+  posts = "/blog/:year/:title/"
+  
 [params]
   author = "Sonia Saugrin"
   description = "Geek et développeur web expérimenté vivant à l'île de La Réunion"

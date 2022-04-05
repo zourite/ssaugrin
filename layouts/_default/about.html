@@ -4,13 +4,25 @@
   <section id="me-area" class="">
   <div class="container mx-auto px-4">
 
-    <div class="flex gap-4">
+    <div class="flex flex-col md:flex-row items-center gap-4">
 
-      <div class="w-1/2">
-        <img src="/img/lomaveli.jpg" />
+      <div class="w-full md:w-1/2">
+        <div class="flex flex-wrap gap-4 justify-center">
+
+          {{ range $.Site.Data.logos.logo.certif }}
+
+          <div class="card basis-3/4 lg:basis-1/5">
+            <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2 center" width="140" height="120"
+              style="margin: auto;" />
+          </div>
+
+
+          {{ end }}
+
+        </div>
       </div>
 
-      <div class="w-1/2">
+      <div class="w-full md:w-1/2">
         <h1>Qui suis-je ?</h1>
         <p>Je vis à La Réunion, département français [974] situé en plein coeur de l'ocean indien. La spécialité locale
           que j'adore manger c'est le <a href="https://www.youtube.com/watch?v=0cJAvnyV_HI" target="_blank">civet
@@ -27,8 +39,8 @@
 </section>
   <section id="competences-area" class="">
   <div class="container mx-auto px-4">
-    <div class="flex gap-4">
-      <div class="w-1/2">
+    <div class="flex flex-col md:flex-row ">
+      <div class="w-full md:w-1/2">
         <h2> Mon domaine de compétences</h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam aspernatur autem atque ducimus non aliquam
@@ -36,12 +48,12 @@
           aliquid?
         </p>
       </div>
-      <div class="w-1/2">
-        <div class="flex flex-wrap gap-4 justify-center">
+      <div class="w-full md:w-1/2">
+        <div class="flex flex-wrap gap-1 md:gap-4 justify-center">
 
           {{ range $.Site.Data.logos.logo.skill }}
 
-          <div class="card basis-3/4 lg:basis-1/5">
+          <div class="card basis-2/4 lg:basis-1/5">
             <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2 center" width="140" height="120"
               style="margin: auto;" />
           </div>

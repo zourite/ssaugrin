@@ -1,3 +1,5 @@
+#post-content {
+
 .project {
    
   position : relative;
@@ -44,7 +46,8 @@
       
       display: flex;
       align-items: center;
-    
+      color: #fff;
+      text-decoration: none;
     }
 
   }
@@ -76,11 +79,18 @@
   color: #fff;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
+  h2 {
+
+    color: #fff;
+
+  }
 }
 
 #me-area {
 
   padding-top: 30px;
   padding-bottom: 15px;
+
+}
 
 }
