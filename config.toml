@@ -3,6 +3,8 @@ languageCode = "fr-fr"
 title = "Lead Développeur | ssaugrin"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 summaryLength = 20
+defaultContentLanguage = 'fr'
+
 [permalinks]
   posts = "/blog/:year/:title/"
   

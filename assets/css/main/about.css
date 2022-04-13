@@ -1,96 +1,152 @@
 #post-content {
 
-.project {
-   
-  position : relative;
-  margin-bottom: 20px;
-
-  &.card {
-
-   
-    background-color: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
-  
-  }
-
-  .project-img {
+  .project {
 
     position: relative;
-    height: 200px;
-    
-    img {
+    margin-bottom: 20px;
 
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
+    &.card {
+
+
+      background-color: #fff;
       border-radius: 0.5rem;
+      box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+
     }
 
-    .info-project {
+    .project-img {
+
+      position: relative;
+      height: 200px;
+
+      img {
+
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+
+      .info-project {
+
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.85);
+        width: 100%;
+        border-bottom-right-radius: 0.5rem;
+      }
+
+    }
+
+    .github-btn {
+
+      margin-top: auto;
+      border-bottom-left-radius: 0.5rem;
+
+      a {
+
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+      }
+
+    }
+
+    @screen md {
+
+      &:not(:last-of-type):after {
+
+        content: '';
+        display: inline-block;
+        width: 1.5rem;
+        height: 1px;
+        background-color: #028090;
+        position: absolute;
+        top: 99px;
+        right: -1.5rem;
+
+      }
+    }
+  }
+
+  #competences-area {
+
+
+    background-color: #3498db;
+    background-image: linear-gradient(315deg, #2c3e50 0%, #3498db 74%);
+    padding: 25px 0;
+    margin: 15px 0;
+    margin-top : 0;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    h2, h3 {
+
+      color: #fff;
+
+    }
+  }
+
+  #me-area {
+
+    padding-top: 30px;
+    /* padding-bottom: 15px; */
+
+
+    .rotate {
+
+      transform: rotate(180deg);
+      animation: tourne 3s forwards;
+      animation-delay: 1s;
+
+    }
+
+    #certif0 {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+    }
+
+    #certif1 {
 
       position: absolute;
       bottom: 0;
-      background-color: rgba(255, 255, 255, 0.85);
-      width: 100%;
-      border-bottom-right-radius: 0.5rem;
+      left: 0;
+
+    }
+
+  }
+
+  #intro-texte {
+
+    padding: 0 10px;
+
+    h1 {
+
+      @apply bg-lgt-green-octo;
+      color: #fafafa;
+      text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+      padding: 5px 15px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      width: fit-content;
+
     }
 
   }
 
-  .github-btn {
-
-    margin-top: auto;
-    border-bottom-left-radius: 0.5rem;
-    a {
-      
-      display: flex;
-      align-items: center;
-      color: #fff;
-      text-decoration: none;
-    }
-
-  }
-
-  @screen md {
-  
-    &:not(:last-of-type):after {
-
-      content: '';
-      display: inline-block;
-      width: 1.5rem;
-      height: 1px;
-      background-color: #028090;
-      position: absolute;
-      top : 99px;
-      right : -1.5rem;
-
-    }
-  }
 }
 
-#competences-area {
+@keyframes tourne {
+  0% {
 
-
-  background-color: #3498db;
-  background-image: linear-gradient(315deg, #2c3e50 0%, #3498db 74%);
-  padding: 25px 0;
-  margin: 15px 0;
-  color: #fff;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-  h2 {
-
-    color: #fff;
-
+    transform: rotate(180deg);
   }
-}
 
-#me-area {
+  100% {
 
-  padding-top: 30px;
-  padding-bottom: 15px;
-
-}
-
+    transform: rotate(360deg);
+  }
 }

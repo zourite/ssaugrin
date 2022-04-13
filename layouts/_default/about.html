@@ -1,71 +1,97 @@
 {{ define "main" }}
-
+{{ $index := 0 }}
 <section id="post-content">
+  
   <section id="me-area" class="">
-  <div class="container mx-auto px-4">
 
-    <div class="flex flex-col md:flex-row items-center gap-4">
+    <div class="container mx-auto px-4">
 
-      <div class="w-full md:w-1/2">
-        <div class="flex flex-wrap gap-4 justify-center">
+      <div class="flex flex-col md:flex-row items-center gap-3">
 
-          {{ range $.Site.Data.logos.logo.certif }}
+        <div class="w-full md:w-1/2">
 
-          <div class="card basis-3/4 lg:basis-1/5">
-            <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2 center" width="140" height="120"
-              style="margin: auto;" />
+          <div class="flex flex-wrap gap-4 justify-center relative">
+
+            <img src="/img/zourite-maveli.png" width="300" height="300" class="rotate shadow-img" />
+            {{ range $index, $val := $.Site.Data.logos.logo.certif }}
+
+            <div id="certif{{ $index }}" class=" basis-3/4 lg:basis-1/5">
+              <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="center" width="80px" />
+            </div>
+
+
+            {{ end }}
+
           </div>
+        </div>
 
+        <div id="intro-texte" class="w-full md:w-1/2">
 
-          {{ end }}
+          <h1>Qui suis-je ?</h1>
+
+          <p>Je cumule plus d'une dizaine d'année d'expérience en tant que développeur web. J'ai principalement
+            travaillé en agence de communication. Cette expérience, me permet de créer des solutions numériques,
+            simples, sécurisés et efficaces 🤓
+          </p>
+
+          <p>Je me fais appeler Zourite, car la spécialité de l'île de La Réunion, que j'adore manger c'est le <a
+              href="https://www.youtube.com/watch?v=0cJAvnyV_HI" target="_blank">civet zourite</a>.
+          </p>
+
+          <p>J'habite à La Réunion, département français [974] situé en plein coeur de l'océan indien. J'ai eu la chance
+            de visiter la Guyane Française dans le cadre d'une mission en tant que facilitateur pour une formation
+            développeur web labellisé <a target="_blank" href="https://www.grandeecolenumerique.fr/">Grande École
+              Numérique.</a></p>
+
+          <p>Pour finir, j'ajouterai que je suis jury pour les titres professionnels : <strong>Développeur web </strong>
+            et <strong>Concepteur d'application</strong></p>
 
         </div>
-      </div>
-
-      <div class="w-full md:w-1/2">
-        <h1>Qui suis-je ?</h1>
-        <p>Je vis à La Réunion, département français [974] situé en plein coeur de l'ocean indien. La spécialité locale
-          que j'adore manger c'est le <a href="https://www.youtube.com/watch?v=0cJAvnyV_HI" target="_blank">civet
-            zourite</a>.</p>
-
-        <p>J'ai visité la Guyane Française dans le cadre d'une mission en Freelance en tant que formateur Developpeur
-          Web labelisé GEN. Je suis aussi jury professionnelle pour les titres pros <strong>Develloppeur web</strong> et
-          <strong>Concepteur d'application</strong></p>
 
       </div>
-
     </div>
-  </div>
-</section>
-  <section id="competences-area" class="">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-col md:flex-row ">
-      <div class="w-full md:w-1/2">
-        <h2> Mon domaine de compétences</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam aspernatur autem atque ducimus non aliquam
-          suscipit. Laborum ipsam ducimus, distinctio necessitatibus aut dolorum. Illo cum culpa ad. Alias, ullam
-          aliquid?
-        </p>
-      </div>
-      <div class="w-full md:w-1/2">
-        <div class="flex flex-wrap gap-1 md:gap-4 justify-center">
+  </section>
 
-          {{ range $.Site.Data.logos.logo.skill }}
+  <section id="competences-area">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row ">
+        <div class="w-full md:w-1/2">
+          <h2> Mes compétences en développement web</h2>
+          <p>
+            Le domaine du développement web est vaste. Les technologies sont nombreuses. Je maitirse les technologies de
+            base HTML / CSS / JS.
+            Cependant mes compétences ne s'arrette pas à ces langages.
+          </p>
 
-          <div class="card basis-2/4 lg:basis-1/5">
-            <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2 center" width="140" height="120"
-              style="margin: auto;" />
+          <p> Au fil des années, je me suis spécialisé en PHP / MYSQL. Je maitrise le CMS WordPress aussi bien que
+            l'incontournable framework Laravel. Cependant avec l'émergence des frameworks JS. Je me suis intéréssée à
+            VueJS.</p>
+
+          <h3>Vous connaissez la jamstack ?</h3>
+          <p> Si vous ne connaissez pas encore ce que c'est la Jamstack, je vous invite à lire cet article : <a
+              href="https://jamstatic.fr/2019/02/07/c-est-quoi-la-jamstack">C'est quoi la Jamstack au juste ?</a>
+            Si je vous en parle c'est par ce que ce site est réalisé à l'aide du générateur de site static <a>Hugo</a>
+          </p>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center items-center">
+          <div class="flex flex-wrap gap-1 md:gap-4 justify-center items-center">
+
+            {{ range $.Site.Data.logos.logo.skill }}
+
+            <div class="card basis-1/4 lg:basis-1/5">
+              <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2 center" width="140"
+                height="120" style="margin: auto;" />
+            </div>
+
+
+            {{ end }}
+
           </div>
-
-
-          {{ end }}
-
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
   {{ with getJSON "https://api.github.com/users/zourite/repos" }}
   {{ $projects := sort (where . "fork" false) "created_at" "desc" | first 4 }}
   <div class="container mx-auto px-4">
