@@ -1,11 +1,16 @@
-#content {
+/* #content,  */
+#contact {
 
   @apply bg-light;
   padding-top: 40px;
-  animation-name: fadeInUp;
-  animation-duration: 0.95s;
-  animation-fill-mode: both;
   min-height: calc(100vh - 35px );
+
+  @screen lg {
+    animation-name: fadeInUp;
+    animation-duration: 0.95s;
+    animation-fill-mode: both;
+  }
+
 }
 
 .home {
@@ -13,6 +18,7 @@
   #content {
 
     padding-top: initial;
+    animation-name: unset;
   }
 }
 

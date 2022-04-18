@@ -102,38 +102,33 @@
 
     }
 
-    #certif0 {
+  }
+
+  #certification {
+
+
+    /* #certif0 {
 
       position: absolute;
-      top: 0;
-      left: 0;
+      top : 50%;
+      left : 0;
 
     }
 
     #certif1 {
 
       position: absolute;
-      bottom: 0;
-      left: 0;
+      top: 50%;
+      right : 0;
 
-    }
+    } */
 
+    
   }
 
   #intro-texte {
 
     padding: 0 10px;
-
-    h1 {
-
-      @apply bg-lgt-green-octo;
-      color: #fafafa;
-      text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
-      padding: 5px 15px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-      width: fit-content;
-
-    }
 
   }
 

@@ -1,28 +1,17 @@
 {{ define "main" }}
 {{ $index := 0 }}
 <section id="post-content">
-  
+
   <section id="me-area" class="">
 
     <div class="container mx-auto px-4">
 
       <div class="flex flex-col md:flex-row items-center gap-3">
 
-        <div class="w-full md:w-1/2">
+        <div class="hidden md:block md:w-1/2">
 
-          <div class="flex flex-wrap gap-4 justify-center relative">
+          <img src="/img/zourite-maveli.png" width="300" height="300" class="rotate shadow-img block mx-auto" />
 
-            <img src="/img/zourite-maveli.png" width="300" height="300" class="rotate shadow-img" />
-            {{ range $index, $val := $.Site.Data.logos.logo.certif }}
-
-            <div id="certif{{ $index }}" class=" basis-3/4 lg:basis-1/5">
-              <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="center" width="80px" />
-            </div>
-
-
-            {{ end }}
-
-          </div>
         </div>
 
         <div id="intro-texte" class="w-full md:w-1/2">
@@ -88,6 +77,34 @@
 
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certification">
+
+    <div class="container mx-auto">
+
+      <h2>Des certifications ?! J'en ai !</h2>
+
+        <div class="">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic distinctio dolore totam dolores, eligendi at voluptatibus nam modi temporibus a, debitis dolorum esse deserunt repellat, ullam quia voluptas deleniti iste?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic distinctio dolore totam dolores, eligendi at voluptatibus nam modi temporibus a, debitis dolorum esse deserunt repellat, ullam quia voluptas deleniti iste? Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic distinctio dolore totam dolores, eligendi at voluptatibus nam modi temporibus a, debitis dolorum esse deserunt repellat, ullam quia voluptas deleniti iste?
+
+          <div class="flex gap-6 items-center justify-center mt-2">
+
+            {{ range $index, $val := $.Site.Data.logos.logo.certif }}
+
+              <div id="certif{{ $index }}">
+                <a href="{{ .link }}" target="_blank">
+                  <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="center" width="100px" />
+                </a>
+              </div>
+
+            {{ end }}
+          
+        </div>
+
       </div>
     </div>
   </section>
