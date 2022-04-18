@@ -1883,15 +1883,6 @@ h2 a {
     background-color: #114b5f;
   }
 
-img {
-  image-rendering: optimizeSpeed;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: optimize-contrast;
-  image-rendering: pixelated;
-  -ms-interpolation-mode: nearest-neighbor;
-}
-
 /* backface-visibility: visible !important;
 animation-name: flipInY;
 animation-duration: 2s;
