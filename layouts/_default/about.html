@@ -83,27 +83,34 @@
 
   <section id="certification">
 
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
 
       <h2>Des certifications ?! J'en ai !</h2>
 
-        <div class="">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic distinctio dolore totam dolores, eligendi at voluptatibus nam modi temporibus a, debitis dolorum esse deserunt repellat, ullam quia voluptas deleniti iste?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic distinctio dolore totam dolores, eligendi at voluptatibus nam modi temporibus a, debitis dolorum esse deserunt repellat, ullam quia voluptas deleniti iste? Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic distinctio dolore totam dolores, eligendi at voluptatibus nam modi temporibus a, debitis dolorum esse deserunt repellat, ullam quia voluptas deleniti iste?
-
-          <div class="flex gap-6 items-center justify-center mt-2">
+        <div class="flex">
+          
+          <div class="flex gap-6 basis-1/2 items-center justify-center mt-2">
 
             {{ range $index, $val := $.Site.Data.logos.logo.certif }}
 
               <div id="certif{{ $index }}">
                 <a href="{{ .link }}" target="_blank">
-                  <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="center" width="100px" />
+                  <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="center" width="120px" />
                 </a>
               </div>
 
             {{ end }}
           
-        </div>
+          </div>
+
+          <div class="basis-1/2">
+            <p>
+            Un développeur travaillant essentiellement en agence de communication, doit avoir des compétences transversales. C'est pour cela que je mets un point d'honneur à développer des compétences annexes. 
+            </p>
+            <p>
+            Je maitrise la méthodologie scrum et je sais créer des sites webs de qualité qui respectent les standards en matière de qualités-web et de sécurité informatique.
+            </p>
+          </div>
 
       </div>
     </div>
