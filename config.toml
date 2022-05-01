@@ -4,6 +4,12 @@ title = "Lead Développeur | ssaugrin"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 summaryLength = 20
 defaultContentLanguage = 'fr'
+rssLimit = 20
+copyright = "2021 Janne Kemppainen All rights reserved"
+
+[author]
+	name = "Sonia SAUGRIN"
+	email = "me@ssaugrin.fr"
 
 [permalinks]
   posts = "/blog/:year/:title/"
