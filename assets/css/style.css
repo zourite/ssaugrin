@@ -510,6 +510,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: fixed;
 }
 
+.float-left {
+  float: left;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -555,6 +567,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
 }
 
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
 .block {
   display: block;
 }
@@ -565,6 +585,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .grid {
@@ -635,6 +659,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: hidden;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -659,6 +687,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .text-center {
@@ -1063,19 +1095,14 @@ h2 a {
 }
 
 @media (min-width: 1024px) {
-
-#contact {
-    -webkit-animation-name: fadeInUp;
-            animation-name: fadeInUp;
-
-    -webkit-animation-duration: 0.95s;
-
-            animation-duration: 0.95s;
-
-    -webkit-animation-fill-mode: both;
-
-            animation-fill-mode: both;
-}
+    #contact #page-content {
+      -webkit-animation-name: fadeInUp;
+              animation-name: fadeInUp;
+      -webkit-animation-duration: 0.95s;
+              animation-duration: 0.95s;
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+    }
   }
 
 .home #content {
@@ -1094,6 +1121,22 @@ h2 a {
 
 #posts .post {
       flex-direction: row
+  }
+    }
+
+@media (min-width: 1024px) {
+
+#posts .post {
+      -webkit-animation-name: fadeInUp;
+              animation-name: fadeInUp;
+
+      -webkit-animation-duration: 0.95s;
+
+              animation-duration: 0.95s;
+
+      -webkit-animation-fill-mode: both;
+
+              animation-fill-mode: both
   }
     }
 
@@ -1118,19 +1161,19 @@ h2 a {
            object-fit: cover;
       }
 
-#posts .post h3 {
+#posts .post h2 {
       --tw-text-opacity: 1;
       color: rgb(17 75 95 / var(--tw-text-opacity));
     }
 
-#posts .post h3 {
+#posts .post h2 {
       font-weight: 600;
       margin-top: 5px;
     }
 
 #posts .post .post-meta {
       font-size: 0.80em;
-      color: rgba(0, 0, 0, 0.6);
+      color: #6F6F6F;
       text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
       margin-bottom: 1rem;
     }
@@ -1252,7 +1295,7 @@ h2 a {
   justify-content: center;
   position: relative;
   padding: 0 1rem;
-  top : 40px;
+  margin-top : 40px;
 }
 
 #hero::after {
@@ -1309,7 +1352,7 @@ h2 a {
     text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
     margin-right: auto;
     margin-bottom: 10px;
-    margin-top: 55px;
+    margin-top: 15px;
     position: relative;
     padding: 5px 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -1478,19 +1521,19 @@ h2 a {
     padding: 25px 0;
     margin: 15px 0;
     margin-top : 0;
-    color: #fff;
+    color: #002E3D;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
 
 #post-content #competences-area h2, #post-content #competences-area h3 {
-      color: #fff;
+      color: #1E1A1A;
     }
 
 #post-content #competences-area a {
-      color: #fff;
+      color: #500101;
       font-weight: bold;
-      -webkit-text-decoration-color : #fff;
-              text-decoration-color : #fff;
+      -webkit-text-decoration-color : #500101;
+              text-decoration-color : #500101;
     }
 
 #post-content #me-area {
@@ -1503,8 +1546,8 @@ h2 a {
       transform: rotate(180deg);
       -webkit-animation: tourne 3s forwards;
               animation: tourne 3s forwards;
-      -webkit-animation-delay: 1s;
-              animation-delay: 1s;
+      -webkit-animation-delay: 300ms;
+              animation-delay: 300ms;
     }
 
 #post-content #certification {
@@ -1567,13 +1610,14 @@ h2 a {
 
 #home blockquote h1 {
       font-size : 24px;
-      color: #fff;
+      color: #1E1212;
       text-align : center;
     }
 
 #home blockquote cite {
       display : block;
       text-align: right;
+      color : #ECD3D3;
     }
 
 #home .ocean,
@@ -1841,6 +1885,10 @@ h2 a {
   background: rgb(248, 248, 248);
   background: linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 100%);
   box-shadow: 0px 1px 0px #ccc, 0px 2px 0px #c9c9c9, 0px 3px 0px #bbb, 0px 4px 0px #b9b9b9, 0px 6px 0px rgba(0, 0, 0, 0.1), 0px 1px 0px rgba(0, 0, 0, 0.3), 0px 3px 0px rgba(0, 0, 0, 0.2), 0px 5px 0px rgba(0, 0, 0, 0.25), 0 7px 7px rgba(0, 0, 0, 0.1), 0 8px 7px rgba(0, 0, 0, 0.1), 0 9px 9px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.15), 0 15px 15px rgba(0, 0, 0, 0.16);
+}
+
+iframe {
+  max-width : 100%;
 }
 
 .card-brd-top {

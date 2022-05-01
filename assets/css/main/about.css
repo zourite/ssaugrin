@@ -78,20 +78,20 @@
     padding: 25px 0;
     margin: 15px 0;
     margin-top : 0;
-    color: #fff;
+    color: #002E3D;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
     h2, h3 {
 
-      color: #fff;
+      color: #1E1A1A;
 
     }
 
     a {
 
-      color: #fff;
+      color: #500101;
       font-weight: bold;
-      text-decoration-color : #fff;      
+      text-decoration-color : #500101;      
     }
   }
 
@@ -105,7 +105,7 @@
 
       transform: rotate(180deg);
       animation: tourne 3s forwards;
-      animation-delay: 1s;
+      animation-delay: 300ms;
 
     }
 

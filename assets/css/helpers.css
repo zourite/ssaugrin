@@ -17,6 +17,11 @@
 }
 
 
+iframe {
+
+  max-width : 100%;
+
+}
 
 .card-brd-top {
 

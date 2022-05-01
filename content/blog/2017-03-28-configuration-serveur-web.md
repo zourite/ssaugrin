@@ -35,7 +35,7 @@ Sans un serveur HTTP d&rsquo;installé rien ne fonctionne, il est le pilier prin
 
 A la base NGINX est utilisé en tant que reverse proxy en complément d&rsquo;Apache. Cependant je trouve que NGINX rempli très bien son rôle de serveur HTTP sans pour autant avoir besoin d&rsquo;Apache. Mis à part sa légèreté et sa rapidité d’exécution. Je trouve que la syntaxe de NGINX est plus simple et plus intuitive, ce n&rsquo;est que mon avis. Plus bas, tu trouveras un graphique qui représente la part de marché des différents serveurs HTTP. NGINX prend de plus en plus de part au fil des années.
 
-<div id="attachment_3078" style="width: 730px" class="wp-caption aligncenter">
+<div id="attachment_3078" class="wp-caption aligncenter">
   <img aria-describedby="caption-attachment-3078" src="/img/2017/03/Sélection_239.png" alt="" width="720" height="586" class="size-full wp-image-3078" srcset="/img/2017/03/Sélection_239.png 720w, 2017/03/Sélection_239-300x244.png 300w" sizes="(max-width: 720px) 100vw, 720px" />
   
   <p id="caption-attachment-3078" class="wp-caption-text">

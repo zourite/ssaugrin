@@ -6,6 +6,7 @@ date: 2016-01-20T11:54:40+00:00
 description: Avez-vous déjà contacté un professionnel ? Avez-vous attendu une réponse pendant un siècle ? Avez-vous répondu oui aux questions précédentes ? Alors, cet article est fait pour vous. Je vais vous donner quelques conseil pour que vous ayez plus de chance de recevoir une réponse à vos e-mails.
 url: /comment-envoyer-email-professionnel-obtenir-reponse-rapide/
 featured: 2016/01/ecrire-mail-reponse.jpg
+hero: /img/hero/repondre-proffessionelle-email.jpg
 pdrp_attributionLocation:
   - end
 kdc_metadata:
@@ -36,6 +37,7 @@ Si vous voulez que quelqu&rsquo;un vous donne son avis sur quelque chose, soyez 
 
 C&rsquo;est si simple d&rsquo;envoyer un mail en trente secondes quand la réponse nécessitera que quelqu&rsquo;un y passe 1h pour y répondre. Votre demande risque de tomber dans les oubliettes ou la réponse risque de prendre énormément de temps. Je me répète mais les professionnels sont des gens très occupés. Si vous voulez qu&rsquo;ils vous répondent et surtout si vous désirez que votre premier contact soit une réussite. La première chose à faire est simple et efficace faire une recherche sur Google, la réponse est parfois quasi instantané 😀
 
+<a rel="nofollow noopener noreferrer" href="https://amzn.to/38wvaXa" class="float-left m-2 ml-0" target="_blank"><img border="0" src="/img/main/rediger-un-email-professionel.jpg" /></a>
 Sortez du lot et démarquez vous en prouvant à votre interlocuteur que vous avez déjà essayé de rechercher la réponse par vous même et que vous avez exploré des pistes. Ceci aura pour conséquence de réduire la durée de ce que vous lui demandez, si vous lui dites clairement les pistes que vous avez trouvé.
 
 Pour finir, si Google n&rsquo;est pas votre ami et qu&rsquo;il ne vous propose aucune piste, avant de contacter le « professionnel » ou « l&rsquo;expert » essayez de couper votre demande en plusieurs petites demandes. Je vais vous donner un exemple tout con, au lieu de demander directement à votre interlocuteur : **Comment écrire un mail parfait ?** Demandez lui : **Comment intitulé l&rsquo;objet de mon mail pour que le mail soit lu ?** 😉
@@ -49,12 +51,9 @@ Pour conclure, je vous renvoie vers différents liens utiles qui vous permettron
   * <a href="http://www.terrafemina.com/emploi-a-carrieres/carriere/articles/27496-quelles-formules-de-politesse-utiliser-dans-un-e-mail-.html" target="_blank">Quelles formules de politesse utiliser dans un e-mail ? &#8211; Terrafemina</a> 
   * <a rel="nofollow" href="https://amzn.to/38wvaXa">Etre un pro de l&rsquo;e-mail : 7 étapes pour rédiger des e-mails efficaces</a>
 
-<div class="grid-x grid-padding-x align-middle">
-  <div class="cell small-12 medium-6 columns">
-    <iframe  width="560" height="315" src="https://www.youtube.com/embed/CcTqSFWAYEc" frameborder="0" allowfullscreen></iframe>
-  </div>
+<div class="mt-16">
   
-  <div class="cell small-12 medium-6 columns center">
-    <a rel="nofollow" href="https://amzn.to/38wvaXa"><img border="0" src="/img/main/rediger-un-email-professionel.jpg" /></a>
-  </div>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/CcTqSFWAYEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </div>
+

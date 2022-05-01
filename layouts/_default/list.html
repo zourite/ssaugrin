@@ -2,7 +2,7 @@
 {{ $pagin := (.Paginator 8).Pages }}
 {{ $paginator := .Paginator }}
 
-<section id="posts" class="container mx-auto px-4">
+<section id="posts" class="container mx-auto px-4 pt-10">
 
   <h1>Mes derniers articles</h1>
 
@@ -22,7 +22,7 @@
 
       <div class="post-content w-full xl:w-7/12">
         <a href="{{ .RelPermalink }}">
-          <h3> {{.Title}} </h3>
+          <h2> {{.Title}} </h2>
           <ul class="post-meta">
 
             <li class="mr-2">
@@ -57,7 +57,7 @@
     <!-- Previous page. -->
     {{ if $paginator.HasPrev }}
     <li class="waves-effect">
-      <a href="{{ $paginator.Prev.URL }}">
+      <a href="{{ $paginator.Prev.URL }}" aria-label="Les articles précédents">
         ←
       </a>
     </li>
@@ -82,7 +82,7 @@
     <!-- Next page. -->
     {{ if $paginator.HasNext }}
     <li class="waves-effect">
-      <a href="{{ $paginator.Next.URL }}">
+      <a href="{{ $paginator.Next.URL }}" aria-label="Les articles suivants">
         →
       </a>
     </li>
