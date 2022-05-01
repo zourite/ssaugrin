@@ -1,0 +1,80 @@
+#contact {
+
+  display: flex;
+  height: calc(100vh - 75px );
+  background-image: linear-gradient(0deg, #3498db 0%, #2c3e50 74%);
+
+  #page-content {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+
+    .mailto {
+
+      @apply text-3xl text-white;
+
+      &:hover {
+        @apply text-dragon;
+      }
+    
+    }
+
+    #intro {
+
+      @apply text-4xl;
+
+      margin-bottom: 30px;
+
+      p {
+
+        color : #fff;
+      }
+    }
+
+    #rs-icon {
+
+      a {
+
+        width : 2.5em;
+        height : 2.5em;
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius : 50%;
+        margin-right : 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &::last-child {
+
+          margin-right : 0;
+
+        }
+
+        .inline-svg {
+
+          @apply text-blue-deep;
+          width : 1.5em;
+          height : 1.5em;
+          margin: 0;
+          vertical-align: middle;
+
+        }
+
+        &:hover .inline-svg {
+
+          @apply text-dragon;
+
+        }
+
+      }
+
+      
+
+    }
+
+  }
+}

@@ -1,27 +1,9 @@
 @import "heading.scss";
 @import "grid.scss";
 
-@font-face {
 
-    font-family: "Inter var";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("/fonts/Inter-Regular.woff2") format("woff2"),
-        url("/fonts/Inter-Regular.woff") format("woff");
 
-}
 
-body {
-
-    background-image: url('/img/main/brushed-metal-test.jpg');
-    font-family: "Inter var", Helvetica, sans-serif;
-    font-feature-settings: 'liga'1;
-    font-feature-settings: 'tnum'1;
-    font-feature-settings: 'ss02'1;
-    color: #333333;
-    background-color: #b7b7b7;
-}
 
 
 a {

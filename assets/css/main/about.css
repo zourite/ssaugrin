@@ -1,0 +1,154 @@
+#post-content {
+
+  .project {
+
+    position: relative;
+    margin-bottom: 20px;
+
+    &.card {
+
+
+      background-color: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+
+    }
+
+    .project-img {
+
+      position: relative;
+      height: 200px;
+
+      img {
+
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+
+      .info-project {
+
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.85);
+        width: 100%;
+        border-bottom-right-radius: 0.5rem;
+      }
+
+    }
+
+    .github-btn {
+
+      margin-top: auto;
+      border-bottom-left-radius: 0.5rem;
+
+      a {
+
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+      }
+
+    }
+
+    @screen md {
+
+      &:not(:last-of-type):after {
+
+        content: '';
+        display: inline-block;
+        width: 1.5rem;
+        height: 1px;
+        background-color: #028090;
+        position: absolute;
+        top: 99px;
+        right: -1.5rem;
+
+      }
+    }
+  }
+
+  #competences-area {
+
+
+    background-color: #3498db;
+    background-image: linear-gradient(315deg, #2c3e50 0%, #3498db 74%);
+    padding: 25px 0;
+    margin: 15px 0;
+    margin-top : 0;
+    color: #002E3D;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+    h2, h3 {
+
+      color: #1E1A1A;
+
+    }
+
+    a {
+
+      color: #500101;
+      font-weight: bold;
+      text-decoration-color : #500101;      
+    }
+  }
+
+  #me-area {
+
+    padding-top: 30px;
+    /* padding-bottom: 15px; */
+
+
+    .rotate {
+
+      transform: rotate(180deg);
+      animation: tourne 3s forwards;
+      animation-delay: 300ms;
+
+    }
+
+  }
+
+  #certification {
+
+
+    /* #certif0 {
+
+      position: absolute;
+      top : 50%;
+      left : 0;
+
+    }
+
+    #certif1 {
+
+      position: absolute;
+      top: 50%;
+      right : 0;
+
+    } */
+
+    
+  }
+
+  #intro-texte {
+
+    padding: 0 10px;
+
+  }
+
+}
+
+@keyframes tourne {
+  0% {
+
+    transform: rotate(180deg);
+  }
+
+  100% {
+
+    transform: rotate(360deg);
+  }
+}

@@ -28,6 +28,12 @@ image = "/img/logos/php.png"
 titre = "JS"
 image = "/img/logos/js.png"
 
-[[skill]]
-titre = "GIT"
-image = "/img/logos/git.png"
+[[certif]]
+titre = "Opquast"
+image = "/img/logos/badge_avance.svg"
+link = "https://directory.opquast.com/fr/certificat/BLZ7UG/"
+
+[[certif]]
+titre = "Scrum"
+image = "/img/logos/icstd.png"
+link = "https://scrum-league.org/registre-certifies?id=6i2vlln2pga8"

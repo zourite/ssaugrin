@@ -1,41 +1,35 @@
 {{ define "main" }}
-<article id="single" class="w-full md:w-11/12 md:mx-auto lg:w-8/12 pt-16 pb-8">
 
-  <div class="mx-2 md:mx-0">
+<header id="hero" style="background-image:url({{ .Params.hero }})">
 
-  <header class="flex flex-col card mb-3 mt-2 p-2">
+  <h1> {{ .Title }} </h1>
+  
+</header>
 
-    <div class="clearfix">
-    <ul id="meta" class="flex float-right">
+<section id="single" class="single-post">
+  
+  <ul id="meta" class="flex">
 
-      <li class="mr-2">
-       
-        {{ partial "fontawesome.html" "calendar-alt-regular" }} 
-        <time class="published" datetime="{{ .Date }}">
-          <!-- {{ default (i18n "date_format") | .Date.Format  }} -->
-          {{ .Date.Day }} {{ index $.Site.Data.months "fr" (printf "%d" .Date.Month) }} {{ .Date.Year }}
-        </time>
-      </li>
+    <li class="mr-2">
+     
+      {{ partial "fontawesome.html" "calendar-alt-regular" }} 
+      <time class="published" datetime="{{ .Date }}">
+        <!-- {{ default (i18n "date_format") | .Date.Format  }} -->
+        {{ .Date.Day }} {{ index $.Site.Data.months "fr" (printf "%d" .Date.Month) }} {{ .Date.Year }}
+      </time>
+    </li>
 
-      <li>
-        {{ partial "fontawesome.html" "stopwatch-solid" }} {{ .ReadingTime }} minutes de lecture
-      </li>
+    <li>
+      {{ partial "fontawesome.html" "stopwatch-solid" }} {{ .ReadingTime }} minutes de lecture
+    </li>
 
-    </ul>
-  </div>
+  </ul>
 
-    <h1> {{ .Title }} </h1>
-
-
-  </header>
-
-  <article class="card p-3">
+  <article id="post-content">
 
     {{ .Content | emojify }}
 
   </article>
 
-</div>
-
-</article>
+</section>
 {{ end }}

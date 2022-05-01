@@ -1,0 +1,21 @@
+@font-face {
+
+  font-family: "Inter var";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Inter-Regular.woff2") format("woff2"),
+      url("/fonts/Inter-Regular.woff") format("woff");
+
+}
+
+body {
+
+  @apply bg-light;
+  font-family: "Inter var", Helvetica, sans-serif;
+  font-feature-settings: 'liga'1;
+  font-feature-settings: 'tnum'1;
+  font-feature-settings: 'ss02'1;
+  color: #333333;
+
+}
