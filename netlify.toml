@@ -10,3 +10,9 @@
   status = 301
   force = false
 
+[[redirects]]
+  from = "/2012/11/les-post-types-et-les-autres-fonctions-integrer-au-theme"
+  to = "/"
+  status = 301
+  force = false
+
