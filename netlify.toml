@@ -1,2 +1,7 @@
-
+[[redirects]]
+  from = "/2012/12/integrer-highcharts-a-du-php-csv"
+  to = "/integrer-highcharts-a-du-php-csv"
+  status = 301
+  force = false
+  query = {path = ":path"}
 
