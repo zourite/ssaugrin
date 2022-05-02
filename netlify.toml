@@ -4,3 +4,9 @@
   status = 301
   force = false
 
+[[redirects]]
+  from = "/2012/08/generer-des-graphiques-avec-highcharts-et-codeigniter"
+  to = "/generer-des-graphiques-avec-highcharts-et-codeigniter"
+  status = 301
+  force = false
+
