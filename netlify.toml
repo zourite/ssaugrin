@@ -3,5 +3,4 @@
   to = "/integrer-highcharts-a-du-php-csv"
   status = 301
   force = false
-  query = {path = ":path"}
 
