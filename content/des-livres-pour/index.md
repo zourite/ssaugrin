@@ -4,5 +4,5 @@ author: Zourite
 type: page
 layout : livres-pour
 hero : /img/hero/livre-develloppement-personnel.jpg
-date: 2018-04-06T16:04:16+00:00
+description: Il est toujours bon de s'améliorer. Les livres nous aident à le faire
 ---

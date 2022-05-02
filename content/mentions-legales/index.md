@@ -9,7 +9,7 @@ kdc_metadata:
   - 'a:1:{s:4:"lang";s:2:"fr";}'
 sharing_disabled:
   - 1
-
+description: Les mentions légales du site de Sonia Saugrin
 ---
 Éditeur : Sonia SAUGRIN
   
