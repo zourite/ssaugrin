@@ -1517,12 +1517,14 @@ h2 a {
     padding: 25px 0;
     margin: 15px 0;
     margin-top : 0;
-    color: #002E3D;
+    color: #000;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
 
 #post-content #competences-area h2, #post-content #competences-area h3 {
       color: #1E1A1A;
+      /* color: #000; */
+      font-weight: bold;
     }
 
 #post-content #competences-area a {

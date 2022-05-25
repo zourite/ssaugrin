@@ -108,6 +108,7 @@
       "mb-4",
       "mb-5",
       "md:block",
+      "md:flex-col",
       "md:flex-row",
       "md:gap-4",
       "md:mx-auto",
