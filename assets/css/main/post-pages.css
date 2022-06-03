@@ -1,4 +1,9 @@
-/* #content,  */
+#content {
+
+  min-height: calc(100vh - 35px);
+
+}
+
 #contact {
 
   @apply bg-light;

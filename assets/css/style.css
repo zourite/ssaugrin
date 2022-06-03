@@ -1081,7 +1081,9 @@ h2 a {
     background-repeat:no-repeat;
   }
 
-/* #content,  */
+#content {
+  min-height: calc(100vh - 35px);
+}
 
 #contact {
   --tw-bg-opacity: 1;
@@ -1417,8 +1419,18 @@ h2 a {
       margin-bottom: 30px;
     }
 
-#contact #page-content #intro p {
-        color : #fff;
+#contact #page-content #intro h1 {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+      }
+
+#contact #page-content #intro h1 {
+        --tw-text-opacity: 1;
+        color: rgb(255 255 255 / var(--tw-text-opacity));
+      }
+
+#contact #page-content #intro h1 {
+        margin : 0;
       }
 
 #contact #page-content #rs-icon a {
