@@ -1,6 +1,6 @@
 baseURL = "https://saugrin-sonia.fr/"
 languageCode = "fr-fr"
-title = "Lead Développeur | ssaugrin"
+title = "Geek rêveur et développeur | ssaugrin"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 summaryLength = 20
 defaultContentLanguage = 'fr'
