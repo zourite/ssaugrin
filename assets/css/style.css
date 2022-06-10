@@ -1290,6 +1290,7 @@ h2 a {
   position: relative;
   padding: 0 1rem;
   margin-top : 40px;
+  background-size: cover;
 }
 
 #hero::after {
