@@ -6,6 +6,7 @@ date: 2017-03-28T05:57:43+00:00
 description: 'Un serveur web est par définition un ordinateur qui te permet de visualiser un site web grâce à Firefox ou Chrome. '
 url: /configuration-serveur-web/
 featured: 2017/03/serveur-web-nginx-php.jpg
+hero : /img/hero/serveur-dedie-configuration.jpg
 kdc_metadata:
   - 'a:1:{s:4:"lang";s:2:"fr";}'
 categories:

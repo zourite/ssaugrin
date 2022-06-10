@@ -6,6 +6,7 @@ date: 2012-12-02T13:11:52+00:00
 description: "Comme on me l'a gentille-ment demandé, j'ai écrit un petit tutoriel sur le moyen d'intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l'aide d'un csv."
 url: /integrer-highcharts-a-du-php-csv/
 featured: 2012/11/csv.png
+hero: /img/hero/graphique-highcharts.jpg
 views:
   - 515
 categories:

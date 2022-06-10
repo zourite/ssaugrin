@@ -5,6 +5,8 @@ type: post
 date: 2010-10-27T14:17:10+00:00
 description: Vous pouvez rajouter des symboles à côté de votre pseudo sur les réseaux sociaux tel que Twitter ou Facebook, ceci apportera une petite touche de personnalisation à votre profil. (ツ) ☆ ⑨⑦④ ☢ ♐ ♕
 url: /comment-ajouter-des-images-pseudo-twitter-ou-facebook/
+featured: featured/code-ascii-twitter.jpg
+hero: /img/hero/code-ascii-twitter.jpg
 ratings_users:
   - 0
   - 0

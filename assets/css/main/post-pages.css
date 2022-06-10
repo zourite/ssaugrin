@@ -54,7 +54,7 @@
 
     .thumb {
 
-      @apply overflow-hidden h-52 xl:h-auto;
+      @apply overflow-hidden xl:h-auto;
 
       img {
 

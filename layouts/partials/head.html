@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 
 {{ $title := print  .Title " | ssaugrin"  }}
-{{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+{{ if .IsHome }}{{ $title := .Site.Title }}{{ end }}
 <title>{{ $title }}</title>
 
 {{ template "_internal/opengraph.html" . }}
@@ -44,7 +44,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;600;700&display=swap" rel="stylesheet"> 
 
 {{ if .Site.IsServer }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<link rel="stylesheet" href="{{ $style.Permalink }}">
 {{ else }}
 {{ $style := $style | minify | fingerprint  }}
 <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}">
