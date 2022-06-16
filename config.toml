@@ -1,11 +1,10 @@
 baseURL = "https://saugrin-sonia.fr/"
 languageCode = "fr-fr"
-title = "Geek rêveur et développeur vivant dans son monde"
+title = "Geek rêveur et développeur avec une façon particulière de penser"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 summaryLength = 20
 defaultContentLanguage = 'fr'
 rssLimit = 20
-copyright = "2021 Janne Kemppainen All rights reserved"
 
 [author]
 	name = "Sonia SAUGRIN"

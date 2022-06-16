@@ -1,9 +1,7 @@
 <head>
 
 <meta charset="utf-8">
-
-{{ $title := print  .Title " | ssaugrin"  }}
-{{ if .IsHome }}{{ $title := .Site.Title }}{{ end }}
+{{ $title := print  .Title " | Sonia Saugrin"  }}
 <title>{{ $title }}</title>
 
 {{ template "_internal/opengraph.html" . }}
