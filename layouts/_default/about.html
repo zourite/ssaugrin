@@ -116,8 +116,9 @@
     </div>
   </section>
 
-  {{ with getJSON "https://api.github.com/users/zourite/repos" }}
-  {{ $projects := sort (where . "fork" false) "created_at" "desc" | first 4 }}
+  {{ $projects := dict }}
+  {{ with resources.GetRemote "https://api.github.com/users/zourite/repos" | transform.Unmarshal  }}
+  {{ $projects = sort (where . "fork" false) "created_at" "desc" | first 4 }}
   <div class="container mx-auto px-4">
 
     <h2>Les derniers projets que j'ai codé</h2>
