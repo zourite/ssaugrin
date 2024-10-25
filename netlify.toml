@@ -15,4 +15,5 @@
   to = "/"
   status = 301
   force = false
-
+[build.environment]
+  HUGO_VERSION = "0.135.0"
