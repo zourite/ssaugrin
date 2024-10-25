@@ -1,5 +1,113 @@
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
 /*
-! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -30,20 +138,30 @@
 2. Prevent adjustments of font size after orientation changes in iOS.
 3. Use a more readable tab size.
 4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
   /* 3 */
-  -o-tab-size: 4;
-     -moz-tab-size: 4;
-     tab-size: 4;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
   /* 3 */
   font-family: Inter var, Helvetica, Arial, sans-serif;
   /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
 }
 
 /*
@@ -115,8 +233,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -125,8 +245,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -185,9 +309,17 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
   font-size: 100%;
   /* 1 */
+  font-weight: inherit;
+  /* 1 */
   line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
   /* 1 */
   color: inherit;
   /* 1 */
@@ -212,9 +344,9 @@ select {
 */
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
   -webkit-appearance: button;
   /* 1 */
   background-color: transparent;
@@ -334,6 +466,14 @@ menu {
 }
 
 /*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
 Prevent resizing textareas horizontally by default.
 */
 
@@ -347,13 +487,6 @@ textarea {
 */
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
   /* 1 */
   color: #9ca3af;
@@ -415,66 +548,19 @@ video {
   height: auto;
 }
 
-/*
-Ensure the default browser behavior of the `hidden` attribute.
-*/
+/* Make elements with the HTML hidden attribute stay hidden by default */
 
-[hidden] {
+[hidden]:where(:not([hidden="until-found"])) {
   display: none;
-}
-
-*, ::before, ::after {
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
 }
 
 .container {
   width: 100%;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
   .container {
-    max-width: 640px;
+    max-width: 480px;
   }
 }
 
@@ -484,21 +570,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
   .container {
-    max-width: 1024px;
+    max-width: 976px;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
+    max-width: 1200px;
   }
 }
 
@@ -527,12 +607,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: -0.75rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.ml-0 {
+  margin-left: 0px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .mt-4 {
@@ -541,34 +649,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.ml-0 {
-  margin-left: 0px;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .block {
@@ -595,7 +675,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.h-full {
+.size-full {
+  width: 100%;
   height: 100%;
 }
 
@@ -603,20 +684,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 16rem;
 }
 
-.w-full {
-  width: 100%;
+.h-full {
+  height: 100%;
 }
 
 .w-4\/12 {
   width: 33.333333%;
 }
 
-.basis-1\/4 {
-  flex-basis: 25%;
+.w-full {
+  width: 100%;
 }
 
 .basis-1\/2 {
   flex-basis: 50%;
+}
+
+.basis-1\/4 {
+  flex-basis: 25%;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .grid-cols-1 {
@@ -639,12 +728,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   justify-content: center;
 }
 
-.gap-3 {
-  gap: 0.75rem;
-}
-
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
 }
 
 .gap-6 {
@@ -659,6 +748,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -667,8 +760,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }
 
-.p-1 {
-  padding: 0.25rem;
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-4 {
@@ -676,17 +770,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1rem;
 }
 
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.pt-10 {
+  padding-top: 2.5rem;
 }
 
 .pt-16 {
   padding-top: 4rem;
-}
-
-.pt-10 {
-  padding-top: 2.5rem;
 }
 
 .text-center {
@@ -700,116 +789,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes bounceIn {
-  from, 20%, 40%, 60%, 80%, to {
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-  }
-
-  0% {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-
-  20% {
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
-
-  40% {
-    transform: scale3d(0.9, 0.9, 0.9);
-  }
-
-  60% {
-    transform: scale3d(1.03, 1.03, 1.03);
-    opacity: 1;
-  }
-
-  80% {
-    transform: scale3d(0.97, 0.97, 0.97);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes bounceIn {
-  from, 20%, 40%, 60%, 80%, to {
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-  }
-
-  0% {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-
-  20% {
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
-
-  40% {
-    transform: scale3d(0.9, 0.9, 0.9);
-  }
-
-  60% {
-    transform: scale3d(1.03, 1.03, 1.03);
-    opacity: 1;
-  }
-
-  80% {
-    transform: scale3d(0.97, 0.97, 0.97);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@-webkit-keyframes slideInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    visibility: visible;
-  }
-
-  to {
-    transform: translate3d(0, 0, 0);
-  }
 }
 
 @font-face {
@@ -892,7 +871,7 @@ h2 a {
     height: 100%;
   }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
 
 #header #menu-principal {
       display: flex;
@@ -913,7 +892,7 @@ h2 a {
         border-right: none;
       }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
 
 #header #menu-principal .branding .inset-text {
           border-right : 1px solid rgba(160, 160, 160, 0.3)
@@ -932,19 +911,19 @@ h2 a {
       justify-content: center;
     }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
       #header #menu-principal .nav-links {
         margin-right: 0.5rem;
       }
     }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
       #header #menu-principal .nav-links {
         flex-direction: row;
       }
     }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
       #header #menu-principal .nav-links {
         justify-content: flex-start;
       }
@@ -957,7 +936,7 @@ h2 a {
       transform: translateX(-100%);
     }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
 
 #header #menu-principal .nav-links  {
         height : auto;
@@ -975,20 +954,20 @@ h2 a {
         color: rgb(255 255 255 / var(--tw-text-opacity));
       }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
         #header #menu-principal .nav-links li {
           margin-right: 1rem;
         }
       }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
         #header #menu-principal .nav-links li {
           --tw-bg-opacity: 1;
           background-color: rgb(17 75 95 / var(--tw-bg-opacity));
         }
       }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
         #header #menu-principal .nav-links li {
           text-align: center;
         }
@@ -1092,21 +1071,17 @@ h2 a {
   min-height: calc(100vh - 35px );
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
     #contact #page-content {
-      -webkit-animation-name: fadeInUp;
-              animation-name: fadeInUp;
-      -webkit-animation-duration: 0.95s;
-              animation-duration: 0.95s;
-      -webkit-animation-fill-mode: both;
-              animation-fill-mode: both;
+      animation-name: fadeInUp;
+      animation-duration: 0.95s;
+      animation-fill-mode: both;
     }
   }
 
 .home #content {
     padding-top: initial;
-    -webkit-animation-name: unset;
-            animation-name: unset;
+    animation-name: unset;
   }
 
 #posts .post {
@@ -1122,19 +1097,14 @@ h2 a {
   }
     }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
 
 #posts .post {
-      -webkit-animation-name: fadeInUp;
-              animation-name: fadeInUp;
+      animation-name: fadeInUp;
 
-      -webkit-animation-duration: 0.95s;
+      animation-duration: 0.95s;
 
-              animation-duration: 0.95s;
-
-      -webkit-animation-fill-mode: both;
-
-              animation-fill-mode: both
+      animation-fill-mode: both
   }
     }
 
@@ -1142,7 +1112,7 @@ h2 a {
       overflow: hidden;
     }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
       #posts .post .thumb {
         height: auto;
       }
@@ -1207,15 +1177,13 @@ h2 a {
 #post-content a {
     font-weight: bold;
     text-decoration: underline;
-    -webkit-text-decoration-color: #c33c54;
-            text-decoration-color: #c33c54;
+    text-decoration-color: #c33c54;
     text-decoration-thickness: .05em;
     text-underline-offset: 1.5px;
   }
 
 #post-content a:hover {
-      -webkit-text-decoration-color: #2c3e50;
-              text-decoration-color: #2c3e50;
+      text-decoration-color: #2c3e50;
     }
 
 #post-content a:visited {
@@ -1224,8 +1192,7 @@ h2 a {
     }
 
 #post-content a:visited {
-      -webkit-text-decoration-color: #2c3e50;
-              text-decoration-color: #2c3e50;
+      text-decoration-color: #2c3e50;
     }
 
 #post-content .btn-trello a {
@@ -1252,7 +1219,7 @@ h2 a {
         margin-right: 10px;
       }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
     #post-content::after {
       content: '';
       position: absolute;
@@ -1355,7 +1322,6 @@ h2 a {
     padding: 5px 15px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     width: -moz-fit-content;
-    width: -webkit-fit-content;
     width: fit-content;
   }
 
@@ -1368,7 +1334,7 @@ h2 a {
         top: 0.4rem;
       }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
       #single #meta:after {
         content: '';
         display: inline-block;
@@ -1542,8 +1508,7 @@ h2 a {
 #post-content #competences-area a {
       color: #500101;
       font-weight: bold;
-      -webkit-text-decoration-color : #500101;
-              text-decoration-color : #500101;
+      text-decoration-color : #500101;
     }
 
 #post-content #me-area {
@@ -1554,10 +1519,8 @@ h2 a {
 
 #post-content #me-area .rotate {
       transform: rotate(180deg);
-      -webkit-animation: tourne 3s forwards;
-              animation: tourne 3s forwards;
-      -webkit-animation-delay: 300ms;
-              animation-delay: 300ms;
+      animation: tourne 3s forwards;
+      animation-delay: 300ms;
     }
 
 #post-content #certification {
@@ -1581,16 +1544,6 @@ h2 a {
 #post-content #intro-texte {
     padding: 0 10px;
   }
-
-@-webkit-keyframes tourne {
-  0% {
-    transform: rotate(180deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 @keyframes tourne {
   0% {
@@ -1644,18 +1597,15 @@ h2 a {
       background-color: white;
       box-shadow: 0 0 1px 0 white inset, 0 0 1px 0 white;
       bottom: -10%;
-      -webkit-animation: bubble 10s ease-in-out infinite;
-              animation: bubble 10s ease-in-out infinite;
+      animation: bubble 10s ease-in-out infinite;
     }
 
 #home .bubbles span:nth-child(1) {
         width: 50px;
         height: 50px;
         left: 10%;
-        -webkit-animation-delay: 3s;
-                animation-delay: 3s;
-        -webkit-animation-duration: 10s;
-                animation-duration: 10s;
+        animation-delay: 3s;
+        animation-duration: 10s;
         opacity: 0.2;
       }
 
@@ -1663,10 +1613,8 @@ h2 a {
         width: 30px;
         height: 30px;
         left: 40%;
-        -webkit-animation-delay: 1s;
-                animation-delay: 1s;
-        -webkit-animation-duration: 5s;
-                animation-duration: 5s;
+        animation-delay: 1s;
+        animation-duration: 5s;
         opacity: 0.1;
       }
 
@@ -1674,10 +1622,8 @@ h2 a {
         width: 10px;
         height: 10px;
         left: 30%;
-        -webkit-animation-delay: 5s;
-                animation-delay: 5s;
-        -webkit-animation-duration: 20s;
-                animation-duration: 20s;
+        animation-delay: 5s;
+        animation-duration: 20s;
         opacity: 0.3;
       }
 
@@ -1685,10 +1631,8 @@ h2 a {
         width: 35px;
         height: 35px;
         left: 40%;
-        -webkit-animation-delay: 8s;
-                animation-delay: 8s;
-        -webkit-animation-duration: 8s;
-                animation-duration: 8s;
+        animation-delay: 8s;
+        animation-duration: 8s;
         opacity: 0.2;
       }
 
@@ -1696,10 +1640,8 @@ h2 a {
         width: 45px;
         height: 45px;
         left: 60%;
-        -webkit-animation-delay: 10s;
-                animation-delay: 10s;
-        -webkit-animation-duration: 15s;
-                animation-duration: 15s;
+        animation-delay: 10s;
+        animation-duration: 15s;
         opacity: 0.1;
       }
 
@@ -1707,10 +1649,8 @@ h2 a {
         width: 40px;
         height: 40px;
         left: 80%;
-        -webkit-animation-delay: 3s;
-                animation-delay: 3s;
-        -webkit-animation-duration: 30s;
-                animation-duration: 30s;
+        animation-delay: 3s;
+        animation-duration: 30s;
         opacity: 0.4;
       }
 
@@ -1718,8 +1658,7 @@ h2 a {
         width: 15px;
         height: 15px;
         left: 90%;
-        -webkit-animation-duration: 25s;
-                animation-duration: 25s;
+        animation-duration: 25s;
         opacity: 0.3;
       }
 
@@ -1727,8 +1666,7 @@ h2 a {
         width: 20px;
         height: 20px;
         left: 50%;
-        -webkit-animation-duration: 10s;
-                animation-duration: 10s;
+        animation-duration: 10s;
         opacity: 0.2;
       }
 
@@ -1738,12 +1676,9 @@ h2 a {
       margin-top : 145px;
       margin-left: -235px;
       position: absolute;
-      -webkit-animation: swim 20s;
-              animation: swim 20s;
-      -webkit-animation-iteration-count: infinite;
-              animation-iteration-count: infinite;
-      -webkit-animation-timing-function: linear;
-              animation-timing-function: linear;
+      animation: swim 20s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
     }
 
 #home .ocean #fish-group .fish{
@@ -1755,36 +1690,30 @@ h2 a {
 
 #home .ocean #fish-group #fish1, #home .ocean #fish-group #fish2, #home .ocean #fish-group #fish3, #home .ocean #fish-group #fish4, #home .ocean #fish-group #fish5, #home .ocean #fish-group #fish6 {
         margin-bottom: 15px;
-        -webkit-animation: bounce 2s infinite;
-                animation: bounce 2s infinite;
+        animation: bounce 2s infinite;
       }
 
 #home .ocean #fish-group #fish2{
         margin-left : 40px;
-        -webkit-animation-delay: 0.5s;
-                animation-delay: 0.5s;
+        animation-delay: 0.5s;
       }
 
 #home .ocean #fish-group #fish3{
-        -webkit-animation-delay: 0.2s;
-                animation-delay: 0.2s;
+        animation-delay: 0.2s;
       }
 
 #home .ocean #fish-group #fish4{
-        -webkit-animation-delay: 0.4s;
-                animation-delay: 0.4s;
+        animation-delay: 0.4s;
       }
 
 #home .ocean #fish-group #fish5{
         margin-left : 40px;
-        -webkit-animation-delay: 0.1s;
-                animation-delay: 0.1s;
+        animation-delay: 0.1s;
       }
 
 #home .ocean #fish-group #fish6{
         margin-top : 10px;
-        -webkit-animation-delay: 0.3s;
-                animation-delay: 0.3s;
+        animation-delay: 0.3s;
       }
 
 #home article {
@@ -1805,17 +1734,6 @@ h2 a {
           margin-right : 0;
         }
 
-@-webkit-keyframes bubble {
-  0% {
-    bottom: -10%;
-    opacity: 0;
-  }
-
-  100% {
-    bottom: 100%;
-  }
-}
-
 @keyframes bubble {
   0% {
     bottom: -10%;
@@ -1824,20 +1742,6 @@ h2 a {
 
   100% {
     bottom: 100%;
-  }
-}
-
-@-webkit-keyframes swim {
-  0% {
-    margin-left: -235px
-  }
-
-  70% {
-    margin-left: 100%;
-  }
-
-  100% {
-    margin-left: 100%;
   }
 }
 
@@ -1852,20 +1756,6 @@ h2 a {
 
   100% {
     margin-left: 100%;
-  }
-}
-
-@-webkit-keyframes bounce {
-  0%, 50%, 100% {
-    transform: translateY(0);
-  }
-
-  25% {
-    transform: translateY(-5px);
-  }
-
-  75% {
-    transform: translateY(-3px);
   }
 }
 
@@ -1909,8 +1799,7 @@ iframe {
 }
 
 .shadow-img {
-  -webkit-animation: mover 2s infinite alternate;
-          animation: mover 2s infinite alternate;
+  animation: mover 2s infinite alternate;
   filter: drop-shadow(5px 5px 5px #222);
 }
 
@@ -1923,7 +1812,6 @@ iframe {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
   width: -moz-fit-content;
-  width: -webkit-fit-content;
   width: fit-content;
 }
 
@@ -1965,11 +1853,10 @@ animation-fill-mode: both; */
   transition: transform 400ms;
   -webkit-user-select: none;
              -moz-user-select: none;
-              -ms-user-select: none;
           user-select: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
 
 .ham {
     display : none
@@ -2014,46 +1901,16 @@ animation-fill-mode: both; */
   -webkit-animation: slide-out 0.5s forwards;
 }
 
-@-webkit-keyframes flipInY {
-  from {
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-    opacity: 0;
-  }
-
-  40% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-  }
-
-  60% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    opacity: 1;
-  }
-
-  80% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-  }
-
-  to {
-    transform: perspective(400px);
-  }
-}
-
 @keyframes flipInY {
   from {
     transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
     opacity: 0;
   }
 
   40% {
     transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 
   60% {
@@ -2067,18 +1924,6 @@ animation-fill-mode: both; */
 
   to {
     transform: perspective(400px);
-  }
-}
-
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -2094,16 +1939,6 @@ animation-fill-mode: both; */
   }
 }
 
-@-webkit-keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-20px);
-  }
-}
-
 @keyframes mover {
   0% {
     transform: translateY(0);
@@ -2114,25 +1949,9 @@ animation-fill-mode: both; */
   }
 }
 
-@-webkit-keyframes slide-in {
-  100% {
-    transform: translateX(0%);
-  }
-}
-
 @keyframes slide-in {
   100% {
     transform: translateX(0%);
-  }
-}
-
-@-webkit-keyframes slide-out {
-  0% {
-    transform: translateX(0%);
-  }
-
-  100% {
-    transform: translateX(-100%);
   }
 }
 
@@ -2146,7 +1965,11 @@ animation-fill-mode: both; */
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 480px) {
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sm\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -2162,12 +1985,12 @@ animation-fill-mode: both; */
     display: block;
   }
 
-  .md\:w-11\/12 {
-    width: 91.666667%;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
+  }
+
+  .md\:w-11\/12 {
+    width: 91.666667%;
   }
 
   .md\:flex-row {
@@ -2179,7 +2002,7 @@ animation-fill-mode: both; */
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 976px) {
   .lg\:w-8\/12 {
     width: 66.666667%;
   }
@@ -2187,19 +2010,23 @@ animation-fill-mode: both; */
   .lg\:basis-1\/5 {
     flex-basis: 20%;
   }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
+  .xl\:w-3\/12 {
+    width: 25%;
+  }
+
   .xl\:w-5\/12 {
     width: 41.666667%;
   }
 
   .xl\:w-7\/12 {
     width: 58.333333%;
-  }
-
-  .xl\:w-3\/12 {
-    width: 25%;
   }
 
   .xl\:grid-cols-2 {

@@ -4,3 +4,4 @@ hugo-dev
 public
 resources
 resources/_gen
+.idea

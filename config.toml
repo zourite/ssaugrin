@@ -1,7 +1,7 @@
 baseURL = "https://saugrin-sonia.fr/"
 languageCode = "fr-fr"
 title = "Geek rêveur et développeur avec une façon particulière de penser"
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy"]
 summaryLength = 20
 defaultContentLanguage = 'fr'
 rssLimit = 20
@@ -21,7 +21,7 @@ rssLimit = 20
   consumer_key = "13616-c877ca91826123ba561154b7"
 
 [markup.goldmark.renderer]
-unsafe= true
+  unsafe= true
 
 [build]
-writeStats = true
+  writeStats = true
