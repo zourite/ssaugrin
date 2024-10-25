@@ -16,3 +16,4 @@
   status = 301
   force = false
 
+HUGO_VERSION = 0.135
