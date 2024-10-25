@@ -82,7 +82,7 @@
       <pubDate>Sun, 02 Dec 2012 13:11:52 +0000</pubDate>
       <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
       <guid>http://localhost:1313/integrer-highcharts-a-du-php-csv/</guid>
-      <description>&lt;p&gt;Comme on me l’a gentiment demandé, j’ai écrit un petit tutoriel sur le moyen d’intégrer &lt;strong&gt;Highcharts&lt;/strong&gt; à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l’aide d’un csv. Dans un premier temps, vous devez télécharger la librairie &lt;a href=&#34;https://github.com/ghunti/HighchartsPHP/&#34; target=&#34;_blank&#34;&gt;PHP – Highcharts de Ghunti.&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Comme on me l’a gentiment demandé, j’ai écrit un petit tutoriel sur le moyen d’intégrer &lt;strong&gt;Highcharts&lt;/strong&gt; à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l’aide d’un csv. Dans un premier temps, vous devez télécharger la librairie &lt;!-- raw HTML omitted --&gt;PHP – Highcharts de Ghunti.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
       <enclosure url="https://saugrin-sonia.fr/img/2012/11/csv.png" length="19060" type="image/png" />
     </item>
     
@@ -113,8 +113,7 @@
       <pubDate>Wed, 27 Oct 2010 14:17:10 +0000</pubDate>
       <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
       <guid>http://localhost:1313/comment-ajouter-des-images-pseudo-twitter-ou-facebook/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Edit&lt;/strong&gt; : J’ai découvert qu’on vendait des émojis &lt;a rel=&#34;nofollow&#34; href=&#34;https://www.amazon.fr/gp/product/B00YC8270C/ref=as_li_tl?ie=UTF8&amp;#038;camp=1642&amp;#038;creative=19458&amp;#038;creativeASIN=B00YC8270C&amp;#038;linkCode=as2&amp;#038;tag=ssaugrin-21&#34;&gt;sous forme de coussin chez Amazon&lt;/a&gt; &lt;img src=&#34;https://ir-fr.amazon-adsystem.com/e/ir?t=ssaugrin-21&amp;#038;l=as2&amp;#038;o=8&amp;#038;a=B00YC8270C&#34; width=&#34;1&#34; height=&#34;1&#34; border=&#34;0&#34; alt=&#34;&#34; style=&#34;border:none !important; margin:0px !important;&#34; /&gt;🙂&lt;/p&gt;
-&lt;p&gt;Dans un premier temps ce que j’appelle ici « image » ne sont pas des images, pour être correcte ce sont des symboles ASCII. Vous pouvez les rajouter à côté de votre pseudo sur les réseaux sociaux tel que Twitter ou Facebook, ceci apportera une petite touche de personnalisation à votre profil.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;Edit&lt;/strong&gt; : J’ai découvert qu’on vendait des émojis &lt;!-- raw HTML omitted --&gt;sous forme de coussin chez Amazon&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;🙂&lt;/p&gt;</description>
       <enclosure url="https://saugrin-sonia.fr/img/featured/code-ascii-twitter.jpg" length="99036" type="image/png" />
     </item>
     

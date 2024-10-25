@@ -31,9 +31,9 @@ Passons à l&rsquo;éssentiel dans un premier temps téléchargez l&rsquo;archiv
 
 Le fichier `config/highcharts.php` permet de personnaliser le rendu des graphiques. Il est possible de configurer des élèments qui seront appliqués à tous les graphiques ou de creer une template personnaliser. Pour choisir une template, il suffit de l&rsquo;initialiser :
 
-~~~~php 
-$this->highcharts->initialize('nom_template')
-~~~~
+```php 
+$this->highcharts->initialize(TEMPLATE_NAME)
+```
 
 ### Intégration
 
@@ -74,32 +74,20 @@ Array
 Ce qui fait que pour générer les graphiques il faut faire le traitement suivant :
 
 ~~~~php
-<?php
-
     foreach($tags as $key => $tag):
-
        $labels = array_keys($tag); // récupère les avis ( + , - , Neutre)
-
        $serie['data'] = $tag; // Les résultats à analyser
+       $totaux = 0;
+       $nbArray = count($tag);
 
-
-        $totaux = 0;
-
-        $nbArray = count($tag);
-
-        // Fonction qui totalise le total de personne qui ont données leur avis
-        for ($i = 0; $i &lt; $nbArray; $i++) {
-
+       for ($i = 0; $i &lt; $nbArray; $i++) {
               $totaux += $tag[$i][1];
+       }
 
-        }
-
-        $title = ucfirst($key).' - '.$totaux.' occurences'; // Titre du Graphique
-
-        $callback = "function() { return '
-
+       $title = ucfirst($key).' - '.$totaux.' occurences'; // Titre du Graphique
+       $callback = "function() { return '
+       
 <b>'+ this.point.name +'</b>: '+ Math.round(this.percentage*100)/100 +' %'}";
-
         $tool->formatter = $callback; // Legende au survol de la souris
         $plot->pie->dataLabels->formatter = $callback; // Legende
         $this->highcharts
@@ -109,11 +97,9 @@ Ce qui fait que pour générer les graphiques il faut faire le traitement suivan
             ->set_dimensions('', 300)
             ->set_title($title, '')
             ->set_plotOptions($plot);
-
+            
         echo $this->highcharts->render();
-
     endforeach;
-?>
 ~~~~
 
 ### Rendu

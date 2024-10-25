@@ -12,16 +12,20 @@ rssLimit = 20
 
 [permalinks]
   posts = "/blog/:year/:title/"
-  
+
 [params]
   author = "Sonia Saugrin"
   images = ['screenshot.png']
   description = "Geek et développeur web expérimenté vivant à l'île de La Réunion"
-  token = "123456"
-  consumer_key = "13616-c877ca91826123ba561154b7"
 
-[markup.goldmark.renderer]
-  unsafe= true
-
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  lineNoStart = 1
+  lineNos = true
+  lineNumbersInTable = false
+  tabWidth = 4
+  noClasses = false
+  style = 'catppuccin-frappe'
 [build]
   writeStats = true

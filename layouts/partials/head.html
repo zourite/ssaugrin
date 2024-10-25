@@ -10,7 +10,7 @@
 
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
+
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -32,26 +32,20 @@
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 {{ template "_internal/schema.html" . }}
-    
+
 <base href="{{ .Site.BaseURL }}">
 
 {{ $style := resources.Get "/css/style.css" | postCSS }}
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;600;700&display=swap" rel="stylesheet"> 
-
-{{ if hugo.IsServer }}
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">{{ if hugo.IsServer }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 {{ else }}
 {{ $style := $style | minify | fingerprint  }}
 <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}">
 {{ end }}
-  
-
 <link rel="canonical" href="{{ .Permalink }}">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/solarized-dark.min.css">
 
-    
 </head>

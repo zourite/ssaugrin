@@ -5,3 +5,4 @@ public
 resources
 resources/_gen
 .idea
+.env
