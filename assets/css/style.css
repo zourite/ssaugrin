@@ -842,6 +842,7 @@ h2 a {
 :root {
   --header-height: 40px;
   --header-z-index: 56;
+  --font-mono: "Fira Code", monospace;
 }
 
 #header {
@@ -870,10 +871,6 @@ h2 a {
 
       justify-content: space-between
   }
-    }
-
-#header #main-menu :root {
-      --font-mono: "Fira Code", monospace;
     }
 
 #header #main-menu .branding {
