@@ -933,9 +933,9 @@ h2 a {
 #header {
   --tw-bg-opacity: 1;
   background-color: rgb(44 62 80 / var(--tw-bg-opacity));
-  height : 40px;
+  height : 50px;
   z-index: 56;
-  top:0px;
+  top:0;
 }
 
 #header #menu-principal {
@@ -946,8 +946,6 @@ h2 a {
 
 #header #menu-principal {
       display: flex;
-
-      align-items: center;
 
       justify-content: space-between
   }
@@ -1049,6 +1047,7 @@ h2 a {
         cursor: pointer;
         border: none;
         transition: all .4s ease-in-out;
+        height: 100%;
       }
 
 #header #menu-principal .nav-links li a {
@@ -1078,6 +1077,33 @@ h2 a {
 #header #menu-principal .nav-links > :last-child {
         margin-right: 0;
       }
+
+@media (min-width: 976px) {
+    #header #menu-top {
+      --tw-bg-opacity: 1;
+      background-color: rgb(17 75 95 / var(--tw-bg-opacity));
+    }
+  }
+
+#header #menu-top {
+    margin-right: 0;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+#header #menu-top:before {
+      content: " ";
+      background: black;
+      position: absolute;
+      top:0;
+      left:-10px;
+      right:-10px;
+      bottom:0;
+      z-index: -1;
+      transform: skewX(-15deg);
+    }
 
 #footer {
   background-color : #2c3e50;

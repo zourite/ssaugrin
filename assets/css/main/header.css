@@ -20,22 +20,21 @@
 #header {
 
   @apply bg-blue-deep;
-  height : 40px;
+  height : 50px;
   z-index: 56;
-  top:0px;
-  
+  top:0;
+
   #menu-principal {
 
     height: 100%;
 
     @screen lg {
-      
+
       display: flex;
-      align-items: center;
       justify-content: space-between;
-    
+
     }
-    
+
     .branding {
 
       display: flex;
@@ -49,18 +48,19 @@
         @screen lg {
 
           border-right : 1px solid rgba(160, 160, 160, 0.3);
-  
+
         }
       }
 
     }
 
     .nav-link {
- 
+
       letter-spacing : 2px;
-   
+
+
     }
-  
+
     .nav-links  {
 
       @apply flex-col lg:mr-2 justify-center lg:justify-start lg:flex-row;
@@ -78,13 +78,13 @@
       }
 
       li {
-  
+
         @apply lg:mr-4 lg:text-center lg:bg-drk-green-octo text-white;
         font-size: 16px;
         cursor: pointer;
-        border: none;  
+        border: none;
         transition: all .4s ease-in-out;
-
+        height: 100%;
         a {
 
           @apply px-2 py-1;
@@ -98,21 +98,40 @@
           margin-right : 0.3rem;
 
         }
-  
+
         &:hover, .active {
-  
+
           background-color: rgba(255, 255, 255, 0.85);
           color : #000;
-    
+
         }
-      
+
       }
 
-      > :last-child {  
-        margin-right: 0; 
+      > :last-child {
+        margin-right: 0;
       }
     }
 
   }
-  
+
+  #menu-top {
+    @apply lg:bg-drk-green-octo;
+    margin-right: 0;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &:before {
+      content: " ";
+      background: black;
+      position: absolute;
+      top:0;
+      left:-10px;
+      right:-10px;
+      bottom:0;
+      z-index: -1;
+      transform: skewX(-15deg);
+    }
+  }
 }
