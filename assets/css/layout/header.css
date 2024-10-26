@@ -1,9 +1,12 @@
+:root {
+  --header-height: 40px;
+  --header-z-index: 56;
+}
 #header {
   @apply bg-blue-deep w-full fixed;
-  height: 40px;
-  z-index: 56;
+  height: var(--header-height);
+  z-index: var(--header-z-index);
   top: 0;
-
   #main-menu {
     @screen lg {
       display: flex;
