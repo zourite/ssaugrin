@@ -1,12 +1,9 @@
-:root {
-  --header-height: 40px;
-  --header-z-index: 56;
-}
 #header {
   @apply bg-blue-deep w-full fixed;
-  height: var(--header-height);
-  z-index: var(--header-z-index);
+  height: 40px;
+  z-index: 56;
   top: 0;
+
   #main-menu {
     @screen lg {
       display: flex;
@@ -14,15 +11,12 @@
       justify-content: space-between;
     }
 
-    :root {
-      --font-mono: "Fira Code", monospace;
-    }
     .branding {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-left: 10px;
-      font-family: var(--font-mono);
+      font-family: "Fira Code", monospace;
       font-weight: 600;
 
       .inset-text {
