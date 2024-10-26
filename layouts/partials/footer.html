@@ -1,21 +1,19 @@
 <footer id="footer">
     <nav id="nav-foot" class="flex px-2">
-
       <p class="inset-text">
-            ssaugrin © {{ dateFormat "2006" now }} - <a rel="license"
-                href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener noreferrer" target="_blank">
-                <img alt="Licence Creative Commons" style="border-width:0"
-                    src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" class="inline"  /></a>
+        ssaugrin © {{ dateFormat "2006" now }} -
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener noreferrer" target="_blank">
+          <img alt="Licence Creative Commons" style="border-width:0"
+                    src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" class="inline"  />
+        </a>
       </p>
-
       <ul class="nav-links ml-auto">
         <li>
             <a class="nav-link" href="/mentions-legales/">
-                    Mentions legales
+                    Mentions légales
             </a>
         </li>
       </ul>
-
     </nav>
 </footer>
 {{ $js := resources.Get "js/app.js" | js.Build }}
