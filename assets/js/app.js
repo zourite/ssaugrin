@@ -1,4 +1,4 @@
-import './assets/js/componnents/menu'
+import './assets/js/components/menu'
 
 
 

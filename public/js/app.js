@@ -1,7 +1,7 @@
 (() => {
-  // assets/js/componnents/menu.js
+  // assets/js/components/menu.js
   var menuItems = document.querySelectorAll(".nav-link");
-  var current = location.pathname.split("/")[1];
+  var current = location.pathname.split("/").filter(Boolean)[0] || "";
   var mainMenu = document.getElementById("main-menu");
   var hamburger = document.getElementById("btn-burger");
   var menu = document.getElementById("top-links");
@@ -24,12 +24,13 @@
   };
   hamburger.addEventListener("click", toggleMenu);
   var setActiveLink = () => {
-    if (!current) {
+    if (!current && homeLink?.parentElement) {
       homeLink.parentElement.classList.add("active");
       return;
     }
     Array.from(menuItems).forEach((item) => {
-      if (item.getAttribute("href").includes(current)) {
+      const href = item.getAttribute("href");
+      if (href && href.split("/").filter(Boolean)[0] === current) {
         item.parentElement.classList.add("active");
       }
     });

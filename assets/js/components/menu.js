@@ -1,5 +1,5 @@
 const menuItems = document.querySelectorAll('.nav-link');
-const current = location.pathname.split('/')[1];
+const current = location.pathname.split("/").filter(Boolean)[0] || "";
 const mainMenu = document.getElementById('main-menu');
 const hamburger = document.getElementById('btn-burger');
 const menu = document.getElementById('top-links');
@@ -28,14 +28,15 @@ const toggleMenu = () => {
 hamburger.addEventListener('click', toggleMenu);
 
 const setActiveLink = () => {
-  if (!current) {
+  if (!current && homeLink?.parentElement) {
     homeLink.parentElement.classList.add('active');
     return;
   }
 
   Array.from(menuItems)
     .forEach(item => {
-      if (item.getAttribute("href").includes(current)) {
+      const href = item.getAttribute("href");
+      if (href && href.split("/").filter(Boolean)[0] === current) {
         item.parentElement.classList.add('active');
       }
     });

@@ -1,21 +1,18 @@
-<div class="p-2 w-4/12 xl:w-3/12">
+<div class="flex">
+{{ range $.Scratch.Get "books"}}
+<div class="p-2 ">
   <div class="card">
-
-    <div class="h-64 overflow-hidden"> 
-  
+    <div class="h-64 overflow-hidden">
       <a href="{{ .amazon }}" target="_blank">
-   
+
         <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" width="100%"/>
-   
       </a>
-
     </div>
-    
+
     <div class="btn-trello">
-    
       <a href="{{ .trello }}" target="_blank">Voir la fiche 📚</a>
-    
     </div>
-
   </div>
+</div>
+{{ end }}
 </div>
