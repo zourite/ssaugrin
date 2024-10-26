@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+hugo-dev
+public/
+resources/_gen/
+assets/jsconfig.json
+hugo_stats.json
+.idea
+.env
+/assets/css/style.css

@@ -1,0 +1,26 @@
+.btn-trello {
+  @apply p-1;
+  background-color: #055a8c;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+
+  a {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: #114b5f;
+  }
+}
+
+.btn-github {
+  @apply bg-black p-1 text-white text-sm;
+  width: fit-content;
+  a {
+    color : #fff;
+    .inline-svg {
+      margin-right: 10px;
+      width: 1em;
+    }
+  }
+}

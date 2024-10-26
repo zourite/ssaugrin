@@ -1,0 +1,31 @@
+baseURL = "https://saugrin-sonia.fr/"
+languageCode = "fr-fr"
+title = "Geek rêveur et développeur avec une façon particulière de penser"
+disableKinds = ["taxonomy"]
+summaryLength = 20
+defaultContentLanguage = 'fr'
+rssLimit = 20
+
+[author]
+	name = "Sonia SAUGRIN"
+	email = "me@ssaugrin.fr"
+
+[permalinks]
+  posts = "/blog/:year/:title/"
+
+[params]
+  author = "Sonia Saugrin"
+  images = ['screenshot.png']
+  description = "Geek et développeur web expérimenté vivant à l'île de La Réunion"
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  lineNoStart = 1
+  lineNos = true
+  lineNumbersInTable = false
+  tabWidth = 4
+  noClasses = false
+  style = 'catppuccin-frappe'
+[build]
+  writeStats = true

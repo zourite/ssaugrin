@@ -1,0 +1,39 @@
+[[skill]]
+titre = "Laravel"
+image = "/img/logos/laravel.png"
+
+
+[[skill]]
+titre = "VueJS"
+image = "/img/logos/vuejs.png"
+
+
+[[skill]]
+titre = "HTML/CSS"
+image = "/img/logos/html-css.png"
+
+[[skill]]
+titre = "WordPress"
+image = "/img/logos/wordpress.png"
+
+[[skill]]
+titre = "Hugo"
+image = "/img/logos/hugo.png"
+
+[[skill]]
+titre = "PHP"
+image = "/img/logos/php.png"
+
+[[skill]]
+titre = "JS"
+image = "/img/logos/js.png"
+
+[[certif]]
+titre = "Opquast"
+image = "/img/logos/badge_avance.svg"
+link = "https://directory.opquast.com/fr/certificat/BLZ7UG/"
+
+[[certif]]
+titre = "Scrum"
+image = "/img/logos/icstd.png"
+link = "https://scrum-league.org/registre-certifies?id=6i2vlln2pga8"

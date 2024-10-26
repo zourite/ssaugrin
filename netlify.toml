@@ -1,0 +1,19 @@
+[[redirects]]
+  from = "/2012/12/integrer-highcharts-a-du-php-csv"
+  to = "/integrer-highcharts-a-du-php-csv"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/2012/08/generer-des-graphiques-avec-highcharts-et-codeigniter"
+  to = "/generer-des-graphiques-avec-highcharts-et-codeigniter"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/2012/11/les-post-types-et-les-autres-fonctions-integrer-au-theme"
+  to = "/"
+  status = 301
+  force = false
+[build.environment]
+  HUGO_VERSION = "0.135.0"

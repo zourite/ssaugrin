@@ -1,0 +1,34 @@
+#p404 {
+
+  background: url("/img/main/404.jpg") no-repeat;
+  min-height:  calc(100vh - 35px);
+  background-size: cover;
+
+  #posts-404 {
+
+    border: 10px solid transparent;
+    border-image: url('/img/main/watercolor-paint-background.jpg') 60;
+  
+  }
+  
+  
+  .top-round-rainbow {
+    
+    border-radius: 4px;
+    
+    background-image: repeating-linear-gradient(to right,
+    #c4e17f 0px, #c4e17f 50px,
+    #f7fdca 50px, #f7fdca 100px,
+    #fad071 100px, #fad071 150px,
+    #f0766b 150px, #f0766b 200px,
+    #db9dbe 200px, #db9dbe 250px,
+    #c49cdf 250px, #c49cdf 300px,
+    #6599e2 300px, #6599e2 350px,
+    #61c2e4 350px, #61c2e4 400px);
+    background-size: 100% 10px;
+    background-repeat:no-repeat;
+  }
+
+}
+
+
