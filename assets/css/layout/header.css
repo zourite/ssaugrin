@@ -14,12 +14,15 @@
       justify-content: space-between;
     }
 
+    :root {
+      --font-mono: "Fira Code", monospace;
+    }
     .branding {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-left: 10px;
-      font-family: "Fira Code", monospace;
+      font-family: var(--font-mono);
       font-weight: 600;
 
       .inset-text {
