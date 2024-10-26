@@ -5,7 +5,7 @@
   background-image: linear-gradient(0deg, #3498db 0%, #2c3e50 74%);
 
   #page-content {
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@
       &:hover {
         @apply text-dragon;
       }
-    
+
     }
 
     #intro {
@@ -32,7 +32,7 @@
 
         @apply text-3xl text-white;
         margin : 0;
-        
+
       }
     }
 
@@ -50,10 +50,8 @@
         align-items: center;
         justify-content: center;
 
-        &::last-child {
-
+        &:last-child {
           margin-right : 0;
-
         }
 
         .inline-svg {
@@ -74,7 +72,7 @@
 
       }
 
-      
+
 
     }
 

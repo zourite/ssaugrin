@@ -27,5 +27,19 @@ rssLimit = 20
   tabWidth = 4
   noClasses = false
   style = 'catppuccin-frappe'
+[server]
+watch = true
+
 [build]
-  writeStats = true
+writeStats = true
+
+[module]
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+
+[build.buildStats]
+    enable = true

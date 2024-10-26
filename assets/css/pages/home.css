@@ -134,50 +134,53 @@
         animation: bounce 2s infinite;
       }
 
-      #fish2 {
-        margin-left: 40px;
-        animation-delay: 0.5s;
-      }
+    }
 
-      #fish3 {
-        animation-delay: 0.2s;
-      }
+    #fish2 {
+      margin-left: 40px;
+      animation-delay: 0.5s;
+    }
 
-      #fish4 {
-        animation-delay: 0.4s;
-      }
+    #fish3 {
+      animation-delay: 0.2s;
+    }
 
-      #fish5 {
-        margin-left: 40px;
-        animation-delay: 0.1s;
-      }
+    #fish4 {
+      animation-delay: 0.4s;
+    }
 
-      #fish6 {
-        margin-top: 10px;
-        animation-delay: 0.3s;
-      }
+    #fish5 {
+      margin-left: 40px;
+      animation-delay: 0.1s;
+    }
+
+    #fish6 {
+      margin-top: 10px;
+      animation-delay: 0.3s;
     }
   }
+}
 
-  article {
-    position: relative;
-    z-index: 5;
+article {
+  position: relative;
+  z-index: 5;
 
-    #rs-icon {
-      .inline-svg {
-        width: 1.5em;
-        height: 1.5em;
-        margin-right: 20px;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        padding: 5px;
-        &:last-child {
-          margin-right: 0;
-        }
+  #rs-icon {
+    .inline-svg {
+      width: 1.5em;
+      height: 1.5em;
+      margin-right: 20px;
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      padding: 5px;
+
+      &:last-child {
+        margin-right: 0;
       }
     }
   }
 }
+
 
 @keyframes bubble {
   0% {

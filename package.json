@@ -4,10 +4,10 @@
     "description": "Tailwind integration",
     "main": "index.js",
     "scripts": {
-        "start": "concurrently npm:watch:*",
+        "start": "npm run build && concurrently npm:watch:*",
         "watch:tw": "tailwindcss -i ./assets/css/main.css -o ./assets/css/style.css --postcss --watch --livereload",
-        "watch:hugo": "hugo server --disableFastRender",
-        "build": "npm run build:css && hugo --minify",
+        "watch:hugo": "hugo server",
+        "build": "npm run build:css && hugo --gc --minify",
         "build:css": "tailwindcss -m -i ./assets/css/main.css -o ./assets/css/style.css"
     },
     "devDependencies": {
