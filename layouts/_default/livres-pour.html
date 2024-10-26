@@ -1,9 +1,6 @@
 {{ define "main" }}
-
 <header id="hero" style="background-image:url({{ .Params.hero }})">
-  
   <h1>{{ .Title }}</h1>
-
 </header>
 
 <section id="single" class="page">
@@ -18,20 +15,16 @@
 
     <h2>Se comprendre</h2>
 
-    <p>A mon avis, pour trouver le chemin du bien être il est éssentiel de comprendre ce que l'on est et de l'accepter.
+    <p>
+      A mon avis, pour trouver le chemin du bien être il est éssentiel de comprendre ce que l'on est et de l'accepter.
       Je
       peux t'assurer que j'ai eu aussi des soucis avec l'acceptation de soi, mais il y a des livres qui m'ont aider à
       voir
       plus clair.</p>
 
-    <div class="flex justify-center">
-      {{ range $.Site.Data.books.communiquer.products | first 6}}
-
+      {{ .Scratch.Set "books" $.Site.Data.books.communiquer.products | first 6 }}
       {{ partial "livre" . }}
 
-      {{ end }}
-
-    </div>
 
     <h2>Communiquer</h2>
 
@@ -39,13 +32,9 @@
       communication. Je ne suis pas une grande communicante dans l'âme, mais des livres m'ont appris à mieux communiquer
       avec les autres.</p>
 
-    <div class="flex justify-center">
-      {{ range $.Site.Data.books.comprendre.products | first 6}}
-
+      {{ .Scratch.Set "books" $.Site.Data.books.comprendre.products | first 6 }}
       {{ partial "livre" . }}
 
-      {{ end }}
-    </div>
   </article>
 </section>
 {{ end }}
