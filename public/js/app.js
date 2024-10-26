@@ -24,13 +24,13 @@
   };
   hamburger.addEventListener("click", toggleMenu);
   var setActiveLink = () => {
-    if (current === "") {
-      homeLink.classList.add("active");
+    if (!current) {
+      homeLink.parentElement.classList.add("active");
       return;
     }
     Array.from(menuItems).forEach((item) => {
       if (item.getAttribute("href").includes(current)) {
-        item.classList.add("active");
+        item.parentElement.classList.add("active");
       }
     });
   };
