@@ -839,13 +839,18 @@ h2 a {
     color : #114b5f;
   }
 
+:root {
+  --header-height: 40px;
+  --header-z-index: 56;
+}
+
 #header {
   position: fixed;
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgb(44 62 80 / var(--tw-bg-opacity));
-  height: 40px;
-  z-index: 56;
+  height: var(--header-height);
+  z-index: var(--header-z-index);
   top: 0;
 }
 
@@ -860,12 +865,16 @@ h2 a {
   }
     }
 
+#header #main-menu :root {
+      --font-mono: "Fira Code", monospace;
+    }
+
 #header #main-menu .branding {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding-left: 10px;
-      font-family: "Fira Code", monospace;
+      font-family: var(--font-mono);
       font-weight: 600;
     }
 
