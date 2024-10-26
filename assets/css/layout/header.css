@@ -1,0 +1,114 @@
+:root {
+  --header-height: 40px;
+  --header-z-index: 56;
+}
+#header {
+  @apply bg-blue-deep w-full fixed;
+  height: var(--header-height);
+  z-index: var(--header-z-index);
+  top: 0;
+  #main-menu {
+    @screen lg {
+      display: flex;
+      height: auto;
+      justify-content: space-between;
+    }
+
+    :root {
+      --font-mono: "Fira Code", monospace;
+    }
+    .branding {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 10px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+
+      .inset-text {
+        border-right: none;
+        padding-right: 10px;
+        @screen lg {
+          border-right: 1px solid rgba(160, 160, 160, 0.5);
+        }
+      }
+    }
+
+    #top-links {
+      @apply grid grid-cols-2 p-2 lg:bg-drk-green-octo lg:mr-2;
+      margin-right: 0;
+      width: 100%;
+      transform: translateX(-100%);
+      height: calc(100vh - 75px);
+      background-image: linear-gradient(0deg, #3498db 0%, #2c3e50 74%);
+
+      @screen lg {
+        height: auto;
+        width: auto;
+        background-image: none;
+        transform: unset;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:before {
+          @apply bg-drk-green-octo;
+          content: "";
+          position: absolute;
+          inset: 0 -30px;
+          z-index: -1;
+          transform: skewX(-35deg);
+        }
+      }
+
+      li {
+        @apply lg:mr-4 lg:text-center lg:bg-drk-green-octo text-white;
+        font-size: rfs(16px);
+        cursor: pointer;
+        border: none;
+        transition: all .4s ease-in-out;
+
+        a {
+          @apply px-3 py-1;
+          display: inline-block;
+          width: 100%;
+        }
+
+        &:hover, &.active {
+          background-color: rgba(255, 255, 255, 0.85);
+          border-radius: 15px;
+          color: #000;
+        }
+      }
+
+      > :last-child {
+        margin-right: 5px;
+      }
+    }
+
+    &.menu-open {
+      height: calc(100vh - 35px);
+
+      #top-links {
+
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin: 15px;
+          border: 1px solid rgba(160, 160, 160, 0.3);
+          border-radius: 20px;
+          padding: 10px;
+
+          a {
+            .inline-svg {
+              display: block;
+              margin: 10px auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
