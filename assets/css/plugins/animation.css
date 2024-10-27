@@ -1,19 +1,11 @@
-/* backface-visibility: visible !important;
-animation-name: flipInY;
-animation-duration: 2s;
-animation-fill-mode: both; */
-
 .ham {
-
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   transition: transform 400ms;
   user-select: none;
 
   @screen lg {
-
     display : none;
-
   }
 
   .line {
@@ -42,7 +34,7 @@ animation-fill-mode: both; */
       stroke-dashoffset: -138px;
     }
   }
-  
+
 }
 
 .hamRotate.active {
@@ -61,7 +53,6 @@ animation-fill-mode: both; */
 
 @keyframes flipInY {
   from {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
     transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
@@ -69,25 +60,21 @@ animation-fill-mode: both; */
   }
 
   40% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
     transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
 
   60% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
     transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
     opacity: 1;
   }
 
   80% {
-    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
   }
 
   to {
-    -webkit-transform: perspective(400px);
     transform: perspective(400px);
   }
 }
@@ -115,10 +102,13 @@ animation-fill-mode: both; */
 }
 
 @keyframes slide-in {
-  100% { transform: translateX(0%); }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 @keyframes slide-out {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
+  100% {
+    transform: translateX(-100%);
+  }
 }

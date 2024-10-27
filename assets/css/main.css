@@ -1,12 +1,13 @@
-/*Tailwind*/
+/* Tailwind */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-/*Typo*/
+/* Typo */
 @import 'typo/font.css';
 @import 'typo/heading.css';
 @import 'layout/header.css';
-/*Layout*/
+/* Layout */
+@import 'layout/base.css';
 @import 'layout/footer.css';
 @import 'main/error.css';
 @import 'main/post-pages.css';
@@ -14,9 +15,9 @@
 @import 'pages/contact.css';
 @import 'pages/about.css';
 @import 'pages/home.css';
-/*Components*/
+/* Components */
 @import 'components/helpers.css';
 @import 'components/button.css';
-/*Plugins*/
+/* Plugins */
 @import 'plugins/animation.css';
 @import 'plugins/syntax.css';

@@ -1,25 +1,42 @@
 #content {
-  min-height: calc(100vh - 35px);
+  min-height: calc(100dvh - 35px - env(safe-area-inset-bottom));
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 .section, .page {
   #header {
-    box-shadow: 0 -3px 6px  rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    #main-menu #top-links {
+      height: calc(100dvh - 35px - env(safe-area-inset-bottom));
+      @screen lg {
+        height: auto;
+      }
+    }
   }
 }
 
 #contact {
   @apply bg-light;
   padding-top: 40px;
-  min-height: calc(100vh - 35px );
+  min-height: calc(100dvh - 35px);
 
   @screen lg {
     #page-content {
       animation-name: fadeInUp;
-      animation-duration: 0.95s;
+      animation-duration: 0.4s;
       animation-fill-mode: both;
+      will-change: transform;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #page-content {
+        animation: none;
+      }
     }
   }
+
 }
 
 .home {
@@ -35,6 +52,8 @@
     display: flex;
     flex-direction: column;
     transition: all 0.5s ease-out;
+    margin-bottom: 1rem;
+    @apply touch-manipulation;
 
     @screen md {
       flex-direction: row;
@@ -48,6 +67,7 @@
 
     .thumb {
       @apply overflow-hidden xl:h-auto;
+
       img {
         width: 100%;
         height: 100%;
@@ -69,15 +89,16 @@
 
       li {
         display: inline-block;
+
         .inline-svg {
           width: 0.80em;
-          top : 0.4rem;
+          top: 0.4rem;
         }
       }
     }
 
     .post-content {
-      @apply p-3 bg-white;
+      @apply p-4 bg-white;
     }
 
     &:hover {
@@ -96,8 +117,12 @@
     font-weight: bold;
     text-decoration: underline;
     text-decoration-color: #c33c54;
-    text-decoration-thickness: .05em;
-    text-underline-offset: 1.5px;
+    text-decoration-thickness: .1em;
+    text-underline-offset: 3px;
+    @screen lg {
+      text-decoration-thickness: .05em;
+      text-underline-offset: 2px;
+    }
 
     &:hover {
       text-decoration-color: #2c3e50;
@@ -126,7 +151,11 @@
         @apply text-drk-green-octo;
         content: "⦾";
         display: inline-block;
-        margin-right: 10px;
+        margin-right: 12px;
+        font-size: 1.2em;
+        @screen lg {
+          font-size: 1em;
+        }
       }
     }
   }
@@ -148,14 +177,16 @@
 #pagination {
   margin: 20px 0;
   justify-content: center;
+
   li {
-    margin : 0 10px;
+    margin: 0 10px;
     width: 25px;
     height: 25px;
     text-align: center;
+
     &.active {
       background-color: rgba(2, 128, 144, 0.3);
-      border-radius : 50px;
+      border-radius: 50px;
     }
   }
 }
