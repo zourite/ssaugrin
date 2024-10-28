@@ -1,8 +1,3 @@
-:root {
-  --header-height: 40px;
-  --header-z-index: 56;
-  --font-mono: "Fira Code", monospace;
-}
 #header {
   @apply bg-blue-deep w-full fixed;
   height: var(--header-height);
@@ -14,6 +9,7 @@
   }
 
   #main-menu {
+    position: relative;
     @screen lg {
       display: flex;
       height: auto;
@@ -37,15 +33,23 @@
     }
 
     #top-links {
-      @apply grid grid-cols-2 p-2 lg:bg-drk-green-octo lg:mr-2;
+      @apply grid grid-cols-2 p-2 lg:mr-2;
       margin-right: 0;
       width: 100%;
       transform: translateX(-100%);
-      background-image: linear-gradient(0deg, #3498db 0%, #2c3e50 74%);
-      height: 0;
+      height: calc(100dvh - 75px);
+      position: absolute;
+      background-image: linear-gradient(180deg, #2c3e50 0%, #114b5f 80%);
 
       @screen lg {
         height: auto;
+      }
+
+      &.slide-out {
+        transform: unset;
+      }
+
+      @screen lg {
         width: auto;
         background-image: none;
         transform: unset;
@@ -54,61 +58,79 @@
         align-items: center;
 
         &:before {
-          @apply bg-drk-green-octo;
+          background-image: linear-gradient(90deg, #2c3e50 0%, #114b5f 80%);
           content: "";
+          border-left: 1px solid rgba(255,255,255, 0.3);
           position: absolute;
           inset: 0 -30px;
           z-index: -1;
-          transform: skewX(-35deg);
+          transform: skewX(-50deg);
         }
       }
 
       li {
-        @apply lg:mr-4 lg:text-center lg:bg-drk-green-octo text-white;
+        @apply lg:mr-4 lg:text-center text-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
         font-size: rfs(16px);
-        cursor: pointer;
-        border: none;
-        transition: all .4s ease-in-out;
+        margin: 15px;
+        border: 1px solid rgba(160, 160, 160, 0.3);
+        border-radius: 20px;
+
+        @screen lg {
+          border: none;
+          border-radius: 5px;
+          margin: 0 10px 0 0;
+          transition: background-color .5s ease-in-out;
+        }
 
         a {
           @apply px-3 py-1;
           display: inline-block;
           width: 100%;
+          padding: 10px;
+
+          @screen lg {
+            padding: 5px 15px;
+          }
+
+          .inline-svg {
+            display: block;
+            margin: 10px auto;
+            @screen lg {
+              display: inline-block;
+              margin: 0 5px 0 0;
+            }
+          }
         }
 
         &:hover, &.active {
-          background-color: rgba(255, 255, 255, 0.85);
-          border-radius: 15px;
-          color: #000;
+          @apply text-drk-green-octo;
+          background-color: rgba(255, 255, 255, 0.80);
+          border-radius: 20px;
+          font-weight: 500;
+
+          @screen lg {
+            border-radius: 5px;
+          }
         }
       }
-
-      > :last-child {
-        margin-right: 5px;
+      @screen lg {
+        > li:first-of-type {
+          margin-left: 0;
+        }
+        > :last-child {
+          margin-right: 0;
+        }
       }
     }
 
     &.menu-open {
-      height: calc(100dvh - 35px);
-
       #top-links {
-        height: calc(100dvh - 75px);
         li {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          margin: 15px;
-          border: 1px solid rgba(160, 160, 160, 0.3);
-          border-radius: 20px;
-          padding: 10px;
-
-          a {
-            .inline-svg {
-              display: block;
-              margin: 10px auto;
-            }
-          }
+          transition: background-color .5s ease-in-out;
         }
       }
     }
