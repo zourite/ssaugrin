@@ -26,6 +26,7 @@
     "dependencies": {
         "concat": "^1.0.3",
         "dotenv": "^16.4.5",
+        "iconify-icon": "^2.1.0",
         "postcss-nested-ancestors": "^3.0.0",
         "rfs": "^10.0.0"
     }

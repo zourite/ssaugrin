@@ -88,20 +88,34 @@
 
         a {
           @apply px-3 py-1;
-          display: inline-block;
           width: 100%;
+          height: 100%;
           padding: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
 
           @screen lg {
+            display: inline-block;
             padding: 5px 15px;
+            aspect-ratio: initial;
           }
 
           .inline-svg {
-            display: block;
             margin: 10px auto;
+            width: 60px;
+            height: 60px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-size: rfs(60px);
+
             @screen lg {
               display: inline-block;
               margin: 0 5px 0 0;
+              font-size: rfs(16px);
+              width: auto;
+              height: auto;
             }
           }
         }
