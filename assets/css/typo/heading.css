@@ -13,9 +13,6 @@ h2 {
   @apply text-xl;
   display: inline-block;
 
-  a {
-    color: #114b5f;
-  }
 }
 
 h3 {
