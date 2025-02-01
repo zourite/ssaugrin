@@ -15,6 +15,15 @@
       height: auto;
       justify-content: space-between;
     }
+    a {
+      text-decoration: none;
+      font-weight: 400;
+      color: #fff;
+
+      &:visited {
+        color: inherit;
+      }
+    }
     .branding {
       display: flex;
       justify-content: space-between;
@@ -29,6 +38,9 @@
         @screen lg {
           border-right: 1px solid rgba(160, 160, 160, 0.5);
         }
+        a {
+          font-weight: bold;
+        }
       }
     }
 
@@ -40,9 +52,12 @@
       height: calc(100dvh - 75px);
       position: absolute;
       background-image: linear-gradient(180deg, #2c3e50 0%, #114b5f 80%);
+      align-items: center;
+      justify-content: center;
 
       @screen lg {
         height: auto;
+        align-items: inherit;
       }
 
       &.slide-out {
@@ -78,12 +93,15 @@
         margin: 15px;
         border: 1px solid rgba(160, 160, 160, 0.3);
         border-radius: 20px;
+        max-height: 130px;
+        aspect-ratio: 10 / 7;
 
         @screen lg {
           border: none;
           border-radius: 5px;
           margin: 0 10px 0 0;
           transition: background-color .5s ease-in-out;
+          aspect-ratio: initial;
         }
 
         a {
@@ -98,13 +116,12 @@
           @screen lg {
             display: inline-block;
             padding: 5px 15px;
-            aspect-ratio: initial;
           }
 
           .inline-svg {
             margin: 10px auto;
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             display: inline-flex;
             justify-content: center;
             align-items: center;

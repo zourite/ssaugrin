@@ -1,4 +1,4 @@
-#post-content {
+#about {
 
   .project {
 
@@ -39,9 +39,10 @@
     }
 
     .github-btn {
-
+      background-color: #000;
       margin-top: auto;
       border-bottom-left-radius: 0.5rem;
+      padding: 15px 10px;
 
       a {
 
@@ -93,7 +94,7 @@
 
       color: #500101;
       font-weight: bold;
-      text-decoration-color : #500101;      
+      text-decoration-color : #500101;
     }
   }
 
@@ -132,7 +133,7 @@
 
     } */
 
-    
+
   }
 
   #intro-texte {

@@ -10,9 +10,10 @@ h1 {
 }
 
 h2 {
+  @apply text-drk-green-octo;
   @apply text-xl;
   display: inline-block;
-
+  font-weight: 600;
 }
 
 h3 {

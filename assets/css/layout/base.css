@@ -7,3 +7,25 @@
 body {
   -webkit-font-smoothing: antialiased;
 }
+
+a {
+  @apply text-dragon;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #c33c54;
+  text-decoration-thickness: .1em;
+  text-underline-offset: 3px;
+  @screen lg {
+    text-decoration-thickness: .05em;
+    text-underline-offset: 2px;
+  }
+
+  &:hover {
+    text-decoration-color: #2c3e50;
+  }
+
+  &:visited {
+    @apply text-blue-deep;
+    text-decoration-color: #2c3e50;
+  }
+}
