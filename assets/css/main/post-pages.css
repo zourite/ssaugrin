@@ -1,10 +1,4 @@
-#content {
-  min-height: calc(100dvh - 35px - env(safe-area-inset-bottom));
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-}
-
-.section, .page {
+.page {
   #header {
     box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
 
@@ -14,6 +8,23 @@
         height: auto;
       }
     }
+  }
+
+  #content {
+    min-height: calc(100dvh - 35px - env(safe-area-inset-bottom));
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-top: 50px;
+
+    h1, h2 {
+      @apply text-drk-green-octo;
+      margin-top: 5px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
   }
 }
 
@@ -75,12 +86,6 @@
       }
     }
 
-    h2 {
-      @apply text-drk-green-octo;
-      font-weight: 600;
-      margin-top: 5px;
-    }
-
     .post-meta {
       font-size: 0.80em;
       color: #6F6F6F;
@@ -108,40 +113,15 @@
 }
 
 #post-content {
-  h2, h3 {
-    @apply text-drk-green-octo;
-  }
 
-  a {
-    @apply text-dragon;
-    font-weight: bold;
-    text-decoration: underline;
-    text-decoration-color: #c33c54;
-    text-decoration-thickness: .1em;
-    text-underline-offset: 3px;
-    @screen lg {
-      text-decoration-thickness: .05em;
-      text-underline-offset: 2px;
-    }
 
-    &:hover {
-      text-decoration-color: #2c3e50;
-    }
-
-    &:visited {
-      @apply text-blue-deep;
-      text-decoration-color: #2c3e50;
-    }
-  }
 
   .btn-trello a {
     text-decoration: none;
     color: #fff;
   }
 
-  p {
-    margin: 1rem 0;
-  }
+
 
   ul {
     li {
@@ -159,6 +139,7 @@
       }
     }
   }
+
 
   @screen lg {
     &::after {

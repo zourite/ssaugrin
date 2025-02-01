@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $index := 0 }}
-<section id="post-content">
+<section id="about-page">
 
   <section id="me-area" class="">
 
@@ -10,29 +10,25 @@
 
         <div class="hidden md:block md:w-1/2">
 
-          <img src="/img/zourite-maveli.png" width="300" height="300" class="rotate shadow-img block mx-auto" role="presentation" />
+          <img src="/img/zourite-maveli.png" width="300" height="300" class="rotate shadow-img block mx-auto" role="presentation"  alt=""/>
 
         </div>
 
         <div id="intro-texte" class="w-full md:w-1/2">
 
-          <h1>Qui suis-je ?</h1>
+          <h1>Professionnellement parlant</h1>
 
-          <p>Je cumule plus d'une dizaine d'année d'expérience en tant que développeur web. J'ai principalement
-            travaillé en agence de communication. Cette expérience, me permet de créer des solutions numériques,
-            simples, sécurisés et efficaces 🤓
+          <p>Fort de plus de dix ans d'expérience en tant que développeur web, j'ai principalement exercé en agence de communication. Ce parcours m'a permis de concevoir des solutions numériques simples, sécurisées et performantes. 🤓
           </p>
 
-          <p>Je me fais appeler Zourite, car la spécialité de l'île de La Réunion, que j'adore manger c'est le <a
-              href="https://www.youtube.com/watch?v=0cJAvnyV_HI" target="_blank">civet zourite</a>.
+          <p>On me connaît sous le pseudonyme de "Zourite", en hommage au "<a
+            href="https://www.youtube.com/watch?v=0cJAvnyV_HI" target="_blank">civet zourite</a>", une spécialité de mon île, La Réunion, que j'apprécie particulièrement.
           </p>
 
-          <p>J'habite à La Réunion, département français [974] situé en plein coeur de l'océan indien. J'ai eu la chance
-            de visiter la Guyane Française dans le cadre d'une mission en tant que facilitateur pour une formation
-            développeur web labellisé <a target="_blank" href="https://www.grandeecolenumerique.fr/">Grande École
+          <p>Je réside à La Réunion, un département français [974] niché au cœur de l’océan Indien. J'ai également eu l’opportunité de me rendre en Guyane française pour une mission en tant que facilitateur dans le cadre d'une formation labellisée <a target="_blank" href="https://www.grandeecolenumerique.fr/">Grande École
               Numérique.</a></p>
 
-          <p>Pour finir, j'ajouterai que je suis jury pour les titres professionnels : <strong>Développeur web </strong>
+          <p>Enfin, j'interviens régulièrement comme membre de jury pour les titres professionnels de <strong>Développeur web </strong>
             et <strong>Concepteur d'application</strong></p>
 
         </div>
@@ -88,7 +84,7 @@
       <h2>Des certifications, pour developpeur ?! J'en ai !</h2>
 
         <div class="flex flex-col md:flex-row">
-          
+
           <div class="flex gap-6 basis-1/2 items-center justify-center mt-2">
 
             {{ range $index, $val := $.Site.Data.logos.logo.certif }}
@@ -100,12 +96,12 @@
               </div>
 
             {{ end }}
-          
+
           </div>
 
           <div class="basis-1/2">
             <p>
-            Un développeur travaillant essentiellement en agence de communication, doit avoir des compétences transversales. C'est pour cela que je mets un point d'honneur à développer des compétences annexes. 
+            Un développeur travaillant essentiellement en agence de communication, doit avoir des compétences transversales. C'est pour cela que je mets un point d'honneur à développer des compétences annexes.
             </p>
             <p>
             Je maitrise la méthodologie scrum et je sais créer des sites webs de qualité qui respectent les standards en matière de qualités-web et de sécurité informatique.
