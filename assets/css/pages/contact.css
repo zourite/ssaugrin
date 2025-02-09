@@ -15,7 +15,7 @@
     .mailto {
 
       @apply text-3xl text-white;
-
+      text-decoration: none;
       &:hover {
         @apply text-dragon;
       }

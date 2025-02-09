@@ -1,5 +1,9 @@
 #about {
 
+  #content {
+    margin-top: 60px;
+  }
+
   .project {
 
     position: relative;
@@ -101,7 +105,7 @@
   #me-area {
 
     padding-top: 30px;
-    /* padding-bottom: 15px; */
+    padding-bottom: 15px;
 
 
     .rotate {
