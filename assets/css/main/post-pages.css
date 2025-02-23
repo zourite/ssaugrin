@@ -6,8 +6,17 @@
   #header {
     box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
     @screen lg {
-      #main-menu #top-links {
-        height: auto;
+      #main-menu {
+        background-image: linear-gradient(to right, #2c3e50 40%, #114b5f 90%);
+        z-index: -2;
+
+        #top-links {
+          height: auto;
+
+          &:before {
+            border-left: 1px inset #eee;
+          }
+        }
       }
     }
   }
