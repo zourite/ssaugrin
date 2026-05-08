@@ -15,6 +15,7 @@ rssLimit = 20
 
 [params]
   author = "Sonia Saugrin"
+  author_email = "me@ssaugrin.fr"
   images = ['screenshot.png']
   description = "Geek et développeur web expérimenté vivant à l'île de La Réunion"
 
@@ -27,6 +28,8 @@ rssLimit = 20
   tabWidth = 4
   noClasses = false
   style = 'catppuccin-frappe'
+[markup.goldmark.renderer]
+  unsafe = true
 [server]
 watch = true
 

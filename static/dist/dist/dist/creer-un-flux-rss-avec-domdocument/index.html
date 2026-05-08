@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+
+  <meta charset="utf-8">
+  
+  <title>Creer un flux RSS avec DOMDocument | Sonia Saugrin</title>
+
+  <meta property="og:url" content="https://saugrin-sonia.fr/creer-un-flux-rss-avec-domdocument/">
+  <meta property="og:site_name" content="Geek rêveur et développeur avec une façon particulière de penser">
+  <meta property="og:title" content="Creer un flux RSS avec DOMDocument">
+  <meta property="og:description" content="Depuis un certains temps, j&#39;utilise DOMDocument pour générer mais fichier XML. Je vais donc vous montrer la voie sur le moyen de générer un Flux RSS à l&#39;aide de cette librairie.">
+  <meta property="og:locale" content="fr_fr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2012-09-12T08:47:11+00:00">
+    <meta property="article:modified_time" content="2012-09-12T08:47:11+00:00">
+    <meta property="article:tag" content="Librairie">
+    <meta property="article:tag" content="PHP">
+    <meta property="article:tag" content="POO">
+    <meta property="article:tag" content="RSS">
+    <meta property="og:image" content="https://saugrin-sonia.fr/screenshot.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta name="twitter:title" content="Creer un flux RSS avec DOMDocument">
+  <meta name="twitter:description" content="Depuis un certains temps, j&#39;utilise DOMDocument pour générer mais fichier XML. Je vais donc vous montrer la voie sur le moyen de générer un Flux RSS à l&#39;aide de cette librairie.">
+
+  
+  <meta itemprop="name" content="Creer un flux RSS avec DOMDocument">
+  <meta itemprop="description" content="Depuis un certains temps, j&#39;utilise DOMDocument pour générer mais fichier XML. Je vais donc vous montrer la voie sur le moyen de générer un Flux RSS à l&#39;aide de cette librairie.">
+  <meta itemprop="datePublished" content="2012-09-12T08:47:11+00:00">
+  <meta itemprop="dateModified" content="2012-09-12T08:47:11+00:00">
+  <meta itemprop="wordCount" content="371">
+  <meta itemprop="image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta itemprop="keywords" content="Librairie,PHP,POO,RSS">
+
+  <meta name="description"
+        content="Depuis un certains temps, j&#39;utilise DOMDocument pour générer mais fichier XML. Je vais donc vous montrer la voie sur le moyen de générer un Flux RSS à l&#39;aide de cette librairie.">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-title" content="ssaugrin">
+  <meta name="application-name" content="ssaugrin">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:url" content="https://saugrin-sonia.fr/creer-un-flux-rss-avec-domdocument/">
+  <meta property="og:site_name" content="Geek rêveur et développeur avec une façon particulière de penser">
+  <meta property="og:title" content="Creer un flux RSS avec DOMDocument">
+  <meta property="og:description" content="Depuis un certains temps, j&#39;utilise DOMDocument pour générer mais fichier XML. Je vais donc vous montrer la voie sur le moyen de générer un Flux RSS à l&#39;aide de cette librairie.">
+  <meta property="og:locale" content="fr_fr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2012-09-12T08:47:11+00:00">
+    <meta property="article:modified_time" content="2012-09-12T08:47:11+00:00">
+    <meta property="article:tag" content="Librairie">
+    <meta property="article:tag" content="PHP">
+    <meta property="article:tag" content="POO">
+    <meta property="article:tag" content="RSS">
+    <meta property="og:image" content="https://saugrin-sonia.fr/screenshot.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta name="twitter:title" content="Creer un flux RSS avec DOMDocument">
+  <meta name="twitter:description" content="Depuis un certains temps, j&#39;utilise DOMDocument pour générer mais fichier XML. Je vais donc vous montrer la voie sur le moyen de générer un Flux RSS à l&#39;aide de cette librairie.">
+
+  
+  <meta itemprop="name" content="Creer un flux RSS avec DOMDocument">
+  <meta itemprop="description" content="Depuis un certains temps, j&#39;utilise DOMDocument pour générer mais fichier XML. Je vais donc vous montrer la voie sur le moyen de générer un Flux RSS à l&#39;aide de cette librairie.">
+  <meta itemprop="datePublished" content="2012-09-12T08:47:11+00:00">
+  <meta itemprop="dateModified" content="2012-09-12T08:47:11+00:00">
+  <meta itemprop="wordCount" content="371">
+  <meta itemprop="image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta itemprop="keywords" content="Librairie,PHP,POO,RSS">
+
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&display=swap"
+    rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="/css/style.min.734b323fff00848424a96aad1d14e71ac4aefb4cd8b919bc0cea85a34bf4198a.css" integrity="sha256-c0syP/8AhIQkqWqtHRTnGsSu&#43;0zYuRm8DOqFo0v0GYo=">
+  
+  <link rel="canonical" href="https://saugrin-sonia.fr/creer-un-flux-rss-avec-domdocument/">
+
+
+</head>
+<body  class="page"><header id="header">
+    <nav id="main-menu" aria-label="Navigation principal">
+        <div class="branding">
+            <div class="inset-text">
+              <a href="/">SSAUGRIN  <em>aka Zourite</em></a>
+            </div>
+            <svg id="btn-burger" class="ham hamRotate ham1" viewBox="0 0 100 100" width="40">
+              <path
+                    class="line top"
+                    d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+              <path
+                    class="line middle"
+                    d="m 30,50 h 40" />
+              <path
+                    class="line bottom"
+                    d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+            </svg>
+        </div>
+        <ul id="top-links" class="flex">
+            <li>
+                <a id="home-link" class="nav-link" href="/">
+                  <iconify-icon icon="fa-solid:home" class="inline-svg" aria-hidden="true"></iconify-icon>
+                  Accueil
+                </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/a-propos/">
+                <iconify-icon icon="fa6-regular:circle-user" class="inline-svg" aria-hidden="true"></iconify-icon>
+                A propos
+              </a>
+            </li>
+            <li>
+                <a class="nav-link" href="/contact/">
+                  <iconify-icon icon="fa-regular:paper-plane" class="inline-svg" aria-hidden="true"></iconify-icon>
+                 Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+
+<header id="hero" style="background-image:url(/img/hero/creer-fluxrss-domdocument.jpg)">
+
+  <h1> Creer un flux RSS avec DOMDocument </h1>
+  
+</header>
+
+<section id="single" class="single-post">
+  
+  <ul id="meta" class="flex">
+
+    <li class="mr-2">
+     
+      <span class="inline-svg" role="presentation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-calendar-alt fa-w-14" data-icon="calendar-alt" data-prefix="far" focusable="false" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>
+</span> 
+      <time class="published" datetime="2012-09-12 08:47:11 &#43;0000 &#43;0000">
+        
+        12 septembre 2012
+      </time>
+    </li>
+
+    <li>
+      <span class="inline-svg" role="presentation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-stopwatch fa-w-14" data-icon="stopwatch" data-prefix="fas" focusable="false" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M432 304c0 114.9-93.1 208-208 208S16 418.9 16 304c0-104 76.3-190.2 176-205.5V64h-28c-6.6 0-12-5.4-12-12V12c0-6.6 5.4-12 12-12h120c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-28v34.5c37.5 5.8 71.7 21.6 99.7 44.6l27.5-27.5c4.7-4.7 12.3-4.7 17 0l28.3 28.3c4.7 4.7 4.7 12.3 0 17l-29.4 29.4-.6.6C419.7 223.3 432 262.2 432 304zm-176 36V188.5c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12V340c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12z"/></svg>
+</span> 2 minutes de lecture
+    </li>
+
+  </ul>
+
+  <article id="post-content">
+
+    <h3 id="quest-ce-que-domdocument-">Qu’est ce que DOMDocument ?</h3>
+<p>DOMDocument est une librairie PHP, qui à fait son entrer avec PHP5. Cette librairie permet de créer ou de modifier un fichier <strong>XML</strong> ou <strong>HTML</strong>. DOMDocument est très semblable à Javascript aussi bien par le biais de ses fonctions ou par son fonctionement. Nous retrouvons donc le concept des <strong>noeuds</strong> ou encore la fameuse fonction <code>getElementById()</code>.</p>
+<p><strong>Plus besoin de faire :</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="ln">1</span><span class="cl"> <span class="nv">$xml</span> <span class="o">=</span> <span class="s1">&#39;&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"> <span class="nv">$xml</span> <span class="o">.=</span> <span class="s1">&#39;&amp;lt;rss version=&#34;2.0&#34;&gt;&#39;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="ln">3</span><span class="cl"> <span class="nv">$xml</span> <span class="o">.=</span> <span class="s1">&#39;&amp;lt;channel&gt;&#39;</span><span class="p">;</span> 
+</span></span><span class="line"><span class="ln">4</span><span class="cl"> <span class="nv">$xml</span> <span class="o">.=</span> <span class="s1">&#39;
+</span></span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="s1">&lt;title&gt;
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="s1">  Titre du flux
+</span></span></span><span class="line"><span class="ln">8</span><span class="cl"><span class="s1">&lt;/title&gt;&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p><strong>Il suffit d’écrire :</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="ln">1</span><span class="cl"><span class="nv">$file</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">DOMDocument</span><span class="p">(</span><span class="s2">&#34;1.0&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="nv">$root</span> <span class="o">=</span> <span class="nv">$file</span><span class="o">-&gt;</span><span class="na">createElement</span><span class="p">(</span><span class="s2">&#34;rss&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="nv">$root</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="s2">&#34;version&#34;</span><span class="p">,</span> <span class="s2">&#34;2.0&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="nv">$root</span> <span class="o">=</span> <span class="nv">$file</span><span class="o">-&gt;</span><span class="na">appendChild</span><span class="p">(</span><span class="nv">$root</span><span class="p">);</span> 
+</span></span><span class="line"><span class="ln">5</span><span class="cl"><span class="nv">$element_channel</span> <span class="o">=</span> <span class="nv">$file</span><span class="o">-&gt;</span><span class="na">createElement</span><span class="p">(</span><span class="s2">&#34;channel&#34;</span><span class="p">);</span> 
+</span></span><span class="line"><span class="ln">6</span><span class="cl"><span class="nv">$element_channel</span> <span class="o">=</span> <span class="nv">$root</span><span class="o">-&gt;</span><span class="na">appendChild</span><span class="p">(</span><span class="nv">$element_channel</span><span class="p">);</span>
+</span></span></code></pre></div><p>Ok ! J’admets que c’est plus long de procéder ainsi, mais c’est plus sexy, le code est plus agréable à lire et la procédure de maintenance en est simplifier. Il faudra au préalable respecter certains concepts de la POO, pour réellement trouver un intérêt à utiliser cette librairie. Je pense que l’avantage principal de DOMDocument, ce situe dans le fait qu’on à plus besoin d’utiliser des fonctions tel que <code>fwrite()</code> ou <code>fopen()</code>, DOMDocument se charge de tout.</p>
+<h3 id="comment-faire-un-flux-rss-">Comment faire un Flux RSS ?</h3>
+<p>C’est très simple ! Il suffit de lire le tuto de <a href="http://baptiste-wicht.developpez.com/tutoriels/php/rss/" title="Flux RSS PHP4 et PHP5" target="_blank">Baptiste Witch sur développez.net</a>. Non, je déconne ! Enfin pas tout à fait ce tuto est très bien fait, sauf qu’il y à une erreur dans son script. J’ai eu droit à <code>Fatal error: Call to a member function appendChild() on a non-object in</code>. Donc on reprend depuis le début, <a href="ftp://ftp-developpez.com/baptiste-wicht/tutoriel/php/rss/fichiers/RSSPHP5.php" title="Fichier de fonction PHP5 Flux RSS">téléchargez le fichier qu’il fourni à la fin de son tuto</a>.</p>
+<p>Modifiez la fonction <code>createXML()</code></p>
+<p><strong>Remplacer :</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1">// Création du noeud channel 
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="c1"></span><span class="nv">$element_channel</span> <span class="o">=</span> <span class="nv">$file</span><span class="o">-&gt;</span><span class="na">createElement</span><span class="p">(</span><span class="s2">&#34;channel&#34;</span><span class="p">);</span><span class="c1">//On crée un élément channel
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="c1"></span><span class="nv">$element_channel</span><span class="o">-&gt;</span><span class="na">setAttribute</span><span class="p">(</span><span class="s2">&#34;id&#34;</span><span class="p">,</span> <span class="s2">&#34;news&#34;</span><span class="p">);</span> <span class="c1">//On donne un attribut id à notre channel
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"></span><span class="nv">$element_channel</span> <span class="o">=</span> <span class="nv">$root</span><span class="o">-&gt;</span><span class="na">appendChild</span><span class="p">(</span><span class="nv">$element_channel</span><span class="p">);</span><span class="c1">//On ajoute cet élément à la racine
+</span></span></span></code></pre></div><p><strong>Par :</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="ln">1</span><span class="cl"><span class="c1">// Création du noeud channel 
+</span></span></span><span class="line"><span class="ln">2</span><span class="cl"><span class="c1"></span>	 <span class="nv">$element_channel</span> <span class="o">=</span> <span class="nv">$file</span><span class="o">-&gt;</span><span class="na">createElement</span><span class="p">(</span><span class="s2">&#34;channel&#34;</span><span class="p">);</span><span class="c1">//On crée un élément channel 
+</span></span></span><span class="line"><span class="ln">3</span><span class="cl"><span class="c1"></span>	 <span class="nv">$element_channel</span> <span class="o">=</span> <span class="nv">$root</span><span class="o">-&gt;</span><span class="na">appendChild</span><span class="p">(</span><span class="nv">$element_channel</span><span class="p">);</span><span class="c1">//On ajoute cet élément à la racine 
+</span></span></span><span class="line"><span class="ln">4</span><span class="cl"><span class="c1"></span>	 <span class="nv">$element_id</span> <span class="o">=</span> <span class="nv">$file</span><span class="o">-&gt;</span><span class="na">createAttribute</span><span class="p">(</span><span class="s2">&#34;xml:id&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">5</span><span class="cl">	 <span class="nv">$element_id</span> <span class="o">=</span> <span class="nv">$element_channel</span><span class="o">-&gt;</span><span class="na">appendChild</span><span class="p">(</span><span class="nv">$element_id</span><span class="p">);</span> 
+</span></span><span class="line"><span class="ln">6</span><span class="cl">	 <span class="nv">$element_idt</span> <span class="o">=</span> <span class="nv">$file</span><span class="o">-&gt;</span><span class="na">createTextNode</span><span class="p">(</span><span class="s2">&#34;news&#34;</span><span class="p">);</span> <span class="c1">//On donne un attribut id à notre channel 
+</span></span></span><span class="line"><span class="ln">7</span><span class="cl"><span class="c1"></span>	 <span class="nv">$element_idt</span> <span class="o">=</span> <span class="nv">$element_id</span><span class="o">-&gt;</span><span class="na">appendChild</span><span class="p">(</span><span class="nv">$element_idt</span><span class="p">);</span> 
+</span></span><span class="line"><span class="ln">8</span><span class="cl">	 <span class="nv">$element_idt</span> <span class="o">=</span> <span class="nv">$element_channel</span><span class="o">-&gt;</span><span class="na">setIdAttribute</span><span class="p">(</span><span class="s2">&#34;xml:id&#34;</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span></code></pre></div><p>Voila ! Vous pouvez maintenant suivre le reste de son tuto.</p>
+
+
+  </article>
+
+</section>
+
+        </main><footer id="footer">
+    <nav id="nav-foot" class="flex px-2">
+      <p class="inset-text">
+        ssaugrin © 2026 -
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener noreferrer" target="_blank">
+          <img alt="Licence Creative Commons" style="border-width:0"
+                    src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" class="inline"  />
+        </a>
+      </p>
+      <ul class="nav-links ml-auto">
+        <li>
+            <a class="nav-link" href="/mentions-legales/">
+                    Mentions légales
+            </a>
+        </li>
+      </ul>
+    </nav>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

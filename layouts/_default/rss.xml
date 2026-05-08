@@ -11,11 +11,11 @@
     {{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}
     </description>
     <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
-    <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
-    <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>
+    <language>{{.}}</language>{{end}}{{ with .Site.Params.author_email }}
+    <managingEditor>{{.}}{{ with $.Site.Params.author }} ({{.}}){{end}}</managingEditor>
     {{end}}
-    {{ with .Site.Author.email }}
-    <webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>
+    {{ with .Site.Params.author_email }}
+    <webMaster>{{.}}{{ with $.Site.Params.author }} ({{.}}){{end}}</webMaster>
     {{end}}
     {{ with .Site.Copyright }}
     <copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}
@@ -29,7 +29,7 @@
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+      {{ with .Site.Params.author_email }}<author>{{.}}{{ with $.Site.Params.author }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | html }}</description>
       {{ with .Params.featured }}{{ $image_location := printf "static/img/%s" .}}{{$image := readFile $image_location }}{{$len := len $image}}<enclosure url="https://saugrin-sonia.fr/img/{{.}}" length="{{$len}}" type="image/png" />{{end}}

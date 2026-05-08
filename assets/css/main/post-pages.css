@@ -5,7 +5,7 @@
 .section, .page {
   #header {
     box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
-    @screen lg {
+    @media (min-width: 976px) {
       #main-menu {
         background-image: linear-gradient(to right, #2c3e50 40%, #114b5f 90%);
         z-index: -2;
@@ -28,7 +28,7 @@
   padding-top: 40px;
   min-height: calc(100vh - 35px);
 
-  @screen lg {
+  @media (min-width: 976px) {
     #page-content {
       animation-name: fadeInUp;
       animation-duration: 0.95s;
@@ -51,11 +51,11 @@
     flex-direction: column;
     transition: all 0.5s ease-out;
 
-    @screen md {
+    @media (min-width: 768px) {
       flex-direction: row;
     }
 
-    @screen lg {
+    @media (min-width: 976px) {
       animation-name: fadeInUp;
       animation-duration: 0.95s;
       animation-fill-mode: both;
@@ -148,7 +148,7 @@
     }
   }
 
-  @screen lg {
+  @media (min-width: 976px) {
     &::after {
       content: '';
       position: absolute;

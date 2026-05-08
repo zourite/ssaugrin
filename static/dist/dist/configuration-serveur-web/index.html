@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+
+  <meta charset="utf-8">
+  
+  <title>Comment mon #serveur #web est organisé | Sonia Saugrin</title>
+
+  <meta property="og:url" content="https://saugrin-sonia.fr/configuration-serveur-web/">
+  <meta property="og:site_name" content="Geek rêveur et développeur avec une façon particulière de penser">
+  <meta property="og:title" content="Comment mon #serveur #web est organisé">
+  <meta property="og:description" content="Un serveur web est par définition un ordinateur qui te permet de visualiser un site web grâce à Firefox ou Chrome.">
+  <meta property="og:locale" content="fr_fr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2017-03-28T05:57:43+00:00">
+    <meta property="article:modified_time" content="2017-03-28T05:57:43+00:00">
+    <meta property="article:tag" content="Debian">
+    <meta property="article:tag" content="Nginx">
+    <meta property="og:image" content="https://saugrin-sonia.fr/screenshot.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta name="twitter:title" content="Comment mon #serveur #web est organisé">
+  <meta name="twitter:description" content="Un serveur web est par définition un ordinateur qui te permet de visualiser un site web grâce à Firefox ou Chrome.">
+
+  
+  <meta itemprop="name" content="Comment mon #serveur #web est organisé">
+  <meta itemprop="description" content="Un serveur web est par définition un ordinateur qui te permet de visualiser un site web grâce à Firefox ou Chrome.">
+  <meta itemprop="datePublished" content="2017-03-28T05:57:43+00:00">
+  <meta itemprop="dateModified" content="2017-03-28T05:57:43+00:00">
+  <meta itemprop="wordCount" content="633">
+  <meta itemprop="image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta itemprop="keywords" content="Debian,Nginx">
+
+  <meta name="description"
+        content="Un serveur web est par définition un ordinateur qui te permet de visualiser un site web grâce à Firefox ou Chrome. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-title" content="ssaugrin">
+  <meta name="application-name" content="ssaugrin">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:url" content="https://saugrin-sonia.fr/configuration-serveur-web/">
+  <meta property="og:site_name" content="Geek rêveur et développeur avec une façon particulière de penser">
+  <meta property="og:title" content="Comment mon #serveur #web est organisé">
+  <meta property="og:description" content="Un serveur web est par définition un ordinateur qui te permet de visualiser un site web grâce à Firefox ou Chrome.">
+  <meta property="og:locale" content="fr_fr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2017-03-28T05:57:43+00:00">
+    <meta property="article:modified_time" content="2017-03-28T05:57:43+00:00">
+    <meta property="article:tag" content="Debian">
+    <meta property="article:tag" content="Nginx">
+    <meta property="og:image" content="https://saugrin-sonia.fr/screenshot.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta name="twitter:title" content="Comment mon #serveur #web est organisé">
+  <meta name="twitter:description" content="Un serveur web est par définition un ordinateur qui te permet de visualiser un site web grâce à Firefox ou Chrome.">
+
+  
+  <meta itemprop="name" content="Comment mon #serveur #web est organisé">
+  <meta itemprop="description" content="Un serveur web est par définition un ordinateur qui te permet de visualiser un site web grâce à Firefox ou Chrome.">
+  <meta itemprop="datePublished" content="2017-03-28T05:57:43+00:00">
+  <meta itemprop="dateModified" content="2017-03-28T05:57:43+00:00">
+  <meta itemprop="wordCount" content="633">
+  <meta itemprop="image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta itemprop="keywords" content="Debian,Nginx">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/dist/assets/main.css">
+  <link rel="canonical" href="https://saugrin-sonia.fr/configuration-serveur-web/">
+
+
+</head>
+<body  class="page"><header id="header">
+    <nav id="main-menu" aria-label="Navigation principal">
+        <div class="branding">
+            <div class="inset-text">
+              <a href="/">SSAUGRIN  <em>aka Zourite</em></a>
+            </div>
+            <svg id="btn-burger" class="ham hamRotate ham1" viewBox="0 0 100 100" width="40">
+              <path
+                    class="line top"
+                    d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+              <path
+                    class="line middle"
+                    d="m 30,50 h 40" />
+              <path
+                    class="line bottom"
+                    d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+            </svg>
+        </div>
+        <ul id="top-links" class="flex">
+            <li>
+                <a id="home-link" class="nav-link" href="/">
+                  <iconify-icon icon="fa-solid:home" class="inline-svg" aria-hidden="true"></iconify-icon>
+                  Accueil
+                </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/a-propos/">
+                <iconify-icon icon="fa6-regular:circle-user" class="inline-svg" aria-hidden="true"></iconify-icon>
+                A propos
+              </a>
+            </li>
+            <li>
+                <a class="nav-link" href="/contact/">
+                  <iconify-icon icon="fa-regular:paper-plane" class="inline-svg" aria-hidden="true"></iconify-icon>
+                 Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+
+<header id="hero" style="background-image:url(/img/hero/serveur-dedie-configuration.jpg)">
+
+  <h1> Comment mon #serveur #web est organisé </h1>
+  
+</header>
+
+<section id="single" class="single-post">
+  
+  <ul id="meta" class="flex">
+
+    <li class="mr-2">
+     
+      <span class="inline-svg" role="presentation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-calendar-alt fa-w-14" data-icon="calendar-alt" data-prefix="far" focusable="false" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>
+</span> 
+      <time class="published" datetime="2017-03-28 05:57:43 &#43;0000 &#43;0000">
+        
+        28 mars 2017
+      </time>
+    </li>
+
+    <li>
+      <span class="inline-svg" role="presentation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-stopwatch fa-w-14" data-icon="stopwatch" data-prefix="fas" focusable="false" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M432 304c0 114.9-93.1 208-208 208S16 418.9 16 304c0-104 76.3-190.2 176-205.5V64h-28c-6.6 0-12-5.4-12-12V12c0-6.6 5.4-12 12-12h120c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-28v34.5c37.5 5.8 71.7 21.6 99.7 44.6l27.5-27.5c4.7-4.7 12.3-4.7 17 0l28.3 28.3c4.7 4.7 4.7 12.3 0 17l-29.4 29.4-.6.6C419.7 223.3 432 262.2 432 304zm-176 36V188.5c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12V340c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12z"/></svg>
+</span> 3 minutes de lecture
+    </li>
+
+  </ul>
+
+  <article id="post-content">
+
+    <p>Il y a maintenant une ou deux année de cela, j’ai pris la décision de ne plus utiliser des serveurs mutualisés.</p>
+<p>J’ai fait ce choix principalement pour avoir le contrôle absolue sur ce que je fais <em>(I’m ROOT, I’m GOD)</em> et expérimenter des nouvelles technologies, sans attendre le bon vouloir de mon hébergeur pour les intégrer à ses serveurs.</p>
+<p>Le système d’exploitation que je choisi pour un serveur web, est <a href="https://www.debian.org/index.fr.html" target="_blank">Debian</a> et si ce ne serait pas Debian ça aurait été Ubuntu. Il y à énormément de ressources et de tutaux pour ces systèmes d’exploitations. <strong>Grande est la communauté du .deb</strong> 😀</p>
+<p><strong>Un serveur web</strong> est par définition un ordinateur qui te <strong>permet de visualiser un site web</strong> grâce à Firefox ou Chrome. Je te propose de regarder cette vidéo de deux minutes qui t’explique comment fonctionne un serveur web.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/msB9AvJ4bTM?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<p>Entrons donc dans le vif du sujet, le schéma ci dessous te montre comment mon serveur est organisé. Je partitionne <em>(séparer en plusieurs partie)</em> mon serveur en deux. Les fichiers qui constituent <strong>le site web sont stockés dans le répertoire /home et les applicatifs sont à la racine /(racine).</strong> Je préfère séparer ces deux types de données si un site est trop gourmand en stockage d’images, de pdf ou de vidéos, et sature l’espace disponible, mon serveur continuera de fonctionner sans encombre.</p>
+<img src="/img/2017/03/serveur-nginx-php-mysql.jpg" alt="" class="aligncenter size-full wp-image-3074" srcset="/img/2017/03/serveur-nginx-php-mysql.jpg 791w, 2017/03/serveur-nginx-php-mysql-300x137.jpg 300w, 2017/03/serveur-nginx-php-mysql-768x351.jpg 768w" />
+<h2 id="le-serveur-http"><strong>Le serveur HTTP</strong></h2>
+<p>Sans un serveur HTTP d’installé rien ne fonctionne, il est le pilier principal d’un serveur web. Parmi les serveurs HTTP les plus utilisés, il y a Apache, NGINX et IIS. J’ai utilisé Apache pendant très longtemps sur mes serveurs web mais depuis j’ai rencontré Nginx. Je suis tombé amoureuse et je ne veux rien d’autre que du Nginx sur mon serveur.</p>
+<p>A la base NGINX est utilisé en tant que reverse proxy en complément d’Apache. Cependant je trouve que NGINX rempli très bien son rôle de serveur HTTP sans pour autant avoir besoin d’Apache. Mis à part sa légèreté et sa rapidité d’exécution. Je trouve que la syntaxe de NGINX est plus simple et plus intuitive, ce n’est que mon avis. Plus bas, tu trouveras un graphique qui représente la part de marché des différents serveurs HTTP. NGINX prend de plus en plus de part au fil des années.</p>
+<div id="attachment_3078" class="wp-caption aligncenter">
+  <img aria-describedby="caption-attachment-3078" src="/img/2017/03/Sélection_239.png" alt="" width="720" height="586" class="size-full wp-image-3078" srcset="/img/2017/03/Sélection_239.png 720w, 2017/03/Sélection_239-300x244.png 300w" sizes="(max-width: 720px) 100vw, 720px" />
+  <div class="caption-text">
+    <a href="https://trends.builtwith.com/web-server" target="_blank">https://trends.builtwith.com/web-server</a>
+  </div>
+</div>
+<h2 id="language-de-scripts"><strong>Language de scripts</strong></h2>
+<p>Si tu décides d’avoir ton propre serveur, je ne pense pas que c’est uniquement pour y déposer des fichiers HTML. Si tu veux au moins un formulaire de contact sur ton site, il te faudra nécessairement installer un language de scripts. J’ai débuter avec PHP et pour le moment il me convient. Le serveur Nginx se charge d’interpréter le PHP pour le renvoyer sous forme HTML à ton navigateur.</p>
+<h2 id="la-base-de-données"><strong>La base de données</strong></h2>
+<p>En ce qui concerne la gestion de base de données, j’utilise principalement <strong>MySql</strong> par ce que comme PHP c’est l’une des technologies les plus utilisées pour le web. La majorité des CMS fonctionnement avec MySQL. Cependant d’autres systèmes de gestion de base de données existent. Tu as le choix entre <strong>MariaDB, Sqlite et PostgreSQL.</strong></p>
+<p>Tu peux stocker tes informations dans des fichiers .txt que tu enregistrera sur ton serveur et dont tu feras appel quand tu auras besoin. Tu peux le faire ce n’est pas interdit, mais pour une question de performance, je te conseille de choisir un applicatif qui est spécialement conçu pour le stockage de données. 😀 Je dis ça, je dis rien tu peux faire ton <em>frappadingue</em> et tout enregistrer dans des fichiers, c’est pas un soucis.</p>
+<p>Pour conclure, j’évoque le fait que cette configuration est basique et me convient pour ce que j’ai à faire. Je pense plus tard ajouter un système de cache avec Varnish qui est un serveur de cache qui se place avant Nginx et pourquoi pas installer MemCached pour améliorer les performances du serveur.</p>
+
+
+  </article>
+
+</section>
+
+        </main><footer id="footer">
+    <nav id="nav-foot" class="flex px-2">
+      <p class="inset-text">
+        ssaugrin © 2026 -
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener noreferrer" target="_blank">
+          <img alt="Licence Creative Commons" style="border-width:0"
+                    src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" class="inline"  />
+        </a>
+      </p>
+      <ul class="nav-links ml-auto">
+        <li>
+            <a class="nav-link" href="/mentions-legales/">
+                    Mentions légales
+            </a>
+        </li>
+      </ul>
+    </nav>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

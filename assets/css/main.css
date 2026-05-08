@@ -1,23 +1,29 @@
-/* Tailwind */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-/* Typo */
-@import 'typo/font.css';
-@import 'typo/heading.css';
-@import 'layout/header.css';
-/* Layout */
-@import 'layout/base.css';
-@import 'layout/footer.css';
-@import 'main/error.css';
-@import 'main/post-pages.css';
-@import 'main/single.css';
-@import 'pages/contact.css';
-@import 'pages/about.css';
-@import 'pages/home.css';
-/* Components */
-@import 'components/helpers.css';
-@import 'components/button.css';
-/* Plugins */
-@import 'plugins/animation.css';
-@import 'plugins/syntax.css';
+@import "tailwindcss";
+@import "typo/font.css";
+@import "typo/heading.css";
+@import "layout/header.css";
+@import "layout/base.css";
+@import "layout/footer.css";
+@import "main/error.css";
+@import "main/post-pages.css";
+@import "main/single.css";
+@import "pages/contact.css";
+@import "pages/about.css";
+@import "pages/home.css";
+@import "components/helpers.css";
+@import "components/button.css";
+@import "plugins/animation.css";
+@import "plugins/syntax.css";
+
+@theme {
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 976px;
+  --breakpoint-xl: 1200px;
+  --color-drk-green-octo: #114b5f;
+  --color-lgt-green-octo: #028090;
+  --color-light: #fafafa;
+  --color-dragon: #c33c54;
+  --color-blue-deep: #2c3e50;
+  --font-sans: "Inter var", Helvetica, Arial, sans-serif;
+}

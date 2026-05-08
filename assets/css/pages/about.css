@@ -58,7 +58,7 @@
 
     }
 
-    @screen md {
+    @media (min-width: 768px) {
 
       &:not(:last-of-type):after {
 

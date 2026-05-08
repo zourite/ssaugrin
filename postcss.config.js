@@ -6,7 +6,7 @@ module.exports = {
     require('postcss-import')({
       root: './assets/css',
     }),
-    require('tailwindcss'),
+    require('@tailwindcss/postcss'),
     require('postcss-viewport-unit-fallback'),
     require('autoprefixer')({
       overrideBrowserslist: ['>1%']

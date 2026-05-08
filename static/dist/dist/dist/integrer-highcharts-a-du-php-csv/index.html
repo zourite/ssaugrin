@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+
+  <meta charset="utf-8">
+  
+  <title>Intégrer #Highcharts à du #PHP / #CSV | Sonia Saugrin</title>
+
+  <meta property="og:url" content="https://saugrin-sonia.fr/integrer-highcharts-a-du-php-csv/">
+  <meta property="og:site_name" content="Geek rêveur et développeur avec une façon particulière de penser">
+  <meta property="og:title" content="Intégrer #Highcharts à du #PHP / #CSV">
+  <meta property="og:description" content="Comme on me l&#39;a gentille-ment demandé, j&#39;ai écrit un petit tutoriel sur le moyen d&#39;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&#39;aide d&#39;un csv.">
+  <meta property="og:locale" content="fr_fr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2012-12-02T13:11:52+00:00">
+    <meta property="article:modified_time" content="2012-12-02T13:11:52+00:00">
+    <meta property="article:tag" content="Csv">
+    <meta property="article:tag" content="Highcharts">
+    <meta property="article:tag" content="Javascript">
+    <meta property="article:tag" content="Librairie">
+    <meta property="article:tag" content="PHP">
+    <meta property="og:image" content="https://saugrin-sonia.fr/screenshot.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta name="twitter:title" content="Intégrer #Highcharts à du #PHP / #CSV">
+  <meta name="twitter:description" content="Comme on me l&#39;a gentille-ment demandé, j&#39;ai écrit un petit tutoriel sur le moyen d&#39;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&#39;aide d&#39;un csv.">
+
+  
+  <meta itemprop="name" content="Intégrer #Highcharts à du #PHP / #CSV">
+  <meta itemprop="description" content="Comme on me l&#39;a gentille-ment demandé, j&#39;ai écrit un petit tutoriel sur le moyen d&#39;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&#39;aide d&#39;un csv.">
+  <meta itemprop="datePublished" content="2012-12-02T13:11:52+00:00">
+  <meta itemprop="dateModified" content="2012-12-02T13:11:52+00:00">
+  <meta itemprop="wordCount" content="543">
+  <meta itemprop="image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta itemprop="keywords" content="Csv,Highcharts,Javascript,Librairie,PHP">
+
+  <meta name="description"
+        content="Comme on me l&#39;a gentille-ment demandé, j&#39;ai écrit un petit tutoriel sur le moyen d&#39;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&#39;aide d&#39;un csv.">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-title" content="ssaugrin">
+  <meta name="application-name" content="ssaugrin">
+  <meta name="msapplication-TileColor" content="#b91d47">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:url" content="https://saugrin-sonia.fr/integrer-highcharts-a-du-php-csv/">
+  <meta property="og:site_name" content="Geek rêveur et développeur avec une façon particulière de penser">
+  <meta property="og:title" content="Intégrer #Highcharts à du #PHP / #CSV">
+  <meta property="og:description" content="Comme on me l&#39;a gentille-ment demandé, j&#39;ai écrit un petit tutoriel sur le moyen d&#39;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&#39;aide d&#39;un csv.">
+  <meta property="og:locale" content="fr_fr">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2012-12-02T13:11:52+00:00">
+    <meta property="article:modified_time" content="2012-12-02T13:11:52+00:00">
+    <meta property="article:tag" content="Csv">
+    <meta property="article:tag" content="Highcharts">
+    <meta property="article:tag" content="Javascript">
+    <meta property="article:tag" content="Librairie">
+    <meta property="article:tag" content="PHP">
+    <meta property="og:image" content="https://saugrin-sonia.fr/screenshot.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta name="twitter:title" content="Intégrer #Highcharts à du #PHP / #CSV">
+  <meta name="twitter:description" content="Comme on me l&#39;a gentille-ment demandé, j&#39;ai écrit un petit tutoriel sur le moyen d&#39;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&#39;aide d&#39;un csv.">
+
+  
+  <meta itemprop="name" content="Intégrer #Highcharts à du #PHP / #CSV">
+  <meta itemprop="description" content="Comme on me l&#39;a gentille-ment demandé, j&#39;ai écrit un petit tutoriel sur le moyen d&#39;intégrer Highcharts à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&#39;aide d&#39;un csv.">
+  <meta itemprop="datePublished" content="2012-12-02T13:11:52+00:00">
+  <meta itemprop="dateModified" content="2012-12-02T13:11:52+00:00">
+  <meta itemprop="wordCount" content="543">
+  <meta itemprop="image" content="https://saugrin-sonia.fr/screenshot.png">
+  <meta itemprop="keywords" content="Csv,Highcharts,Javascript,Librairie,PHP">
+
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&display=swap"
+    rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="/css/style.min.734b323fff00848424a96aad1d14e71ac4aefb4cd8b919bc0cea85a34bf4198a.css" integrity="sha256-c0syP/8AhIQkqWqtHRTnGsSu&#43;0zYuRm8DOqFo0v0GYo=">
+  
+  <link rel="canonical" href="https://saugrin-sonia.fr/integrer-highcharts-a-du-php-csv/">
+
+
+</head>
+<body  class="page"><header id="header">
+    <nav id="main-menu" aria-label="Navigation principal">
+        <div class="branding">
+            <div class="inset-text">
+              <a href="/">SSAUGRIN  <em>aka Zourite</em></a>
+            </div>
+            <svg id="btn-burger" class="ham hamRotate ham1" viewBox="0 0 100 100" width="40">
+              <path
+                    class="line top"
+                    d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+              <path
+                    class="line middle"
+                    d="m 30,50 h 40" />
+              <path
+                    class="line bottom"
+                    d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+            </svg>
+        </div>
+        <ul id="top-links" class="flex">
+            <li>
+                <a id="home-link" class="nav-link" href="/">
+                  <iconify-icon icon="fa-solid:home" class="inline-svg" aria-hidden="true"></iconify-icon>
+                  Accueil
+                </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/a-propos/">
+                <iconify-icon icon="fa6-regular:circle-user" class="inline-svg" aria-hidden="true"></iconify-icon>
+                A propos
+              </a>
+            </li>
+            <li>
+                <a class="nav-link" href="/contact/">
+                  <iconify-icon icon="fa-regular:paper-plane" class="inline-svg" aria-hidden="true"></iconify-icon>
+                 Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+
+<header id="hero" style="background-image:url(/img/hero/graphique-highcharts.jpg)">
+
+  <h1> Intégrer #Highcharts à du #PHP / #CSV </h1>
+  
+</header>
+
+<section id="single" class="single-post">
+  
+  <ul id="meta" class="flex">
+
+    <li class="mr-2">
+     
+      <span class="inline-svg" role="presentation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-calendar-alt fa-w-14" data-icon="calendar-alt" data-prefix="far" focusable="false" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>
+</span> 
+      <time class="published" datetime="2012-12-02 13:11:52 &#43;0000 &#43;0000">
+        
+        2 décembre 2012
+      </time>
+    </li>
+
+    <li>
+      <span class="inline-svg" role="presentation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-stopwatch fa-w-14" data-icon="stopwatch" data-prefix="fas" focusable="false" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M432 304c0 114.9-93.1 208-208 208S16 418.9 16 304c0-104 76.3-190.2 176-205.5V64h-28c-6.6 0-12-5.4-12-12V12c0-6.6 5.4-12 12-12h120c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-28v34.5c37.5 5.8 71.7 21.6 99.7 44.6l27.5-27.5c4.7-4.7 12.3-4.7 17 0l28.3 28.3c4.7 4.7 4.7 12.3 0 17l-29.4 29.4-.6.6C419.7 223.3 432 262.2 432 304zm-176 36V188.5c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12V340c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12z"/></svg>
+</span> 3 minutes de lecture
+    </li>
+
+  </ul>
+
+  <article id="post-content">
+
+    <p>Comme on me l’a gentiment demandé, j’ai écrit un petit tutoriel sur le moyen d’intégrer <strong>Highcharts</strong> à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l’aide d’un csv. Dans un premier temps, vous devez télécharger la librairie <!-- raw HTML omitted -->PHP – Highcharts de Ghunti.<!-- raw HTML omitted --></p>
+<h3 id="transformer-un-csv-en-array">Transformer un CSV en Array()</h3>
+<p>Pour transformer un CSV en <code>array()</code> on va utiliser la fonction <code>fgetcsv()</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="k">function</span> <span class="nf">get_array</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl"><span class="nv">$file</span> <span class="o">=</span> <span class="nx">fopen</span><span class="p">(</span><span class="s1">&#39;highcharts_demo.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="k">while</span> <span class="p">((</span><span class="nv">$line</span> <span class="o">=</span> <span class="nx">fgetcsv</span><span class="p">(</span><span class="nv">$file</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;;&#39;</span><span class="p">))</span> <span class="o">!==</span> <span class="k">FALSE</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">    <span class="nv">$array_data</span><span class="p">[]</span> <span class="o">=</span> <span class="nv">$line</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="nx">fclose</span><span class="p">(</span><span class="nv">$file</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="nx">unset</span><span class="p">(</span><span class="nv">$array_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="k">return</span> <span class="nv">$array_data</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Ce qui vous donnera un <code>array()</code> de cette forme</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="ln"> 1</span><span class="cl"><span class="k">Array</span>
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="p">(</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">    <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl">        <span class="p">(</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">            <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Livre</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl">            <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Nombre</span> <span class="nx">de</span> <span class="nx">fois</span> <span class="nx">lue</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl">            <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Mois</span> <span class="nx">de</span> <span class="nx">lecture</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl">            <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Lecteur</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl">
+</span></span><span class="line"><span class="ln">11</span><span class="cl">    <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+</span></span><span class="line"><span class="ln">12</span><span class="cl">        <span class="p">(</span>
+</span></span><span class="line"><span class="ln">13</span><span class="cl">            <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">WordPress</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">            <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="ln">15</span><span class="cl">            <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">janvier</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">            <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Mickaël</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">
+</span></span><span class="line"><span class="ln">19</span><span class="cl">    <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">        <span class="p">(</span>
+</span></span><span class="line"><span class="ln">21</span><span class="cl">            <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">PHP</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl">            <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl">            <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">janvier</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl">            <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Raphaël</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl">
+</span></span><span class="line"><span class="ln">27</span><span class="cl">    <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+</span></span><span class="line"><span class="ln">28</span><span class="cl">        <span class="p">(</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl">            <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">SQL</span>
+</span></span><span class="line"><span class="ln">30</span><span class="cl">            <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="ln">31</span><span class="cl">            <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">fevrier</span>
+</span></span><span class="line"><span class="ln">32</span><span class="cl">            <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Virginie</span>
+</span></span><span class="line"><span class="ln">33</span><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="ln">34</span><span class="cl">
+</span></span><span class="line"><span class="ln">35</span><span class="cl">    <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="k">Array</span>
+</span></span><span class="line"><span class="ln">36</span><span class="cl">        <span class="p">(</span>
+</span></span><span class="line"><span class="ln">37</span><span class="cl">            <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Jquery</span>
+</span></span><span class="line"><span class="ln">38</span><span class="cl">            <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="ln">39</span><span class="cl">            <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">mars</span>
+</span></span><span class="line"><span class="ln">40</span><span class="cl">            <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=&gt;</span> <span class="nx">Mickaël</span>
+</span></span><span class="line"><span class="ln">41</span><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="ln">42</span><span class="cl"><span class="p">)</span>
+</span></span></code></pre></div><p>[<!-- raw HTML omitted -->]</p>
+<h3 id="transformation-de-larray">Transformation de l’array</h3>
+<p>Nous allons voir comment obtenir un graphique comme celui de droite. Tout d’abord il faudra impérativement modifier le tableau, pour qu’il nous renvoie ce que nous voulons, ce sera un tableau multidimensionnel, contenant la valeur et le libellé. On va donc récupérer les livres qui sont les plus lus. Pour qu’une portion du camembert soit détaché au moment de la visualisation, il faut insérer deux valeurs au tableau <code>sliced =&gt; true</code> et <code>selected =&gt; true</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="ln"> 1</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="k">function</span> <span class="nf">get_livres</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="nv">$array</span> <span class="o">=</span> <span class="nx">get_array</span><span class="p">();</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$array</span> <span class="k">as</span> <span class="nv">$value</span><span class="p">)</span> <span class="o">:</span>
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="nv">$totaux</span><span class="p">[</span><span class="nv">$value</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">+=</span> <span class="nv">$value</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="k">endforeach</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$totaux</span> <span class="k">as</span> <span class="nv">$key</span> <span class="o">=&gt;</span> <span class="nv">$value</span><span class="p">)</span> <span class="o">:</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nv">$value</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span> <span class="o">:</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="nv">$livres</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="nv">$key</span> <span class="p">,</span> 
+</span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="s1">&#39;sliced&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl"><span class="s1">&#39;selected&#39;</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span> 
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="s1">&#39;y&#39;</span> <span class="o">=&gt;</span> <span class="nx">intval</span><span class="p">(</span><span class="nv">$value</span><span class="p">)</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl">
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="p">);</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl">
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="k">else</span> <span class="o">:</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">
+</span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="nv">$livres</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="nx">utf8_decode</span><span class="p">(</span><span class="nv">$key</span><span class="p">),</span><span class="nx">intval</span><span class="p">(</span><span class="nv">$value</span><span class="p">));</span>
+</span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="k">endif</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl"><span class="k">endforeach</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="k">return</span> <span class="nv">$livres</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="générer-le-graphique">Générer le graphique</h3>
+<p>Maintenant, il manque juste à incorporer la fonction <code>get_livres()</code> au code pour que le graphique prenne forme.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="ln"> 1</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 2</span><span class="cl"><span class="k">function</span> <span class="nf">pie_chart</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="ln"> 3</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 4</span><span class="cl"><span class="nv">$chart1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Highchart</span><span class="p">();</span>
+</span></span><span class="line"><span class="ln"> 5</span><span class="cl">
+</span></span><span class="line"><span class="ln"> 6</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">chart</span><span class="o">-&gt;</span><span class="na">renderTo</span> <span class="o">=</span> <span class="s2">&#34;contain&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 7</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">chart</span><span class="o">-&gt;</span><span class="na">plotBackgroundColor</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 8</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">chart</span><span class="o">-&gt;</span><span class="na">plotBorderWidth</span> <span class="o">=</span> <span class="k">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln"> 9</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">chart</span><span class="o">-&gt;</span><span class="na">plotShadow</span> <span class="o">=</span> <span class="k">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">10</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">title</span><span class="o">-&gt;</span><span class="na">text</span> <span class="o">=</span> <span class="s2">&#34;Pourcentage de lecture par livre&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">11</span><span class="cl">
+</span></span><span class="line"><span class="ln">12</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">tooltip</span><span class="o">-&gt;</span><span class="na">formatter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HighchartJsExpr</span><span class="p">(</span><span class="s2">&#34;function() {
+</span></span></span><span class="line"><span class="ln">13</span><span class="cl"><span class="s2">    return &#39;&lt;b&gt;&#39;+ this.point.name +&#39;&lt;/b&gt;: &#39;+ Math.round(this.percentage*100)/100 +&#39; %&#39;;}&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">14</span><span class="cl">
+</span></span><span class="line"><span class="ln">15</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">plotOptions</span><span class="o">-&gt;</span><span class="na">pie</span><span class="o">-&gt;</span><span class="na">allowPointSelect</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">16</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">plotOptions</span><span class="o">-&gt;</span><span class="na">pie</span><span class="o">-&gt;</span><span class="na">cursor</span> <span class="o">=</span> <span class="s2">&#34;pointer&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">17</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">plotOptions</span><span class="o">-&gt;</span><span class="na">pie</span><span class="o">-&gt;</span><span class="na">dataLabels</span><span class="o">-&gt;</span><span class="na">enabled</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">18</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">plotOptions</span><span class="o">-&gt;</span><span class="na">pie</span><span class="o">-&gt;</span><span class="na">dataLabels</span><span class="o">-&gt;</span><span class="na">color</span> <span class="o">=</span> <span class="s2">&#34;#000000&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">19</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">plotOptions</span><span class="o">-&gt;</span><span class="na">pie</span><span class="o">-&gt;</span><span class="na">dataLabels</span><span class="o">-&gt;</span><span class="na">connectorColor</span> <span class="o">=</span> <span class="s2">&#34;#000000&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="ln">20</span><span class="cl">
+</span></span><span class="line"><span class="ln">21</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">plotOptions</span><span class="o">-&gt;</span><span class="na">pie</span><span class="o">-&gt;</span><span class="na">dataLabels</span><span class="o">-&gt;</span><span class="na">formatter</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HighchartJsExpr</span><span class="p">(</span><span class="s2">&#34;function() {
+</span></span></span><span class="line"><span class="ln">22</span><span class="cl"><span class="s2">    return &#39;&lt;b&gt;&#39;+ this.point.name +&#39;&lt;/b&gt;: &#39;+ Math.round(this.percentage*100)/100 +&#39; %&#39;; }&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="ln">23</span><span class="cl">
+</span></span><span class="line"><span class="ln">24</span><span class="cl"><span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">series</span><span class="p">[]</span> <span class="o">=</span> <span class="k">array</span><span class="p">(</span><span class="s1">&#39;type&#39;</span> <span class="o">=&gt;</span> <span class="s2">&#34;pie&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">25</span><span class="cl">                         <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="s2">&#34;Lecture de Livre&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="ln">26</span><span class="cl">                         <span class="s1">&#39;data&#39;</span> <span class="o">=&gt;</span>  <span class="nx">get_livres</span><span class="p">());</span>
+</span></span><span class="line"><span class="ln">27</span><span class="cl">
+</span></span><span class="line"><span class="ln">28</span><span class="cl"><span class="k">return</span> <span class="nv">$chart1</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">();</span>
+</span></span><span class="line"><span class="ln">29</span><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="démonstration-et-téléchargement">Démonstration et téléchargement</h3>
+<p>Vous pouvez télécharger les fichiers et avoir un aperçu de ce qu’on peut faire <del>dans mon labo</del>. Il y à deux fichiers important, <code>chart.php</code> qui regroupe les fonctions pour créer le graphique, <code>functions.php</code> contient toutes les fonctions pour modifier l’array obtenu à partir du CSV. Maintenant c’est à vous d’adapter cet exemple.</p>
+
+
+  </article>
+
+</section>
+
+        </main><footer id="footer">
+    <nav id="nav-foot" class="flex px-2">
+      <p class="inset-text">
+        ssaugrin © 2026 -
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener noreferrer" target="_blank">
+          <img alt="Licence Creative Commons" style="border-width:0"
+                    src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" class="inline"  />
+        </a>
+      </p>
+      <ul class="nav-links ml-auto">
+        <li>
+            <a class="nav-link" href="/mentions-legales/">
+                    Mentions légales
+            </a>
+        </li>
+      </ul>
+    </nav>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

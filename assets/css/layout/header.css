@@ -9,13 +9,13 @@
   z-index: var(--header-z-index);
   top: 0;
 
-  @screen lg {
+  @media (min-width: 976px) {
     height: 60px;
   }
 
   #main-menu {
     position: relative;
-    @screen lg {
+    @media (min-width: 976px) {
       display: flex;
       height: auto;
       justify-content: space-between;
@@ -31,7 +31,7 @@
       .inset-text {
         border-right: none;
         padding-right: 10px;
-        @screen lg {
+        @media (min-width: 976px) {
           border-right: 1px solid rgba(160, 160, 160, 0.5);
         }
         a {
@@ -50,7 +50,7 @@
       height: calc(100dvh - 40px);
       position: absolute;
 
-      @screen lg {
+      @media (min-width: 976px) {
         height: auto;
       }
 
@@ -58,7 +58,7 @@
         transform: unset;
       }
 
-      @screen lg {
+      @media (min-width: 976px) {
         width: auto;
         background-image: none;
         transform: unset;
@@ -88,7 +88,7 @@
         padding: 8px 15px;
         border-radius: 20px;
 
-        @screen lg {
+        @media (min-width: 976px) {
           border: 1px solid transparent;
           margin: 0 15px 0 0;
           transition: background-color .5s ease-in-out;
@@ -102,14 +102,14 @@
           text-decoration: none;
           color: rgba(255, 255, 255, 0.85);
 
-          @screen lg {
+          @media (min-width: 976px) {
             padding: 0;
           }
 
           .inline-svg {
             display: block;
             margin: 10px auto;
-            @screen lg {
+            @media (min-width: 976px) {
               display: inline-block;
               margin: 0 5px 0 0;
             }

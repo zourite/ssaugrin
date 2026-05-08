@@ -1,0 +1,122 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>
+    RSS on Geek rêveur et développeur avec une façon particulière de penser
+    
+    </title>
+    <link>https://saugrin-sonia.fr/tags/rss/</link>
+    <description>Recent content 
+    
+    in RSS on Geek rêveur et développeur avec une façon particulière de penser
+    </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-fr</language>
+    <managingEditor>me@ssaugrin.fr (Sonia SAUGRIN)</managingEditor>
+    
+    
+    <webMaster>me@ssaugrin.fr (Sonia SAUGRIN)</webMaster>
+    
+    
+    <lastBuildDate>Wed, 12 Sep 2012 08:47:11 +0000</lastBuildDate>
+    
+    
+        <atom:link href="https://saugrin-sonia.fr/tags/rss/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>La solution pour avoir plus de temps !</title>
+      <link>https://saugrin-sonia.fr/solution-avoir-plus-temps/</link>
+      <pubDate>Tue, 10 Oct 2017 05:16:35 +0000</pubDate>
+      <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
+      <guid>https://saugrin-sonia.fr/solution-avoir-plus-temps/</guid>
+      <description>&lt;p&gt;Ne pas avoir le temps que cela signifie t’il ? Je pense qu’il est temps de faire le point sur cette fameuse phrase que tout le monde répète : &lt;em&gt;Je n’ai pas le temps.&lt;/em&gt; Pour étayer cet article, j’ai cherché la définition du mot “temps”.&lt;/p&gt;</description>
+      <enclosure url="https://saugrin-sonia.fr/img/2017/10/113757-accuracy_800x533.jpeg" length="77280" type="image/png" />
+    </item>
+    
+    <item>
+      <title>Comment mon #serveur #web est organisé</title>
+      <link>https://saugrin-sonia.fr/configuration-serveur-web/</link>
+      <pubDate>Tue, 28 Mar 2017 05:57:43 +0000</pubDate>
+      <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
+      <guid>https://saugrin-sonia.fr/configuration-serveur-web/</guid>
+      <description>&lt;p&gt;Il y a maintenant une ou deux année de cela, j’ai pris la décision de ne plus utiliser des serveurs mutualisés.&lt;/p&gt;</description>
+      <enclosure url="https://saugrin-sonia.fr/img/2017/03/serveur-web-nginx-php.jpg" length="285861" type="image/png" />
+    </item>
+    
+    <item>
+      <title>Ecrire un email à un professionnel et obtenir une réponse rapide</title>
+      <link>https://saugrin-sonia.fr/comment-envoyer-email-professionnel-obtenir-reponse-rapide/</link>
+      <pubDate>Wed, 20 Jan 2016 11:54:40 +0000</pubDate>
+      <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
+      <guid>https://saugrin-sonia.fr/comment-envoyer-email-professionnel-obtenir-reponse-rapide/</guid>
+      <description>&lt;p&gt;Avez-vous déjà contacté un professionnel ? Avez-vous attendu une réponse à votre email pendant un siècle ? Avez-vous répondu oui aux questions précédentes ? Alors, cet article est fait pour vous. Il est vrai que cela est frustrant de ne pas apercevoir de réponse dans sa boite de réception. Cela peut renforcer le manque de confiance en soi et faire surgir des émotions négatives.&lt;/p&gt;</description>
+      <enclosure url="https://saugrin-sonia.fr/img/2016/01/ecrire-mail-reponse.jpg" length="35860" type="image/png" />
+    </item>
+    
+    <item>
+      <title>Sauvegarder ses données dans Dropbox avec mysqldump</title>
+      <link>https://saugrin-sonia.fr/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</link>
+      <pubDate>Thu, 03 Dec 2015 05:36:17 +0000</pubDate>
+      <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
+      <guid>https://saugrin-sonia.fr/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump/</guid>
+      <description>&lt;p&gt;J’écris cet article suite à une mésaventure. Tous les disques durs de mon serveur sont tombés en panne, j’ai perdu près de deux ans de travail pour l’un de mes sites. Je suis paresseuse et faire des backups hebdomadaire via une interface ne m’enchante guère.&lt;/p&gt;</description>
+      <enclosure url="https://saugrin-sonia.fr/img/2017/02/dropbox-backup.jpg" length="29010" type="image/png" />
+    </item>
+    
+    <item>
+      <title>#Facebook n’est pas bon pour toi ! Fais ta vie !</title>
+      <link>https://saugrin-sonia.fr/facebook-nest-pas-bon-pour-toi-fais-ta-vie/</link>
+      <pubDate>Thu, 20 Mar 2014 10:49:02 +0000</pubDate>
+      <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
+      <guid>https://saugrin-sonia.fr/facebook-nest-pas-bon-pour-toi-fais-ta-vie/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;Ce texte est une traduction d’un l’article intitulé [« Facebook is bad for you&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Get a life! »]&lt;a href=&#34;http://www.economist.com/news/science-and-technology/21583593-using-social-network-seems-make-people-more-miserable-get-life&#34; target=&#34;_blank&#34;&gt;1&lt;/a&gt; du site : &lt;a href=&#34;http://www.economist.com/&#34; target=&#34;_blank&#34;&gt;The Economist&lt;/a&gt; parut le 17/08/2013&lt;/p&gt;</description>
+      <enclosure url="https://saugrin-sonia.fr/img/2017/02/facebook-pas-bon-pour-toi.jpg" length="28582" type="image/png" />
+    </item>
+    
+    <item>
+      <title>Intégrer #Highcharts à du #PHP / #CSV</title>
+      <link>https://saugrin-sonia.fr/integrer-highcharts-a-du-php-csv/</link>
+      <pubDate>Sun, 02 Dec 2012 13:11:52 +0000</pubDate>
+      <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
+      <guid>https://saugrin-sonia.fr/integrer-highcharts-a-du-php-csv/</guid>
+      <description>&lt;p&gt;Comme on me l’a gentiment demandé, j’ai écrit un petit tutoriel sur le moyen d’intégrer &lt;strong&gt;Highcharts&lt;/strong&gt; à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l’aide d’un csv. Dans un premier temps, vous devez télécharger la librairie &lt;!-- raw HTML omitted --&gt;PHP – Highcharts de Ghunti.&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;</description>
+      <enclosure url="https://saugrin-sonia.fr/img/2012/11/csv.png" length="19060" type="image/png" />
+    </item>
+    
+    <item>
+      <title>Creer un flux RSS avec DOMDocument</title>
+      <link>https://saugrin-sonia.fr/creer-un-flux-rss-avec-domdocument/</link>
+      <pubDate>Wed, 12 Sep 2012 08:47:11 +0000</pubDate>
+      <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
+      <guid>https://saugrin-sonia.fr/creer-un-flux-rss-avec-domdocument/</guid>
+      <description>&lt;h3 id=&#34;quest-ce-que-domdocument-&#34;&gt;Qu’est ce que DOMDocument ?&lt;/h3&gt;
+&lt;p&gt;DOMDocument est une librairie PHP, qui à fait son entrer avec PHP5. Cette librairie permet de créer ou de modifier un fichier &lt;strong&gt;XML&lt;/strong&gt; ou &lt;strong&gt;HTML&lt;/strong&gt;. DOMDocument est très semblable à Javascript aussi bien par le biais de ses fonctions ou par son fonctionement. Nous retrouvons donc le concept des &lt;strong&gt;noeuds&lt;/strong&gt; ou encore la fameuse fonction &lt;code&gt;getElementById()&lt;/code&gt;.&lt;/p&gt;</description>
+      <enclosure url="https://saugrin-sonia.fr/img/featured/creer-fluxrss-domdocument.jpg" length="333029" type="image/png" />
+    </item>
+    
+    <item>
+      <title>Générer des graphiques avec Highcharts et #CodeIgniter</title>
+      <link>https://saugrin-sonia.fr/generer-des-graphiques-avec-highcharts-et-codeigniter/</link>
+      <pubDate>Mon, 06 Aug 2012 05:10:04 +0000</pubDate>
+      <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
+      <guid>https://saugrin-sonia.fr/generer-des-graphiques-avec-highcharts-et-codeigniter/</guid>
+      <description>&lt;p&gt;Highcharts est une librairie Javascript, qui permet de faire de beaux graphiques. Si quelqu’un me dit d’utiliser Google Chart, car c’est plus simple, je le tue. Plus sérieusement je n’utilise pas Google Chart pour générer des graphiques puisque rien m’assure que le service sera toujours accessible 24H/24H, je n’aime pas dépendre d’application tierce. Pour certains services on ne peut faire autrement, pour exemple je ne citerais que Google Map. Si une personne me dit qu’il peut se passer aisément de Google Maps quand il à besoin de représenter des données sur une map qu’il me donne sa solution.&lt;/p&gt;</description>
+      <enclosure url="https://saugrin-sonia.fr/img/featured/charts.jpg" length="10657" type="image/png" />
+    </item>
+    
+    <item>
+      <title>Comment ajouter des images a côté de votre pseudo Twitter ou Facebook</title>
+      <link>https://saugrin-sonia.fr/comment-ajouter-des-images-pseudo-twitter-ou-facebook/</link>
+      <pubDate>Wed, 27 Oct 2010 14:17:10 +0000</pubDate>
+      <author>me@ssaugrin.fr (Sonia SAUGRIN)</author>
+      <guid>https://saugrin-sonia.fr/comment-ajouter-des-images-pseudo-twitter-ou-facebook/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Edit&lt;/strong&gt; : J’ai découvert qu’on vendait des émojis &lt;!-- raw HTML omitted --&gt;sous forme de coussin chez Amazon&lt;!-- raw HTML omitted --&gt; &lt;!-- raw HTML omitted --&gt;🙂&lt;/p&gt;</description>
+      <enclosure url="https://saugrin-sonia.fr/img/featured/code-ascii-twitter.jpg" length="99036" type="image/png" />
+    </item>
+    
+  </channel>
+</rss>

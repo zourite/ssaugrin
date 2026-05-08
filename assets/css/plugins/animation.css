@@ -4,7 +4,7 @@
   transition: transform 400ms;
   user-select: none;
 
-  @screen lg {
+  @media (min-width: 976px) {
     display : none;
   }
 
