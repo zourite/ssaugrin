@@ -1,3 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[context.production]
+  command = "npm install --include=optional && npm run build"
+
 [[redirects]]
   from = "/2012/12/integrer-highcharts-a-du-php-csv"
   to = "/integrer-highcharts-a-du-php-csv"
@@ -17,3 +24,6 @@
   force = false
 [build.environment]
   HUGO_VERSION = "0.152.2"
+  NODE_VERSION = "20"
+  NPM_VERSION = "11.4.2"
+  NPM_FLAGS = "--include=optional"
