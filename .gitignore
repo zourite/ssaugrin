@@ -8,3 +8,4 @@ hugo_stats.json
 .idea
 .env
 /assets/css/style.css
+static/dist/
