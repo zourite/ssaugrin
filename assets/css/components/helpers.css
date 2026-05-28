@@ -12,7 +12,7 @@
 }
 
 code {
-  font-family: "Fira Code", monospace;
+  font-family: var(--font-mono);
 }
 
 iframe {

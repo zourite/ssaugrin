@@ -7,7 +7,7 @@
     box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
     @media (min-width: 976px) {
       #main-menu {
-        background-image: linear-gradient(to right, #2c3e50 40%, #114b5f 90%);
+        background-image: linear-gradient(to right, var(--color-blue-deep) 40%, var(--color-drk-green-octo) 90%);
         z-index: -2;
 
         #top-links {
@@ -24,7 +24,7 @@
 }
 
 #contact {
-  @apply bg-light;
+  background-color: var(--color-light);
   padding-top: 40px;
   min-height: calc(100vh - 35px);
 
@@ -62,7 +62,11 @@
     }
 
     .thumb {
-      @apply overflow-hidden xl:h-auto;
+      overflow: hidden;
+
+      @media (min-width: 1200px) {
+        height: auto;
+      }
 
       img {
         width: 100%;
@@ -72,7 +76,7 @@
     }
 
     h2 {
-      @apply text-drk-green-octo;
+      color: var(--color-drk-green-octo);
       font-weight: 600;
       margin-top: 5px;
     }
@@ -94,7 +98,8 @@
     }
 
     .post-content {
-      @apply p-3 bg-white;
+      padding: calc(var(--spacing) * 3);
+      background-color: var(--color-white);
     }
 
     &:hover {
@@ -105,24 +110,24 @@
 
 #post-content {
   h2, h3 {
-    @apply text-drk-green-octo;
+    color: var(--color-drk-green-octo);
   }
 
   a {
-    @apply text-dragon;
+    color: var(--color-dragon);
     font-weight: bold;
     text-decoration: underline;
-    text-decoration-color: #c33c54;
+    text-decoration-color: var(--color-dragon);
     text-decoration-thickness: .05em;
     text-underline-offset: 1.5px;
 
     &:hover {
-      text-decoration-color: #2c3e50;
+      text-decoration-color: var(--color-blue-deep);
     }
 
     &:visited {
-      @apply text-blue-deep;
-      text-decoration-color: #2c3e50;
+      color: var(--color-blue-deep);
+      text-decoration-color: var(--color-blue-deep);
     }
   }
 
@@ -140,7 +145,7 @@
       margin-bottom: 5px;
 
       &:before {
-        @apply text-drk-green-octo;
+        color: var(--color-drk-green-octo);
         content: "⦾";
         display: inline-block;
         margin-right: 10px;
@@ -154,7 +159,7 @@
       position: absolute;
       top: 1rem;
       left: 0;
-      background-color: #028090;
+      background-color: var(--color-lgt-green-octo);
       display: inline-block;
       height: calc(100% - 1rem);
       width: 1px;

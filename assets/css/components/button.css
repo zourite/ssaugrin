@@ -1,5 +1,5 @@
 .btn-trello {
-  @apply p-1;
+  padding: calc(var(--spacing) * 1);
   background-color: #055a8c;
   text-align: center;
   transition: background-color 0.3s ease-in-out;
@@ -9,12 +9,15 @@
   }
 
   &:hover {
-    background-color: #114b5f;
+    background-color: var(--color-drk-green-octo);
   }
 }
 
 .btn-github {
-  @apply bg-black p-1 text-white text-sm;
+  background-color: var(--color-black);
+  padding: calc(var(--spacing) * 1);
+  color: var(--color-white);
+  font-size: var(--text-sm);
   width: fit-content;
   a {
     color : #fff;

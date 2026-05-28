@@ -1,21 +1,97 @@
 @font-face {
 
-  font-family: "Inter var";
+  font-family: "Kalam Light";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-display: swap;
-  src: url("/fonts/Inter-Regular.woff2") format("woff2"),
-      url("/fonts/Inter-Regular.woff") format("woff");
+  src: url("/fonts/kalam-latin-300-normal.woff2") format("woff2"),
+      url("/fonts/kalam-latin-300-normal.woff") format("woff");
 
 }
 
-body {
+@font-face {
 
-  @apply bg-light;
-  font-family: "Inter var", Helvetica, sans-serif;
+  font-family: "Kalam Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/kalam-latin-400-normal.woff2") format("woff2"),
+      url("/fonts/kalam-latin-400-normal.woff") format("woff");
+
+}
+
+@font-face {
+
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/nunito-latin-400-normal.woff2") format("woff2"),
+      url("/fonts/nunito-latin-400-normal.woff") format("woff");
+
+}
+
+@font-face {
+
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/nunito-latin-400-italic.woff2") format("woff2"),
+      url("/fonts/nunito-latin-400-italic.woff") format("woff");
+
+}
+
+@font-face {
+
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/nunito-latin-600-normal.woff2") format("woff2"),
+      url("/fonts/nunito-latin-600-normal.woff") format("woff");
+
+}
+
+@font-face {
+
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/nunito-latin-600-italic.woff2") format("woff2"),
+      url("/fonts/nunito-latin-600-italic.woff") format("woff");
+
+}
+
+@font-face {
+
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/nunito-latin-700-normal.woff2") format("woff2"),
+      url("/fonts/nunito-latin-700-normal.woff") format("woff");
+
+}
+
+@font-face {
+
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/nunito-latin-700-italic.woff2") format("woff2"),
+      url("/fonts/nunito-latin-700-italic.woff") format("woff");
+
+}
+
+
+body {
+  font-family: "Nunito", Helvetica, sans-serif;
+  font-weight: 400;
   font-feature-settings: 'liga'1;
   font-feature-settings: 'tnum'1;
   font-feature-settings: 'ss02'1;
   color: #333333;
-
 }

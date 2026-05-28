@@ -1,23 +1,20 @@
 h1, h2, h3, h4 {
-  font-family: var(--font-mono);
   line-height: 2;
   letter-spacing: 0.04em;
   margin: 1em 0;
 }
 
 h1 {
-  @apply text-2xl;
+  font-size: var(--text-2xl);
 }
 
 h2 {
-  @apply text-drk-green-octo;
-  @apply text-xl;
+  color: var(--color-drk-green-octo);
+  font-size: var(--text-xl);
   display: inline-block;
   font-weight: 600;
 }
 
 h3 {
-  @apply text-lg;
+  font-size: var(--text-lg);
 }
-
-
