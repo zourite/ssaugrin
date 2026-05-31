@@ -1,57 +1,32 @@
 {{ define "main" }}
-<section id="home">
-
-  <div class="ocean">
-
-    <div id="fish-group" class="flex" aria-hidden="true">
-      <div>
-        <div class="fish" id="fish6" aria-hidden="true"></div>
-        <div class="fish" id="fish5" aria-hidden="true"></div>
-        <div class="fish" id="fish4" aria-hidden="true"></div>
-      </div>
-      <div style="margin-left:-25px">
-        <div class="fish" id="fish3" aria-hidden="true"></div>
-        <div class="fish" id="fish2" aria-hidden="true"></div>
-        <div class="fish" id="fish1" aria-hidden="true"></div>
-      </div>
+<section id="home" class="min-h-screen flex items-center justify-center py-12">
+  
+  <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-8">
+    
+    <!-- ZONE TEXTE -->
+    <!-- order-2 sur mobile (passe en bas), order-1 sur grand écran (repasse à gauche) -->
+    <div id="hero-area" class="bg-white/70 backdrop-blur-md border border-white/30 p-6 flex flex-col w-full md:w-3/5 flex-shrink-0 order-2 md:order-1">
+      <p class="flex flex-wrap items-center gap-2 md:gap-4 text-drk-green-octo font-bold text-sm md:text-base mb-4">
+        <span>Curiosité</span>
+        <span class="text-orange">•</span>
+        <span>Exploration</span>
+        <span class="text-orange">•</span>
+        <span>Authenticité</span>
+      </p>
+      <h1 class="text-1xl md:text-4xl text-left text-gray-900 leading-relaxed">
+        Les <span class="font-mono font-bold text-orange">rêves</span> sont la porte de <span class="font-mono font-bold text-orange">l'ambition</span>.
+      </h1>
     </div>
-
-    <div class="bubbles" aria-hidden="true">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
+    
+    <div class="md:w-2/5 flex-shrink-0 order-1 md:order-2">
+      <img src="/img/zourite-ssaugrin.svg" 
+           loading="lazy" 
+           height="200px"
+           alt="Zourite aka ssaugrin" 
+           aria-hidden="true" 
+           class="shadow-img mx-auto h-[200px] lg:h-[300px]">
     </div>
-
-    <article class="container mx-auto h-full ">
-
-      <div class="h-full flex flex-col items-center justify-center">
-        <div id="rs-icon" class="text-center">
-
-          <img src="/img/zourite-developpeur-web-reunion.png" loading="lazy" alt="Zourite developpeur web reunion" aria-hidden="true" class="shadow-img mx-auto">
-
-          <div class="w-full mt-4">
-            <a href="https://github.com/Zourite" aria-label="Compte Github de Saugrin Sonia" rel="noopener noreferrer" target="_blank">
-              <iconify-icon icon="fa6-brands:github-alt" class="inline-svg" width="24" aria-label="Github"></iconify-icon>
-            </a>
-            <a href="https://www.linkedin.com/in/ssaugrin/" aria-label="Compte Linkedin de Saugrin Sonia" rel="noopener noreferrer" target="_blank">
-              <iconify-icon icon="fa6-brands:linkedin" class="inline-svg" width="24" aria-label="Linkedin"></iconify-icon>
-            </a>
-          </div>
-          <blockquote class="mt-5 mb-5 p-4">
-            <h1>Les rêves sont la porte de l'ambition. </h1>
-          </blockquote>
-        </div>
-      </div>
-
-  </article>
-
+  
   </div>
-
 </section>
-
 {{ end }}

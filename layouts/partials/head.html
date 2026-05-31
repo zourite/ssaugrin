@@ -33,13 +33,11 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/schema.html" . }}
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&display=swap"
-    rel="stylesheet">
+  {{ if eq hugo.Environment "development" }}
+  <link rel="stylesheet" href="http://localhost:5173/assets/css/main.css">
+  {{ else }}
   <link rel="stylesheet" href="/dist/assets/main.css">
+  {{ end }}
   <link rel="canonical" href="{{ .Permalink }}">
 
 

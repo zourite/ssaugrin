@@ -9,14 +9,6 @@
       #main-menu {
         background-image: linear-gradient(to right, var(--color-blue-deep) 40%, var(--color-drk-green-octo) 90%);
         z-index: -2;
-
-        #top-links {
-          height: auto;
-
-          &:before {
-            border-left: 1px inset #eee;
-          }
-        }
       }
     }
   }

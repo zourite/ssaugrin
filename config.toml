@@ -17,7 +17,7 @@ rssLimit = 20
   author = "Sonia Saugrin"
   author_email = "me@ssaugrin.fr"
   images = ['screenshot.png']
-  description = "Geek et développeur web expérimenté vivant à l'île de La Réunion"
+  description = "Exploratrice à l’imaginaire fertile, le regard toujours tourné vers l’horizon."
 
 [markup.highlight]
   codeFences = true
@@ -32,6 +32,11 @@ rssLimit = 20
   unsafe = true
 [server]
 watch = true
+
+[[server.headers]]
+  for = "/**"
+  [server.headers.values]
+    X-Frame-Options = "DENY"
 
 [build]
 writeStats = true

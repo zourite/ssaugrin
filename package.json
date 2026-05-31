@@ -3,11 +3,11 @@
     "version": "1.2.0",
     "description": "Tailwind integration",
     "main": "index.js",
-    "scripts": {
-        "start": "npm run build:assets && concurrently npm:watch:*",
-        "watch:vite": "vite build --watch",
-        "watch:hugo": "hugo server",
-        "build": "npm run build:assets && hugo --gc --minify",
+   "scripts": {
+        "start": "concurrently npm:watch:*",
+        "watch:vite": "vite",
+        "watch:hugo": "hugo server --disableFastRender",
+        "build": "vite build && hugo --gc --minify",
         "build:assets": "vite build"
     },
     "devDependencies": {
@@ -16,11 +16,6 @@
         "concurrently": "^9.0.1",
         "postcss": "^8.5.14",
         "postcss-cli": "^11.0.1",
-        "postcss-comment": "^2.0.0",
-        "postcss-import": "^16.1.0",
-        "postcss-nested": "^6.2.0",
-        "postcss-nesting": "^13.0.1",
-        "postcss-viewport-unit-fallback": "^1.0.1",
         "tailwindcss": "^4.1.7",
         "vite": "^5.4.19"
     },
@@ -29,7 +24,6 @@
         "concat": "^1.0.3",
         "dotenv": "^16.4.5",
         "iconify-icon": "^2.1.0",
-        "postcss-nested-ancestors": "^3.0.0",
         "rfs": "^10.0.0"
     }
 }

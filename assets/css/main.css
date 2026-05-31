@@ -15,6 +15,9 @@
 @import "plugins/animation.css";
 @import "plugins/syntax.css";
 
+@source "../../layouts/**/*.html";
+@source "../../content/**/*.md";
+
 @theme {
   --breakpoint-sm: 480px;
   --breakpoint-md: 768px;
@@ -25,5 +28,10 @@
   --color-light: #fafafa;
   --color-dragon: #c33c54;
   --color-blue-deep: #2c3e50;
-  --font-sans: "Inter var", Helvetica, Arial, sans-serif;
+  --color-yellow: #F1D51F;
+  --color-orange: #F97E24;
+  --font-sans: "Nunito", Helvetica, sans-serif;
+  --font-mono: "Kalam Regular", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --header-height: 40px;
+  --header-z-index: 56;
 }
