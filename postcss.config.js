@@ -1,15 +1,7 @@
 module.exports = {
   plugins: [
-    require('postcss-nested-ancestors'),
-    require('postcss-nested'),
-    require('rfs'),
-    require('postcss-import')({
-      root: './assets/css',
-    }),
     require('@tailwindcss/postcss'),
-    require('postcss-viewport-unit-fallback'),
-    require('autoprefixer')({
-      overrideBrowserslist: ['>1%']
-    })
+    require('rfs'),
+    require('autoprefixer'),
   ]
 }
