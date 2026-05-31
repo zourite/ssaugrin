@@ -1,6 +1,6 @@
 baseURL = "https://saugrin-sonia.fr/"
 languageCode = "fr-fr"
-title = "Geek rêveur et développeur avec une façon particulière de penser"
+title = "Exploratrice à l’imaginaire fertile, le regard toujours tourné vers l’horizon."
 disableKinds = ["taxonomy"]
 summaryLength = 20
 defaultContentLanguage = 'fr'

@@ -26,14 +26,8 @@
       font-weight: 600;
 
       .inset-text {
-        border-right: none;
-        padding-right: 10px;
-        @media (min-width: 976px) {
-          padding: 5px;
-          border-bottom: 1px inset var(--color-orange);
-        }
         a {
-          color: #fff;
+          color: var(--color-cream);
           text-decoration: none;
         }
       }
@@ -129,7 +123,7 @@
         }
 
         &:hover, &.active {
-          background-color: rgba(255, 255, 255, 0.85);
+          background-color: var(--color-cream);
           border-radius: 20px;
           a {
             color: var(--color-drk-green-octo);

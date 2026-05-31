@@ -4,17 +4,21 @@ h1, h2, h3, h4 {
   margin: 1em 0;
 }
 
-h1 {
-  font-size: var(--text-2xl);
-}
+.page {
+  
+  h1 {
+    font-size: var(--text-2xl);
+  }
 
-h2 {
-  color: var(--color-drk-green-octo);
-  font-size: var(--text-xl);
-  display: inline-block;
-  font-weight: 600;
-}
+  h2 {
+    color: var(--color-drk-green-octo);
+    font-size: var(--text-xl);
+    display: inline-block;
+    font-weight: 600;
+  }
 
-h3 {
-  font-size: var(--text-lg);
+  h3 {
+    font-size: var(--text-lg);
+  }
+  
 }
