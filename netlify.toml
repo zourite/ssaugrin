@@ -23,7 +23,7 @@
   status = 301
   force = false
 [build.environment]
-  HUGO_VERSION = "0.152.2"
-  NODE_VERSION = "20"
+  HUGO_VERSION = "0.162.1"
+  NODE_VERSION = "22"
   NPM_VERSION = "11.4.2"
   NPM_FLAGS = "--include=optional"

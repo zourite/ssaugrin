@@ -1,5 +1,5 @@
 baseURL = "https://saugrin-sonia.fr/"
-languageCode = "fr-fr"
+locale = "fr-FR"
 title = "Exploratrice à l’imaginaire fertile, le regard toujours tourné vers l’horizon."
 disableKinds = ["taxonomy", "term"]
 summaryLength = 20

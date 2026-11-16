@@ -22,7 +22,7 @@
       voir
       plus clair.</p>
 
-      {{ .Scratch.Set "books" $.Site.Data.books.communiquer.products | first 6 }}
+      {{ .Scratch.Set "books" hugo.Data.books.communiquer.products | first 6 }}
       {{ partial "livre" . }}
 
 
@@ -32,7 +32,7 @@
       communication. Je ne suis pas une grande communicante dans l'âme, mais des livres m'ont appris à mieux communiquer
       avec les autres.</p>
 
-      {{ .Scratch.Set "books" $.Site.Data.books.comprendre.products | first 6 }}
+      {{ .Scratch.Set "books" hugo.Data.books.comprendre.products | first 6 }}
       {{ partial "livre" . }}
 
   </article>

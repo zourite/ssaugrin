@@ -61,7 +61,7 @@
         <div class="w-full md:w-1/2 flex justify-center items-center">
           <div class="flex flex-wrap gap-1 md:gap-4 justify-center items-center">
 
-            {{ range $.Site.Data.logos.logo.skill }}
+            {{ range hugo.Data.logos.logo.skill }}
 
             <div class="card basis-1/4 lg:basis-1/5">
               <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2 center" width="140"
@@ -87,7 +87,7 @@
 
           <div class="flex gap-6 basis-1/2 items-center justify-center mt-2">
 
-            {{ range $index, $val := $.Site.Data.logos.logo.certif }}
+            {{ range $index, $val := hugo.Data.logos.logo.certif }}
 
               <div id="certif{{ $index }}">
                 <a href="{{ .link }}" target="_blank">

@@ -15,7 +15,7 @@
       {{ partial "fontawesome.html" "calendar-alt-regular" }} 
       <time class="published" datetime="{{ .Date }}">
         <!-- {{ default (i18n "date_format") | .Date.Format  }} -->
-        {{ .Date.Day }} {{ index $.Site.Data.months "fr" (printf "%d" .Date.Month) }} {{ .Date.Year }}
+        {{ .Date.Day }} {{ index hugo.Data.months "fr" (printf "%d" .Date.Month) }} {{ .Date.Year }}
       </time>
     </li>
 
