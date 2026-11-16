@@ -16,5 +16,5 @@
       </ul>
     </nav>
 </footer>
-{{ $js := resources.Get "js/app.js" | js.Build }}
-<script src="{{ $js.RelPermalink }}"></script>
+{{ $js := resources.Get "js/app.js" | js.Build (dict "minify" true) }}
+<script src="{{ $js.RelPermalink }}" defer></script>

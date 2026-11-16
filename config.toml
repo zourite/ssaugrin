@@ -1,7 +1,7 @@
 baseURL = "https://saugrin-sonia.fr/"
 languageCode = "fr-fr"
 title = "Exploratrice à l’imaginaire fertile, le regard toujours tourné vers l’horizon."
-disableKinds = ["taxonomy"]
+disableKinds = ["taxonomy", "term"]
 summaryLength = 20
 defaultContentLanguage = 'fr'
 rssLimit = 20
@@ -38,9 +38,6 @@ watch = true
   [server.headers.values]
     X-Frame-Options = "DENY"
 
-[build]
-writeStats = true
-
 [module]
   [[module.mounts]]
     source = "assets"
@@ -48,6 +45,3 @@ writeStats = true
   [[module.mounts]]
     source = "static"
     target = "static"
-
-[build.buildStats]
-    enable = true
