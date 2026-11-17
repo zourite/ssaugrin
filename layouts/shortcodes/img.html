@@ -1,0 +1,10 @@
+{{- /* Shortcode image pour le contenu Markdown : {{< img src="/img/..." alt="..." >}} */ -}}
+{{- partial "image.html" (dict
+  "src" (.Get "src")
+  "alt" (.Get "alt")
+  "class" (.Get "class")
+  "style" (.Get "style")
+  "title" (.Get "title")
+  "sizes" (.Get "sizes")
+  "max" (.Get "max")
+) -}}

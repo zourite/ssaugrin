@@ -20,12 +20,12 @@
     </div>
     
     <div class="md:w-2/5 flex-shrink-0 order-1 md:order-2">
-      <img src="/img/zourite-ssaugrin.svg" 
-           loading="lazy" 
-           height="200px"
-           alt="Zourite aka ssaugrin" 
-           aria-hidden="true" 
-           class="shadow-img mx-auto h-[200px] lg:h-[300px]">
+      {{ partial "image.html" (dict
+        "src" "/img/zourite-ssaugrin.svg"
+        "alt" "Zourite aka ssaugrin"
+        "class" "shadow-img mx-auto h-[200px] lg:h-[300px]"
+        "loading" "eager"
+        "fetchpriority" "high") }}
     </div>
   
   </div>

@@ -12,10 +12,15 @@
 
     <article class="post">
 
+      {{ $title := .Title }}
       <div class="thumb w-full xl:w-5/12">
         <a href="{{ .RelPermalink }}">
-          {{ if isset .Params "featured" }}
-          <img src="/img/{{ .Params.featured }}" alt="{{ .Title }}" />
+          {{ with .Params.featured }}
+          {{ partial "image.html" (dict
+            "src" (printf "/img/%s" .)
+            "alt" $title
+            "max" 1000
+            "sizes" "(min-width: 1200px) 560px, (min-width: 768px) 50vw, 100vw") }}
           {{ end }}
         </a>
       </div>

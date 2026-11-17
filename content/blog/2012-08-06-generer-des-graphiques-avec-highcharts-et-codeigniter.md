@@ -104,7 +104,7 @@ Ce qui fait que pour générer les graphiques il faut faire le traitement suivan
 
 ### Rendu
 
-<img aria-describedby="caption-attachment-1176" src="/img/2012/08/Sélection_023.png" alt="Codeigniter - Highcharts" title="Codeigniter - Highcharts" />
+{{< img src="/img/2012/08/Sélection_023.png" alt="Codeigniter - Highcharts" title="Codeigniter - Highcharts" sizes="(min-width: 1016px) 1016px, 100vw" >}}
 Si tout c&rsquo;est bien passé vous devez avoir un rendu comme l&rsquo;image ci-contre. Je vous conseil de faire un tour sur le 
 
 <a href="http://www.highcharts.com/" title="site officiel de HighCharts" target="_blank">site officiel de Highcharts</a> pour connaitre l&rsquo;étendue des possibilités offertes.

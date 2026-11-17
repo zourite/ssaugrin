@@ -17,4 +17,4 @@
     </nav>
 </footer>
 {{ $js := resources.Get "js/app.js" | js.Build (dict "minify" true) }}
-<script src="{{ $js.RelPermalink }}" defer></script>
+<script>{{ $js.Content | safeJS }}</script>

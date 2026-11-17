@@ -1,0 +1,30 @@
+{{- /*
+  Image optimisée (WebP + srcset) depuis assets/.
+  Params : src (obligatoire), alt, class, style, title, sizes, loading,
+           fetchpriority, max (largeur max, 1200 par défaut)
+*/ -}}
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $style := .style | default "" -}}
+{{- $title := .title | default "" -}}
+{{- $sizes := .sizes | default "(min-width: 900px) 900px, 100vw" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $priority := .fetchpriority | default "" -}}
+{{- $max := .max | default 1200 -}}
+{{- $r := resources.Get (strings.TrimPrefix "/" $src) -}}
+{{- if and $r (ne $r.MediaType.SubType "svg") -}}
+  {{- $srcset := slice -}}
+  {{- range (slice 480 768 1200) -}}
+    {{- if and (ge $r.Width .) (le . $max) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" ($r.Resize (printf "%dx webp q82" .)).RelPermalink .) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $w := cond (gt $r.Width $max) $max $r.Width -}}
+  {{- $base := $r.Resize (printf "%dx webp q82" $w) -}}
+  <img src="{{ $base.RelPermalink }}"{{ with $srcset }} srcset="{{ delimit . ", " }}" sizes="{{ $sizes }}"{{ end }} width="{{ $base.Width }}" height="{{ $base.Height }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }}{{ with $style }} style="{{ . | safeCSS }}"{{ end }}{{ with $title }} title="{{ . }}"{{ end }}{{ with $priority }} fetchpriority="{{ . }}"{{ end }} loading="{{ $loading }}" decoding="async">
+{{- else if $r -}}
+  <img src="{{ $r.RelPermalink }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }}{{ with $style }} style="{{ . | safeCSS }}"{{ end }}{{ with $title }} title="{{ . }}"{{ end }}{{ with $priority }} fetchpriority="{{ . }}"{{ end }} loading="{{ $loading }}" decoding="async">
+{{- else -}}
+  <img src="{{ $src }}" alt="{{ $alt }}"{{ with $class }} class="{{ . }}"{{ end }}{{ with $style }} style="{{ . | safeCSS }}"{{ end }}{{ with $title }} title="{{ . }}"{{ end }} loading="{{ $loading }}" decoding="async">
+{{- end -}}

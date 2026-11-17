@@ -41,13 +41,13 @@ Dans un premier temps ce que j&rsquo;appelle ici « image » ne sont pas des i
 
 <div class="cell small-12 large-6">
 <a href="https://amzn.to/32ZTG1A">
-<img class="center" src="/img/2020/03/emoji-porte-clef.jpg" alt="Porte cléfs émojis lumineux"/>
+{{< img src="/img/2020/03/emoji-porte-clef.jpg" alt="Porte cléfs émojis lumineux" class="center" >}}
 </a>
 </div>
 
 <div class="cell small-12 large-6">
 <a href="https://amzn.to/39LuhLT">
-<img class="center"  src="/img/2020/03/emoji-coussin-coeur.jpg" alt="Coussin Emoji"/>
+{{< img src="/img/2020/03/emoji-coussin-coeur.jpg" alt="Coussin Emoji" class="center" >}}
 </a>
 </div>
 </div>

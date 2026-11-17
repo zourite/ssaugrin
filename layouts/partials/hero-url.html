@@ -1,0 +1,18 @@
+{{- /*
+  Renvoie l'URL d'une image d'en-tête optimisée (WebP).
+  Params : src (obligatoire), width (1200 par défaut), quality (80 par défaut).
+  Renvoie une chaîne vide si la ressource n'existe pas.
+*/ -}}
+{{- $src := strings.TrimPrefix "/" .src -}}
+{{- $max := .width | default 1200 -}}
+{{- $q := .quality | default 80 -}}
+{{- $url := "" -}}
+{{- with resources.Get $src -}}
+  {{- if eq .MediaType.SubType "svg" -}}
+    {{- $url = .RelPermalink -}}
+  {{- else -}}
+    {{- $w := cond (gt .Width $max) $max .Width -}}
+    {{- $url = (.Resize (printf "%dx webp q%d" $w $q)).RelPermalink -}}
+  {{- end -}}
+{{- end -}}
+{{- return $url -}}

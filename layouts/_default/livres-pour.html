@@ -1,5 +1,9 @@
 {{ define "main" }}
-<header id="hero" style="background-image:url({{ .Params.hero }})">
+{{- $heroURL := "" -}}
+{{- with .Params.hero -}}
+  {{- $heroURL = partial "hero-url.html" (dict "src" .) | default . -}}
+{{- end -}}
+<header id="hero"{{ with $heroURL }} style="background-image:url({{ . }})"{{ end }}>
   <h1>{{ .Title }}</h1>
 </header>
 

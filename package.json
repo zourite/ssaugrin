@@ -3,7 +3,7 @@
     "version": "1.2.0",
     "description": "Tailwind integration",
     "main": "index.js",
-   "scripts": {
+    "scripts": {
         "start": "concurrently npm:watch:*",
         "watch:vite": "vite",
         "watch:hugo": "hugo server --disableFastRender",
@@ -23,7 +23,6 @@
         "@glidejs/glide": "^3.6.2",
         "concat": "^1.0.3",
         "dotenv": "^16.4.5",
-        "iconify-icon": "^2.1.0",
         "rfs": "^10.0.0"
     }
 }

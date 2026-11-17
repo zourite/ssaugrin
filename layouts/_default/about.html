@@ -10,7 +10,13 @@
 
         <div class="hidden md:block md:w-1/2">
 
-          <img src="/img/zourite-maveli.png" width="300" height="300" class="rotate shadow-img block mx-auto" role="presentation"  alt=""/>
+          {{ partial "image.html" (dict
+            "src" "/img/zourite-maveli.png"
+            "alt" ""
+            "class" "rotate shadow-img block mx-auto"
+            "style" "max-width: 300px; height: auto"
+            "max" 700
+            "sizes" "300px") }}
 
         </div>
 
@@ -64,8 +70,14 @@
             {{ range hugo.Data.logos.logo.skill }}
 
             <div class="card basis-1/4 lg:basis-1/5">
-              <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="p-2 center" width="140"
-                height="120" style="margin: auto;" />
+              {{ partial "image.html" (dict
+                "src" .image
+                "alt" .titre
+                "title" .titre
+                "class" "p-2 center"
+                "style" "margin: auto; max-width: 140px; height: auto"
+                "max" 280
+                "sizes" "140px") }}
             </div>
 
 
@@ -91,7 +103,14 @@
 
               <div id="certif{{ $index }}">
                 <a href="{{ .link }}" target="_blank">
-                  <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" class="center" width="120px" />
+                  {{ partial "image.html" (dict
+                    "src" .image
+                    "alt" .titre
+                    "title" .titre
+                    "class" "center"
+                    "style" "width: 120px; height: auto"
+                    "max" 240
+                    "sizes" "120px") }}
                 </a>
               </div>
 
@@ -135,7 +154,7 @@
         <div class="project-img">
 
           <img src="https://raw.githubusercontent.com/{{ .full_name }}/master/screenshot.png"
-            alt="{{ replace .name "-" " " | title }} github">
+            alt="{{ replace .name "-" " " | title }} github" loading="lazy" decoding="async">
           <div class="info-project">
 
             <p class="text-xs text-right p-2"><i>{{ .language }}</i></p>

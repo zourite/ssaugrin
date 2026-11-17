@@ -5,7 +5,13 @@
     <div class="h-64 overflow-hidden">
       <a href="{{ .amazon }}" target="_blank">
 
-        <img src="{{ .image }}" alt="{{ .titre }}" title="{{ .titre }}" width="100%"/>
+        {{ partial "image.html" (dict
+          "src" .image
+          "alt" .titre
+          "title" .titre
+          "style" "width: 100%; height: auto"
+          "max" 400
+          "sizes" "(min-width: 768px) 220px, 45vw") }}
       </a>
     </div>
 

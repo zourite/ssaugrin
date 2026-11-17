@@ -21,6 +21,12 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="apple-mobile-web-app-title" content="ssaugrin">
   <meta name="application-name" content="ssaugrin">
+  <link rel="preload" href="/fonts/nunito-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/kalam-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  {{ with .Params.hero }}
+  {{- $heroURL := partial "hero-url.html" (dict "src" .) -}}
+  {{ with $heroURL }}<link rel="preload" as="image" href="{{ . }}" fetchpriority="high">{{ end }}
+  {{ end }}
   {{ range .AlternativeOutputFormats -}}
   {{ printf `
   <link rel="%s" type="%s" href="%s" title="%s"/>

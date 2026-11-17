@@ -86,7 +86,7 @@ Array
 )
 ```
 
-[<img src="/img/2012/12/Sélection_012-300x200.jpg" alt="Graphique Highcharts PHP" title="Graphique Highcharts PHP"/>]
+[{{< img src="/img/2012/12/Sélection_012.jpg" alt="Graphique Highcharts PHP" title="Graphique Highcharts PHP" >}}]
 
 ### Transformation de l&rsquo;array
 

@@ -1,15 +1,17 @@
 {{ define "main"}}
-<section id="p404" class="w-full flex items-center top-round-rainbow ">
+{{- $bg := partial "hero-url.html" (dict "src" "/img/main/404.jpg" "width" 1200 "quality" 62) -}}
+{{- $border := partial "hero-url.html" (dict "src" "/img/main/watercolor-paint-background.jpg" "width" 600) -}}
+<section id="p404" class="w-full flex items-center top-round-rainbow "{{ with $bg }} style="background-image: url({{ . }})"{{ end }}>
       <div class="md:w-11/12 md:mx-auto lg:w-8/12 pt-16">
 
-        <img src="/img/main/unicorn.png" alt="La licorne Perdu" class="mx-auto -mb-3">
+        {{ partial "image.html" (dict "src" "/img/main/unicorn.png" "alt" "La licorne Perdu" "class" "mx-auto -mb-3" "max" 400) }}
         <header class="mb-4"> 
             <h1 class="text-center"> Tu t'es perdu petit padawan !</h1> 
         </header>   
         
         <article class="card">
              
-            <div id="posts-404" class="p-2">
+            <div id="posts-404" class="p-2"{{ with $border }} style="border-image: url({{ . }}) 60"{{ end }}>
                 
                 <ul>
                     
