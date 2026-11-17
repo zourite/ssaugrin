@@ -1,113 +1,135 @@
 {{ define "main" }}
 
 <section id="contact">
-  <div class="container mx-auto px-4">
+  <div class="contact-shell container mx-auto px-4">
 
-    <header id="contact-intro">
-      <p class="contact-eyebrow">Contact</p>
-      <h1>Parlons de ton projet</h1>
-      <p class="contact-lead">
-        Une question, une idée, un site à concevoir ? Écris-moi via le formulaire
-        ou directement par email. Je te réponds dès que possible.
-      </p>
-    </header>
+    <div class="contact-grid grid gap-8 items-start lg:grid-cols-3">
 
-    <div class="contact-grid grid gap-6 items-start lg:grid-cols-3">
-
-      <div class="contact-card lg:col-span-2">
-        <h2>Ton message</h2>
-
-        <form id="contact-form" name="contact" method="POST" action="/merci/"
-              data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact">
-
-          <p class="hidden" aria-hidden="true">
-            <label>Ne pas remplir ce champ : <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+      <div class="contact-main lg:col-span-2">
+        <header id="contact-intro">
+          <h1>Écris-moi</h1>
+          <p>
+            Une question, une remarque, une envie d'échanger ? Remplis le formulaire
+            ou envoie-moi un email, je te réponds dès que possible.
           </p>
+        </header>
 
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div class="field">
-              <label for="name">Ton nom <span aria-hidden="true">*</span></label>
-              <input id="name" name="name" type="text" autocomplete="name"
-                     placeholder="Sonia Saugrin" required>
+        <div class="contact-card">
+          <h2 class="sr-only">Formulaire de contact</h2>
+
+          <form id="contact-form" name="contact" method="POST" action="/merci/"
+                data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+
+            <p class="hidden" aria-hidden="true">
+              <label>Ne pas remplir ce champ : <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+            </p>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="field">
+                <label for="prenom">Ton prénom <span aria-hidden="true">*</span></label>
+                <input id="prenom" name="prenom" type="text" autocomplete="given-name"
+                       required minlength="2" aria-describedby="prenom-error">
+                <p class="field-error" id="prenom-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="email">Ton email <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email"
+                       required aria-describedby="email-error">
+                <p class="field-error" id="email-error" hidden></p>
+              </div>
             </div>
 
             <div class="field">
-              <label for="email">Ton email <span aria-hidden="true">*</span></label>
-              <input id="email" name="email" type="email" autocomplete="email"
-                     placeholder="toi@exemple.fr" required>
+              <label for="message">Ton message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" rows="9" required minlength="20"
+                        aria-describedby="message-error"></textarea>
+              <p class="field-error" id="message-error" hidden></p>
             </div>
-          </div>
 
-          <div class="field">
-            <label for="sujet">Le sujet</label>
-            <select id="sujet" name="sujet">
-              <option value="">Choisir un sujet…</option>
-              <option value="Un projet de site">Un projet de site</option>
-              <option value="Une question technique">Une question technique</option>
-              <option value="Une collaboration">Une collaboration</option>
-              <option value="Autre">Autre</option>
-            </select>
-          </div>
+            <div class="field field-checkbox">
+              <input id="consentement" name="consentement" type="checkbox" required
+                     aria-describedby="consentement-error">
+              <label for="consentement">
+                J'accepte que ces informations soient utilisées pour me répondre.
+                Voir les <a href="/mentions-legales/">mentions légales</a>.
+              </label>
+            </div>
+            <p class="field-error" id="consentement-error" hidden></p>
 
-          <div class="field">
-            <label for="message">Ton message <span aria-hidden="true">*</span></label>
-            <textarea id="message" name="message" rows="6" required
-                      placeholder="Quelques lignes sur ton besoin, ton idée ou ta question…"></textarea>
-          </div>
+            <p class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1" hidden></p>
 
-          <div class="field field-checkbox">
-            <input id="consentement" name="consentement" type="checkbox" required>
-            <label for="consentement">
-              J'accepte que ces informations soient utilisées pour me répondre.
-              Voir les <a href="/mentions-legales/">mentions légales</a>.
-            </label>
-          </div>
-
-          <div class="form-actions flex flex-wrap items-center justify-between gap-3">
-            <p class="form-note">* Champs obligatoires</p>
-            <button type="submit" class="btn-contact">
-              {{ partial "fontawesome.html" "paper-plane-regular" }}
-              Envoyer le message
-            </button>
-          </div>
-        </form>
+            <div class="form-actions">
+              <button type="submit" class="btn-contact">
+                {{ partial "fontawesome.html" "paper-plane-regular" }}
+                <span class="submit-label">Envoyer</span>
+              </button>
+              <p class="form-note">* Champs obligatoires</p>
+            </div>
+          </form>
+        </div>
       </div>
 
-      <aside class="contact-card">
-        <h2>Restons en contact</h2>
-        <p class="aside-intro">Tu préfères un autre canal ? Tout est ici.</p>
+      <aside class="contact-aside">
 
-        <a class="contact-link"
-           href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;">
-          {{ partial "fontawesome.html" "paper-plane-regular" }}
-          <span>Email
-            <small>&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;</small>
-          </span>
-        </a>
+        <section class="contact-card">
+          <h2>Réseaux sociaux</h2>
+          <ul class="contact-links">
+            <li>
+              <a class="contact-link" href="https://github.com/Zourite" target="_blank"
+                 rel="noopener noreferrer" aria-label="Compte GitHub de Saugrin Sonia (nouvelle fenêtre)">
+                {{ partial "fontawesome.html" "github-brands" }}
+                <span>GitHub <small>@Zourite</small></span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="https://www.linkedin.com/in/ssaugrin/" target="_blank"
+                 rel="noopener noreferrer" aria-label="Compte LinkedIn de Saugrin Sonia (nouvelle fenêtre)">
+                {{ partial "fontawesome.html" "linkedin-in-brands" }}
+                <span>LinkedIn <small>Sonia Saugrin</small></span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="/index.xml">
+                {{ partial "fontawesome.html" "rss-solid" }}
+                <span>Flux RSS <small>Les nouveaux articles</small></span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-        <a class="contact-link" href="https://github.com/Zourite" target="_blank"
-           rel="noopener noreferrer" aria-label="Compte GitHub de Saugrin Sonia (nouvelle fenêtre)">
-          {{ partial "fontawesome.html" "github-brands" }}
-          <span>GitHub
-            <small>@Zourite</small>
-          </span>
-        </a>
+        <section class="contact-card">
+          <h2>Liens utiles</h2>
+          <ul class="contact-links">
+            <li>
+              <a class="contact-link"
+                 href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;">
+                {{ partial "fontawesome.html" "paper-plane-regular" }}
+                <span>Email <small>&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;</small></span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="/blog/">
+                {{ partial "fontawesome.html" "book-solid" }}
+                <span>Le blog</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="/a-propos/">
+                {{ partial "fontawesome.html" "user-circle-o" }}
+                <span>À propos</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="/des-livres-pour/">
+                {{ partial "fontawesome.html" "book-solid" }}
+                <span>Des livres pour</span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-        <a class="contact-link" href="https://www.linkedin.com/in/ssaugrin/" target="_blank"
-           rel="noopener noreferrer" aria-label="Compte LinkedIn de Saugrin Sonia (nouvelle fenêtre)">
-          {{ partial "fontawesome.html" "linkedin-in-brands" }}
-          <span>LinkedIn
-            <small>Sonia Saugrin</small>
-          </span>
-        </a>
-
-        <a class="contact-link" href="/index.xml">
-          {{ partial "fontawesome.html" "rss-solid" }}
-          <span>Flux RSS
-            <small>Les nouveaux articles</small>
-          </span>
-        </a>
       </aside>
 
     </div>
