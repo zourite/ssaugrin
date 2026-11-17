@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Europe/Paris"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      # Une seule PR pour toutes les mineures et correctifs.
+      # Les montées majeures restent des PR séparées, à valider une par une.
+      mineures-et-correctifs:
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
