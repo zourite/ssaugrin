@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<section id="contact">
+  <div class="container mx-auto px-4">
+    <div class="contact-card merci max-w-2xl mx-auto text-center">
+
+      <div class="merci-icon">
+        {{ partial "fontawesome.html" "paper-plane-regular" }}
+      </div>
+
+      <h1>Message envoyé !</h1>
+      <p>Merci pour ton message. Je te réponds dès que possible.</p>
+
+      <div class="flex flex-wrap justify-center gap-3 mt-6">
+        <a class="btn-contact" href="/">Retour à l'accueil</a>
+        <a class="btn-secondary" href="/blog/">Lire le blog</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{ end }}

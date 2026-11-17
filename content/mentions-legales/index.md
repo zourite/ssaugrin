@@ -19,6 +19,12 @@ Hébergeur : OVH – 2 rue Kellermann – 59100 Roubaix – France
 
 Ce site participe au Programme Partenaires d&rsquo;Amazon EU, un programme d&rsquo;affiliation conçu pour permettre à des sites de percevoir une rémunération grâce à la création de liens vers Amazon.fr.
 
+## FORMULAIRE DE CONTACT {#formulaire-contact}
+
+Les informations saisies dans le formulaire de contact (nom, adresse email, sujet et message) sont transmises de façon sécurisée et utilisées uniquement pour répondre à votre demande. Elles ne sont ni revendues, ni utilisées à des fins publicitaires, et sont conservées le temps nécessaire à l'échange puis supprimées.
+
+Le formulaire ne dépose aucun cookie de suivi. Pour exercer vos droits d'accès, de rectification ou de suppression, écrivez à me@ssaugrin.fr.
+
 ## MENTIONS RELATIVES AUX COOKIES {#cookies}
 
 ### Qu’est-ce qu’un cookie et à quoi sert-il ?

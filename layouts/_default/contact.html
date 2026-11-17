@@ -1,23 +1,114 @@
 {{ define "main" }}
 
 <section id="contact">
-  <div class="container mx-auto p-4">
-    <div id="page-content">
+  <div class="container mx-auto px-4">
 
-      <div id="intro" class="text-center">
-        <h1>Je te réponds dès que possible. A bientôt !</h1>
+    <header id="contact-intro">
+      <p class="contact-eyebrow">Contact</p>
+      <h1>Parlons de ton projet</h1>
+      <p class="contact-lead">
+        Une question, une idée, un site à concevoir ? Écris-moi via le formulaire
+        ou directement par email. Je te réponds dès que possible.
+      </p>
+    </header>
+
+    <div class="contact-grid grid gap-6 items-start lg:grid-cols-3">
+
+      <div class="contact-card lg:col-span-2">
+        <h2>Ton message</h2>
+
+        <form id="contact-form" name="contact" method="POST" action="/merci/"
+              data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+
+          <p class="hidden" aria-hidden="true">
+            <label>Ne pas remplir ce champ : <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="field">
+              <label for="name">Ton nom <span aria-hidden="true">*</span></label>
+              <input id="name" name="name" type="text" autocomplete="name"
+                     placeholder="Sonia Saugrin" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Ton email <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email"
+                     placeholder="toi@exemple.fr" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="sujet">Le sujet</label>
+            <select id="sujet" name="sujet">
+              <option value="">Choisir un sujet…</option>
+              <option value="Un projet de site">Un projet de site</option>
+              <option value="Une question technique">Une question technique</option>
+              <option value="Une collaboration">Une collaboration</option>
+              <option value="Autre">Autre</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Ton message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" rows="6" required
+                      placeholder="Quelques lignes sur ton besoin, ton idée ou ta question…"></textarea>
+          </div>
+
+          <div class="field field-checkbox">
+            <input id="consentement" name="consentement" type="checkbox" required>
+            <label for="consentement">
+              J'accepte que ces informations soient utilisées pour me répondre.
+              Voir les <a href="/mentions-legales/">mentions légales</a>.
+            </label>
+          </div>
+
+          <div class="form-actions flex flex-wrap items-center justify-between gap-3">
+            <p class="form-note">* Champs obligatoires</p>
+            <button type="submit" class="btn-contact">
+              {{ partial "fontawesome.html" "paper-plane-regular" }}
+              Envoyer le message
+            </button>
+          </div>
+        </form>
       </div>
 
-      <a class="mailto"
-        href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;">&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;</a>
+      <aside class="contact-card">
+        <h2>Restons en contact</h2>
+        <p class="aside-intro">Tu préfères un autre canal ? Tout est ici.</p>
 
-      <div id="rs-icon" class="text-center mt-4">
-        <a href="https://github.com/Zourite" target="_blank" rel="noopener noreferrer" aria-label="Compte Github de Saugrin Sonia"> {{ partial "fontawesome.html" "github-brands" }} </a>
-
-        <a href="https://www.linkedin.com/in/ssaugrin/" target="_blank" rel="noopener noreferrer" aria-label="Compte Linkedin de Saugrin Sonia">
-          {{ partial "fontawesome.html" "linkedin-in-brands" }}
+        <a class="contact-link"
+           href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;">
+          {{ partial "fontawesome.html" "paper-plane-regular" }}
+          <span>Email
+            <small>&#109;&#101;&#64;&#115;&#115;&#97;&#117;&#103;&#114;&#105;&#110;&#46;&#102;&#114;</small>
+          </span>
         </a>
-      </div>
+
+        <a class="contact-link" href="https://github.com/Zourite" target="_blank"
+           rel="noopener noreferrer" aria-label="Compte GitHub de Saugrin Sonia (nouvelle fenêtre)">
+          {{ partial "fontawesome.html" "github-brands" }}
+          <span>GitHub
+            <small>@Zourite</small>
+          </span>
+        </a>
+
+        <a class="contact-link" href="https://www.linkedin.com/in/ssaugrin/" target="_blank"
+           rel="noopener noreferrer" aria-label="Compte LinkedIn de Saugrin Sonia (nouvelle fenêtre)">
+          {{ partial "fontawesome.html" "linkedin-in-brands" }}
+          <span>LinkedIn
+            <small>Sonia Saugrin</small>
+          </span>
+        </a>
+
+        <a class="contact-link" href="/index.xml">
+          {{ partial "fontawesome.html" "rss-solid" }}
+          <span>Flux RSS
+            <small>Les nouveaux articles</small>
+          </span>
+        </a>
+      </aside>
 
     </div>
   </div>
