@@ -16,7 +16,6 @@ rssLimit = 20
 [params]
   author = "Sonia Saugrin"
   author_email = "me@ssaugrin.fr"
-  images = ['screenshot.png']
   description = "Exploratrice à l’imaginaire fertile, le regard toujours tourné vers l’horizon."
 
 [markup.highlight]

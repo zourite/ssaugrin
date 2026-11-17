@@ -1,0 +1,53 @@
+{{- /*
+  Métadonnées de partage (Open Graph + Twitter).
+  Image : hero de la page, sinon l'image « featured » de l'article,
+  sinon l'image générique du site.
+*/ -}}
+{{- $title := .Title | default .Site.Title -}}
+{{- $description := .Description | default .Site.Params.description | strings.TrimSpace -}}
+
+{{- $ogImage := "" -}}
+{{- $src := .Params.hero | default "" -}}
+{{- if not $src -}}
+  {{- with .Params.featured -}}{{- $src = printf "/img/%s" . -}}{{- end -}}
+{{- end -}}
+{{- with $src -}}
+  {{- with resources.Get (strings.TrimPrefix "/" .) -}}
+    {{- if eq .MediaType.SubType "svg" -}}
+      {{- $ogImage = .RelPermalink | absURL -}}
+    {{- else -}}
+      {{- $w := cond (gt .Width 1200) 1200 .Width -}}
+      {{- $ogImage = (.Resize (printf "%dx jpg q82" $w)).RelPermalink | absURL -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $ogImage -}}
+  {{- $ogImage = "screenshot.png" | absURL -}}
+{{- end -}}
+
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:locale" content="{{ replace site.Language.Locale "-" "_" }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:image" content="{{ $ogImage }}">
+<meta property="og:image:alt" content="{{ $title }}">
+{{- if .IsPage -}}
+{{- with .Section }}
+<meta property="article:section" content="{{ . }}">
+{{- end }}
+{{- with .Date }}
+{{- if not .IsZero }}
+<meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end }}
+{{- end }}
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}">
+{{- end }}
+{{- end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
+<meta name="twitter:image:alt" content="{{ $title }}">

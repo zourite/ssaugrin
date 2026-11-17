@@ -1,0 +1,29 @@
+# Projets affichés sur /a-propos/.
+# Figés le 2026-11-17 depuis l'API GitHub (dépôts récents, forks exclus,
+# dépôt de profil « zourite » sans capture écarté) : plus aucun appel
+# réseau au build, donc build reproductible.
+# Pour mettre à jour : reprendre les dépôts et leurs captures.
+
+[[projects]]
+  name = "ansible-debian-lemp"
+  language = "PHP"
+  url = "https://github.com/zourite/ansible-debian-lemp"
+  image = "/img/projects/ansible-debian-lemp.png"
+
+[[projects]]
+  name = "shizoumi"
+  language = "HTML"
+  url = "https://github.com/zourite/shizoumi"
+  image = "/img/projects/shizoumi.png"
+
+[[projects]]
+  name = "ssaugrin"
+  language = "CSS"
+  url = "https://github.com/zourite/ssaugrin"
+  image = "/img/projects/ssaugrin.png"
+
+[[projects]]
+  name = "Docker-NGINX-PHP-MAILHOG"
+  language = "JavaScript"
+  url = "https://github.com/zourite/Docker-NGINX-PHP-MAILHOG"
+  image = "/img/projects/docker-nginx-php-mailhog.png"

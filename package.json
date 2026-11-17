@@ -12,17 +12,9 @@
     },
     "devDependencies": {
         "@tailwindcss/postcss": "^4.1.7",
-        "autoprefixer": "^10.4.20",
         "concurrently": "^9.0.1",
         "postcss": "^8.5.14",
-        "postcss-cli": "^11.0.1",
         "tailwindcss": "^4.1.7",
         "vite": "^6.4.2"
-    },
-    "dependencies": {
-        "@glidejs/glide": "^3.6.2",
-        "concat": "^1.0.3",
-        "dotenv": "^16.4.5",
-        "rfs": "^10.0.0"
     }
 }
