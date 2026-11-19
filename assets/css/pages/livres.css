@@ -1,10 +1,55 @@
 /* --------------------------- Des livres pour… --------------------------- */
 
+/* Le texte reste à une largeur de lecture confortable même quand le
+   conteneur, lui, est large pour les grilles. */
+.prose-column {
+  max-width: var(--prose-max);
+
+  p {
+    margin: 1rem 0;
+    line-height: 1.7;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+#livres-page {
+  /* Les sections sont pleine largeur pour que les bandeaux aillent d'un
+     bord à l'autre ; c'est .page-inner qui recentre le contenu. */
+  .livres-section {
+    padding-block: 2.5rem;
+
+    @media (min-width: 768px) {
+      padding-block: 3rem;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .livres-highlight {
+    display: flex;
+    justify-content: center;
+  }
+
+  .livres-note {
+    margin: 2.5rem 0 0;
+    padding-top: 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-soft);
+  }
+}
+
 .book-grid {
   display: grid;
-  gap: 1.25rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 1.5rem 0 2.5rem;
+  gap: 1.25rem;
+  max-width: 48rem;
+  margin: 1.75rem 0 0;
   padding: 0;
   list-style: none;
 
@@ -14,18 +59,23 @@
 }
 
 .book {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background-color: var(--surface);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
+  transition: transform 0.25s ease-out;
 
-  /* L'ancien `h-64 overflow-hidden` rognait les couvertures : on garde
-     désormais la proportion d'un livre et l'image entière. */
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &:focus-within {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 2px;
+  }
+
+  /* Proportion d'un livre, couverture entière : l'ancien `h-64` la rognait. */
   .book-cover {
-    display: block;
     aspect-ratio: 2 / 3;
     padding: 0.75rem;
     background-color: rgba(2, 128, 144, 0.06);
@@ -37,20 +87,69 @@
     }
   }
 
-  .book-title {
-    margin: 0;
-    padding: 0.75rem 0.85rem;
-    color: var(--color-blue-deep);
-    font-size: 0.88rem;
-    font-weight: 700;
-    line-height: 1.35;
+  .book-body {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.85rem;
   }
 
-  .book-links {
-    display: grid;
-    gap: 1px;
-    margin-top: auto;
-    padding: 0;
-    list-style: none;
+  .book-title {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.35;
+
+    a {
+      color: var(--color-drk-green-octo);
+      text-decoration: none;
+
+      /* Action principale : toute la carte mène à la fiche Trello. */
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      &:visited {
+        color: var(--color-drk-green-octo);
+      }
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
+
+  /* Au-dessus de la zone cliquable du titre, sinon il serait inatteignable. */
+  .book-buy {
+    position: relative;
+    z-index: 1;
+    margin: auto 0 0;
+    font-size: 0.8rem;
+
+    a {
+      color: var(--color-lgt-green-octo);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+
+      &:hover {
+        color: var(--color-dragon);
+      }
+
+      &:visited {
+        color: var(--color-lgt-green-octo);
+      }
+    }
+  }
+
+  .ext-icon {
+    margin-left: 0.25rem;
   }
 }

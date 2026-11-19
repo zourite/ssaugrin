@@ -1,25 +1,35 @@
 {{- /*
   Grille de livres.
-  Params : books (slice de produits), title (titre accessible de la grille).
+  Params : books (slice de produits).
+  Chaque carte n'a qu'une action principale — la fiche Trello, portée par
+  le titre et étendue à toute la carte — plus un lien Amazon explicite.
 */ -}}
 <ul class="book-grid">
   {{ range .books }}
   <li class="book">
-    <a class="book-cover" href="{{ .amazon }}" target="_blank" rel="noopener noreferrer sponsored">
+
+    <div class="book-cover">
       {{ partial "image.html" (dict
         "src" .image
-        "alt" (printf "%s — fiche Amazon (nouvelle fenêtre)" .titre)
+        "alt" ""
         "max" 400
-        "sizes" "(min-width: 640px) 220px, 45vw") }}
-    </a>
-    <p class="book-title">{{ .titre }}</p>
-    <ul class="book-links">
-      <li>
-        <a class="btn-trello" href="{{ .trello }}" target="_blank" rel="noopener noreferrer">
-          Voir la fiche 📚<span class="sr-only"> de « {{ .titre }} » sur Trello (nouvelle fenêtre)</span>
+        "sizes" "(min-width: 640px) 200px, 45vw") }}
+    </div>
+
+    <div class="book-body">
+      <h3 class="book-title">
+        <a href="{{ .trello }}" target="_blank" rel="noopener noreferrer">
+          {{ .titre }}{{ partial "ext-icon.html" }}
         </a>
-      </li>
-    </ul>
+      </h3>
+
+      <p class="book-buy">
+        <a href="{{ .amazon }}" target="_blank" rel="noopener noreferrer sponsored">
+          Sur Amazon<span class="sr-only"> : {{ .titre }}</span>{{ partial "ext-icon.html" }}
+        </a>
+      </p>
+    </div>
+
   </li>
   {{ end }}
 </ul>

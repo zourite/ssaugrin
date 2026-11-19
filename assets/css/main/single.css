@@ -114,9 +114,6 @@
     padding: 1rem;
     color: var(--color-drk-green-octo);
     text-decoration: none;
-    background-color: var(--surface);
-    border: 1px solid var(--border-soft);
-    border-radius: var(--radius-card);
     transition: background-color 0.2s ease-in-out;
 
     &:hover {

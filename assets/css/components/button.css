@@ -71,30 +71,6 @@
   }
 }
 
-.btn-trello {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding: 0.5rem 0.75rem;
-  color: var(--color-white);
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-align: center;
-  text-decoration: none;
-  background-color: #055a8c;
-  transition: background-color 0.3s ease-in-out;
-
-  &:hover {
-    color: var(--color-white);
-    background-color: var(--color-drk-green-octo);
-  }
-
-  &:visited {
-    color: var(--color-white);
-  }
-}
-
 .btn-github {
   display: inline-flex;
   align-items: center;

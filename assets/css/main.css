@@ -6,6 +6,7 @@
 @import "layout/page.css";
 @import "layout/footer.css";
 @import "components/button.css";
+@import "components/card.css";
 @import "components/helpers.css";
 @import "main/error.css";
 @import "main/post-pages.css";
@@ -51,11 +52,12 @@
   --page-max: 72rem;
   --prose-max: 46rem;
   --radius-card: 10px;
+  --card-liseret: 4px;
+  --shadow-card: 0 16px 28px -22px rgba(0, 0, 0, 0.6);
   --surface: #ffffff;
   --surface-muted: var(--color-light);
   --border-soft: rgba(17, 75, 95, 0.15);
   --text-muted: #5f6b70;
-  --shadow-card: 0 16px 28px -22px rgba(0, 0, 0, 0.6);
   --band: linear-gradient(0deg, #3498db 0%, var(--color-blue-deep) 74%);
 }
 

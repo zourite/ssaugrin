@@ -91,13 +91,9 @@
   }
 }
 
-/* Carte claire : même rendu que .contact-card. */
+/* Carte claire : l'habillage est dans components/card.css. */
 .surface {
   padding: 1.5rem;
-  background-color: var(--surface);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-card);
-  box-shadow: var(--shadow-card);
 
   @media (min-width: 768px) {
     padding: 2rem;
@@ -179,5 +175,94 @@
     color: var(--color-white);
     background-color: var(--color-lgt-green-octo);
     border-color: var(--color-lgt-green-octo);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Charte : les deux motifs récurrents du site, partagés au lieu d'être
+   recopiés page par page.
+   --------------------------------------------------------------------------- */
+
+/* Deux colonnes à parts égales, empilées sous 768px. */
+.split-2 {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+/* Bandeau sombre, pour alterner le rythme d'une page longue. */
+.band-dark {
+  color: rgba(255, 255, 255, 0.92);
+  background-image: linear-gradient(315deg, var(--color-blue-deep) 0%, var(--color-drk-green-octo) 74%);
+  box-shadow: inset 0 6px 12px -8px rgba(0, 0, 0, 0.5);
+
+  h2, h3 {
+    color: var(--color-cream);
+  }
+
+  strong {
+    color: var(--color-yellow);
+  }
+
+  a:not([class]) {
+    color: var(--color-yellow);
+    text-decoration-color: var(--color-yellow);
+
+    &:visited {
+      color: var(--color-yellow);
+      text-decoration-color: var(--color-yellow);
+    }
+
+    &:hover {
+      text-decoration-color: var(--color-cream);
+    }
+  }
+}
+
+/* Panneau d'accent à liseré jaune : le motif de l'accroche d'accueil. */
+.accent-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 1.5rem 1.75rem;
+  background: rgba(245, 230, 200, 0.08);
+  border: 1px solid rgba(245, 230, 200, 0.22);
+  border-left: var(--card-liseret) solid var(--color-yellow);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+
+  blockquote {
+    margin: 0 0 0.85rem;
+    color: var(--color-cream);
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
+  p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Sur fond clair, le panneau garde le liseré mais inverse ses couleurs. */
+  .band-light & {
+    background: rgba(2, 128, 144, 0.06);
+    border-color: rgba(17, 75, 95, 0.18);
+    border-left-color: var(--color-yellow);
+    box-shadow: none;
+
+    blockquote {
+      color: var(--color-drk-green-octo);
+    }
+
+    p {
+      color: #4a4a4a;
+    }
   }
 }
