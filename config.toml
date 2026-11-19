@@ -11,7 +11,10 @@ rssLimit = 20
 	email = "me@ssaugrin.fr"
 
 [permalinks]
-  posts = "/blog/:year/:title/"
+  # La section s'appelle « blog » : la clé « posts » ne s'appliquait à rien.
+  # Tous les articles vivent à la racine (ils fixent leur `url`), cette règle
+  # garde la même forme pour un article publié sans `url`.
+  blog = "/:slug/"
 
 [params]
   author = "Sonia Saugrin"
