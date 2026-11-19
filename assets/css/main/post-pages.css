@@ -3,14 +3,47 @@
    cartes illustrées. Les vignettes sont volontairement absentes.
    ----------------------------------------------------------------------- */
 
-#posts {
+/* En-tête du carnet : posé sur le fond clair, il reprend le trait jaune
+   des années pour appartenir au système de la frise. */
+#carnet-header {
+  padding-top: calc(var(--header-h) + 2.25rem);
+  padding-bottom: 1.5rem;
+
+  @media (min-width: 768px) {
+    padding-top: calc(var(--header-h) + 2.75rem);
+  }
+
+  h1 {
+    margin: 0;
+    color: var(--color-drk-green-octo);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 2.5rem;
+      height: 3px;
+      margin-bottom: 0.65rem;
+      background-color: var(--color-yellow);
+    }
+  }
+
+  .carnet-lead {
+    max-width: var(--prose-max);
+    margin: 0.6rem 0 0;
+    color: #4a4a4a;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
   .index-count {
-    margin: 0 0 2rem;
+    margin: 0.35rem 0 0;
     color: var(--text-muted);
     font-family: var(--font-mono);
     font-size: 1rem;
   }
+}
 
+#posts {
   .post-year {
     position: relative;
     display: grid;

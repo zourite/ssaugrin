@@ -1,10 +1,12 @@
 {{ define "main" }}
 <div id="about-page">
 
+  {{/* Pas de surtitre « À propos » : la navigation marque déjà la page
+       active. Le chapô ne reprend plus « mon coin d'Internet », que le
+       troisième paragraphe développe. */}}
   {{ partial "page-band.html" (dict
-    "eyebrow" "À propos"
     "title" "Zourite"
-    "lead" "Curieuse d’esprit, geek dans l’âme et artisane du web à La Réunion. Bienvenue dans mon coin d’Internet.") }}
+    "lead" "Curieuse d’esprit, geek dans l’âme et artisane du web à La Réunion.") }}
 
   <!-- Section 1 : Qui suis-je / Zourite -->
   <section id="me-area" class="about-section" aria-labelledby="me-title">
@@ -21,7 +23,7 @@
         </div>
 
         <div id="intro-texte">
-          <h2 id="me-title">Moi, c’est Zourite</h2>
+          <h2 id="me-title">Qui écrit ici</h2>
 
           <p>Moi, c’est Sonia. Sur le web et ailleurs, on m’appelle surtout <strong>Zourite</strong> — un clin d’œil au
             <a href="https://www.youtube.com/watch?v=0cJAvnyV_HI" target="_blank" rel="noopener noreferrer">civet zourite{{ partial "ext-icon.html" }}</a>, un plat emblématique de mon île, La Réunion, où je vis et travaille.</p>

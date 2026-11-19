@@ -3,13 +3,6 @@
 #about-page {
   .about-section {
     padding-block: 2.5rem;
-
-    > .page-inner {
-      width: 100%;
-      max-width: var(--page-max);
-      margin-inline: auto;
-      padding-inline: 1rem;
-    }
   }
 
   .about-split {

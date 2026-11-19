@@ -67,21 +67,27 @@
   }
 }
 
-/* Corps de page clair, posé sous le bandeau. */
+/* Conteneur centré, utilisable par n'importe quelle section. */
+.page-inner {
+  width: 100%;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* Corps de page clair. */
 .page-body {
   flex: 1 1 auto;
   width: 100%;
   padding-block: 2rem 3rem;
 
-  > .page-inner {
-    width: 100%;
-    max-width: var(--page-max);
-    margin-inline: auto;
-    padding-inline: 1rem;
-  }
-
   &.page-body-narrow > .page-inner {
     max-width: calc(var(--prose-max) + 4rem);
+  }
+
+  /* Pages qui ont déjà leur propre en-tête juste au-dessus. */
+  &.page-body-flush {
+    padding-top: 0;
   }
 }
 

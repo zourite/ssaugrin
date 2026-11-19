@@ -1,18 +1,21 @@
 {{ define "main" }}
 {{- $paginator := .Paginate (where .RegularPages "Type" "post") 12 -}}
 
-{{ partial "page-band.html" (dict
-  "eyebrow" "Carnet de bord"
-  "title" .Title
-  "lead" .Description) }}
+{{/* En-tête compact plutôt qu'un bandeau dégradé : la frise est déjà
+     l'objet visuel de la page, un bandeau lui faisait concurrence. */}}
+<header id="carnet-header">
+  <div class="page-inner">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="carnet-lead">{{ . }}</p>{{ end }}
+    <p class="index-count">
+      {{ len (where .RegularPages "Type" "post") }} entrées, de la plus récente à la plus ancienne.
+    </p>
+  </div>
+</header>
 
-<div class="page-body">
+<div class="page-body page-body-flush">
   <div class="page-inner">
     <section id="posts" aria-label="Index du carnet de bord">
-
-      <p class="index-count">
-        {{ len (where .RegularPages "Type" "post") }} entrées, de la plus récente à la plus ancienne.
-      </p>
 
       {{ range $paginator.Pages.GroupByDate "2006" }}
       <section class="post-year" aria-labelledby="annee-{{ .Key }}">
