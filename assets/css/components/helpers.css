@@ -43,6 +43,26 @@ iframe {
   margin-right: 5px;
 }
 
+/* Indicateur visuel pour les liens s'ouvrant dans une nouvelle fenêtre */
+.ext-icon {
+  display: inline-block;
+  margin-left: 0.25em;
+  vertical-align: baseline;
+
+  .inline-svg {
+    display: inline-block;
+    width: 0.75em;
+    height: 0.75em;
+    margin: 0;
+    vertical-align: 0.05em;
+    opacity: 0.75;
+  }
+}
+
+a:hover .ext-icon .inline-svg {
+  opacity: 1;
+}
+
 /* Masque visuellement sans retirer du flux pour les lecteurs d'écran. */
 .sr-only {
   position: absolute;
