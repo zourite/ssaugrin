@@ -145,6 +145,21 @@
     }
   }
 
+  ol {
+    padding-left: 1.5rem;
+    list-style: decimal;
+
+    li {
+      margin-bottom: 5px;
+      padding-left: 0.25rem;
+
+      &::marker {
+        color: var(--color-drk-green-octo);
+        font-weight: 600;
+      }
+    }
+  }
+
   @media (min-width: 976px) {
     &::after {
       content: '';

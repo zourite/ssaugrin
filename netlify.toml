@@ -13,7 +13,25 @@
 
 [[redirects]]
   from = "/2012/08/generer-des-graphiques-avec-highcharts-et-codeigniter"
-  to = "/generer-des-graphiques-avec-highcharts-et-codeigniter"
+  to = "/integrer-highcharts-a-du-php-csv"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/generer-des-graphiques-avec-highcharts-et-codeigniter"
+  to = "/integrer-highcharts-a-du-php-csv"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump"
+  to = "/sauvegarder-ses-donnees-en-2026"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/2015/12/sauvegarder-ses-donnees-dans-dropbox-avec-mysqldump"
+  to = "/sauvegarder-ses-donnees-en-2026"
   status = 301
   force = false
 

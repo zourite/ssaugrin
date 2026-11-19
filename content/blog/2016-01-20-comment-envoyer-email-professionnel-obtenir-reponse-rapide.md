@@ -46,8 +46,7 @@ Définir correctement l&rsquo;objet de son mail fait partie de la démarche pour
 
 Pour conclure, je vous renvoie vers différents liens utiles qui vous permettront de bien rédiger votre email et de le mettre en forme :
 
-  * <a href="http://www.commentcamarche.net/contents/176-regles-de-bon-usage-de-la-messagerie" target="_blank">Règles de bon usage de la messagerie &#8211; CCM</a> 
-  * <a href="http://www.faire-connaitre-mon-entreprise.fr/communication/comment-ecrire-un-email-professionnel/" target="_blank">Comment écrire un email professionnel en 4 points de réussite &#8211; FCME</a> 
+  * <a href="https://www.commentcamarche.net/applis-sites/bureautique/176-regles-de-bon-usage-de-la-messagerie/" target="_blank">Règles de bon usage de la messagerie &#8211; CCM</a> 
   * <a href="http://www.terrafemina.com/emploi-a-carrieres/carriere/articles/27496-quelles-formules-de-politesse-utiliser-dans-un-e-mail-.html" target="_blank">Quelles formules de politesse utiliser dans un e-mail ? &#8211; Terrafemina</a> 
   * <a rel="nofollow" href="https://amzn.to/38wvaXa">Etre un pro de l&rsquo;e-mail : 7 étapes pour rédiger des e-mails efficaces</a>
 
