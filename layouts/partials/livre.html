@@ -1,24 +1,25 @@
-<div class="flex">
-{{ range $.Scratch.Get "books"}}
-<div class="p-2 ">
-  <div class="card">
-    <div class="h-64 overflow-hidden">
-      <a href="{{ .amazon }}" target="_blank">
-
-        {{ partial "image.html" (dict
-          "src" .image
-          "alt" .titre
-          "title" .titre
-          "style" "width: 100%; height: auto"
-          "max" 400
-          "sizes" "(min-width: 768px) 220px, 45vw") }}
-      </a>
-    </div>
-
-    <div class="btn-trello">
-      <a href="{{ .trello }}" target="_blank">Voir la fiche 📚</a>
-    </div>
-  </div>
-</div>
-{{ end }}
-</div>
+{{- /*
+  Grille de livres.
+  Params : books (slice de produits), title (titre accessible de la grille).
+*/ -}}
+<ul class="book-grid">
+  {{ range .books }}
+  <li class="book">
+    <a class="book-cover" href="{{ .amazon }}" target="_blank" rel="noopener noreferrer sponsored">
+      {{ partial "image.html" (dict
+        "src" .image
+        "alt" (printf "%s — fiche Amazon (nouvelle fenêtre)" .titre)
+        "max" 400
+        "sizes" "(min-width: 640px) 220px, 45vw") }}
+    </a>
+    <p class="book-title">{{ .titre }}</p>
+    <ul class="book-links">
+      <li>
+        <a class="btn-trello" href="{{ .trello }}" target="_blank" rel="noopener noreferrer">
+          Voir la fiche 📚<span class="sr-only"> de « {{ .titre }} » sur Trello (nouvelle fenêtre)</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+  {{ end }}
+</ul>

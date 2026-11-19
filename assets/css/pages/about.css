@@ -1,161 +1,236 @@
-#about {
+/* ------------------------------- À propos ------------------------------- */
 
-  #content {
-    margin-top: 60px;
+#about-page {
+  .about-section {
+    padding-block: 2.5rem;
+
+    > .page-inner {
+      width: 100%;
+      max-width: var(--page-max);
+      margin-inline: auto;
+      padding-inline: 1rem;
+    }
   }
 
-  .project {
-
-    position: relative;
-    margin-bottom: 20px;
-
-    &.card {
-
-
-      background-color: #fff;
-      border-radius: 0.5rem;
-      box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
-
-    }
-
-    .project-img {
-
-      position: relative;
-      height: 200px;
-
-      img {
-
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 0.5rem;
-      }
-
-      .info-project {
-
-        position: absolute;
-        bottom: 0;
-        background-color: rgba(255, 255, 255, 0.85);
-        width: 100%;
-        border-bottom-right-radius: 0.5rem;
-      }
-
-    }
-
-    .github-btn {
-      background-color: #000;
-      margin-top: auto;
-      border-bottom-left-radius: 0.5rem;
-      padding: 15px 10px;
-
-      a {
-
-        display: flex;
-        align-items: center;
-        color: #fff;
-        text-decoration: none;
-      }
-
-    }
+  .about-split {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
 
     @media (min-width: 768px) {
-
-      &:not(:last-of-type):after {
-
-        content: '';
-        display: inline-block;
-        width: 1.5rem;
-        height: 1px;
-        background-color: #028090;
-        position: absolute;
-        top: 99px;
-        right: -1.5rem;
-
-      }
-    }
-  }
-
-  #competences-area {
-
-
-    background-color: #3498db;
-    background-image: linear-gradient(315deg, #2c3e50 0%, #3498db 74%);
-    padding: 25px 0;
-    margin: 15px 0;
-    margin-top : 0;
-    color: #000;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-    h2, h3 {
-
-      color: #1E1A1A;
-      /* color: #000; */
-      font-weight: bold;
-
-    }
-
-    a {
-
-      color: #500101;
-      font-weight: bold;
-      text-decoration-color : #500101;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     }
   }
 
   #me-area {
+    .portrait {
+      display: none;
 
-    padding-top: 30px;
-    padding-bottom: 15px;
+      @media (min-width: 768px) {
+        display: block;
+      }
 
+      img {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-inline: auto;
+      }
+    }
 
     .rotate {
-
-      transform: rotate(180deg);
       animation: tourne 3s forwards;
       animation-delay: 300ms;
-
     }
 
+    p {
+      margin: 0.9rem 0;
+      line-height: 1.7;
+    }
   }
 
-  #certification {
+  /* Bandeau compétences : contraste retravaillé (le texte noir sur bleu
+     moyen ne passait pas le niveau AA). */
+  #competences-area {
+    background-image: linear-gradient(315deg, var(--color-blue-deep) 0%, var(--color-drk-green-octo) 74%);
+    box-shadow: inset 0 6px 12px -8px rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.92);
 
-
-    /* #certif0 {
-
-      position: absolute;
-      top : 50%;
-      left : 0;
-
+    h2, h3 {
+      color: var(--color-cream);
     }
 
-    #certif1 {
+    p {
+      margin: 0.9rem 0;
+      line-height: 1.7;
+    }
 
-      position: absolute;
-      top: 50%;
-      right : 0;
+    a {
+      color: var(--color-yellow);
+      text-decoration-color: var(--color-yellow);
 
-    } */
+      &:visited {
+        color: var(--color-yellow);
+        text-decoration-color: var(--color-yellow);
+      }
 
-
+      &:hover {
+        text-decoration-color: var(--color-cream);
+      }
+    }
   }
 
-  #intro-texte {
+  .skill-grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    padding: 0 10px;
+    @media (min-width: 480px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem;
+      background-color: var(--surface);
+      border-radius: var(--radius-card);
+      box-shadow: 0 8px 16px -12px rgba(0, 0, 0, 0.7);
+    }
+
+    img {
+      width: 100%;
+      max-width: 90px;
+      height: auto;
+    }
   }
 
+  .certif-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    list-style: none;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+      border-radius: 8px;
+
+      &:hover {
+        background-color: rgba(2, 128, 144, 0.08);
+      }
+    }
+
+    img {
+      width: 110px;
+      height: auto;
+    }
+  }
+
+  /* Projets GitHub */
+  .project-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 976px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  .project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    transition: transform 0.25s ease-out;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+
+    .project-img {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .project-body {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      gap: 0.4rem;
+      padding: 0.9rem 1rem 1rem;
+    }
+
+    .project-name {
+      margin: 0;
+      font-size: 1rem;
+
+      a {
+        color: var(--color-drk-green-octo);
+        text-decoration: none;
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          text-underline-offset: 3px;
+        }
+
+        &:visited {
+          color: var(--color-drk-green-octo);
+        }
+      }
+    }
+
+    .project-lang {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin: auto 0 0;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+
+      .inline-svg {
+        width: 0.95em;
+        height: 0.95em;
+        margin: 0;
+      }
+    }
+  }
 }
 
 @keyframes tourne {
   0% {
-
     transform: rotate(180deg);
   }
 
   100% {
-
     transform: rotate(360deg);
   }
 }

@@ -1,0 +1,11 @@
+{{- /*
+  Bandeau de titre commun aux pages internes.
+  Params : title (obligatoire), eyebrow, lead.
+*/ -}}
+<div class="page-band on-dark">
+  <div class="page-band-inner">
+    {{ with .eyebrow }}<p class="page-eyebrow">{{ . }}</p>{{ end }}
+    <h1>{{ .title }}</h1>
+    {{ with .lead }}<p class="page-lead">{{ . | safeHTML }}</p>{{ end }}
+  </div>
+</div>

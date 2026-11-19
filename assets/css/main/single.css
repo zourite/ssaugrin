@@ -1,100 +1,149 @@
-#hero {
+/* ------------------------------- Article -------------------------------- */
 
-  height: 200px;
+#article-hero {
+  /* Même respiration que .page-band. La hauteur suit le contenu : le
+     min-height ne sert que de plancher pour qu'on voie la photo, sinon
+     il creusait un grand vide au-dessus du titre. */
+  --hero-pad: 2.25rem;
+
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  padding: 0 1rem;
-  margin-top : 40px;
+  min-height: 13rem;
+  padding-top: calc(var(--header-h) + var(--hero-pad));
+  padding-bottom: var(--hero-pad);
+  background-color: var(--color-blue-deep);
+  background-image: var(--band);
+  background-position: center;
   background-size: cover;
-  
-  &::after {
 
-    content: '';
-    display: block;
+  @media (min-width: 768px) {
+    --hero-pad: 2.75rem;
+
+    min-height: 16rem;
+  }
+
+  /* Voile sombre : garantit le contraste du titre sur n'importe quelle photo. */
+  &::before {
+    content: "";
     position: absolute;
-    top : 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(28, 86, 145,0.5);
-    z-index: 1;
-    box-shadow: inset 2px -13px 16px -9px rgba(44, 62, 80, 0.6)
+    inset: 0;
+    background-image: linear-gradient(to top, rgba(17, 75, 95, 0.92) 0%, rgba(44, 62, 80, 0.6) 100%);
+  }
 
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: calc(var(--prose-max) + 4rem);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  .hero-cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 0.75rem;
+    padding: 0;
+    list-style: none;
+
+    .chip {
+      color: var(--color-drk-green-octo);
+      background-color: var(--color-cream);
+    }
   }
 
   h1 {
-
-    color: var(--color-white);
-    padding-block: calc(var(--spacing) * 6);
     margin: 0;
-    position: relative;
-    z-index: 2;
-    font-weight: bold;
-    font-size: 2em;
+    color: var(--color-white);
+    font-size: var(--text-2xl);
+    line-height: 1.2;
 
+    @media (min-width: 768px) {
+      font-size: var(--text-4xl);
+    }
   }
-  
+
+  .meta-list {
+    margin-top: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+
+    .inline-svg {
+      color: var(--color-yellow);
+    }
+  }
 }
 
-
 #single {
-
-  max-width: 800px;
-  margin: auto;
-  margin-bottom: 2rem;
+  width: 100%;
+  max-width: calc(var(--prose-max) + 4rem);
+  margin-inline: auto;
   padding: 0 1rem;
-  position: relative;
+}
 
+/* Pied d'article : tags + navigation entre articles. */
+.post-footer {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
 
-  &.page #post-content {
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
 
-    &::after {
+.post-nav {
+  display: grid;
+  gap: 1rem;
 
-      top: -1rem;
-      height: calc(100% + 1rem);
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem;
+    color: var(--color-drk-green-octo);
+    text-decoration: none;
+    background-color: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-card);
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: rgba(2, 128, 144, 0.08);
+    }
+
+    &:visited {
+      color: var(--color-drk-green-octo);
     }
   }
 
-  #meta {
-
-    background-color: var(--color-lgt-green-octo);
-    font-size: 0.80em;
-    color: var(--color-light);
-    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
-    margin-right: auto;
-    margin-bottom: 10px;
-    margin-top: 15px;
-    position: relative;
-    padding: 5px 15px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    width: fit-content;
-
-    li {
-
-      display: inline-block;
-
-      .inline-svg {
-
-        width: 0.80em;
-        top: 0.4rem;
-      }
-    }
-    @media (min-width: 976px) {
-      
-      &:after {
-
-        content: '';
-        display: inline-block;
-        width: 1rem;
-        height: 1px;
-        background-color: var(--color-lgt-green-octo);
-        position: absolute;
-        top: 50%;
-        left: -1rem;
-
-      }
-    }
+  .nav-label {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
+  .nav-title {
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .post-nav-next {
+    @media (min-width: 640px) {
+      text-align: right;
+    }
+  }
 }

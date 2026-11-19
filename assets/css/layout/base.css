@@ -1,5 +1,18 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Les ancres (#formulaire-contact…) ne se cachent plus sous l'en-tête fixe. */
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
+
 body {
   -webkit-font-smoothing: antialiased;
+  background-color: var(--surface-muted);
+  overflow-x: hidden;
 }
 
 a {
@@ -9,6 +22,7 @@ a {
   text-decoration-color: var(--color-dragon);
   text-decoration-thickness: .1em;
   text-underline-offset: 3px;
+
   @media (min-width: 976px) {
     text-decoration-thickness: .05em;
     text-underline-offset: 2px;
@@ -21,5 +35,46 @@ a {
   &:visited {
     color: var(--color-blue-deep);
     text-decoration-color: var(--color-blue-deep);
+  }
+}
+
+/* Indicateur de focus visible et homogène sur tout le site. */
+:focus-visible {
+  outline: 2px solid var(--color-orange);
+  outline-offset: 2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Lien d'évitement : premier élément focusable de chaque page. */
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: calc(var(--header-z-index) + 10);
+  padding: 0.6rem 1rem;
+  color: var(--color-drk-green-octo);
+  font-weight: 700;
+  text-decoration: none;
+  background-color: var(--color-cream);
+  border-radius: 6px;
+  transform: translateY(-200%);
+  transition: transform 0.2s ease-in-out;
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

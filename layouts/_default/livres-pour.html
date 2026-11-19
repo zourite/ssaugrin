@@ -1,44 +1,40 @@
 {{ define "main" }}
-{{- $heroURL := "" -}}
-{{- with .Params.hero -}}
-  {{- $heroURL = partial "hero-url.html" (dict "src" .) | default . -}}
-{{- end -}}
-<header id="hero"{{ with $heroURL }} style="background-image:url({{ . }})"{{ end }}>
-  <h1>{{ .Title }}</h1>
-</header>
 
-<section id="single" class="page">
-  <article id="post-content">
-    <p>Ce que j'ai à te proposer ce sont éssentiellement des livres qui pourront t'aider à être encore plus parfait que
-      tu
-      l'es déjà. J'ai un tableau trello qui recense des livres que j'ai lu et que j'aimerais lire, les livres sont
-      classés
-      par categorie. Le tableau se nomme <a href="https://trello.com/b/QcRsNCYA/des-livres-pour" target="_blank"> Des
-        livres
-        pour ... </a>, n'hésite pas à jetter un oeil.</p>
+{{ partial "page-band.html" (dict
+  "eyebrow" "Lectures"
+  "title" .Title
+  "lead" "Des livres qui m'ont aidée à voir plus clair, classés par thème. Ils sont aussi rassemblés sur un tableau Trello.") }}
 
-    <h2>Se comprendre</h2>
+<div class="page-body page-body-narrow">
+  <div class="page-inner">
+    <article id="post-content" class="surface">
 
-    <p>
-      A mon avis, pour trouver le chemin du bien être il est éssentiel de comprendre ce que l'on est et de l'accepter.
-      Je
-      peux t'assurer que j'ai eu aussi des soucis avec l'acceptation de soi, mais il y a des livres qui m'ont aider à
-      voir
-      plus clair.</p>
+      <p>Ce que j'ai à te proposer, ce sont essentiellement des livres qui pourront t'aider à
+        être encore plus parfait que tu l'es déjà. J'ai un tableau Trello qui recense les
+        livres que j'ai lus et ceux que j'aimerais lire, classés par catégorie. Il s'appelle
+        <a href="https://trello.com/b/QcRsNCYA/des-livres-pour" target="_blank" rel="noopener noreferrer">Des
+        livres pour…</a> (nouvelle fenêtre), n'hésite pas à y jeter un œil.</p>
 
-      {{ .Scratch.Set "books" hugo.Data.books.communiquer.products | first 6 }}
-      {{ partial "livre" . }}
+      <h2 id="se-comprendre">Se comprendre</h2>
 
+      <p>À mon avis, pour trouver le chemin du bien-être, il est essentiel de comprendre ce que
+        l'on est et de l'accepter. Je peux t'assurer que j'ai eu, moi aussi, des soucis avec
+        l'acceptation de soi — mais certains livres m'ont aidée à voir plus clair.</p>
 
-    <h2>Communiquer</h2>
+      {{ partial "livre.html" (dict "books" (first 6 hugo.Data.books.comprendre.products)) }}
 
-    <p>Les relations humaines sont parfois très complexe. Au coeur d'une relation ce qui fait souvent défaut c'est la
-      communication. Je ne suis pas une grande communicante dans l'âme, mais des livres m'ont appris à mieux communiquer
-      avec les autres.</p>
+      <h2 id="communiquer">Communiquer</h2>
 
-      {{ .Scratch.Set "books" hugo.Data.books.comprendre.products | first 6 }}
-      {{ partial "livre" . }}
+      <p>Les relations humaines sont parfois très complexes. Au cœur d'une relation, ce qui fait
+        souvent défaut, c'est la communication. Je ne suis pas une grande communicante dans
+        l'âme, mais des livres m'ont appris à mieux communiquer avec les autres.</p>
 
-  </article>
-</section>
+      {{ partial "livre.html" (dict "books" (first 6 hugo.Data.books.communiquer.products)) }}
+
+      <p class="text-sm">Les liens vers Amazon sont des liens affiliés : voir les
+        <a href="/mentions-legales/">mentions légales</a>.</p>
+
+    </article>
+  </div>
+</div>
 {{ end }}
