@@ -16,95 +16,180 @@
 }
 
 #livres-page {
-  /* Les sections sont pleine largeur pour que les bandeaux aillent d'un
-     bord à l'autre ; c'est .page-inner qui recentre le contenu. */
-  .livres-section {
-    padding-block: 2.5rem;
-
-    @media (min-width: 768px) {
-      padding-block: 3rem;
-    }
-
-    h2 {
-      margin-top: 0;
-    }
+  /* Plus d'alternance de bandeaux : les quatre thèmes ont la même
+     structure, donc le changement de fond ne signalait rien et découpait
+     la page en blocs qui se concurrençaient. La séparation est désormais
+     typographique. */
+  .livres-intro {
+    margin-bottom: 3rem;
   }
 
-  .livres-highlight {
-    display: flex;
-    justify-content: center;
+  .livres-theme + .livres-theme {
+    margin-top: 1.5rem;
   }
 
-  .livres-note {
-    margin: 2.5rem 0 0;
-    padding-top: 1.25rem;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    border-top: 1px solid var(--border-soft);
+  /* Pas de trait jaune au-dessus du titre : la carte porte déjà le liseré. */
+  .livres-theme h2 {
+    margin: 0;
+    color: var(--color-drk-green-octo);
+    font-size: var(--text-2xl);
   }
 }
 
-.book-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
-  max-width: 48rem;
+/* --------------------------------------------------------------------------
+   L'étagère : une rangée par thème, qui défile horizontalement.
+   Le nombre de livres par thème n'a plus d'incidence sur la mise en page —
+   une grille laissait des trous quand un thème n'en comptait que deux.
+   -------------------------------------------------------------------------- */
+.book-shelf {
+  /* Hauteur de la zone de couverture : une seule source, dont dépendent la
+     ligne de base des livres et la position de la planche. */
+  --cover-h: 11rem;
+  /* Une couverture fait environ deux tiers de sa hauteur en largeur. La
+     colonne prend cette largeur : avant, elle faisait 13rem pour une
+     couverture d'environ 8rem, d'où le vide à droite de chaque livre. */
+  --cover-w: calc(var(--cover-h) * 0.66);
+
+  /* flex-start, pas flex-end : aligner par le bas incluait le texte, donc
+     une fiche sans auteur descendait sous la planche. Par le haut, avec une
+     zone de couverture à hauteur fixe, toutes les bases coïncident. */
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
   margin: 1.75rem 0 0;
   padding: 0;
   list-style: none;
 
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+
+  /* La rangée déborde jusqu'au bord de l'écran : on voit qu'elle continue.
+     Le padding compense la marge négative pour que le premier livre reste
+     aligné sur le texte. */
+  --shelf-gutter: 1rem;
+
+  margin-inline: calc(-1 * var(--shelf-gutter));
+  padding-inline: var(--shelf-gutter);
+  scroll-padding-left: var(--shelf-gutter);
+
+  /* Place pour la couverture soulevée au survol et pour le contour de focus. */
+  padding-block: 0.5rem 1rem;
+
+  /* L'étagère, en trois couches de fond, de haut en bas :
+     - la face supérieure de la planche, sur laquelle les livres reposent
+       (sa moitié arrière est cachée par le pied des couvertures) ;
+     - le chant de la planche, plus sombre, vu de face ;
+     - l'ombre portée sous la planche.
+     Teinte chêne clair, dérivée du crème de la charte. Un fond d'élément ne
+     défile pas avec le contenu d'une zone scrollable : les livres glissent
+     sur l'étagère, qui reste en place. */
+  --shelf-base: calc(0.5rem + var(--cover-h));
+
+  background-image:
+    linear-gradient(to bottom, #c9a46b, #a9803f 85%, #8a6633),
+    linear-gradient(to bottom, #dcc08e, #ecd6ae),
+    linear-gradient(to bottom, rgba(60, 40, 15, 0.28), transparent);
+  background-repeat: no-repeat;
+  background-size:
+    100% 0.8rem,
+    100% 0.6rem,
+    100% 0.9rem;
+  background-position:
+    0 calc(var(--shelf-base) + 0.15rem),
+    0 calc(var(--shelf-base) - 0.45rem),
+    0 calc(var(--shelf-base) + 0.95rem);
+
+  /* Les livres s'effacent aux deux bords au lieu d'être tranchés net. */
+  mask-image: linear-gradient(to right,
+    transparent 0, #000 var(--shelf-gutter),
+    #000 calc(100% - 2.5rem), transparent 100%);
+
   @media (min-width: 640px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    --cover-h: 13rem;
+
+    gap: 1.25rem;
   }
+
+  @media (min-width: 976px) {
+    --cover-h: 14rem;
+
+    perspective: 1400px;
+  }
+
+  > .book {
+    flex: 0 0 var(--cover-w);
+    scroll-snap-align: start;
+  }
+
+  /* Barre de défilement discrète plutôt que masquée : c'est l'indice que
+     la rangée continue. */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(17, 75, 95, 0.16) transparent;
+}
+
+.band-dark .book-shelf {
+  scrollbar-color: rgba(245, 230, 200, 0.45) transparent;
 }
 
 .book {
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  transition: transform 0.25s ease-out;
-
-  &:hover {
-    transform: translateY(-3px);
-  }
 
   &:focus-within {
     outline: 2px solid var(--color-orange);
-    outline-offset: 2px;
+    outline-offset: 4px;
   }
 
-  /* Proportion d'un livre, couverture entière : l'ancien `h-64` la rognait. */
+  /* Hauteur fixe, et non min-height : une couverture plus haute que les
+     autres poussait sa propre boîte, donc chaque livre avait sa base à lui
+     et la rangée donnait l'impression de flotter. Ici les bas sont tous sur
+     la même ligne et seules les hauteurs varient, comme sur une étagère. */
   .book-cover {
-    aspect-ratio: 2 / 3;
-    padding: 0.75rem;
-    background-color: rgba(2, 128, 144, 0.06);
+    display: flex;
+    align-items: flex-end;
+    height: var(--cover-h, 11rem);
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+      filter: drop-shadow(4px 5px 7px rgba(0, 0, 0, 0.3));
     }
   }
 
-  .book-body {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.85rem;
-  }
-
+  /* Trois lignes au maximum : la colonne a la largeur de la couverture,
+     un titre long a besoin d'une ligne de plus. */
   .book-title {
-    margin: 0;
-    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin: 0.7rem 0 0;
+
+    /* Sur l'étagère, le titre se place sous le chant de la planche. */
+    .book-shelf & {
+      margin-top: 1.6rem;
+    }
+    font-size: 0.88rem;
+    font-weight: 700;
     line-height: 1.35;
 
     a {
       color: var(--color-drk-green-octo);
-      text-decoration: none;
 
-      /* Action principale : toute la carte mène à la fiche Trello. */
+      /* Le soulignement est visible d'emblée : c'est ce qui signale que la
+         fiche est cliquable, le survol ne fait que l'affirmer. */
+      text-decoration: underline;
+      text-decoration-color: rgba(17, 75, 95, 0.3);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      transition: text-decoration-color 0.2s ease-in-out;
+
+      /* Action principale : toute la fiche mène à la page du livre. */
       &::after {
         content: "";
         position: absolute;
@@ -112,8 +197,8 @@
       }
 
       &:hover {
-        text-decoration: underline;
-        text-underline-offset: 3px;
+        text-decoration-color: var(--color-dragon);
+        text-decoration-thickness: 2px;
       }
 
       &:visited {
@@ -126,30 +211,207 @@
     }
   }
 
-  /* Au-dessus de la zone cliquable du titre, sinon il serait inatteignable. */
-  .book-buy {
-    position: relative;
-    z-index: 1;
-    margin: auto 0 0;
-    font-size: 0.8rem;
+  /* Une seule ligne : un nom d'auteur qui passe à la ligne décalerait
+     lui aussi la fiche voisine. */
+  .book-author {
+    overflow: hidden;
+    margin: 0.2rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Desktop uniquement : on attrape le livre sur l'étagère.
+   Rien de tout ceci ne s'applique en mobile — pas de survol sur un écran
+   tactile, et la page doit rester légère pour une arrivée depuis Instagram.
+   -------------------------------------------------------------------------- */
+@media (min-width: 976px) {
+  .book .book-cover {
+    transform-origin: left center;
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .book .book-cover img {
+    transition: filter 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .book:hover .book-cover,
+  .book:focus-within .book-cover {
+    transform: translateY(-10px) rotateY(-14deg) scale(1.04);
+  }
+
+  /* drop-shadow et non box-shadow : l'ombre épouse la couverture, qui n'a
+     plus de boîte autour d'elle. */
+  .book:hover .book-cover img,
+  .book:focus-within .book-cover img {
+    filter: drop-shadow(14px 14px 18px rgba(0, 0, 0, 0.45));
+  }
+
+}
+
+@keyframes row-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes book-slide {
+  from {
+    opacity: 0;
+    transform: translateX(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Animations liées au défilement : chaque rangée se lève quand elle entre
+   dans la page, chaque livre se glisse en place quand il entre dans sa
+   rangée. Là où ce n'est pas encore implémenté (Firefox, Safari), tout
+   s'affiche normalement — rien à rattraper. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .livres-theme {
+      animation: row-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+
+    /* view(inline) : l'axe horizontal de l'étagère, pas celui de la page. */
+    .book-shelf > .book {
+      animation: book-slide linear both;
+      animation-timeline: view(inline);
+      animation-range: entry 0% entry 85%;
+    }
+  }
+}
+
+
+
+/* ------------------------------ Fiche livre ------------------------------ */
+
+#livre-page {
+  .page-inner {
+    max-width: 58rem;
+  }
+
+  .livre-grid {
+    display: grid;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 15rem minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: start;
+    }
+  }
+
+  /* La couverture suit la lecture du résumé. */
+  .livre-aside {
+    @media (min-width: 768px) {
+      position: sticky;
+      top: calc(var(--header-h) + 1.5rem);
+    }
+  }
+
+  /* Même traitement que sur l'étagère : la couverture n'est pas encadrée. */
+  .livre-cover {
+    max-width: 13rem;
+
+    @media (min-width: 768px) {
+      max-width: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      filter: drop-shadow(6px 8px 12px rgba(0, 0, 0, 0.3));
+    }
+  }
+
+  /* Le bloc d'achat clôt la colonne de texte : on le rencontre une fois le
+     résumé et l'extrait lus. */
+  .livre-achat {
+    margin-top: 2rem;
+    padding: 1.25rem;
+
+    @media (min-width: 768px) {
+      padding: 1.5rem;
+    }
+  }
+
+  .livre-achat-label {
+    margin: 0 0 0.85rem;
+    color: var(--color-drk-green-octo);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .livre-achat-note {
+    margin: 0.9rem 0 0;
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .livre-contenu {
+    h2:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .livre-voisins {
+    margin-top: 3rem;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  /* Retour en lien plutôt qu'en bouton : c'est une sortie, pas une action. */
+  .livre-retour {
+    margin: 2rem 0 0;
+    font-size: 0.9rem;
 
     a {
-      color: var(--color-lgt-green-octo);
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 2px;
+      color: var(--color-drk-green-octo);
+      font-weight: 700;
+      text-decoration-color: rgba(17, 75, 95, 0.35);
+      text-underline-offset: 3px;
 
       &:hover {
-        color: var(--color-dragon);
+        text-decoration-color: var(--color-dragon);
       }
 
       &:visited {
-        color: var(--color-lgt-green-octo);
+        color: var(--color-drk-green-octo);
       }
     }
   }
 
-  .ext-icon {
-    margin-left: 0.25rem;
+  .livre-retour-haut {
+    margin: 0 0 1.75rem;
+  }
+}
+
+/* Les rangées sont posées dans des cartes, comme les autres blocs du site :
+   l'étagère déborde alors jusqu'au bord intérieur de la carte. */
+.surface .book-shelf {
+  --shelf-gutter: 1.5rem;
+
+  @media (min-width: 768px) {
+    --shelf-gutter: 2rem;
   }
 }

@@ -8,7 +8,6 @@
 /* .post-index (la frise du carnet) garde volontairement son propre
    traitement : panneau à coins ronds et ombre douce. */
 .surface,
-.book,
 .contact-card,
 .post-nav a {
   background-color: var(--surface);

@@ -250,19 +250,4 @@
     line-height: 1.5;
   }
 
-  /* Sur fond clair, le panneau garde le liseré mais inverse ses couleurs. */
-  .band-light & {
-    background: rgba(2, 128, 144, 0.06);
-    border-color: rgba(17, 75, 95, 0.18);
-    border-left-color: var(--color-yellow);
-    box-shadow: none;
-
-    blockquote {
-      color: var(--color-drk-green-octo);
-    }
-
-    p {
-      color: #4a4a4a;
-    }
-  }
 }

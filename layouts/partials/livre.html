@@ -1,34 +1,30 @@
 {{- /*
-  Grille de livres.
-  Params : books (slice de produits).
-  Chaque carte n'a qu'une action principale — la fiche Trello, portée par
-  le titre et étendue à toute la carte — plus un lien Amazon explicite.
+  Étagère de livres : une rangée qui défile horizontalement.
+  Params : books (slice de pages de la section « livres »), label (nom
+  accessible de la rangée).
+  Pas de tabindex sur le conteneur : les fiches sont des liens, donc la
+  zone est déjà atteignable et défilable au clavier sans ajouter un arrêt
+  de tabulation en double.
 */ -}}
-<ul class="book-grid">
+<ul class="book-shelf"{{ with .label }} aria-label="{{ . }}"{{ end }}>
   {{ range .books }}
   <li class="book">
 
     <div class="book-cover">
+      {{ with .Params.cover }}
       {{ partial "image.html" (dict
-        "src" .image
+        "src" .
         "alt" ""
-        "max" 400
-        "sizes" "(min-width: 640px) 200px, 45vw") }}
+        "max" 480
+        "sizes" "(min-width: 976px) 148px, (min-width: 640px) 137px, 116px") }}
+      {{ end }}
     </div>
 
-    <div class="book-body">
-      <h3 class="book-title">
-        <a href="{{ .trello }}" target="_blank" rel="noopener noreferrer">
-          {{ .titre }}{{ partial "ext-icon.html" }}
-        </a>
-      </h3>
+    <h3 class="book-title">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h3>
 
-      <p class="book-buy">
-        <a href="{{ .amazon }}" target="_blank" rel="noopener noreferrer sponsored">
-          Sur Amazon<span class="sr-only"> : {{ .titre }}</span>{{ partial "ext-icon.html" }}
-        </a>
-      </p>
-    </div>
+    {{ with .Params.auteur }}<p class="book-author">{{ . }}</p>{{ end }}
 
   </li>
   {{ end }}
