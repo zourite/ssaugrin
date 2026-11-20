@@ -1,17 +1,20 @@
 @import "tailwindcss";
 @import "typo/font.css";
 @import "typo/heading.css";
-@import "layout/header.css";
 @import "layout/base.css";
+@import "layout/header.css";
+@import "layout/page.css";
 @import "layout/footer.css";
+@import "components/button.css";
+@import "components/card.css";
+@import "components/helpers.css";
 @import "main/error.css";
 @import "main/post-pages.css";
 @import "main/single.css";
-@import "pages/contact.css";
 @import "pages/about.css";
+@import "pages/contact.css";
 @import "pages/home.css";
-@import "components/helpers.css";
-@import "components/button.css";
+@import "pages/livres.css";
 @import "plugins/animation.css";
 @import "plugins/syntax.css";
 
@@ -33,6 +36,34 @@
   --color-cream: #f5e6c8;
   --font-sans: "Nunito", Helvetica, sans-serif;
   --font-mono: "Kalam Regular", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --header-height: 40px;
+}
+
+/* Variables de mise en page : volontairement HORS de @theme.
+   Tailwind élague les variables de thème qu'aucun utilitaire n'utilise ;
+   comme celles-ci ne servent qu'à la CSS écrite à la main, elles pouvaient
+   disparaître — et tout calc() qui les utilisait devenait invalide
+   (padding retombé à 0 sur les bandeaux de titre). */
+:root {
+  /* Hauteur réelle de l'en-tête fixe : toutes les pages s'en servent pour
+     réserver la place sous le header (plus aucune valeur codée en dur). */
+  --header-h: 48px;
   --header-z-index: 56;
+  --footer-h: 40px;
+  --page-max: 72rem;
+  --prose-max: 46rem;
+  --radius-card: 10px;
+  --radius-btn: 6px;
+  --card-liseret: 4px;
+  --shadow-card: 0 16px 28px -22px rgba(0, 0, 0, 0.6);
+  --surface: #ffffff;
+  --surface-muted: var(--color-light);
+  --border-soft: rgba(17, 75, 95, 0.15);
+  --text-muted: #5f6b70;
+  --band: linear-gradient(0deg, #3498db 0%, var(--color-blue-deep) 74%);
+}
+
+@media (min-width: 976px) {
+  :root {
+    --header-h: 60px;
+  }
 }

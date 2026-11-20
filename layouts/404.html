@@ -1,36 +1,30 @@
 {{ define "main"}}
 {{- $bg := partial "hero-url.html" (dict "src" "/img/main/404.jpg" "width" 1200 "quality" 62) -}}
-{{- $border := partial "hero-url.html" (dict "src" "/img/main/watercolor-paint-background.jpg" "width" 600) -}}
-<section id="p404" class="w-full flex items-center top-round-rainbow "{{ with $bg }} style="background-image: url({{ . }})"{{ end }}>
-      <div class="md:w-11/12 md:mx-auto lg:w-8/12 pt-16">
+<section id="p404"{{ with $bg }} style="background-image: url({{ . }})"{{ end }}>
+  <div class="p404-inner">
 
-        {{ partial "image.html" (dict "src" "/img/main/unicorn.png" "alt" "La licorne Perdu" "class" "mx-auto -mb-3" "max" 400) }}
-        <header class="mb-4"> 
-            <h1 class="text-center"> Tu t'es perdu petit padawan !</h1> 
-        </header>   
-        
-        <article class="card">
-             
-            <div id="posts-404" class="p-2"{{ with $border }} style="border-image: url({{ . }}) 60"{{ end }}>
-                
-                <ul>
-                    
-                    {{ range first (.Site.Params.sidebar.postAmount | default 10) (where .Site.Pages  "Type" "post") }}
-                
-                    <li class="mb-2">
-                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    
-                    </li>
-                    
-                    {{ end }}
-                
-                </ul>
-            
-            </div>  
-    
-        </article>
-    
+    {{ partial "image.html" (dict
+      "src" "/img/main/unicorn.png"
+      "alt" ""
+      "class" "p404-unicorn"
+      "max" 400
+      "sizes" "160px") }}
+
+    <h1>Tu t'es perdu, petit padawan !</h1>
+    <p class="p404-lead">Cette page n'existe pas (ou plus). Voici les derniers articles,
+      histoire de retrouver ton chemin.</p>
+
+    <div class="surface p404-posts">
+      <h2>Les derniers articles</h2>
+      <ul>
+        {{ range first 8 (where .Site.RegularPages "Type" "post") }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
     </div>
 
+    <p class="mt-6"><a class="btn" href="/">Retour à l'accueil</a></p>
+
+  </div>
 </section>
 {{ end }}

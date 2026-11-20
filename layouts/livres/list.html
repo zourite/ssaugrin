@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{- $livres := .RegularPages -}}
+
+{{ partial "page-band.html" (dict
+  "eyebrow" "Lectures"
+  "title" .Title
+  "lead" "Des livres qui m'ont aidée à voir plus clair, classés par thème.") }}
+
+<div id="livres-page" class="page-body">
+  <div class="page-inner">
+
+    <div class="prose-column livres-intro">
+      <p>Ce que j'ai à te proposer, ce sont essentiellement des livres qui pourront t'aider à
+        être encore plus parfait que tu l'es déjà. Rien d'obligatoire, rien de prescrit&nbsp;:
+        juste des lectures qui m'ont déplacée. Pas de classement, pas de note sur cinq.</p>
+      <p>{{ len $livres }} titres, quatre thèmes. Chaque couverture ouvre une fiche avec le
+        résumé et un extrait.</p>
+    </div>
+
+    {{/* L'ordre des thèmes vient du front matter de _index.md, pas d'un tri
+         automatique : GroupByParam ignore les paramètres numériques et
+         classerait les thèmes par ordre alphabétique. */}}
+    {{ range .Params.themes }}
+    {{- $theme := . -}}
+    {{- with where $livres "Params.theme" $theme -}}
+    {{- $id := printf "theme-%s" (urlize $theme) -}}
+    <section class="livres-theme surface" aria-labelledby="{{ $id }}">
+      <h2 id="{{ $id }}">{{ $theme }}</h2>
+      {{ partial "livre.html" (dict "books" . "label" (printf "Livres du thème %s" $theme)) }}
+    </section>
+    {{- end }}
+    {{ end }}
+
+  </div>
+</div>
+{{ end }}

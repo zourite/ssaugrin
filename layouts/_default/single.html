@@ -5,36 +5,59 @@
   {{- $heroURL = partial "hero-url.html" (dict "src" .) | default . -}}
 {{- end -}}
 
-<header id="hero"{{ with $heroURL }} style="background-image:url({{ . }})"{{ end }}>
+<header id="article-hero"{{ with $heroURL }} style="background-image:url({{ . }})"{{ end }}>
+  <div class="hero-inner">
+    {{ with .Params.categories }}
+    <ul class="hero-cats">
+      {{ range . }}<li><span class="chip">{{ . }}</span></li>{{ end }}
+    </ul>
+    {{ end }}
 
-  <h1> {{ .Title }} </h1>
-  
+    <h1>{{ .Title }}</h1>
+
+    {{ partial "post-meta.html" . }}
+  </div>
 </header>
 
-<section id="single" class="single-post">
-  
-  <ul id="meta" class="flex">
+<div class="page-body page-body-narrow">
+  <section id="single">
 
-    <li class="mr-2">
-     
-      {{ partial "fontawesome.html" "calendar-alt-regular" }} 
-      <time class="published" datetime="{{ .Date }}">
-        <!-- {{ default (i18n "date_format") | .Date.Format  }} -->
-        {{ .Date.Day }} {{ index hugo.Data.months "fr" (printf "%d" .Date.Month) }} {{ .Date.Year }}
-      </time>
-    </li>
+    <article id="post-content" class="surface">
+      {{ .Content | emojify }}
+    </article>
 
-    <li>
-      {{ partial "fontawesome.html" "stopwatch-solid" }} {{ .ReadingTime }} minutes de lecture
-    </li>
+    <div class="post-footer">
 
-  </ul>
+      {{ with .Params.tags }}
+      <ul class="post-tags">
+        <li class="sr-only">Mots-clés :</li>
+        {{ range . }}<li><span class="chip">#{{ . }}</span></li>{{ end }}
+      </ul>
+      {{ end }}
 
-  <article id="post-content">
+      {{ $prev := .PrevInSection }}
+      {{ $next := .NextInSection }}
+      {{ if or $prev $next }}
+      <nav class="post-nav" aria-label="Articles précédent et suivant">
+        {{ with $prev }}
+        <a class="post-nav-prev" href="{{ .RelPermalink }}" rel="prev">
+          <span class="nav-label">← Article précédent</span>
+          <span class="nav-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+        {{ with $next }}
+        <a class="post-nav-next" href="{{ .RelPermalink }}" rel="next">
+          <span class="nav-label">Article suivant →</span>
+          <span class="nav-title">{{ .Title }}</span>
+        </a>
+        {{ end }}
+      </nav>
+      {{ end }}
 
-    {{ .Content | emojify }}
+      <p><a class="btn-ghost" href="/blog/">Tout le carnet de bord</a></p>
 
-  </article>
+    </div>
 
-</section>
+  </section>
+</div>
 {{ end }}

@@ -1,36 +1,49 @@
 #footer {
-
-  background-color : #2c3e50;
-  box-shadow: 0 -3px 6px  rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
-  height : 35px;
+  background-color: var(--color-blue-deep);
+  box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.19);
 
   #nav-foot {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* Copyright à gauche, liens poussés à droite — comme à l'origine. */
+    justify-content: space-between;
+    gap: 0.25rem 1rem;
+    /* min-height plutôt que height : plus de débordement quand ça passe
+       sur deux lignes en mobile. */
+    min-height: var(--footer-h);
+    padding: 0.4rem 1rem;
+    color: #fff;
 
-    align-items : center;
-    justify-content : center;
-    height : 100%;
-    color : #fff;
-    
+    p {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin: 0;
+    }
+
     .nav-links {
+      display: flex;
+      gap: 0.75rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
 
-      li {
+      a {
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 400;
+        text-decoration: underline;
+        text-underline-offset: 2px;
 
-        margin-left: 10px;
-
-        a {
-          text-decoration: none;
-          font-weight: 400;
-          color : #fff;
-          font-size: 0.75rem;
-          &:visited {
-            color: inherit;
-          }
+        &:visited {
+          color: inherit;
         }
       }
     }
   }
 
   .inset-text {
-    border-right : 0;
+    border-right: 0;
   }
 }

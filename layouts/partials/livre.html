@@ -1,24 +1,31 @@
-<div class="flex">
-{{ range $.Scratch.Get "books"}}
-<div class="p-2 ">
-  <div class="card">
-    <div class="h-64 overflow-hidden">
-      <a href="{{ .amazon }}" target="_blank">
+{{- /*
+  Étagère de livres : une rangée qui défile horizontalement.
+  Params : books (slice de pages de la section « livres »), label (nom
+  accessible de la rangée).
+  Pas de tabindex sur le conteneur : les fiches sont des liens, donc la
+  zone est déjà atteignable et défilable au clavier sans ajouter un arrêt
+  de tabulation en double.
+*/ -}}
+<ul class="book-shelf"{{ with .label }} aria-label="{{ . }}"{{ end }}>
+  {{ range .books }}
+  <li class="book">
 
-        {{ partial "image.html" (dict
-          "src" .image
-          "alt" .titre
-          "title" .titre
-          "style" "width: 100%; height: auto"
-          "max" 400
-          "sizes" "(min-width: 768px) 220px, 45vw") }}
-      </a>
+    <div class="book-cover">
+      {{ with .Params.cover }}
+      {{ partial "image.html" (dict
+        "src" .
+        "alt" ""
+        "max" 480
+        "sizes" "(min-width: 976px) 148px, (min-width: 640px) 137px, 116px") }}
+      {{ end }}
     </div>
 
-    <div class="btn-trello">
-      <a href="{{ .trello }}" target="_blank">Voir la fiche 📚</a>
-    </div>
-  </div>
-</div>
-{{ end }}
-</div>
+    <h3 class="book-title">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h3>
+
+    {{ with .Params.auteur }}<p class="book-author">{{ . }}</p>{{ end }}
+
+  </li>
+  {{ end }}
+</ul>

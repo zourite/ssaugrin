@@ -1,6 +1,5 @@
-<span class="inline-svg" role="presentation">
-    {{- $fname:=print "fontawesome/" . ".svg" -}}
-    {{- $path:="<path" -}}
-    {{- $fill:="<path" -}}
-    {{ replace (readFile $fname) $path $fill | safeHTML }}
+{{- /* Icône décorative : masquée aux technologies d'assistance. */ -}}
+<span class="inline-svg" aria-hidden="true">
+    {{- $fname := print "fontawesome/" . ".svg" -}}
+    {{- readFile $fname | safeHTML -}}
 </span>

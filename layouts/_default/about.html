@@ -1,178 +1,170 @@
 {{ define "main" }}
-{{ $index := 0 }}
-<section id="about-page">
+<div id="about-page">
 
-  <section id="me-area" class="">
+  {{/* Pas de surtitre « À propos » : la navigation marque déjà la page
+       active. Le chapô ne reprend plus « mon coin d'Internet », que le
+       troisième paragraphe développe. */}}
+  {{ partial "page-band.html" (dict
+    "title" "Zourite"
+    "lead" "Curieuse d’esprit, geek dans l’âme et artisane du web à La Réunion.") }}
 
-    <div class="container mx-auto px-4">
+  <!-- Section 1 : Qui suis-je / Zourite -->
+  <section id="me-area" class="about-section" aria-labelledby="me-title">
+    <div class="page-inner">
+      <div class="split-2">
 
-      <div class="flex flex-col md:flex-row items-center gap-3">
-
-        <div class="hidden md:block md:w-1/2">
-
+        <div class="portrait">
           {{ partial "image.html" (dict
             "src" "/img/zourite-maveli.png"
-            "alt" ""
-            "class" "rotate shadow-img block mx-auto"
-            "style" "max-width: 300px; height: auto"
+            "alt" "Illustration de Zourite avec le drapeau réunionnais"
+            "class" "rotate shadow-img"
             "max" 700
             "sizes" "300px") }}
-
         </div>
 
-        <div id="intro-texte" class="w-full md:w-1/2">
+        <div id="intro-texte">
+          <h2 id="me-title">Qui écrit ici</h2>
 
-          <h1>Professionnellement parlant</h1>
+          <p>Moi, c’est Sonia. Sur le web et ailleurs, on m’appelle surtout <strong>Zourite</strong> — un clin d’œil au
+            <a href="https://www.youtube.com/watch?v=0cJAvnyV_HI" target="_blank" rel="noopener noreferrer">civet zourite{{ partial "ext-icon.html" }}</a>, un plat emblématique de mon île, La Réunion, où je vis et travaille.</p>
 
-          <p>Fort de plus de dix ans d'expérience en tant que développeur web, j'ai principalement exercé en agence de communication. Ce parcours m'a permis de concevoir des solutions numériques simples, sécurisées et performantes. 🤓
-          </p>
+          <p>C’est d’ailleurs cet attachement viscéral à mon île qui m’a poussée à créer
+            <a href="https://974attitude.fr/" target="_blank" rel="noopener noreferrer"><strong>974 Attitude</strong>{{ partial "ext-icon.html" }}</a>, un projet ouvert et indépendant dans lequel je documente la biodiversité, les recettes traditionnelles et les sentiers réunionnais.</p>
 
-          <p>On me connaît sous le pseudonyme de "Zourite", en hommage au "<a
-            href="https://www.youtube.com/watch?v=0cJAvnyV_HI" target="_blank">civet zourite</a>", une spécialité de mon île, La Réunion, que j'apprécie particulièrement.
-          </p>
-
-          <p>Je réside à La Réunion, un département français [974] niché au cœur de l’océan Indien. J'ai également eu l’opportunité de me rendre en Guyane française pour une mission en tant que facilitateur dans le cadre d'une formation labellisée <a target="_blank" href="https://www.grandeecolenumerique.fr/">Grande École
-              Numérique.</a></p>
-
-          <p>Enfin, j'interviens régulièrement comme membre de jury pour les titres professionnels de <strong>Développeur web </strong>
-            et <strong>Concepteur d'application</strong></p>
-
+          <p>Ce site n’est ni une vitrine d’agence, ni un portfolio commercial. C’est mon coin d’Internet à moi&nbsp;:
+            un endroit calme, sans algorithme qui décide de ce qu’on doit lire, sans publicité et sans course aux métriques.
+            J’y écris ce que j’observe, ce que j’apprends et ce qui me questionne.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <section id="competences-area">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-col md:flex-row ">
-        <div class="w-full md:w-1/2">
-          <h2> Mes compétences en développement web</h2>
-          <p>
-            Le domaine du développement web est vaste. Les technologies sont nombreuses. Je maitrise les technologies de
-            base HTML / CSS / JS.
-            Cependant mes compétences ne s'arrette pas à ces langages.
-          </p>
+  <!-- Section 2 : Le côté GEEK (bandeau dégradé emblématique) -->
+  <section id="geek-area" class="about-section band-dark" aria-labelledby="geek-title">
+    <div class="page-inner">
+      <div class="split-2">
 
-          <p> Au fil des années, je me suis spécialisé en PHP / MYSQL. Je maitrise le CMS WordPress aussi bien que
-            l'incontournable framework Laravel. Cependant avec l'émergence des frameworks JS. Je me suis intéréssée à
-            VueJS.</p>
+        <div>
+          <h2 id="geek-title">L’esprit geek&nbsp;: bidouille, simplicité et autonomie</h2>
 
-          <h3>Vous connaissez la jamstack ?</h3>
-          <p> Si vous ne connaissez pas encore ce que c'est la Jamstack, je vous invite à lire cet article : <a
-              href="https://jamstatic.fr/2019/02/07/c-est-quoi-la-jamstack">C'est quoi la Jamstack au juste ?</a>
-            Si je vous en parle c'est par ce que ce site est réalisé à l'aide du générateur de site static <a>Hugo</a>
-          </p>
+          <p>Être geek, ce n’est pas collectionner des gadgets coûteux ou s’extasier devant le dernier outil à la mode.
+            Pour moi, c’est d’abord une tournure d’esprit&nbsp;: <strong>aimer comprendre comment les choses fonctionnent sous le capot.</strong></p>
+
+          <p>J’aime la ligne de commande, les outils légers, les formats pérennes et le logiciel libre.
+            Les systèmes qui durent vingt ans sans exiger une mise à jour par semaine, les fichiers texte bruts, les générateurs statiques comme Hugo et les sauvegardes chiffrées qui tournent la nuit sans réveiller personne.</p>
+
+          <p>J’ai une sainte horreur des usines à gaz et des solutions complexes inventées pour résoudre des problèmes qui n’existaient pas.
+            L’autonomie numérique commence par la sobriété.</p>
         </div>
-        <div class="w-full md:w-1/2 flex justify-center items-center">
-          <div class="flex flex-wrap gap-1 md:gap-4 justify-center items-center">
 
-            {{ range hugo.Data.logos.logo.skill }}
-
-            <div class="card basis-1/4 lg:basis-1/5">
-              {{ partial "image.html" (dict
-                "src" .image
-                "alt" .titre
-                "title" .titre
-                "class" "p-2 center"
-                "style" "margin: auto; max-width: 140px; height: auto"
-                "max" 280
-                "sizes" "140px") }}
-            </div>
-
-
-            {{ end }}
-
+        <div class="geek-highlight">
+          <div class="accent-card">
+            <blockquote>
+              «&nbsp;La technique devrait toujours nous libérer du temps, jamais nous en voler.&nbsp;»
+            </blockquote>
+            <p>
+              Des outils choisis pour leur robustesse, leur transparence et leur légèreté. Rien de superflu.
+            </p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <section id="certification">
+  <!-- Section 3 : Observer les rouages / curiosité -->
+  <section id="curiosite-area" class="about-section" aria-labelledby="curiosite-title">
+    <div class="page-inner">
+      <div class="split-2">
 
-    <div class="container mx-auto px-4">
+        <div>
+          <h2 id="curiosite-title">Observer les rouages&nbsp;: la curiosité avant tout</h2>
 
-      <h2>Des certifications, pour developpeur ?! J'en ai !</h2>
+          <p>Le code n’est qu’un outil parmi d’autres. Ce qui me passionne vraiment, c’est d’observer les mécanismes — qu’ils soient faits de serveurs ou d’humains.</p>
 
-        <div class="flex flex-col md:flex-row">
+          <p>Je passe beaucoup de temps le nez dans les livres, les documentaires de société et les essais de fond.
+            J’aime disséquer les récits qu’on nous vend comme des évidences&nbsp;: le culte de l’urgence, les mirages du mérite individuel, la dépendance consentie aux plateformes ou l’injonction permanente à la productivité.</p>
 
-          <div class="flex gap-6 basis-1/2 items-center justify-center mt-2">
+          <p><em>(C’est fou le nombre de vérités toutes faites qui s’effondrent dès qu’on prend cinq minutes pour regarder la ligne de départ.)</em></p>
+        </div>
 
-            {{ range $index, $val := hugo.Data.logos.logo.certif }}
+        <div class="curiosite-side">
+          <div class="surface">
+            <h3>Envie d’échanger&nbsp;?</h3>
+            <p>Si ces sujets te parlent, si tu aimes le web artisanal ou si tu veux simplement partager une réflexion, la porte est ouverte.</p>
+            <ul class="about-links">
+              <li>
+                <a href="https://974attitude.fr/" target="_blank" rel="noopener noreferrer">
+                  {{ partial "fontawesome.html" "home-solid" }}
+                  <span>Explorer 974 Attitude (nature, sentiers & recettes péi)</span>
+                </a>
+              </li>
+              <li>
+                <a href="/blog/">
+                  {{ partial "fontawesome.html" "newspaper-regular" }}
+                  <span>Lire les billets du carnet de bord</span>
+                </a>
+              </li>
+              <li>
+                <a href="/contact/">
+                  {{ partial "fontawesome.html" "paper-plane-regular" }}
+                  <span>M’envoyer un message via la page contact</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-              <div id="certif{{ $index }}">
-                <a href="{{ .link }}" target="_blank">
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 : Côté professionnel & Certifications (minimisé) -->
+  <section id="pro-area" class="about-section" aria-labelledby="pro-title">
+    <div class="page-inner">
+      <div class="surface">
+        <h2 id="pro-title">L’aparté professionnel</h2>
+
+        <div class="split-2">
+          <div>
+            <h3 class="sr-only">Mes certifications</h3>
+            <ul class="certif-list">
+              {{ range hugo.Data.logos.logo.certif }}
+              <li>
+                <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
                   {{ partial "image.html" (dict
                     "src" .image
-                    "alt" .titre
-                    "title" .titre
-                    "class" "center"
-                    "style" "width: 120px; height: auto"
+                    "alt" (printf "Certification %s (nouvelle fenêtre)" .titre)
                     "max" 240
-                    "sizes" "120px") }}
+                    "sizes" "110px") }}
                 </a>
-              </div>
-
-            {{ end }}
-
+              </li>
+              {{ end }}
+            </ul>
           </div>
 
-          <div class="basis-1/2">
-            <p>
-            Un développeur travaillant essentiellement en agence de communication, doit avoir des compétences transversales. C'est pour cela que je mets un point d'honneur à développer des compétences annexes.
-            </p>
-            <p>
-            Je maitrise la méthodologie scrum et je sais créer des sites webs de qualité qui respectent les standards en matière de qualités-web et de sécurité informatique.
-            </p>
-          </div>
+          <div>
+            <p>Dans la vraie vie, je suis <strong>développeuse web depuis plus de quinze ans</strong>, principalement en agence de communication.
+              Ce parcours m’a appris à concevoir des solutions numériques simples, accessibles, sécurisées et performantes.</p>
 
+            <p>J’interviens aussi régulièrement comme facilitatrice et membre de jury pour les titres professionnels de <strong>Développeur web</strong> et <strong>Concepteur d’applications</strong>.</p>
+
+            <div class="pro-links">
+              <a href="https://github.com/ssaugrin" target="_blank" rel="noopener noreferrer">
+                {{ partial "fontawesome.html" "github-brands" }}
+                <span>GitHub (code & projets)</span>
+              </a>
+              <a href="https://www.linkedin.com/in/ssaugrin" target="_blank" rel="noopener noreferrer">
+                {{ partial "fontawesome.html" "linkedin-in-brands" }}
+                <span>Profil LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  {{ with hugo.Data.projects.projects }}
-  <div class="container mx-auto px-4">
-
-    <h2>Les derniers projets que j'ai codé</h2>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-
-      {{ range . }}
-
-      <article class="project card">
-
-        <div class="project-img">
-
-          {{ partial "image.html" (dict
-            "src" .image
-            "alt" (printf "%s github" (replace .name "-" " " | title))
-            "max" 600
-            "sizes" "(min-width: 1024px) 300px, (min-width: 640px) 50vw, 100vw") }}
-          <div class="info-project">
-
-            <p class="text-xs text-right p-2"><i>{{ .language }}</i></p>
-
-            <div class="github-btn">
-
-              <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
-                {{ partial "fontawesome.html" "github-brands" }}
-                {{ replace .name "-" " " | title }}
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </article>
-      {{ end }}
-
-    </div>
-  </div>
-  {{ end }}
-
-</section>
-
+</div>
 {{ end }}

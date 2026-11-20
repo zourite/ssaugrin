@@ -2,6 +2,8 @@ baseURL = "https://saugrin-sonia.fr/"
 locale = "fr-FR"
 title = "Exploratrice à l’imaginaire fertile, le regard toujours tourné vers l’horizon."
 disableKinds = ["taxonomy", "term"]
+# Jamais d'accent ni de caractère non ASCII dans les URLs générées.
+removePathAccents = true
 summaryLength = 20
 defaultContentLanguage = 'fr'
 rssLimit = 20
@@ -11,7 +13,12 @@ rssLimit = 20
 	email = "me@ssaugrin.fr"
 
 [permalinks]
-  posts = "/blog/:year/:title/"
+  # La section s'appelle « blog » : la clé « posts » ne s'appliquait à rien.
+  # Tous les articles vivent à la racine (ils fixent leur `url`), cette règle
+  # garde la même forme pour un article publié sans `url`.
+  blog = "/:slug/"
+  # Les fiches de livre vivent sous la page qui les liste.
+  livres = "/des-livres-pour/:contentbasename/"
 
 [params]
   author = "Sonia Saugrin"
@@ -27,6 +34,9 @@ rssLimit = 20
   tabWidth = 4
   noClasses = false
   style = 'catppuccin-frappe'
+[markup.goldmark.parser]
+  # Les ancres de titre servent d'URL (#resume) : pas d'accent non plus.
+  autoHeadingIDType = "github-ascii"
 [markup.goldmark.renderer]
   unsafe = true
 [server]

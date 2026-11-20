@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{- /* Page éditoriale simple (mentions légales…) : pas de date ni de temps
+       de lecture, qui n'ont aucun sens sur ce type de contenu. */ -}}
+{{ partial "page-band.html" (dict "title" .Title "lead" .Description) }}
+
+<div class="page-body page-body-narrow">
+  <div class="page-inner">
+    <article id="post-content" class="surface">
+      {{ .Content | emojify }}
+    </article>
+  </div>
+</div>
+{{ end }}

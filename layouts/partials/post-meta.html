@@ -1,0 +1,13 @@
+{{- /* Date + temps de lecture d'un article. */ -}}
+<ul class="meta-list">
+  <li>
+    {{ partial "fontawesome.html" "calendar-alt-regular" }}
+    <time class="published" datetime="{{ .Date.Format "2006-01-02" }}">
+      {{ .Date.Day }} {{ index hugo.Data.months "fr" (printf "%d" .Date.Month) }} {{ .Date.Year }}
+    </time>
+  </li>
+  <li>
+    {{ partial "fontawesome.html" "stopwatch-solid" }}
+    {{ .ReadingTime }} min de lecture
+  </li>
+</ul>

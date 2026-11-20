@@ -2,6 +2,7 @@
 title: Mentions légales
 author: Zourite
 type: page
+layout: simple
 date: 2015-12-20T18:18:27+00:00
 pdrp_attributionLocation:
   - end

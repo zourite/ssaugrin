@@ -1,6 +1,6 @@
 +++
-title = "Le Blog"
+title = "Carnet de bord"
 draft = false
 url = "/blog"
-description = "Les articles d'une pieuvre qui aiment le bien être, la psychologie et la tech"
+description = "Ce que je note en chemin : tech, bien-être et psychologie, par une pieuvre curieuse."
 +++

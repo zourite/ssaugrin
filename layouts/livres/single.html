@@ -1,0 +1,71 @@
+{{ define "main" }}
+{{- $theme := .Params.theme -}}
+{{- $autres := where (where .CurrentSection.RegularPages "Params.theme" $theme) "File.UniqueID" "!=" .File.UniqueID -}}
+
+{{ partial "page-band.html" (dict
+  "eyebrow" $theme
+  "title" .Title
+  "lead" .Params.auteur) }}
+
+<div id="livre-page" class="page-body">
+  <div class="page-inner">
+
+    <p class="livre-retour livre-retour-haut">
+      <a href="/des-livres-pour/"><span aria-hidden="true">←</span> Tous les livres</a>
+    </p>
+
+    <div class="livre-grid">
+
+      <div class="livre-aside">
+        {{ with .Params.cover }}
+        <div class="livre-cover">
+          {{ partial "image.html" (dict
+            "src" .
+            "alt" (printf "Couverture de « %s »" $.Title)
+            "max" 600
+            "sizes" "(min-width: 768px) 280px, 60vw"
+            "loading" "eager") }}
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="livre-colonne">
+
+        <article id="post-content" class="livre-contenu">
+          {{ .Content | emojify }}
+        </article>
+
+        {{ with .Params.amazon }}
+        <div class="surface livre-achat">
+          <p class="livre-achat-label">Se procurer le livre</p>
+          <a class="btn" href="{{ . }}" target="_blank" rel="noopener noreferrer sponsored">
+            Voir sur Amazon{{ partial "ext-icon.html" }}
+          </a>
+          {{/* La mention est à côté du lien, pas reléguée en pied de page :
+               c'est là qu'elle sert à quelque chose. */}}
+          <p class="livre-achat-note">
+            C'est un lien affilié. Si tu achètes le livre après l'avoir suivi, je touche
+            une petite commission — sans que le prix change pour toi. Détails dans les
+            <a href="/mentions-legales/">mentions légales</a>.
+          </p>
+        </div>
+        {{ end }}
+
+      </div>
+
+    </div>
+
+    {{ with $autres }}
+    <section class="livre-voisins surface" aria-labelledby="voisins-title">
+      <h2 id="voisins-title">Dans le même thème</h2>
+      {{ partial "livre.html" (dict "books" . "label" (printf "Autres livres du thème %s" $theme)) }}
+    </section>
+    {{ end }}
+
+    <p class="livre-retour">
+      <a href="/des-livres-pour/"><span aria-hidden="true">←</span> Tous les livres</a>
+    </p>
+
+  </div>
+</div>
+{{ end }}

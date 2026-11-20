@@ -1,0 +1,18 @@
+/* ---------------------------------------------------------------------------
+   Famille de cartes.
+   Un seul traitement pour toutes : le liseré jaune de la charte, à plat.
+   Les coins restent droits côté liseré, comme le panneau d'accent et
+   l'accroche de l'accueil — c'est le même geste.
+   --------------------------------------------------------------------------- */
+
+/* .post-index (la frise du carnet) garde volontairement son propre
+   traitement : panneau à coins ronds et ombre douce. */
+.surface,
+.contact-card,
+.post-nav a {
+  background-color: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-left: var(--card-liseret) solid var(--color-yellow);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  box-shadow: none;
+}

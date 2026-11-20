@@ -1,33 +1,103 @@
+/* --------------------------------- 404 ---------------------------------- */
+
 #p404 {
-
-  min-height:  calc(100vh - 35px);
-  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: calc(100dvh - var(--footer-h));
+  padding-block: calc(var(--header-h) + 2rem) 3rem;
+  background-color: var(--color-blue-deep);
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 
-  #posts-404 {
-
-    border: 10px solid transparent;
-  
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(17, 75, 95, 0.6);
   }
-  
-  
-  .top-round-rainbow {
-    
-    border-radius: 4px;
-    
+
+  /* Le filet arc-en-ciel : l'ancienne règle était imbriquée dans #p404,
+     donc le sélecteur ne correspondait jamais à l'élément lui-même. */
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
     background-image: repeating-linear-gradient(to right,
-    #c4e17f 0px, #c4e17f 50px,
-    #f7fdca 50px, #f7fdca 100px,
-    #fad071 100px, #fad071 150px,
-    #f0766b 150px, #f0766b 200px,
-    #db9dbe 200px, #db9dbe 250px,
-    #c49cdf 250px, #c49cdf 300px,
-    #6599e2 300px, #6599e2 350px,
-    #61c2e4 350px, #61c2e4 400px);
-    background-size: 100% 10px;
-    background-repeat:no-repeat;
+      #c4e17f 0px, #c4e17f 50px,
+      #f7fdca 50px, #f7fdca 100px,
+      #fad071 100px, #fad071 150px,
+      #f0766b 150px, #f0766b 200px,
+      #db9dbe 200px, #db9dbe 250px,
+      #c49cdf 250px, #c49cdf 300px,
+      #6599e2 300px, #6599e2 350px,
+      #61c2e4 350px, #61c2e4 400px);
   }
 
+  .p404-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 40rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    text-align: center;
+  }
+
+  .p404-unicorn {
+    display: block;
+    width: 160px;
+    height: auto;
+    margin: 0 auto -0.5rem;
+  }
+
+  h1 {
+    color: var(--color-white);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  }
+
+  .p404-lead {
+    margin: 0 0 1.5rem;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.6;
+  }
+
+  .p404-posts {
+    text-align: left;
+
+    h2 {
+      margin-top: 0;
+      font-size: var(--text-lg);
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li + li {
+      border-top: 1px solid var(--border-soft);
+    }
+
+    a {
+      display: block;
+      padding: 0.6rem 0.25rem;
+      color: var(--color-drk-green-octo);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      &:visited {
+        color: var(--color-drk-green-octo);
+      }
+    }
+  }
 }
-
-
