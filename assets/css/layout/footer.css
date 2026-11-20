@@ -6,7 +6,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    /* Copyright à gauche, liens poussés à droite — comme à l'origine. */
+    justify-content: space-between;
     gap: 0.25rem 1rem;
     /* min-height plutôt que height : plus de débordement quand ça passe
        sur deux lignes en mobile. */

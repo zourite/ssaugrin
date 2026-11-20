@@ -10,7 +10,7 @@
   font: inherit;
   font-weight: 700;
   text-decoration: none;
-  border-radius: 999px;
+  border-radius: var(--radius-btn);
   cursor: pointer;
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
 
