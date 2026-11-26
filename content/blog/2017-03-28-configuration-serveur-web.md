@@ -7,14 +7,11 @@ description: 'Un serveur web est par définition un ordinateur qui te permet de 
 url: /configuration-serveur-web/
 featured: 2017/03/serveur-web-nginx-php.jpg
 hero : /img/hero/serveur-dedie-configuration.jpg
-kdc_metadata:
-  - 'a:1:{s:4:"lang";s:2:"fr";}'
 categories:
   - SysAdmin
 tags:
   - debian
   - nginx
-
 ---
 Il y a maintenant une ou deux année de cela, j&rsquo;ai pris la décision de ne plus utiliser des serveurs mutualisés. 
 

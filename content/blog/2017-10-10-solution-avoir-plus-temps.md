@@ -7,13 +7,10 @@ description: "Je vais t'expliquer comment tu peux optimiser ton temps  facilemen
 url: /solution-avoir-plus-temps/
 featured: 2017/10/113757-accuracy_800x533.jpeg
 hero : /img/hero/comment-avoir-plus-de-temps.jpg
-kdc_metadata:
-  - 'a:1:{s:4:"lang";s:2:"fr";}'
 categories:
   - Mes Opinions
 tags:
   - lifestyle
-
 ---
 Ne pas avoir le temps que cela signifie t’il ? Je pense qu’il est temps de faire le point sur cette fameuse phrase que tout le monde répète : _Je n’ai pas le temps._ Pour étayer cet article, j’ai cherché la définition du mot “temps”.
 

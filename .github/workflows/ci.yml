@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.162.1"
+          extended: true
+
+      - name: Install dependencies
+        run: npm ci --include=optional
+
+      - name: Build production site
+        run: npm run build
+
+      - name: Check Hugo warnings
+        run: |
+          output=$(hugo --renderToMemory --printPathWarnings --printUnusedTemplates --printI18nWarnings 2>&1)
+          echo "$output"
+          if echo "$output" | grep -q "WARN"; then
+            echo "::error::Hugo a émis des avertissements."
+            exit 1
+          fi

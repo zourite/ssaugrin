@@ -1,33 +1,3 @@
-[[skill]]
-titre = "Laravel"
-image = "/img/logos/laravel.png"
-
-
-[[skill]]
-titre = "VueJS"
-image = "/img/logos/vuejs.png"
-
-
-[[skill]]
-titre = "HTML/CSS"
-image = "/img/logos/html-css.png"
-
-[[skill]]
-titre = "WordPress"
-image = "/img/logos/wordpress.png"
-
-[[skill]]
-titre = "Hugo"
-image = "/img/logos/hugo.png"
-
-[[skill]]
-titre = "PHP"
-image = "/img/logos/php.png"
-
-[[skill]]
-titre = "JS"
-image = "/img/logos/js.png"
-
 [[certif]]
 titre = "Opquast"
 image = "/img/logos/badge_avance.svg"

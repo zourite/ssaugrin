@@ -2,11 +2,7 @@
     <nav id="nav-foot" aria-label="Navigation de pied de page">
       <p class="inset-text">
         ssaugrin © {{ dateFormat "2006" now }} —
-        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license noopener noreferrer" target="_blank">
-          <img alt="Licence Creative Commons BY-NC-SA 4.0 (nouvelle fenêtre)"
-               src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"
-               width="80" height="15" loading="lazy" style="border-width:0">
-        </a>
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" rel="license noopener noreferrer" target="_blank">CC BY-NC-SA 4.0<span class="sr-only"> (nouvelle fenêtre)</span></a>
       </p>
       <ul class="nav-links">
         <li><a href="/mentions-legales/">Mentions légales</a></li>
@@ -14,5 +10,5 @@
       </ul>
     </nav>
 </footer>
-{{ $js := resources.Get "js/app.js" | js.Build (dict "minify" true) }}
-<script>{{ $js.Content | safeJS }}</script>
+{{- $js := resources.Get "js/app.js" | js.Build (dict "minify" true) | fingerprint -}}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>

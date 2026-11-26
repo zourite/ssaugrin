@@ -6,7 +6,7 @@ export default defineConfig({
   // Vite build output (that used to nest dist/dist/... on every build).
   publicDir: false,
   build: {
-    outDir: "static/dist",
+    outDir: "assets/dist",
     emptyOutDir: true,
     rollupOptions: {
       input: {

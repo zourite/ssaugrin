@@ -7,27 +7,12 @@ description: Vous pouvez rajouter des symboles à côté de votre pseudo sur les
 url: /comment-ajouter-des-images-pseudo-twitter-ou-facebook/
 featured: featured/code-ascii-twitter.jpg
 hero: /img/hero/code-ascii-twitter.jpg
-ratings_users:
-  - 0
-  - 0
-ratings_score:
-  - 0
-  - 0
-ratings_average:
-  - 0
-  - 0
-views:
-  - 1472
-  - 1472
-pdrp_attributionLocation:
-  - end
 categories:
   - Divers
 tags:
   - Facebook
   - réseaux-sociaux
   - twitter
-
 ---
 **Edit** : J&rsquo;ai découvert qu&rsquo;on vendait des émojis <a rel="nofollow" href="https://www.amazon.fr/gp/product/B00YC8270C/ref=as_li_tl?ie=UTF8&#038;camp=1642&#038;creative=19458&#038;creativeASIN=B00YC8270C&#038;linkCode=as2&#038;tag=ssaugrin-21">sous forme de coussin chez Amazon</a> <img src="https://ir-fr.amazon-adsystem.com/e/ir?t=ssaugrin-21&#038;l=as2&#038;o=8&#038;a=B00YC8270C" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />🙂
 

@@ -9,3 +9,5 @@ hugo_stats.json
 .env
 /assets/css/style.css
 static/dist/
+assets/dist/
+.hugo_build.lock

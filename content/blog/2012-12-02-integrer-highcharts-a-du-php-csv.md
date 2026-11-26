@@ -7,8 +7,6 @@ description: "Comme on me l'a gentille-ment demandé, j'ai écrit un petit tutor
 url: /integrer-highcharts-a-du-php-csv/
 featured: 2012/11/csv.png
 hero: /img/hero/graphique-highcharts.jpg
-views:
-  - 515
 categories:
   - Programmation
 tags:
@@ -17,7 +15,6 @@ tags:
   - Javascript
   - Librairie
   - PHP
-
 ---
 
 Comme on me l&rsquo;a gentiment demandé, j&rsquo;ai écrit un petit tutoriel sur le moyen d&rsquo;intégrer **Highcharts** à du PHP sans passer par un framework. Donc je vais vous montrer comment générer un graphique à l&rsquo;aide d&rsquo;un csv. Dans un premier temps, vous devez télécharger la librairie <a href="https://github.com/ghunti/HighchartsPHP/" target="_blank">PHP &#8211; Highcharts de Ghunti.</a>
