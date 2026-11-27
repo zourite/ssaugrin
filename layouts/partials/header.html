@@ -26,7 +26,7 @@
                   (dict "url" "/blog/" "label" "Carnet" "icon" "newspaper-regular")
                   (dict "url" "/a-propos/" "label" "À propos" "icon" "user-circle-o")
                   (dict "url" "/contact/" "label" "Contact" "icon" "paper-plane-regular") }}
-            {{- $active := cond (eq .url "/") (eq $cur "/") (hasPrefix $cur .url) }}
+            {{- $active := or (and (eq .url "/") (eq $cur "/")) (and (ne .url "/") (hasPrefix $cur .url)) (and (eq .url "/blog/") (eq $.Section "blog")) }}
             <li>
                 <a href="{{ .url }}"{{ if $active }} aria-current="page"{{ end }}>
                   {{ partial "fontawesome.html" .icon }}

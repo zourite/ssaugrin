@@ -7,13 +7,8 @@ description: 'Ceux qui n’ont pas voulu intégrer le réseau social Facebook vo
 url: /facebook-nest-pas-bon-pour-toi-fais-ta-vie/
 featured: 2017/02/facebook-pas-bon-pour-toi.jpg
 hero: /img/hero/facebook-fais-ta-vie.jpg
-pdrp_attributionLocation:
-  - end
-kdc_metadata:
-  - 'a:1:{s:4:"lang";s:2:"fr";}'
 categories:
   - Mes Opinions
-
 ---
 > Ce texte est une traduction d’un l’article intitulé [« Facebook is bad for you
   

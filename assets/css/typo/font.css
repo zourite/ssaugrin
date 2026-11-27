@@ -51,8 +51,6 @@
 body {
   font-family: "Nunito", Helvetica, sans-serif;
   font-weight: 400;
-  font-feature-settings: 'liga'1;
-  font-feature-settings: 'tnum'1;
-  font-feature-settings: 'ss02'1;
+  font-feature-settings: "liga" 1, "tnum" 1, "ss02" 1;
   color: #333333;
 }

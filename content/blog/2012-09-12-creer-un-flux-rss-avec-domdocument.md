@@ -7,8 +7,6 @@ description: "Depuis un certains temps, j'utilise DOMDocument pour générer mai
 url: /creer-un-flux-rss-avec-domdocument/
 featured: featured/creer-fluxrss-domdocument.jpg
 hero: /img/hero/creer-fluxrss-domdocument.jpg
-views:
-  - 171
 categories:
   - Programmation
 tags:
@@ -16,7 +14,6 @@ tags:
   - PHP
   - POO
   - RSS
-
 ---
 ### Qu&rsquo;est ce que DOMDocument ? 
 

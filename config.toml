@@ -8,10 +8,6 @@ summaryLength = 20
 defaultContentLanguage = 'fr'
 rssLimit = 20
 
-[author]
-	name = "Sonia SAUGRIN"
-	email = "me@ssaugrin.fr"
-
 [permalinks]
   # La section s'appelle « blog » : la clé « posts » ne s'appliquait à rien.
   # Tous les articles vivent à la racine (ils fixent leur `url`), cette règle
@@ -21,6 +17,7 @@ rssLimit = 20
   livres = "/des-livres-pour/:contentbasename/"
 
 [params]
+  site_name = "Sonia Saugrin"
   author = "Sonia Saugrin"
   author_email = "me@ssaugrin.fr"
   description = "Exploratrice à l’imaginaire fertile, le regard toujours tourné vers l’horizon."

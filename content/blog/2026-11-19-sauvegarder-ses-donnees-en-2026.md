@@ -13,7 +13,6 @@ tags:
   - sauvegarde
   - restic
   - stockage
-
 ---
 En 2015, tous les disques durs de mon serveur sont tombés en panne. Pas un, pas deux : tous. J’ai perdu près de deux ans de travail pour l’un de mes sites. Sur le moment, j’aurais pu pleurer toutes les larmes de mon corps, mais j’ai préféré écrire un article sur Dropbox et mysqldump. 🙂
 

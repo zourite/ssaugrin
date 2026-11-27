@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Sonia Saugrin (Zourite)",
+    "short_name": "Zourite",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#2c3e50",
+    "background_color": "#fafafa",
     "display": "standalone"
 }

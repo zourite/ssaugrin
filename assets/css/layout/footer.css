@@ -20,6 +20,17 @@
       align-items: center;
       gap: 0.4rem;
       margin: 0;
+
+      a {
+        color: #fff;
+        font-weight: 400;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+
+        &:visited {
+          color: inherit;
+        }
+      }
     }
 
     .nav-links {

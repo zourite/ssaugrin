@@ -1,17 +1,21 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9dc76a7b-7b12-4560-8b08-c0fb12632326/deploy-status)](https://app.netlify.com/sites/suspicious-elion-891abb/deploys)
-![Rendu du site](screenshot.png)
 
----
+![Aperçu du site](static/screenshot.png)
 
-## Build With
+Site personnel et carnet de bord de Sonia Saugrin (**Zourite**), propulsé par [Hugo](https://gohugo.io/), [Vite](https://vite.dev/) et [Tailwind CSS v4](https://tailwindcss.com/), déployé sur [Netlify](https://www.netlify.com/).
 
-- Base : https://gohugo.io/
-- Framework CSS : https://tailwindcss.com/
-- Hebergeur : https://www.netlify.com/
-- Font Icon : https://fontawesome.com/
+## Développement local
 
-## Author
+Prérequis : **Node.js 22+** et **Hugo Extended 0.162.1+**.
 
-- Twitter : https://twitter.com/Zourite
-- Linkedin : https://www.linkedin.com/in/ssaugrin
-- Site : [Developpeur Full Stack - Sonia SAUGRIN](https://saugrin-sonia.fr/)
+```bash
+npm install
+npm start       # Lance Vite + Hugo server en parallèle
+npm run build   # Build de production (Vite + Hugo --gc --minify)
+```
+
+## Auteure
+
+- Site : [saugrin-sonia.fr](https://saugrin-sonia.fr/)
+- GitHub : [@zourite](https://github.com/zourite)
+- LinkedIn : [Sonia Saugrin](https://www.linkedin.com/in/ssaugrin/)

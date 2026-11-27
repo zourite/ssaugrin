@@ -7,15 +7,10 @@ description: Avez-vous déjà contacté un professionnel ? Avez-vous attendu une
 url: /comment-envoyer-email-professionnel-obtenir-reponse-rapide/
 featured: 2016/01/ecrire-mail-reponse.jpg
 hero: /img/hero/repondre-proffessionelle-email.jpg
-pdrp_attributionLocation:
-  - end
-kdc_metadata:
-  - 'a:1:{s:4:"lang";s:2:"fr";}'
 categories:
   - Mes Opinions
 tags:
   - email
-
 ---
 Avez-vous déjà contacté un professionnel ? Avez-vous attendu une réponse à votre email pendant un siècle ? Avez-vous répondu oui aux questions précédentes ? Alors, cet article est fait pour vous. Il est vrai que cela est frustrant de ne pas apercevoir de réponse dans sa boite de réception. Cela peut renforcer le manque de confiance en soi et faire surgir des émotions négatives.
 

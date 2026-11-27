@@ -1,39 +1,48 @@
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>
-    {{ if eq  .Title  .Site.Title }}
-    {{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}
-    {{ end }}
-    </title>
+    <title>{{ if eq .Title .Site.Title }}{{ .Site.Params.site_name | default .Site.Title }}{{ else }}{{ with .Title }}{{ . }} — {{ end }}{{ .Site.Params.site_name | default .Site.Title }}{{ end }}</title>
     <link>{{ .Permalink }}</link>
-    <description>Recent content 
-    {{ if ne  .Title  .Site.Title }}
-    {{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}
-    </description>
-    <generator>Hugo -- gohugo.io</generator>{{ with .Site.Language.Locale }}
-    <language>{{.}}</language>{{end}}{{ with .Site.Params.author_email }}
-    <managingEditor>{{.}}{{ with $.Site.Params.author }} ({{.}}){{end}}</managingEditor>
-    {{end}}
-    {{ with .Site.Params.author_email }}
-    <webMaster>{{.}}{{ with $.Site.Params.author }} ({{.}}){{end}}</webMaster>
-    {{end}}
-    {{ with .Site.Copyright }}
-    <copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}
+    <description>{{ .Description | default .Site.Params.description }}</description>
+    <generator>Hugo</generator>
+    {{- with .Site.Language.Locale }}
+    <language>{{ . }}</language>
+    {{- end }}
+    {{- with .Site.Params.author_email }}
+    <managingEditor>{{ . }}{{ with $.Site.Params.author }} ({{ . }}){{ end }}</managingEditor>
+    <webMaster>{{ . }}{{ with $.Site.Params.author }} ({{ . }}){{ end }}</webMaster>
+    {{- end }}
+    {{- with .Site.Copyright }}
+    <copyright>{{ . }}</copyright>
+    {{- end }}
+    {{- if not .Date.IsZero }}
     <lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
-    {{ end }}
-    {{ with .OutputFormats.Get "RSS" }}
-        {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
-    {{ end }}
-    {{ range first 15 (where .Site.RegularPages "Section" "blog") }}
+    {{- end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- $limit := .Site.Config.Services.RSS.Limit | default 20 }}
+    {{- range first $limit (where .Site.RegularPages "Section" "blog") }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{ with .Site.Params.author_email }}<author>{{.}}{{ with $.Site.Params.author }} ({{.}}){{end}}</author>{{end}}
+      {{- with .Site.Params.author_email }}
+      <author>{{ . }}{{ with $.Site.Params.author }} ({{ . }}){{ end }}</author>
+      {{- end }}
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | html }}</description>
-      {{ with .Params.featured }}{{ $image_location := printf "static/img/%s" .}}{{$image := readFile $image_location }}{{$len := len $image}}<enclosure url="https://saugrin-sonia.fr/img/{{.}}" length="{{$len}}" type="image/png" />{{end}}
+      {{- with .Params.featured }}
+        {{- with resources.Get (printf "img/%s" (strings.TrimPrefix "/" .)) }}
+          {{- $img := . }}
+          {{- if ne .MediaType.SubType "svg" }}
+            {{- $w := cond (gt .Width 1200) 1200 .Width }}
+            {{- $img = .Resize (printf "%dx jpg q82" $w) }}
+          {{- end }}
+      <enclosure url="{{ $img.RelPermalink | absURL }}" length="{{ len $img.Content }}" type="{{ $img.MediaType.Type }}" />
+        {{- end }}
+      {{- end }}
     </item>
-    {{ end }}
+    {{- end }}
   </channel>
 </rss>
